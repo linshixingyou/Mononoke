@@ -636,3 +636,252 @@ proxies:
     skip-cert-verify: true
     sni: openssl.nodesni.com
     type: trojan
+  - name: http1
+    port: 8085
+    server: 5.181.170.234
+    type: http
+    
+  - name: http2
+    port: 8085
+    server: 130.49.9.244
+    type: http
+
+  - name: http3
+    port: 8085
+    server: 89.19.35.67
+    type: http
+
+  - name: http4
+    port: 8085
+    server: 122.8.44.14
+    type: http
+
+  - name: http5
+    port: 8085
+    server: 45.132.184.141
+    type: http
+
+  - name: http6
+    port: 8085
+    server: 93.177.119.51
+    type: http
+
+  - name: http7
+    port: 8085
+    server: 185.61.222.17
+    type: http
+
+  - name: http8
+    port: 8085
+    server: 170.168.31.70
+    type: http
+
+  - name: http9
+    port: 8085
+    server: 193.202.8.120
+    type: http
+
+  - name: http10
+    port: 8085
+    server: 130.49.8.137
+    type: http
+
+  - name: http11
+    port: 8085
+    server: 130.49.9.155
+    type: http
+
+  - name: http12
+    port: 8085
+    server: 130.49.79.121
+    type: http
+
+  - name: http13
+    port: 8085
+    server: 185.201.137.184
+    type: http
+
+  - name: http14
+    port: 8085
+    server: 193.151.191.229
+    type: http
+
+  - name: http15
+    port: 8085
+    server: 122.8.92.181
+    type: http
+
+  - name: http16
+    port: 8085
+    server: 193.202.80.68
+    type: http
+
+  - name: http17
+    port: 8085
+    server: 157.22.18.73
+    type: http
+
+  - name: http18
+    port: 8085
+    server: 185.201.138.153
+    type: http
+
+  - name: http19
+    port: 8085
+    server: 170.168.243.35
+    type: http
+
+  - name: http20
+    port: 8085
+    server: 130.49.79.56
+    type: http
+
+  - name: http21
+    port: 8085
+    server: 91.218.123.218
+    type: http
+
+  - name: http22
+    port: 8085
+    server: 157.22.125.186
+    type: http
+
+  - name: http23
+    port: 8085
+    server: 45.10.167.155
+    type: http
+
+  - name: http24
+    port: 8085
+    server: 45.66.208.88
+    type: http
+
+  - name: http25
+    port: 8085
+    server: 5.181.171.216
+    type: http
+
+  - name: http26
+    port: 8085
+    server: 45.135.2.248
+    type: http
+
+  - name: http27
+    port: 8085
+    server: 193.31.126.43
+    type: http
+
+  - name: http28
+    port: 8085
+    server: 194.104.11.191
+    type: http
+
+  - name: http29
+    port: 8085
+    server: 185.168.30.155
+    type: http
+
+  - name: http30
+    port: 8085
+    server: 193.202.80.249
+    type: http
+
+  - name: http31
+    port: 8085
+    server: 77.220.192.198
+    type: http
+
+  - name: http32
+    port: 8085
+    server: 89.19.35.77
+    type: http
+
+  - name: http33
+    port: 8085
+    server: 83.97.117.142
+    type: http
+
+  - name: http34
+    port: 8085
+    server: 194.104.11.253
+    type: http
+
+  - name: http35
+    port: 8085
+    server: 213.232.123.79
+    type: http
+
+  - name: http36
+    port: 8085
+    server: 77.220.194.21
+    type: http
+
+  - name: http37
+    port: 8085
+    server: 170.168.173.181
+    type: http
+
+  - name: http38
+    port: 8085
+    server: 130.49.79.133
+    type: http
+
+  - name: http39
+    port: 8085
+    server: 157.22.72.88
+    type: http
+
+  - name: http40
+    port: 8085
+    server: 185.168.31.94
+    type: http
+
+  - name: http41
+    port: 8085
+    server: 77.95.172.49
+    type: http
+
+  - name: http42
+    port: 8085
+    server: 5.183.254.80
+    type: http
+
+  - name: http43
+    port: 8085
+    server: 122.8.46.139
+    type: http
+
+  - name: http44
+    port: 8085
+    server: 155.212.36.226
+    type: http
+
+  - name: http45
+    port: 8085
+    server: 157.22.45.221
+    type: http
+
+  - name: http46
+    port: 8085
+    server: 178.20.29.227
+    type: http
+
+  - name: http47
+    port: 8085
+    server: 45.66.211.73
+    type: http
+
+  - name: http48
+    port: 8085
+    server: 157.22.101.54
+    type: http
+
+  - name: http49
+    port: 8085
+    server: 185.168.29.30
+    type: http
+
+  - name: http50
+    port: 8085
+    server: 5.181.171.128
+    type: http
