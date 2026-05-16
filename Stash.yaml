@@ -1,0 +1,638 @@
+mode: rule
+log-level: info
+# DNS模块
+dns:
+  default-nameserver:
+    - 119.29.29.29
+    - 223.5.5.5
+  nameserver:
+    - https://dns.alidns.com/dns-query
+    - https://doh.pub/dns-query
+  fake-ip-filter:
+    - +.lan
+    - +.local
+proxy-providers:
+  Parity落地:
+    interval: 600
+    url: https://pai.yt/clash?preset=other
+  云洞:
+    interval: 60000
+    url: https://0993c0f8-9e29-32b1-810c-65f448c5aa04.nginxsub-cave.top/link/AoKXdOul4Uy4RKZY?list=clash
+  kittysu:
+    interval: 60000
+    url: https://2.luolicon.ru/oosaka/158e9b903acd6217befb82f9b2eede2e
+  pku:
+    interval: 60008
+    url: https://941321.xyz/clash/caiyuhan@pku.edu.cn/c8rhd5gfjw
+  Peigedpkj:
+    interval: 600000
+    url: https://peige.dpkj.qzz.io/dapei
+proxy-groups:
+  - icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Rocket.png
+    name: 前置选一个好用的节点
+    type: select
+    proxies:
+      - 云洞
+      - Kitty
+      - PKU
+      - VPS无限
+      - 保底
+  - name: 云洞
+    type: select
+    use:
+      - 云洞
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/IEPL.png
+  - name: PKU
+    type: select
+    use:
+      - pku
+  - name: Kitty
+    type: select
+    use:
+      - kittysu
+  - name: FSCloud
+    type: select
+    use: []
+  - include-all: true
+    name: 手动
+    type: select
+    proxies: null
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Clubhouse.png
+  - name: Proxy模式选择
+    type: select
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Bypass.png
+    proxies:
+      - 手动
+      - 链式代理引用的话就选这个
+      - 前置选一个好用的节点
+    use: null
+  - name: 落地选你需要的小众国家
+    type: select
+    use: null
+    proxies:
+      - Parity落地
+      - pedagou
+      - 手动
+      - Kitty
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Blackhole.png
+  - icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Available_1.png
+    name: 链式代理引用的话就选这个
+    type: relay
+    proxies:
+      - 前置选一个好用的节点
+      - 落地选你需要的小众国家
+  - name: Final
+    type: select
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Final.png
+    proxies:
+      - Proxy模式选择
+      - DIRECT
+      - 链式代理引用的话就选这个
+      - 前置选一个好用的节点
+    use: null
+  - name: Parity落地
+    type: select
+    use:
+      - Parity落地
+  - name: pedagou
+    type: select
+    use:
+      - Peigedpkj
+  - icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Apple.png
+    name: AppleGlobal
+    type: select
+    proxies:
+      - DIRECT
+      - Proxy模式选择
+      - 手动
+  - name: Apple
+    type: select
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Apple_1.png
+    proxies:
+      - DIRECT
+      - Proxy模式选择
+      - 手动
+  - name: Google
+    type: select
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Google_Search.png
+    proxies:
+      - Proxy模式选择
+      - 云洞
+      - Kitty
+      - America
+      - DIRECT
+      - 链式代理引用的话就选这个
+  - name: YouTube
+    type: select
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/YouTube.png
+    proxies:
+      - Proxy模式选择
+      - HongKong
+      - 链式代理引用的话就选这个
+  - name: Emby
+    type: select
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Emby.png
+    proxies:
+      - Proxy模式选择
+      - HongKong
+      - TaiWan
+      - Japan
+      - Singapore
+      - America
+      - DIRECT
+  - name: AI
+    type: select
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/ChatGPT.png
+    proxies:
+      - Proxy模式选择
+      - HongKong
+      - TaiWan
+      - Japan
+      - Singapore
+      - America
+      - 云洞
+      - Kitty
+  - name: Telegram
+    type: select
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Telegram_X.png
+    proxies:
+      - Proxy模式选择
+      - 云洞
+      - Kitty
+      - HongKong
+      - Singapore
+  - name: Streaming
+    type: select
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Streaming.png
+    proxies:
+      - Proxy模式选择
+      - HongKong
+      - TaiWan
+      - Japan
+      - Singapore
+      - America
+  # 基于地区分组
+  - name: HongKong
+    type: select
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Hong_Kong.png
+    proxies:
+      - HK-Auto
+      - HK-FallBack
+      - HK-Select
+      - HK-LoadBalance
+    filter: 港|🇭🇰|HK|(?i)Hong
+  - name: TaiWan
+    type: select
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/China.png
+    proxies:
+      - TW-Auto
+      - TW-FallBack
+      - TW-Select
+      - TW-LoadBalance
+    filter: 台|🇨🇳|🇹🇼|湾|TW|(?i)Taiwan
+  - name: Japan
+    type: select
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Japan.png
+    proxies:
+      - JP-Auto
+      - JP-FallBack
+      - JP-Select
+      - JP-LoadBalance
+    filter: 日|🇯🇵|东京|JP|(?i)Japan
+  - name: Singapore
+    type: select
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Singapore.png
+    proxies:
+      - SG-Auto
+      - SG-FallBack
+      - SG-Select
+      - SG-LoadBalance
+    filter: 新加坡|坡|狮城|🇸🇬|SG|(?i)Singapore
+  - name: America
+    type: select
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/United_States.png
+    proxies:
+      - US-Auto
+      - US-FallBack
+      - US-Select
+      - US-LoadBalance
+    filter: 美|🇺🇲|US|(?i)States|American
+  - name: HK-Auto
+    type: url-test
+    hidden: true
+    include-all: true
+    filter: 港|🇭🇰|HK|(?i)Hong
+    interval: 300
+    lazy: true
+  - name: TW-Auto
+    type: url-test
+    hidden: true
+    include-all: true
+    filter: 台|🇨🇳|🇹🇼|湾|TW|(?i)Taiwan
+    interval: 300
+    lazy: true
+  - name: JP-Auto
+    type: url-test
+    hidden: true
+    include-all: true
+    filter: 日|🇯🇵|东京|JP|(?i)Japan
+    interval: 300
+    lazy: true
+  - name: SG-Auto
+    type: url-test
+    hidden: true
+    include-all: true
+    filter: 新加坡|坡|狮城|🇸🇬|SG|(?i)Singapore
+    interval: 300
+    lazy: true
+  - name: US-Auto
+    type: url-test
+    hidden: true
+    include-all: true
+    filter: 美|🇺🇲|US|(?i)States|American
+    interval: 300
+    lazy: true
+  - name: HK-FallBack
+    type: fallback
+    hidden: true
+    include-all: true
+    filter: 港|🇭🇰|HK|(?i)Hong
+    interval: 300
+    lazy: true
+  - name: TW-FallBack
+    type: fallback
+    hidden: true
+    include-all: true
+    filter: 台|🇨🇳|🇹🇼|湾|TW|(?i)Taiwan
+    interval: 300
+    lazy: true
+  - name: JP-FallBack
+    type: fallback
+    hidden: true
+    include-all: true
+    filter: 日|🇯🇵|东京|JP|(?i)Japan
+    interval: 300
+    lazy: true
+  - name: SG-FallBack
+    type: fallback
+    hidden: true
+    include-all: true
+    filter: 新加坡|坡|狮城|🇸🇬|SG|(?i)Singapore
+    interval: 300
+    lazy: true
+  - name: US-FallBack
+    type: fallback
+    hidden: true
+    include-all: true
+    filter: 美|🇺🇲|US|(?i)States|American
+    interval: 300
+    lazy: true
+  - name: HK-Select
+    type: select
+    include-all: true
+    filter: 港|🇭🇰|HK|(?i)Hong
+  - name: TW-Select
+    type: select
+    include-all: true
+    filter: 台|🇨🇳|🇹🇼|湾|TW|(?i)Taiwan
+  - name: SG-Select
+    type: select
+    include-all: true
+    filter: 新加坡|坡|狮城|🇸🇬|SG|(?i)Singapore
+    proxies:
+      - 云洞
+  - name: JP-Select
+    type: select
+    include-all: true
+    filter: 日|🇯🇵|东京|JP|(?i)Japan
+  - name: US-Select
+    type: select
+    include-all: true
+    filter: 美|🇺🇲|US|(?i)States|American
+  - name: HK-LoadBalance
+    type: load-balance
+    hidden: true
+    include-all: true
+    filter: 港|🇭🇰|HK|(?i)Hong
+    strategy: consistent-hashing
+    interval: 300
+    lazy: true
+  - name: TW-LoadBalance
+    type: load-balance
+    hidden: true
+    include-all: true
+    filter: 台|🇨🇳|🇹🇼|湾|TW|(?i)Taiwan
+    strategy: consistent-hashing
+    interval: 300
+    lazy: true
+  - name: SG-LoadBalance
+    type: load-balance
+    hidden: true
+    include-all: true
+    filter: 新加坡|坡|狮城|🇸🇬|SG|(?i)Singapore
+    strategy: consistent-hashing
+    interval: 300
+    lazy: true
+  - name: JP-LoadBalance
+    type: load-balance
+    hidden: true
+    include-all: true
+    filter: 日|🇯🇵|东京|JP|(?i)Japan
+    strategy: consistent-hashing
+    interval: 300
+    lazy: true
+  - name: US-LoadBalance
+    type: load-balance
+    hidden: true
+    include-all: true
+    filter: 美|🇺🇲|US|(?i)States|American
+    strategy: consistent-hashing
+    interval: 300
+    lazy: true
+  - name: Github
+    type: select
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/GitHub_Letter.png
+    proxies:
+      - Proxy模式选择
+      - 云洞
+      - PKU
+  - name: X
+    type: select
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/X.png
+    proxies:
+      - Proxy模式选择
+      - HongKong
+      - TaiWan
+      - Japan
+      - Singapore
+      - America
+  - name: All-Auto
+    type: url-test
+    hidden: true
+    include-all: true
+    filter: ^(?=.*(.))(?!.*((?i)群|邀请|返利|循环|官网|客服|网站|网址|获取|订阅|流量|到期|机场|下次|版本|官址|备用|过期|已用|联系|邮箱|工单|贩卖|通知|倒卖|防止|国内|地址|频道|无法|说明|使用|提示|特别|访问|支持|教程|关注|更新|作者|加入|(\b(USE|USED|TOTAL|Traffic|Expire|EMAIL|Panel|Channel|Author)\b|(\d{4}-\d{2}-\d{2}|\d+G)))).*$
+    interval: 300
+    lazy: true
+    # 规则引用
+  - name: bilibili
+    type: select
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/bilibili_3.png
+    proxies:
+      - DIRECT
+      - HongKong
+      - TaiWan
+  - name: Microsoft
+    type: select
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Windows_11.png
+    proxies:
+      - DIRECT
+      - Proxy模式选择
+      - HongKong
+      - TaiWan
+      - Japan
+      - Singapore
+      - America
+  - name: Games
+    type: select
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Game.png
+    proxies:
+      - Proxy模式选择
+      - HongKong
+      - TaiWan
+      - Japan
+      - Singapore
+      - America
+      - All-Auto
+      - DIRECT
+  - name: TikTok
+    type: select
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/TikTok.png
+    proxies:
+      - Proxy模式选择
+      - HongKong
+      - TaiWan
+      - Japan
+      - Singapore
+      - America
+      - All-Auto
+  - name: Disney+
+    type: select
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Disney.png
+    proxies:
+      - Proxy模式选择
+      - HongKong
+      - TaiWan
+      - Japan
+      - Singapore
+      - America
+      - All-Auto
+  - name: Spotify
+    type: select
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Spotify.png
+    proxies:
+      - Proxy模式选择
+      - HongKong
+      - TaiWan
+      - Japan
+      - Singapore
+      - America
+      - All-Auto
+      - DIRECT
+    use: null
+  - name: NETFLIX
+    type: select
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Netflix.png
+    proxies:
+      - Proxy模式选择
+      - HongKong
+      - TaiWan
+      - Japan
+      - Singapore
+      - America
+      - All-Auto
+rules:
+  - DOMAIN,102.205.44.32,云洞
+  - DOMAIN-SUFFIX,revenuecat.com,Telegram
+  - DOMAIN-SUFFIX,nicegram.cloud,Telegram
+  - DOMAIN-SUFFIX,nicegram.app,Telegram
+  - DOMAIN,eco.potdot.de,HongKong
+  - DOMAIN-KEYWORD,reddit,云洞
+  - RULE-SET,Direct,DIRECT
+  - RULE-SET,Reject,REJECT
+  - RULE-SET,LAN,DIRECT
+  - RULE-SET,AppleCN,Apple
+  - RULE-SET,AppleServers,AppleGlobal
+  - RULE-SET,AI,AI
+  - RULE-SET,WeChat,DIRECT
+  - RULE-SET,Telegram,Telegram
+  - RULE-SET,GitHub,Github
+  - RULE-SET,Twitter,X
+  - RULE-SET,Google,Google
+  - RULE-SET,Microsoft,Microsoft
+  - RULE-SET,YouTube,YouTube
+  - RULE-SET,Emby,Emby
+  - RULE-SET,ProxyGFW,Streaming
+  - RULE-SET,BiliIntl,Streaming
+  - RULE-SET,ProxyMedia,Streaming
+  - RULE-SET,Netflix,NETFLIX
+  - RULE-SET,Disney+,Disney+
+  - RULE-SET,TikTok,TikTok
+  - RULE-SET,Bahamut,TaiWan
+  - RULE-SET,Games,Games
+  - RULE-SET,bilibili,bilibili
+  - RULE-SET,Spotify,Spotify
+  - RULE-SET,NetEaseMusic,DIRECT
+  - RULE-SET,CN_Mainland,DIRECT
+  - GEOIP,CN,DIRECT
+  - MATCH,Final
+rule-providers:
+  Direct:
+    behavior: classical
+    format: text
+    interval: 86400
+    url: https://raw.githubusercontent.com/linshixingyou/Mononoke/localhost/Direct.list
+  Reject:
+    behavior: classical
+    format: text
+    interval: 86400
+    url: https://raw.githubusercontent.com/linshixingyou/Mononoke/localhost/Reject.list
+  AI:
+    behavior: classical
+    format: text
+    interval: 86400
+    url: https://raw.githubusercontent.com/linshixingyou/Mononoke/localhost/AI.list
+  YouTube:
+    behavior: classical
+    format: text
+    interval: 86400
+    url: https://raw.githubusercontent.com/linshixingyou/Mononoke/localhost/YouTube.list
+  Netflix:
+    behavior: classical
+    format: text
+    interval: 86400
+    url: https://raw.githubusercontent.com/linshixingyou/Mononoke/localhost/Netflix.list
+  Disney+:
+    behavior: classical
+    format: text
+    interval: 86400
+    url: https://raw.githubusercontent.com/linshixingyou/Mononoke/localhost/Disney.list
+  Emby:
+    behavior: classical
+    format: text
+    interval: 86400
+    url: https://raw.githubusercontent.com/linshixingyou/Mononoke/localhost/Emby.list
+  TikTok:
+    behavior: classical
+    format: text
+    interval: 86400
+    url: https://raw.githubusercontent.com/linshixingyou/Mononoke/localhost/TikTok.list
+  Bahamut:
+    behavior: classical
+    format: text
+    interval: 86400
+    url: https://raw.githubusercontent.com/linshixingyou/Mononoke/localhost/Bahamut.list
+  BiliIntl:
+    behavior: classical
+    format: text
+    interval: 86400
+    url: https://raw.githubusercontent.com/linshixingyou/Mononoke/localhost/BiliBiliIntl.list
+  bilibili:
+    behavior: classical
+    format: text
+    interval: 86400
+    url: https://raw.githubusercontent.com/linshixingyou/Mononoke/localhost/bilibili.list
+  Spotify:
+    behavior: classical
+    format: text
+    interval: 86400
+    url: https://raw.githubusercontent.com/linshixingyou/Mononoke/localhost/Spotify.list
+  NetEaseMusic:
+    behavior: classical
+    format: text
+    interval: 86400
+    url: https://raw.githubusercontent.com/linshixingyou/Mononoke/localhost/NetEaseMusic.list
+  ProxyMedia:
+    behavior: classical
+    format: text
+    interval: 86400
+    url: https://raw.githubusercontent.com/linshixingyou/Mononoke/localhost/ProxyMedia.list
+  WeChat:
+    behavior: classical
+    format: text
+    interval: 86400
+    url: https://raw.githubusercontent.com/linshixingyou/Mononoke/localhost/WeChat.list
+  Telegram:
+    behavior: classical
+    format: text
+    interval: 86400
+    url: https://raw.githubusercontent.com/linshixingyou/Mononoke/localhost/Telegram.list
+  GitHub:
+    behavior: classical
+    format: text
+    interval: 86400
+    url: https://raw.githubusercontent.com/linshixingyou/Mononoke/localhost/Github.list
+  Twitter:
+    behavior: classical
+    format: text
+    interval: 86400
+    url: https://raw.githubusercontent.com/linshixingyou/Mononoke/localhost/Twitter.list
+  Google:
+    behavior: classical
+    format: text
+    interval: 86400
+    url: https://raw.githubusercontent.com/linshixingyou/Mononoke/localhost/Google.list
+  Microsoft:
+    behavior: classical
+    format: text
+    interval: 86400
+    url: https://raw.githubusercontent.com/linshixingyou/Mononoke/localhost/Microsoft.list
+  Games:
+    behavior: classical
+    format: text
+    interval: 86400
+    url: https://raw.githubusercontent.com/linshixingyou/Mononoke/localhost/Game.list
+  ProxyGFW:
+    behavior: classical
+    format: text
+    interval: 86400
+    url: https://raw.githubusercontent.com/linshixingyou/Mononoke/localhost/Rules/ProxyGFW.list
+  AppleCN:
+    behavior: classical
+    format: text
+    interval: 86400
+    url: https://raw.githubusercontent.com/linshixingyou/Mononoke/localhost/AppleCN.list
+  AppleServers:
+    behavior: classical
+    format: text
+    interval: 86400
+    url: https://raw.githubusercontent.com/linshixingyou/Mononoke/localhost/AppleServers.list
+  CN_Mainland:
+    behavior: classical
+    format: text
+    interval: 86400
+    url: https://raw.githubusercontent.com/linshixingyou/Mononoke/localhost/ChinaDomain.list
+  LAN:
+    behavior: classical
+    format: text
+    interval: 86400
+    url: https://raw.githubusercontent.com/linshixingyou/Mononoke/localhost/Lan.list
+proxies:
+  - auth: "3286b74d-a633-401f-8e22-6e8e61c5f1d9"
+    fast-open: false
+    name: VPS无限
+    port: 5555
+    server: 45.192.195.52
+    type: hysteria2
+    alpn:
+      - h3
+    down-speed: 1000
+    skip-cert-verify: true
+    up-speed: 1000
+  - name: 保底
+    password: 0993c0f8-9e29-32b1-810c-65f448c5aa04
+    port: 41510
+    server: cave-hk.kunlun04dns.com
+    servername: openssl.nodesni.com
+    skip-cert-verify: true
+    sni: openssl.nodesni.com
+    type: trojan
