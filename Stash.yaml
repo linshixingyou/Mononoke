@@ -501,12 +501,12 @@ rule-providers:
     interval: 86400
     url: https://raw.githubusercontent.com/linshixingyou/Mononoke/localhost/RejectIP.list
   AI:
-    behavior: classical
+    behavior: domain
     format: text
     interval: 86400
     url: https://raw.githubusercontent.com/linshixingyou/Mononoke/localhost/AI.list
   YouTube:
-    behavior: classical
+    behavior: domain
     format: text
     interval: 86400
     url: https://raw.githubusercontent.com/linshixingyou/Mononoke/localhost/YouTube.list
@@ -516,7 +516,7 @@ rule-providers:
     interval: 86400
     url: https://raw.githubusercontent.com/linshixingyou/Mononoke/localhost/Netflix.list
   Disney+:
-    behavior: classical
+    behavior: domain
     format: text
     interval: 86400
     url: https://raw.githubusercontent.com/linshixingyou/Mononoke/localhost/Disney.list
@@ -526,22 +526,22 @@ rule-providers:
     interval: 86400
     url: https://raw.githubusercontent.com/linshixingyou/Mononoke/localhost/Emby.list
   TikTok:
-    behavior: classical
+    behavior: domain
     format: text
     interval: 86400
     url: https://raw.githubusercontent.com/linshixingyou/Mononoke/localhost/TikTok.list
   Bahamut:
-    behavior: classical
+    behavior: domain
     format: text
     interval: 86400
     url: https://raw.githubusercontent.com/linshixingyou/Mononoke/localhost/Bahamut.list
   BiliIntl:
-    behavior: classical
+    behavior: domain
     format: text
     interval: 86400
     url: https://raw.githubusercontent.com/linshixingyou/Mononoke/localhost/BiliBiliIntl.list
   bilibili:
-    behavior: classical
+    behavior: domain
     format: text
     interval: 86400
     url: https://raw.githubusercontent.com/linshixingyou/Mononoke/localhost/bilibili.list
@@ -571,12 +571,12 @@ rule-providers:
     interval: 86400
     url: https://raw.githubusercontent.com/linshixingyou/Mononoke/localhost/Telegram.list
   GitHub:
-    behavior: classical
+    behavior: domain
     format: text
     interval: 86400
     url: https://raw.githubusercontent.com/linshixingyou/Mononoke/localhost/Github.list
   Twitter:
-    behavior: classical
+    behavior: domain
     format: text
     interval: 86400
     url: https://raw.githubusercontent.com/linshixingyou/Mononoke/localhost/Twitter.list
@@ -586,7 +586,7 @@ rule-providers:
     interval: 86400
     url: https://raw.githubusercontent.com/linshixingyou/Mononoke/localhost/Google.list
   Microsoft:
-    behavior: classical
+    behavior: domain
     format: text
     interval: 86400
     url: https://raw.githubusercontent.com/linshixingyou/Mononoke/localhost/Microsoft.list
@@ -596,22 +596,27 @@ rule-providers:
     interval: 86400
     url: https://raw.githubusercontent.com/linshixingyou/Mononoke/localhost/Game.list
   ProxyGFW:
-    behavior: classical
+    behavior: domain
     format: text
     interval: 86400
     url: https://raw.githubusercontent.com/linshixingyou/Mononoke/localhost/Rules/ProxyGFW.list
+  ProxyGFWIP:
+    behavior: ipcidr
+    format: text
+    interval: 86400
+    url: https://raw.githubusercontent.com/linshixingyou/Mononoke/localhost/Rules/ProxyGFWIP.list
   AppleCN:
-    behavior: classical
+    behavior: domain
     format: text
     interval: 86400
     url: https://raw.githubusercontent.com/linshixingyou/Mononoke/localhost/AppleCN.list
   AppleServers:
-    behavior: classical
+    behavior: domain
     format: text
     interval: 86400
     url: https://raw.githubusercontent.com/linshixingyou/Mononoke/localhost/AppleServers.list
   CN_Mainland:
-    behavior: classical
+    behavior: domain
     format: text
     interval: 86400
     url: https://raw.githubusercontent.com/linshixingyou/Mononoke/localhost/ChinaDomain.list
