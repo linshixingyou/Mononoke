@@ -38,7 +38,9 @@ proxy-groups:
       - Kitty
       - PKU
       - VPS无限
-      - 保底
+      - 云洞保底
+      - ipfoxyipfoxyipfoxy
+      - 喵帕斯
   - name: 云洞
     type: select
     use:
