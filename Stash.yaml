@@ -75,6 +75,7 @@ proxy-groups:
       - pedagou
       - 手动
       - Kitty
+      - 喵帕斯
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Blackhole.png
   - icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Available_1.png
     name: Chain
