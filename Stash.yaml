@@ -613,7 +613,7 @@ rule-providers:
     behavior: ipcidr
     format: text
     interval: 86400
-    url: https://raw.githubusercontent.com/linshixingyou/Mononoke/localhost/Rules/ProxyGFWIP.list
+    url: https://raw.githubusercontent.com/linshixingyou/Mononoke/localhost/ProxyGFWIP.list
   AppleCN:
     behavior: domain
     format: text
