@@ -31,7 +31,7 @@ proxy-providers:
     interval: 86400
     url: https://peige.dpkj.qzz.io/dapei
   GitHubProxy:
-    interval: 86400
+    interval: 40
     url: https://raw.githubusercontent.com/linshixingyou/Mononoke/localhost/Local
 proxy-groups:
   - icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Rocket.png
