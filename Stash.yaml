@@ -660,12 +660,10 @@ proxies:
     type: vless
     password: 4836e8e2-b0b5-4d01-ac14-79ef5319192f
     tls: true
-    flag: CDN
-    ping: 7
     uuid: 4836e8e2-b0b5-4d01-ac14-79ef5319192f
     flow: xtls-rprx-vision
     servername: apple.com 
-    client-fingerprint: chrome, 
+    client-fingerprint: chrome
     public-key: AvtO9YC4L4eCScsYqJZLDNhVsljkXIaTsD_tKSHLNmM
     short-id: 44843487
 
