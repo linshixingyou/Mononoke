@@ -486,15 +486,20 @@ rules:
   - MATCH,Final
 rule-providers:
   Direct:
-    behavior: classical
+    behavior: domain
     format: text
     interval: 86400
     url: https://raw.githubusercontent.com/linshixingyou/Mononoke/localhost/Direct.list
   Reject:
-    behavior: classical
+    behavior: domain
     format: text
     interval: 86400
     url: https://raw.githubusercontent.com/linshixingyou/Mononoke/localhost/Reject.list
+  RejectIP:
+    behavior: ipcidr
+    format: text
+    interval: 86400
+    url: https://raw.githubusercontent.com/linshixingyou/Mononoke/localhost/RejectIP.list
   AI:
     behavior: classical
     format: text
