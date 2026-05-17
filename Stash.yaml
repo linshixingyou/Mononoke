@@ -637,7 +637,7 @@ proxies:
     down-speed: 1000
     skip-cert-verify: true
     up-speed: 1000
-  - name: 保底
+  - name: 云洞保底
     password: 0993c0f8-9e29-32b1-810c-65f448c5aa04
     port: 41510
     server: cave-hk.kunlun04dns.com
@@ -659,3 +659,22 @@ proxies:
     type: socks5
     user: customer-cnt1OMFrok-cc-NG-st-Fct-sessid-1778777321_10000
     password: LzPZfYvjGMAAkMC
+  - name: 喵帕斯
+    port: 12345
+    server: 102.205.44.32
+    type: VLESS
+    xtls: 2
+    method: none
+    obfs: none
+    publicKey: AvtO9YC4L4eCScsYqJZLDNhVsljkXIaTsD_tKSHLNmM
+    peer: apple.com
+    weight: 1778814645
+    title: vl-reality-ser634656983095
+    proto: none
+    password: 4836e8e2-b0b5-4d01-ac14-79ef5319192f
+    shortId: '44843487'
+    tls: true
+    flag: CDN
+    ping: 7
+    uuid: A8406A3F-BAE7-4C7B-A56E-2465B43F8622
+
