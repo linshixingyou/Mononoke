@@ -1,0 +1,416 @@
+#SUBSCRIBED http://script.hub/file/_start_/http://local.text/_end_/local.list?type=rule-set&target=stash-rule-set&del=true&jqEnabled=true&localtext=proxy-providers%3A%0A%20%20Provider-1%3A%0A%20%20%20%20interval%3A%20600%0A%20%20%20%20url%3A%20http%3A%2F%2Fsub.store%2Fdownload%2FProvider-1%3Ftarget%3DStash%0A%20%20Provider-2%3A%0A%20%20%20%20interval%3A%20600%0A%20%20%20%20url%3A%20http%3A%2F%2Fsub.store%2Fdownload%2FProvider-2%3Ftarget%3DStash%0A%20%20Provider-3%3A%0A%20%20%20%20interval%3A%20600%0A%20%20%20%20url%3A%20http%3A%2F%2Fsub.store%2Fdownload%2FProvider-3%3Ftarget%3DStash%0A%20%20Provider-4%3A%0A%20%20%20%20interval%3A%20600%0A%20%20%20%20url%3A%20http%3A%2F%2Fsub.store%2Fdownload%2FProvider-4%3Ftarget%3DStash%0Amode%3A%20rule%0Adns%3A%0A%20%20default-nameserver%3A%0A%20%20%20%20-%20223.5.5.5%0A%20%20%20%20-%20119.28.28.28%0A%20%20%20%20-%20system%0A%20%20nameserver%3A%0A%20%20%20%20-%20https%3A%2F%2F1.12.12.12%2Fdns-query%0A%20%20%20%20-%20https%3A%2F%2F223.5.5.5%2Fdns-query%0Aproxies%3A%0A%20%20-%20name%3A%20%E7%9B%B4%E8%BF%9E%0A%20%20%20%20type%3A%20DIRECT%0A%20%20%20%20udp%3A%20true%0Aproxy-groups%3A%0A%20%20-%20name%3A%20%E9%BB%98%E8%AE%A4%E8%8A%82%E7%82%B9%0A%20%20%20%20icon%3A%20https%3A%2F%2Ffastly.jsdelivr.net%2Fgh%2FKoolson%2FQure%2FIconSet%2FColor%2FProxy.png%0A%20%20%20%20type%3A%20select%0A%20%20%20%20proxies%3A%0A%20%20%20%20%20%20-%20%E8%87%AA%E5%8A%A8%E9%80%89%E6%8B%A9%0A%20%20%20%20%20%20-%20%E7%9B%B4%E8%BF%9E%0A%20%20%20%20%20%20-%20HK%20%E9%A6%99%E6%B8%AF%0A%20%20%20%20%20%20-%20TW%20%E5%8F%B0%E6%B9%BE%E7%9C%81%0A%20%20%20%20%20%20-%20JP%20%E6%97%A5%E6%9C%AC%0A%20%20%20%20%20%20-%20KR%20%E9%9F%A9%E5%9B%BD%0A%20%20%20%20%20%20-%20US%20%E7%BE%8E%E5%9B%BD%0A%20%20%20%20%20%20-%20SG%20%E6%96%B0%E5%8A%A0%E5%9D%A1%0A%20%20%20%20%20%20%23%20%20%20%20%20%20-%20TK%20%E5%9C%9F%E8%80%B3%E5%85%B6%0A%20%20%20%20%20%20-%20%E5%85%B6%E5%AE%83%E5%9C%B0%E5%8C%BA%0A%20%20%20%20%20%20-%20%E5%85%A8%E9%83%A8%E8%8A%82%E7%82%B9%0A%20%20%23%20%E5%8A%9F%E8%83%BD%E5%88%86%E7%BB%84%0A%20%20-%20name%3A%20OpenAI%0A%20%20%20%20icon%3A%20https%3A%2F%2Ffastly.jsdelivr.net%2Fgh%2FKoolson%2FQure%2FIconSet%2FColor%2FChatGPT.png%0A%20%20%20%20type%3A%20select%0A%20%20%20%20proxies%3A%0A%20%20%20%20%20%20-%20%E9%BB%98%E8%AE%A4%E8%8A%82%E7%82%B9%0A%20%20%20%20%20%20-%20HK%20%E9%A6%99%E6%B8%AF%0A%20%20%20%20%20%20-%20TW%20%E5%8F%B0%E6%B9%BE%E7%9C%81%0A%20%20%20%20%20%20-%20JP%20%E6%97%A5%E6%9C%AC%0A%20%20%20%20%20%20-%20KR%20%E9%9F%A9%E5%9B%BD%0A%20%20%20%20%20%20-%20US%20%E7%BE%8E%E5%9B%BD%0A%20%20%20%20%20%20-%20SG%20%E6%96%B0%E5%8A%A0%E5%9D%A1%0A%20%20%20%20%20%20%23%20%20%20%20%20%20-%20TK%20%E5%9C%9F%E8%80%B3%E5%85%B6%0A%20%20%20%20%20%20-%20%E5%85%B6%E5%AE%83%E5%9C%B0%E5%8C%BA%0A%20%20%20%20%20%20-%20%E5%85%A8%E9%83%A8%E8%8A%82%E7%82%B9%0A%20%20%20%20%20%20-%20%E8%87%AA%E5%8A%A8%E9%80%89%E6%8B%A9%0A%20%20%20%20%20%20-%20%E7%9B%B4%E8%BF%9E%0A%20%20-%20name%3A%20Google%0A%20%20%20%20icon%3A%20https%3A%2F%2Ffastly.jsdelivr.net%2Fgh%2FKoolson%2FQure%2FIconSet%2FColor%2FGoogle_Search.png%0A%20%20%20%20type%3A%20select%0A%20%20%20%20proxies%3A%0A%20%20%20%20%20%20-%20%E9%BB%98%E8%AE%A4%E8%8A%82%E7%82%B9%0A%20%20%20%20%20%20-%20HK%20%E9%A6%99%E6%B8%AF%0A%20%20%20%20%20%20-%20TW%20%E5%8F%B0%E6%B9%BE%E7%9C%81%0A%20%20%20%20%20%20-%20JP%20%E6%97%A5%E6%9C%AC%0A%20%20%20%20%20%20-%20KR%20%E9%9F%A9%E5%9B%BD%0A%20%20%20%20%20%20-%20US%20%E7%BE%8E%E5%9B%BD%0A%20%20%20%20%20%20-%20SG%20%E6%96%B0%E5%8A%A0%E5%9D%A1%0A%20%20%20%20%20%20%23%20%20%20%20%20%20-%20TK%20%E5%9C%9F%E8%80%B3%E5%85%B6%0A%20%20%20%20%20%20-%20%E5%85%B6%E5%AE%83%E5%9C%B0%E5%8C%BA%0A%20%20%20%20%20%20-%20%E5%85%A8%E9%83%A8%E8%8A%82%E7%82%B9%0A%20%20%20%20%20%20-%20%E8%87%AA%E5%8A%A8%E9%80%89%E6%8B%A9%0A%20%20%20%20%20%20-%20%E7%9B%B4%E8%BF%9E%0A%20%20-%20name%3A%20Apple%0A%20%20%20%20icon%3A%20https%3A%2F%2Ffastly.jsdelivr.net%2Fgh%2FKoolson%2FQure%2FIconSet%2FColor%2FApple.png%0A%20%20%20%20type%3A%20select%0A%20%20%20%20proxies%3A%0A%20%20%20%20%20%20-%20%E9%BB%98%E8%AE%A4%E8%8A%82%E7%82%B9%0A%20%20%20%20%20%20-%20HK%20%E9%A6%99%E6%B8%AF%0A%20%20%20%20%20%20-%20TW%20%E5%8F%B0%E6%B9%BE%E7%9C%81%0A%20%20%20%20%20%20-%20JP%20%E6%97%A5%E6%9C%AC%0A%20%20%20%20%20%20-%20KR%20%E9%9F%A9%E5%9B%BD%0A%20%20%20%20%20%20-%20US%20%E7%BE%8E%E5%9B%BD%0A%20%20%20%20%20%20-%20SG%20%E6%96%B0%E5%8A%A0%E5%9D%A1%0A%20%20%20%20%20%20%23%20%20%20%20%20%20-%20TK%20%E5%9C%9F%E8%80%B3%E5%85%B6%0A%20%20%20%20%20%20-%20%E5%85%B6%E5%AE%83%E5%9C%B0%E5%8C%BA%0A%20%20%20%20%20%20-%20%E5%85%A8%E9%83%A8%E8%8A%82%E7%82%B9%0A%20%20%20%20%20%20-%20%E8%87%AA%E5%8A%A8%E9%80%89%E6%8B%A9%0A%20%20%20%20%20%20-%20%E7%9B%B4%E8%BF%9E%0A%20%20-%20name%3A%20Telegram%0A%20%20%20%20icon%3A%20https%3A%2F%2Ffastly.jsdelivr.net%2Fgh%2FKoolson%2FQure%2FIconSet%2FColor%2FTelegram.png%0A%20%20%20%20type%3A%20select%0A%20%20%20%20proxies%3A%0A%20%20%20%20%20%20-%20%E9%BB%98%E8%AE%A4%E8%8A%82%E7%82%B9%0A%20%20%20%20%20%20-%20HK%20%E9%A6%99%E6%B8%AF%0A%20%20%20%20%20%20-%20TW%20%E5%8F%B0%E6%B9%BE%E7%9C%81%0A%20%20%20%20%20%20-%20JP%20%E6%97%A5%E6%9C%AC%0A%20%20%20%20%20%20-%20KR%20%E9%9F%A9%E5%9B%BD%0A%20%20%20%20%20%20-%20US%20%E7%BE%8E%E5%9B%BD%0A%20%20%20%20%20%20-%20SG%20%E6%96%B0%E5%8A%A0%E5%9D%A1%0A%20%20%20%20%20%20%23%20%20%20%20%20%20-%20TK%20%E5%9C%9F%E8%80%B3%E5%85%B6%0A%20%20%20%20%20%20-%20%E5%85%B6%E5%AE%83%E5%9C%B0%E5%8C%BA%0A%20%20%20%20%20%20-%20%E5%85%A8%E9%83%A8%E8%8A%82%E7%82%B9%0A%20%20%20%20%20%20-%20%E8%87%AA%E5%8A%A8%E9%80%89%E6%8B%A9%0A%20%20%20%20%20%20-%20%E7%9B%B4%E8%BF%9E%0A%20%20-%20name%3A%20Microsoft%0A%20%20%20%20icon%3A%20https%3A%2F%2Ffastly.jsdelivr.net%2Fgh%2FKoolson%2FQure%2FIconSet%2FColor%2FMicrosoft.png%0A%20%20%20%20type%3A%20select%0A%20%20%20%20proxies%3A%0A%20%20%20%20%20%20-%20%E9%BB%98%E8%AE%A4%E8%8A%82%E7%82%B9%0A%20%20%20%20%20%20-%20HK%20%E9%A6%99%E6%B8%AF%0A%20%20%20%20%20%20-%20TW%20%E5%8F%B0%E6%B9%BE%E7%9C%81%0A%20%20%20%20%20%20-%20JP%20%E6%97%A5%E6%9C%AC%0A%20%20%20%20%20%20-%20KR%20%E9%9F%A9%E5%9B%BD%0A%20%20%20%20%20%20-%20US%20%E7%BE%8E%E5%9B%BD%0A%20%20%20%20%20%20-%20SG%20%E6%96%B0%E5%8A%A0%E5%9D%A1%0A%20%20%20%20%20%20%23%20%20%20%20%20%20-%20TK%20%E5%9C%9F%E8%80%B3%E5%85%B6%0A%20%20%20%20%20%20-%20%E5%85%B6%E5%AE%83%E5%9C%B0%E5%8C%BA%0A%20%20%20%20%20%20-%20%E5%85%A8%E9%83%A8%E8%8A%82%E7%82%B9%0A%20%20%20%20%20%20-%20%E8%87%AA%E5%8A%A8%E9%80%89%E6%8B%A9%0A%20%20%20%20%20%20-%20%E7%9B%B4%E8%BF%9E%0A%20%20-%20name%3A%20%E5%93%94%E5%93%A9%E4%B8%9C%E5%8D%97%E4%BA%9A%0A%20%20%20%20icon%3A%20https%3A%2F%2Ffastly.jsdelivr.net%2Fgh%2FKoolson%2FQure%2FIconSet%2FColor%2Fbilibili_3.png%0A%20%20%20%20type%3A%20select%0A%20%20%20%20proxies%3A%0A%20%20%20%20%20%20-%20%E9%BB%98%E8%AE%A4%E8%8A%82%E7%82%B9%0A%20%20%20%20%20%20-%20HK%20%E9%A6%99%E6%B8%AF%0A%20%20%20%20%20%20-%20TW%20%E5%8F%B0%E6%B9%BE%E7%9C%81%0A%20%20%20%20%20%20-%20JP%20%E6%97%A5%E6%9C%AC%0A%20%20%20%20%20%20-%20KR%20%E9%9F%A9%E5%9B%BD%0A%20%20%20%20%20%20-%20US%20%E7%BE%8E%E5%9B%BD%0A%20%20%20%20%20%20-%20SG%20%E6%96%B0%E5%8A%A0%E5%9D%A1%0A%20%20%20%20%20%20%23%20%20%20%20%20%20-%20TK%20%E5%9C%9F%E8%80%B3%E5%85%B6%0A%20%20%20%20%20%20-%20%E5%85%B6%E5%AE%83%E5%9C%B0%E5%8C%BA%0A%20%20%20%20%20%20-%20%E5%85%A8%E9%83%A8%E8%8A%82%E7%82%B9%0A%20%20%20%20%20%20-%20%E8%87%AA%E5%8A%A8%E9%80%89%E6%8B%A9%0A%20%20%20%20%20%20-%20%E7%9B%B4%E8%BF%9E%0A%20%20-%20name%3A%20%E5%B7%B4%E5%93%88%E5%A7%86%E7%89%B9%0A%20%20%20%20icon%3A%20https%3A%2F%2Ffastly.jsdelivr.net%2Fgh%2FKoolson%2FQure%2FIconSet%2FColor%2FBahamut.png%0A%20%20%20%20type%3A%20select%0A%20%20%20%20proxies%3A%0A%20%20%20%20%20%20-%20%E9%BB%98%E8%AE%A4%E8%8A%82%E7%82%B9%0A%20%20%20%20%20%20-%20HK%20%E9%A6%99%E6%B8%AF%0A%20%20%20%20%20%20-%20TW%20%E5%8F%B0%E6%B9%BE%E7%9C%81%0A%20%20%20%20%20%20-%20JP%20%E6%97%A5%E6%9C%AC%0A%20%20%20%20%20%20-%20KR%20%E9%9F%A9%E5%9B%BD%0A%20%20%20%20%20%20-%20US%20%E7%BE%8E%E5%9B%BD%0A%20%20%20%20%20%20-%20SG%20%E6%96%B0%E5%8A%A0%E5%9D%A1%0A%20%20%20%20%20%20%23%20%20%20%20%20%20-%20TK%20%E5%9C%9F%E8%80%B3%E5%85%B6%0A%20%20%20%20%20%20-%20%E5%85%B6%E5%AE%83%E5%9C%B0%E5%8C%BA%0A%20%20%20%20%20%20-%20%E5%85%A8%E9%83%A8%E8%8A%82%E7%82%B9%0A%20%20%20%20%20%20-%20%E8%87%AA%E5%8A%A8%E9%80%89%E6%8B%A9%0A%20%20%20%20%20%20-%20%E7%9B%B4%E8%BF%9E%0A%20%20-%20name%3A%20YouTube%0A%20%20%20%20icon%3A%20https%3A%2F%2Ffastly.jsdelivr.net%2Fgh%2FKoolson%2FQure%2FIconSet%2FColor%2FYouTube.png%0A%20%20%20%20type%3A%20select%0A%20%20%20%20proxies%3A%0A%20%20%20%20%20%20-%20%E9%BB%98%E8%AE%A4%E8%8A%82%E7%82%B9%0A%20%20%20%20%20%20-%20HK%20%E9%A6%99%E6%B8%AF%0A%20%20%20%20%20%20-%20TW%20%E5%8F%B0%E6%B9%BE%E7%9C%81%0A%20%20%20%20%20%20-%20JP%20%E6%97%A5%E6%9C%AC%0A%20%20%20%20%20%20-%20KR%20%E9%9F%A9%E5%9B%BD%0A%20%20%20%20%20%20-%20US%20%E7%BE%8E%E5%9B%BD%0A%20%20%20%20%20%20-%20SG%20%E6%96%B0%E5%8A%A0%E5%9D%A1%0A%20%20%20%20%20%20%23%20%20%20%20%20%20-%20TK%20%E5%9C%9F%E8%80%B3%E5%85%B6%0A%20%20%20%20%20%20-%20%E5%85%B6%E5%AE%83%E5%9C%B0%E5%8C%BA%0A%20%20%20%20%20%20-%20%E5%85%A8%E9%83%A8%E8%8A%82%E7%82%B9%0A%20%20%20%20%20%20-%20%E8%87%AA%E5%8A%A8%E9%80%89%E6%8B%A9%0A%20%20%20%20%20%20-%20%E7%9B%B4%E8%BF%9E%0A%20%20-%20name%3A%20NETFLIX%0A%20%20%20%20icon%3A%20https%3A%2F%2Ffastly.jsdelivr.net%2Fgh%2FKoolson%2FQure%2FIconSet%2FColor%2FNetflix.png%0A%20%20%20%20type%3A%20select%0A%20%20%20%20proxies%3A%0A%20%20%20%20%20%20-%20%E9%BB%98%E8%AE%A4%E8%8A%82%E7%82%B9%0A%20%20%20%20%20%20-%20HK%20%E9%A6%99%E6%B8%AF%0A%20%20%20%20%20%20-%20TW%20%E5%8F%B0%E6%B9%BE%E7%9C%81%0A%20%20%20%20%20%20-%20JP%20%E6%97%A5%E6%9C%AC%0A%20%20%20%20%20%20-%20KR%20%E9%9F%A9%E5%9B%BD%0A%20%20%20%20%20%20-%20US%20%E7%BE%8E%E5%9B%BD%0A%20%20%20%20%20%20-%20SG%20%E6%96%B0%E5%8A%A0%E5%9D%A1%0A%20%20%20%20%20%20%23%20%20%20%20%20%20-%20TK%20%E5%9C%9F%E8%80%B3%E5%85%B6%0A%20%20%20%20%20%20-%20%E5%85%B6%E5%AE%83%E5%9C%B0%E5%8C%BA%0A%20%20%20%20%20%20-%20%E5%85%A8%E9%83%A8%E8%8A%82%E7%82%B9%0A%20%20%20%20%20%20-%20%E8%87%AA%E5%8A%A8%E9%80%89%E6%8B%A9%0A%20%20%20%20%20%20-%20%E7%9B%B4%E8%BF%9E%0A%20%20-%20name%3A%20Spotify%0A%20%20%20%20icon%3A%20https%3A%2F%2Ffastly.jsdelivr.net%2Fgh%2FKoolson%2FQure%2FIconSet%2FColor%2FSpotify.png%0A%20%20%20%20type%3A%20select%0A%20%20%20%20proxies%3A%0A%20%20%20%20%20%20-%20%E9%BB%98%E8%AE%A4%E8%8A%82%E7%82%B9%0A%20%20%20%20%20%20-%20HK%20%E9%A6%99%E6%B8%AF%0A%20%20%20%20%20%20-%20TW%20%E5%8F%B0%E6%B9%BE%E7%9C%81%0A%20%20%20%20%20%20-%20JP%20%E6%97%A5%E6%9C%AC%0A%20%20%20%20%20%20-%20KR%20%E9%9F%A9%E5%9B%BD%0A%20%20%20%20%20%20-%20US%20%E7%BE%8E%E5%9B%BD%0A%20%20%20%20%20%20-%20SG%20%E6%96%B0%E5%8A%A0%E5%9D%A1%0A%20%20%20%20%20%20%23%20%20%20%20%20%20-%20TK%20%E5%9C%9F%E8%80%B3%E5%85%B6%0A%20%20%20%20%20%20-%20%E5%85%B6%E5%AE%83%E5%9C%B0%E5%8C%BA%0A%20%20%20%20%20%20-%20%E5%85%A8%E9%83%A8%E8%8A%82%E7%82%B9%0A%20%20%20%20%20%20-%20%E8%87%AA%E5%8A%A8%E9%80%89%E6%8B%A9%0A%20%20%20%20%20%20-%20%E7%9B%B4%E8%BF%9E%0A%20%20-%20name%3A%20Disney%2B%0A%20%20%20%20icon%3A%20https%3A%2F%2Ffastly.jsdelivr.net%2Fgh%2FKoolson%2FQure%2FIconSet%2FColor%2FDisney%2B.png%0A%20%20%20%20type%3A%20select%0A%20%20%20%20proxies%3A%0A%20%20%20%20%20%20-%20%E9%BB%98%E8%AE%A4%E8%8A%82%E7%82%B9%0A%20%20%20%20%20%20-%20HK%20%E9%A6%99%E6%B8%AF%0A%20%20%20%20%20%20-%20TW%20%E5%8F%B0%E6%B9%BE%E7%9C%81%0A%20%20%20%20%20%20-%20JP%20%E6%97%A5%E6%9C%AC%0A%20%20%20%20%20%20-%20KR%20%E9%9F%A9%E5%9B%BD%0A%20%20%20%20%20%20-%20US%20%E7%BE%8E%E5%9B%BD%0A%20%20%20%20%20%20-%20SG%20%E6%96%B0%E5%8A%A0%E5%9D%A1%0A%20%20%20%20%20%20%23%20%20%20%20%20%20-%20TK%20%E5%9C%9F%E8%80%B3%E5%85%B6%0A%20%20%20%20%20%20-%20%E5%85%B6%E5%AE%83%E5%9C%B0%E5%8C%BA%0A%20%20%20%20%20%20-%20%E5%85%A8%E9%83%A8%E8%8A%82%E7%82%B9%0A%20%20%20%20%20%20-%20%E8%87%AA%E5%8A%A8%E9%80%89%E6%8B%A9%0A%20%20%20%20%20%20-%20%E7%9B%B4%E8%BF%9E%0A%20%20-%20name%3A%20TikTok%0A%20%20%20%20icon%3A%20https%3A%2F%2Ffastly.jsdelivr.net%2Fgh%2FKoolson%2FQure%2FIconSet%2FColor%2FTikTok.png%0A%20%20%20%20type%3A%20select%0A%20%20%20%20proxies%3A%0A%20%20%20%20%20%20-%20%E9%BB%98%E8%AE%A4%E8%8A%82%E7%82%B9%0A%20%20%20%20%20%20-%20HK%20%E9%A6%99%E6%B8%AF%0A%20%20%20%20%20%20-%20TW%20%E5%8F%B0%E6%B9%BE%E7%9C%81%0A%20%20%20%20%20%20-%20JP%20%E6%97%A5%E6%9C%AC%0A%20%20%20%20%20%20-%20KR%20%E9%9F%A9%E5%9B%BD%0A%20%20%20%20%20%20-%20US%20%E7%BE%8E%E5%9B%BD%0A%20%20%20%20%20%20-%20SG%20%E6%96%B0%E5%8A%A0%E5%9D%A1%0A%20%20%20%20%20%20%23%20%20%20%20%20%20-%20TK%20%E5%9C%9F%E8%80%B3%E5%85%B6%0A%20%20%20%20%20%20-%20%E5%85%B6%E5%AE%83%E5%9C%B0%E5%8C%BA%0A%20%20%20%20%20%20-%20%E5%85%A8%E9%83%A8%E8%8A%82%E7%82%B9%0A%20%20%20%20%20%20-%20%E8%87%AA%E5%8A%A8%E9%80%89%E6%8B%A9%0A%20%20%20%20%20%20-%20%E7%9B%B4%E8%BF%9E%0A%20%20-%20name%3A%20Steam%0A%20%20%20%20icon%3A%20https%3A%2F%2Ffastly.jsdelivr.net%2Fgh%2FKoolson%2FQure%2FIconSet%2FColor%2FSteam.png%0A%20%20%20%20type%3A%20select%0A%20%20%20%20proxies%3A%0A%20%20%20%20%20%20-%20%E9%BB%98%E8%AE%A4%E8%8A%82%E7%82%B9%0A%20%20%20%20%20%20-%20HK%20%E9%A6%99%E6%B8%AF%0A%20%20%20%20%20%20-%20TW%20%E5%8F%B0%E6%B9%BE%E7%9C%81%0A%20%20%20%20%20%20-%20JP%20%E6%97%A5%E6%9C%AC%0A%20%20%20%20%20%20-%20KR%20%E9%9F%A9%E5%9B%BD%0A%20%20%20%20%20%20-%20US%20%E7%BE%8E%E5%9B%BD%0A%20%20%20%20%20%20-%20SG%20%E6%96%B0%E5%8A%A0%E5%9D%A1%0A%20%20%20%20%20%20%23%20%20%20%20%20%20-%20TK%20%E5%9C%9F%E8%80%B3%E5%85%B6%0A%20%20%20%20%20%20-%20%E5%85%B6%E5%AE%83%E5%9C%B0%E5%8C%BA%0A%20%20%20%20%20%20-%20%E5%85%A8%E9%83%A8%E8%8A%82%E7%82%B9%0A%20%20%20%20%20%20-%20%E8%87%AA%E5%8A%A8%E9%80%89%E6%8B%A9%0A%20%20%20%20%20%20-%20%E7%9B%B4%E8%BF%9E%0A%20%20-%20name%3A%20%E5%9B%BD%E5%86%85%E7%BD%91%E7%AB%99%0A%20%20%20%20icon%3A%20https%3A%2F%2Ffastly.jsdelivr.net%2Fgh%2FKoolson%2FQure%2FIconSet%2FColor%2FStreamingCN.png%0A%20%20%20%20type%3A%20select%0A%20%20%20%20proxies%3A%0A%20%20%20%20%20%20-%20%E7%9B%B4%E8%BF%9E%0A%20%20%20%20%20%20-%20%E9%BB%98%E8%AE%A4%E8%8A%82%E7%82%B9%0A%20%20%20%20%20%20-%20HK%20%E9%A6%99%E6%B8%AF%0A%20%20%20%20%20%20-%20TW%20%E5%8F%B0%E6%B9%BE%E7%9C%81%0A%20%20%20%20%20%20-%20JP%20%E6%97%A5%E6%9C%AC%0A%20%20%20%20%20%20-%20KR%20%E9%9F%A9%E5%9B%BD%0A%20%20%20%20%20%20-%20US%20%E7%BE%8E%E5%9B%BD%0A%20%20%20%20%20%20-%20SG%20%E6%96%B0%E5%8A%A0%E5%9D%A1%0A%20%20%20%20%20%20%23%20%20%20%20%20%20-%20TK%20%E5%9C%9F%E8%80%B3%E5%85%B6%0A%20%20%20%20%20%20-%20%E5%85%B6%E5%AE%83%E5%9C%B0%E5%8C%BA%0A%20%20%20%20%20%20-%20%E5%85%A8%E9%83%A8%E8%8A%82%E7%82%B9%0A%20%20%20%20%20%20-%20%E8%87%AA%E5%8A%A8%E9%80%89%E6%8B%A9%0A%20%20-%20name%3A%20%E5%85%B6%E4%BB%96%E5%A4%96%E7%BD%91%0A%20%20%20%20icon%3A%20https%3A%2F%2Ffastly.jsdelivr.net%2Fgh%2FKoolson%2FQure%2FIconSet%2FColor%2FStreaming!CN.png%0A%20%20%20%20type%3A%20select%0A%20%20%20%20proxies%3A%0A%20%20%20%20%20%20-%20%E9%BB%98%E8%AE%A4%E8%8A%82%E7%82%B9%0A%20%20%20%20%20%20-%20HK%20%E9%A6%99%E6%B8%AF%0A%20%20%20%20%20%20-%20TW%20%E5%8F%B0%E6%B9%BE%E7%9C%81%0A%20%20%20%20%20%20-%20JP%20%E6%97%A5%E6%9C%AC%0A%20%20%20%20%20%20-%20KR%20%E9%9F%A9%E5%9B%BD%0A%20%20%20%20%20%20-%20US%20%E7%BE%8E%E5%9B%BD%0A%20%20%20%20%20%20-%20SG%20%E6%96%B0%E5%8A%A0%E5%9D%A1%0A%20%20%20%20%20%20%23%20%20%20%20%20%20-%20TK%20%E5%9C%9F%E8%80%B3%E5%85%B6%0A%20%20%20%20%20%20-%20%E5%85%B6%E5%AE%83%E5%9C%B0%E5%8C%BA%0A%20%20%20%20%20%20-%20%E5%85%A8%E9%83%A8%E8%8A%82%E7%82%B9%0A%20%20%20%20%20%20-%20%E8%87%AA%E5%8A%A8%E9%80%89%E6%8B%A9%0A%20%20%20%20%20%20-%20%E7%9B%B4%E8%BF%9E%0A%20%20%23%20%E5%9F%BA%E4%BA%8E%E5%9C%B0%E5%8C%BA%E5%88%86%E7%BB%84%0A%20%20-%20name%3A%20HK%20%E9%A6%99%E6%B8%AF%0A%20%20%20%20icon%3A%20https%3A%2F%2Ffastly.jsdelivr.net%2Fgh%2FKoolson%2FQure%2FIconSet%2FColor%2FHong_Kong.png%0A%20%20%20%20type%3A%20url-test%0A%20%20%20%20include-all%3A%20true%0A%20%20%20%20interval%3A%20120%0A%20%20%20%20tolerance%3A%2050%0A%20%20%20%20lazy%3A%20true%0A%20%20%20%20filter%3A%20%22(%3Fi)(%E6%BE%B3%E9%97%A8%7C%F0%9F%87%B2%F0%9F%87%B4%7C%E6%B8%AF%7C%F0%9F%87%AD%F0%9F%87%B0%7Chk%7Chong)%22%0A%20%20-%20name%3A%20TW%20%E5%8F%B0%E6%B9%BE%E7%9C%81%0A%20%20%20%20icon%3A%20https%3A%2F%2Ffastly.jsdelivr.net%2Fgh%2FKoolson%2FQure%2FIconSet%2FColor%2FChina.png%0A%20%20%20%20type%3A%20url-test%0A%20%20%20%20include-all%3A%20true%0A%20%20%20%20interval%3A%20120%0A%20%20%20%20tolerance%3A%2050%0A%20%20%20%20lazy%3A%20true%0A%20%20%20%20filter%3A%20%22(%3Fi)(%E5%8F%B0%7C%F0%9F%87%B9%F0%9F%87%BC%7C%E6%B9%BE%7Ctw%7Ctaiwan)%22%0A%20%20-%20name%3A%20JP%20%E6%97%A5%E6%9C%AC%0A%20%20%20%20icon%3A%20https%3A%2F%2Ffastly.jsdelivr.net%2Fgh%2FKoolson%2FQure%2FIconSet%2FColor%2FJapan.png%0A%20%20%20%20type%3A%20url-test%0A%20%20%20%20include-all%3A%20true%0A%20%20%20%20interval%3A%20120%0A%20%20%20%20tolerance%3A%2050%0A%20%20%20%20lazy%3A%20true%0A%20%20%20%20filter%3A%20%22(%3Fi)(%E6%97%A5%7C%F0%9F%87%AF%F0%9F%87%B5%7C%E4%B8%9C%E4%BA%AC%7C%E5%A4%A7%E9%98%AA%7Cjp%7Cjapan)%22%0A%20%20-%20name%3A%20KR%20%E9%9F%A9%E5%9B%BD%0A%20%20%20%20icon%3A%20https%3A%2F%2Ffastly.jsdelivr.net%2Fgh%2FKoolson%2FQure%2FIconSet%2FColor%2FKorea.png%0A%20%20%20%20type%3A%20url-test%0A%20%20%20%20include-all%3A%20true%0A%20%20%20%20interval%3A%20120%0A%20%20%20%20tolerance%3A%2050%0A%20%20%20%20lazy%3A%20true%0A%20%20%20%20filter%3A%20%22(%3Fi)(%E9%9F%A9%7C%F0%9F%87%B0%F0%9F%87%B7%7Ckr%7Ckorea)%22%0A%20%20-%20name%3A%20US%20%E7%BE%8E%E5%9B%BD%0A%20%20%20%20icon%3A%20https%3A%2F%2Ffastly.jsdelivr.net%2Fgh%2FKoolson%2FQure%2FIconSet%2FColor%2FUnited_States.png%0A%20%20%20%20type%3A%20url-test%0A%20%20%20%20include-all%3A%20true%0A%20%20%20%20interval%3A%20120%0A%20%20%20%20tolerance%3A%2050%0A%20%20%20%20lazy%3A%20true%0A%20%20%20%20filter%3A%20%22(%3Fi)(%E7%BE%8E%7C%F0%9F%87%BA%F0%9F%87%B2%7Cus%7Cstates%7Camerica)%22%0A%20%20-%20name%3A%20SG%20%E6%96%B0%E5%8A%A0%E5%9D%A1%0A%20%20%20%20icon%3A%20https%3A%2F%2Ffastly.jsdelivr.net%2Fgh%2FKoolson%2FQure%2FIconSet%2FColor%2FSingapore.png%0A%20%20%20%20type%3A%20url-test%0A%20%20%20%20include-all%3A%20true%0A%20%20%20%20interval%3A%20120%0A%20%20%20%20tolerance%3A%2050%0A%20%20%20%20lazy%3A%20true%0A%20%20%20%20filter%3A%20%22(%3Fi)(%E6%96%B0%E5%8A%A0%E5%9D%A1%7C%E5%9D%A1%7C%E7%8B%AE%E5%9F%8E%7C%F0%9F%87%B8%F0%9F%87%AC%7Csg%7Csingapore)%22%0A%20%20%23%20%20-%20name%3A%20TK%20%E5%9C%9F%E8%80%B3%E5%85%B6%0A%20%20%23%20%20%20%20icon%3A%20https%3A%2F%2Ffastly.jsdelivr.net%2Fgh%2FKoolson%2FQure%2FIconSet%2FColor%2FTurkey.png%0A%20%20%23%20%20%20%20type%3A%20select%0A%20%20%23%20%20%20%20include-all%3A%20true%0A%20%20%23%20%20%20%20filter%3A%20%22%E5%9C%9F%E8%80%B3%E5%85%B6%7C%F0%9F%87%B9%F0%9F%87%B7%7CTK%7C(%3Fi)turkey%22%0A%20%20-%20name%3A%20%E5%85%B6%E5%AE%83%E5%9C%B0%E5%8C%BA%0A%20%20%20%20icon%3A%20https%3A%2F%2Ffastly.jsdelivr.net%2Fgh%2FKoolson%2FQure%2FIconSet%2FColor%2FWorld_Map.png%0A%20%20%20%20type%3A%20url-test%0A%20%20%20%20include-all%3A%20true%0A%20%20%20%20interval%3A%20120%0A%20%20%20%20tolerance%3A%2050%0A%20%20%20%20lazy%3A%20true%0A%20%20%20%20filter%3A%20%22(%3Fi)%5E(%3F!.*(%3F%3A%F0%9F%87%AD%F0%9F%87%B0%7C%F0%9F%87%B9%F0%9F%87%BC%7C%F0%9F%87%AF%F0%9F%87%B5%7C%F0%9F%87%B0%F0%9F%87%B7%7C%F0%9F%87%BA%F0%9F%87%B8%7C%F0%9F%87%B8%F0%9F%87%AC%7C%F0%9F%87%A8%F0%9F%87%B3%7C%E6%B8%AF%7Chk%7Chong%7C%E5%8F%B0%7Ctw%7Ctaiwan%7C%E6%97%A5%E6%9C%AC%7Cjp%7Cjapan%7C%E9%9F%A9%7Ckr%7Ckorea%7C%E7%BE%8E%7Cus%7Cstates%7C%E6%96%B0%E5%8A%A0%E5%9D%A1%7Csg%7Csingapore)).*%22%0A%20%20-%20name%3A%20%E8%87%AA%E5%8A%A8%E9%80%89%E6%8B%A9%0A%20%20%20%20icon%3A%20https%3A%2F%2Ffastly.jsdelivr.net%2Fgh%2FKoolson%2FQure%2FIconSet%2FColor%2FAuto.png%0A%20%20%20%20type%3A%20url-test%0A%20%20%20%20include-all%3A%20true%0A%20%20%20%20interval%3A%20120%0A%20%20%20%20tolerance%3A%2050%0A%20%20%20%20lazy%3A%20true%0A%20%20-%20name%3A%20%E5%85%A8%E9%83%A8%E8%8A%82%E7%82%B9%0A%20%20%20%20icon%3A%20https%3A%2F%2Ffastly.jsdelivr.net%2Fgh%2FKoolson%2FQure%2FIconSet%2FColor%2FGlobal.png%0A%20%20%20%20type%3A%20select%0A%20%20%20%20include-all%3A%20true%0Arules%3A%0A%20%20-%20SCRIPT%2Cquic%2CREJECT%0A%20%20-%20RULE-SET%2Ccategory-ai-chat-!cn%2COpenAI%0A%20%20-%20RULE-SET%2Ctelegram%2CTelegram%0A%20%20-%20RULE-SET%2Cbiliintl%2C%E5%93%94%E5%93%A9%E4%B8%9C%E5%8D%97%E4%BA%9A%0A%20%20-%20RULE-SET%2Cbahamut%2C%E5%B7%B4%E5%93%88%E5%A7%86%E7%89%B9%0A%20%20-%20RULE-SET%2Cyoutube%2CYouTube%0A%20%20-%20RULE-SET%2Cnetflix%2CNETFLIX%0A%20%20-%20RULE-SET%2Cspotify%2CSpotify%0A%20%20-%20RULE-SET%2Cdisney%2CDisney%2B%0A%20%20-%20RULE-SET%2Ctiktok%2CTikTok%0A%20%20-%20RULE-SET%2Csteam%40cn%2C%E5%9B%BD%E5%86%85%E7%BD%91%E7%AB%99%0A%20%20-%20RULE-SET%2Csteam%2CSteam%0A%20%20-%20RULE-SET%2Cpixiv%2C%E5%85%B6%E4%BB%96%E5%A4%96%E7%BD%91%0A%20%20-%20RULE-SET%2Cgoogle-cn%2CGoogle%0A%20%20-%20RULE-SET%2Capple-cn%2CApple%0A%20%20-%20RULE-SET%2Cmicrosoft%40cn%2C%E5%9B%BD%E5%86%85%E7%BD%91%E7%AB%99%0A%20%20-%20RULE-SET%2Cmicrosoft%2CMicrosoft%0A%20%20-%20GEOIP%2CLAN%2C%E7%9B%B4%E8%BF%9E%2Cno-resolve%0A%20%20-%20GEOIP%2CCN%2C%E5%9B%BD%E5%86%85%E7%BD%91%E7%AB%99%2Cno-resolve%0A%20%20-%20MATCH%2C%E5%85%B6%E4%BB%96%E5%A4%96%E7%BD%91%0Arule-providers%3A%0A%20%20category-ai-chat-!cn%3A%0A%20%20%20%20type%3A%20http%0A%20%20%20%20interval%3A%2086400%0A%20%20%20%20behavior%3A%20domain%0A%20%20%20%20format%3A%20text%0A%20%20%20%20url%3A%20https%3A%2F%2Ffastly.jsdelivr.net%2Fgh%2FMetaCubeX%2Fmeta-rules-dat%40meta%2Fgeo%2Fgeosite%2Fcategory-ai-chat-!cn.list%0A%20%20telegram%3A%0A%20%20%20%20type%3A%20http%0A%20%20%20%20interval%3A%2086400%0A%20%20%20%20behavior%3A%20domain%0A%20%20%20%20format%3A%20text%0A%20%20%20%20url%3A%20https%3A%2F%2Ffastly.jsdelivr.net%2Fgh%2FMetaCubeX%2Fmeta-rules-dat%40meta%2Fgeo%2Fgeosite%2Ftelegram.list%0A%20%20biliintl%3A%0A%20%20%20%20type%3A%20http%0A%20%20%20%20interval%3A%2086400%0A%20%20%20%20behavior%3A%20domain%0A%20%20%20%20format%3A%20text%0A%20%20%20%20url%3A%20https%3A%2F%2Ffastly.jsdelivr.net%2Fgh%2FMetaCubeX%2Fmeta-rules-dat%40meta%2Fgeo%2Fgeosite%2Fbiliintl.list%0A%20%20bahamut%3A%0A%20%20%20%20type%3A%20http%0A%20%20%20%20interval%3A%2086400%0A%20%20%20%20behavior%3A%20domain%0A%20%20%20%20format%3A%20text%0A%20%20%20%20url%3A%20https%3A%2F%2Ffastly.jsdelivr.net%2Fgh%2FMetaCubeX%2Fmeta-rules-dat%40meta%2Fgeo%2Fgeosite%2Fbahamut.list%0A%20%20youtube%3A%0A%20%20%20%20type%3A%20http%0A%20%20%20%20interval%3A%2086400%0A%20%20%20%20behavior%3A%20domain%0A%20%20%20%20format%3A%20text%0A%20%20%20%20url%3A%20https%3A%2F%2Ffastly.jsdelivr.net%2Fgh%2FMetaCubeX%2Fmeta-rules-dat%40meta%2Fgeo%2Fgeosite%2Fyoutube.list%0A%20%20netflix%3A%0A%20%20%20%20type%3A%20http%0A%20%20%20%20interval%3A%2086400%0A%20%20%20%20behavior%3A%20domain%0A%20%20%20%20format%3A%20text%0A%20%20%20%20url%3A%20https%3A%2F%2Ffastly.jsdelivr.net%2Fgh%2FMetaCubeX%2Fmeta-rules-dat%40meta%2Fgeo%2Fgeosite%2Fnetflix.list%0A%20%20spotify%3A%0A%20%20%20%20type%3A%20http%0A%20%20%20%20interval%3A%2086400%0A%20%20%20%20behavior%3A%20domain%0A%20%20%20%20format%3A%20text%0A%20%20%20%20url%3A%20https%3A%2F%2Ffastly.jsdelivr.net%2Fgh%2FMetaCubeX%2Fmeta-rules-dat%40meta%2Fgeo%2Fgeosite%2Fspotify.list%0A%20%20disney%3A%0A%20%20%20%20type%3A%20http%0A%20%20%20%20interval%3A%2086400%0A%20%20%20%20behavior%3A%20domain%0A%20%20%20%20format%3A%20text%0A%20%20%20%20url%3A%20https%3A%2F%2Ffastly.jsdelivr.net%2Fgh%2FMetaCubeX%2Fmeta-rules-dat%40meta%2Fgeo%2Fgeosite%2Fdisney.list%0A%20%20tiktok%3A%0A%20%20%20%20type%3A%20http%0A%20%20%20%20interval%3A%2086400%0A%20%20%20%20behavior%3A%20domain%0A%20%20%20%20format%3A%20text%0A%20%20%20%20url%3A%20https%3A%2F%2Ffastly.jsdelivr.net%2Fgh%2FMetaCubeX%2Fmeta-rules-dat%40meta%2Fgeo%2Fgeosite%2Ftiktok.list%0A%20%20steam%40cn%3A%0A%20%20%20%20type%3A%20http%0A%20%20%20%20interval%3A%2086400%0A%20%20%20%20behavior%3A%20domain%0A%20%20%20%20format%3A%20text%0A%20%20%20%20url%3A%20https%3A%2F%2Ffastly.jsdelivr.net%2Fgh%2FMetaCubeX%2Fmeta-rules-dat%40meta%2Fgeo%2Fgeosite%2Fsteam%40cn.list%0A%20%20steam%3A%0A%20%20%20%20type%3A%20http%0A%20%20%20%20interval%3A%2086400%0A%20%20%20%20behavior%3A%20domain%0A%20%20%20%20format%3A%20text%0A%20%20%20%20url%3A%20https%3A%2F%2Ffastly.jsdelivr.net%2Fgh%2FMetaCubeX%2Fmeta-rules-dat%40meta%2Fgeo%2Fgeosite%2Fsteam.list%0A%20%20pixiv%3A%0A%20%20%20%20type%3A%20http%0A%20%20%20%20interval%3A%2086400%0A%20%20%20%20behavior%3A%20domain%0A%20%20%20%20format%3A%20text%0A%20%20%20%20url%3A%20https%3A%2F%2Ffastly.jsdelivr.net%2Fgh%2FMetaCubeX%2Fmeta-rules-dat%40meta%2Fgeo%2Fgeosite%2Fpixiv.list%0A%20%20google-cn%3A%0A%20%20%20%20type%3A%20http%0A%20%20%20%20interval%3A%2086400%0A%20%20%20%20behavior%3A%20domain%0A%20%20%20%20format%3A%20text%0A%20%20%20%20url%3A%20https%3A%2F%2Ffastly.jsdelivr.net%2Fgh%2FMetaCubeX%2Fmeta-rules-dat%40meta%2Fgeo%2Fgeosite%2Fgoogle-cn.list%0A%20%20apple-cn%3A%0A%20%20%20%20type%3A%20http%0A%20%20%20%20interval%3A%2086400%0A%20%20%20%20behavior%3A%20domain%0A%20%20%20%20format%3A%20text%0A%20%20%20%20url%3A%20https%3A%2F%2Ffastly.jsdelivr.net%2Fgh%2FMetaCubeX%2Fmeta-rules-dat%40meta%2Fgeo%2Fgeosite%2Fapple-cn.list%0A%20%20microsoft%40cn%3A%0A%20%20%20%20type%3A%20http%0A%20%20%20%20interval%3A%2086400%0A%20%20%20%20behavior%3A%20domain%0A%20%20%20%20format%3A%20text%0A%20%20%20%20url%3A%20https%3A%2F%2Ffastly.jsdelivr.net%2Fgh%2FMetaCubeX%2Fmeta-rules-dat%40meta%2Fgeo%2Fgeosite%2Fmicrosoft%40cn.list%0A%20%20microsoft%3A%0A%20%20%20%20type%3A%20http%0A%20%20%20%20interval%3A%2086400%0A%20%20%20%20behavior%3A%20domain%0A%20%20%20%20format%3A%20text%0A%20%20%20%20url%3A%20https%3A%2F%2Ffastly.jsdelivr.net%2Fgh%2FMetaCubeX%2Fmeta-rules-dat%40meta%2Fgeo%2Fgeosite%2Fmicrosoft.list%0Ascript%3A%0A%20%20shortcuts%3A%0A%20%20%20%20quic%3A%20network%20%3D%3D%20'udp'%20and%20dst_port%20%3D%3D%20443
+#规则数量:408
+#不支持的规则数量:0
+#已排除的规则数量:0
+
+#-----------------以下为解析后的规则-----------------#
+
+payload:
+  - DOMAIN,proxy-providers:
+  - DOMAIN,Provider-1:
+  - DOMAIN,interval: 600
+  - DOMAIN,Provider-2:
+  - DOMAIN,interval: 600
+  - DOMAIN,Provider-3:
+  - DOMAIN,interval: 600
+  - DOMAIN,Provider-4:
+  - DOMAIN,interval: 600
+  - DOMAIN,mode: rule
+  - DOMAIN,dns:
+  - DOMAIN,default-nameserver:
+  - DOMAIN,223.5.5.5
+  - DOMAIN,119.28.28.28
+  - DOMAIN,system
+  - DOMAIN,nameserver:
+  - DOMAIN,https://1.12.12.12/dns-query
+  - DOMAIN,https://223.5.5.5/dns-query
+  - DOMAIN,proxies:
+  - DOMAIN,name: 直连
+  - DOMAIN,type: DIRECT
+  - DOMAIN,udp: true
+  - DOMAIN,proxy-groups:
+  - DOMAIN,name: 默认节点
+  - DOMAIN,type: select
+  - DOMAIN,proxies:
+  - DOMAIN,自动选择
+  - DOMAIN,直连
+  - DOMAIN,HK 香港
+  - DOMAIN,TW 台湾省
+  - DOMAIN,JP 日本
+  - DOMAIN,KR 韩国
+  - DOMAIN,US 美国
+  - DOMAIN,SG 新加坡
+  - DOMAIN,其它地区
+  - DOMAIN,全部节点
+  - DOMAIN,name: OpenAI
+  - DOMAIN,type: select
+  - DOMAIN,proxies:
+  - DOMAIN,默认节点
+  - DOMAIN,HK 香港
+  - DOMAIN,TW 台湾省
+  - DOMAIN,JP 日本
+  - DOMAIN,KR 韩国
+  - DOMAIN,US 美国
+  - DOMAIN,SG 新加坡
+  - DOMAIN,其它地区
+  - DOMAIN,全部节点
+  - DOMAIN,自动选择
+  - DOMAIN,直连
+  - DOMAIN,name: Google
+  - DOMAIN,type: select
+  - DOMAIN,proxies:
+  - DOMAIN,默认节点
+  - DOMAIN,HK 香港
+  - DOMAIN,TW 台湾省
+  - DOMAIN,JP 日本
+  - DOMAIN,KR 韩国
+  - DOMAIN,US 美国
+  - DOMAIN,SG 新加坡
+  - DOMAIN,其它地区
+  - DOMAIN,全部节点
+  - DOMAIN,自动选择
+  - DOMAIN,直连
+  - DOMAIN,name: Apple
+  - DOMAIN,type: select
+  - DOMAIN,proxies:
+  - DOMAIN,默认节点
+  - DOMAIN,HK 香港
+  - DOMAIN,TW 台湾省
+  - DOMAIN,JP 日本
+  - DOMAIN,KR 韩国
+  - DOMAIN,US 美国
+  - DOMAIN,SG 新加坡
+  - DOMAIN,其它地区
+  - DOMAIN,全部节点
+  - DOMAIN,自动选择
+  - DOMAIN,直连
+  - DOMAIN,name: Telegram
+  - DOMAIN,type: select
+  - DOMAIN,proxies:
+  - DOMAIN,默认节点
+  - DOMAIN,HK 香港
+  - DOMAIN,TW 台湾省
+  - DOMAIN,JP 日本
+  - DOMAIN,KR 韩国
+  - DOMAIN,US 美国
+  - DOMAIN,SG 新加坡
+  - DOMAIN,其它地区
+  - DOMAIN,全部节点
+  - DOMAIN,自动选择
+  - DOMAIN,直连
+  - DOMAIN,name: Microsoft
+  - DOMAIN,type: select
+  - DOMAIN,proxies:
+  - DOMAIN,默认节点
+  - DOMAIN,HK 香港
+  - DOMAIN,TW 台湾省
+  - DOMAIN,JP 日本
+  - DOMAIN,KR 韩国
+  - DOMAIN,US 美国
+  - DOMAIN,SG 新加坡
+  - DOMAIN,其它地区
+  - DOMAIN,全部节点
+  - DOMAIN,自动选择
+  - DOMAIN,直连
+  - DOMAIN,name: 哔哩东南亚
+  - DOMAIN,type: select
+  - DOMAIN,proxies:
+  - DOMAIN,默认节点
+  - DOMAIN,HK 香港
+  - DOMAIN,TW 台湾省
+  - DOMAIN,JP 日本
+  - DOMAIN,KR 韩国
+  - DOMAIN,US 美国
+  - DOMAIN,SG 新加坡
+  - DOMAIN,其它地区
+  - DOMAIN,全部节点
+  - DOMAIN,自动选择
+  - DOMAIN,直连
+  - DOMAIN,name: 巴哈姆特
+  - DOMAIN,type: select
+  - DOMAIN,proxies:
+  - DOMAIN,默认节点
+  - DOMAIN,HK 香港
+  - DOMAIN,TW 台湾省
+  - DOMAIN,JP 日本
+  - DOMAIN,KR 韩国
+  - DOMAIN,US 美国
+  - DOMAIN,SG 新加坡
+  - DOMAIN,其它地区
+  - DOMAIN,全部节点
+  - DOMAIN,自动选择
+  - DOMAIN,直连
+  - DOMAIN,name: YouTube
+  - DOMAIN,type: select
+  - DOMAIN,proxies:
+  - DOMAIN,默认节点
+  - DOMAIN,HK 香港
+  - DOMAIN,TW 台湾省
+  - DOMAIN,JP 日本
+  - DOMAIN,KR 韩国
+  - DOMAIN,US 美国
+  - DOMAIN,SG 新加坡
+  - DOMAIN,其它地区
+  - DOMAIN,全部节点
+  - DOMAIN,自动选择
+  - DOMAIN,直连
+  - DOMAIN,name: NETFLIX
+  - DOMAIN,type: select
+  - DOMAIN,proxies:
+  - DOMAIN,默认节点
+  - DOMAIN,HK 香港
+  - DOMAIN,TW 台湾省
+  - DOMAIN,JP 日本
+  - DOMAIN,KR 韩国
+  - DOMAIN,US 美国
+  - DOMAIN,SG 新加坡
+  - DOMAIN,其它地区
+  - DOMAIN,全部节点
+  - DOMAIN,自动选择
+  - DOMAIN,直连
+  - DOMAIN,name: Spotify
+  - DOMAIN,type: select
+  - DOMAIN,proxies:
+  - DOMAIN,默认节点
+  - DOMAIN,HK 香港
+  - DOMAIN,TW 台湾省
+  - DOMAIN,JP 日本
+  - DOMAIN,KR 韩国
+  - DOMAIN,US 美国
+  - DOMAIN,SG 新加坡
+  - DOMAIN,其它地区
+  - DOMAIN,全部节点
+  - DOMAIN,自动选择
+  - DOMAIN,直连
+  - DOMAIN,name: Disney+
+  - DOMAIN,type: select
+  - DOMAIN,proxies:
+  - DOMAIN,默认节点
+  - DOMAIN,HK 香港
+  - DOMAIN,TW 台湾省
+  - DOMAIN,JP 日本
+  - DOMAIN,KR 韩国
+  - DOMAIN,US 美国
+  - DOMAIN,SG 新加坡
+  - DOMAIN,其它地区
+  - DOMAIN,全部节点
+  - DOMAIN,自动选择
+  - DOMAIN,直连
+  - DOMAIN,name: TikTok
+  - DOMAIN,type: select
+  - DOMAIN,proxies:
+  - DOMAIN,默认节点
+  - DOMAIN,HK 香港
+  - DOMAIN,TW 台湾省
+  - DOMAIN,JP 日本
+  - DOMAIN,KR 韩国
+  - DOMAIN,US 美国
+  - DOMAIN,SG 新加坡
+  - DOMAIN,其它地区
+  - DOMAIN,全部节点
+  - DOMAIN,自动选择
+  - DOMAIN,直连
+  - DOMAIN,name: Steam
+  - DOMAIN,type: select
+  - DOMAIN,proxies:
+  - DOMAIN,默认节点
+  - DOMAIN,HK 香港
+  - DOMAIN,TW 台湾省
+  - DOMAIN,JP 日本
+  - DOMAIN,KR 韩国
+  - DOMAIN,US 美国
+  - DOMAIN,SG 新加坡
+  - DOMAIN,其它地区
+  - DOMAIN,全部节点
+  - DOMAIN,自动选择
+  - DOMAIN,直连
+  - DOMAIN,name: 国内网站
+  - DOMAIN,type: select
+  - DOMAIN,proxies:
+  - DOMAIN,直连
+  - DOMAIN,默认节点
+  - DOMAIN,HK 香港
+  - DOMAIN,TW 台湾省
+  - DOMAIN,JP 日本
+  - DOMAIN,KR 韩国
+  - DOMAIN,US 美国
+  - DOMAIN,SG 新加坡
+  - DOMAIN,其它地区
+  - DOMAIN,全部节点
+  - DOMAIN,自动选择
+  - DOMAIN,name: 其他外网
+  - DOMAIN,type: select
+  - DOMAIN,proxies:
+  - DOMAIN,默认节点
+  - DOMAIN,HK 香港
+  - DOMAIN,TW 台湾省
+  - DOMAIN,JP 日本
+  - DOMAIN,KR 韩国
+  - DOMAIN,US 美国
+  - DOMAIN,SG 新加坡
+  - DOMAIN,其它地区
+  - DOMAIN,全部节点
+  - DOMAIN,自动选择
+  - DOMAIN,直连
+  - DOMAIN,name: HK 香港
+  - DOMAIN,type: url-test
+  - DOMAIN,include-all: true
+  - DOMAIN,interval: 120
+  - DOMAIN,tolerance: 50
+  - DOMAIN,lazy: true
+  - DOMAIN,filter: (?i)(澳门|🇲🇴|港|🇭🇰|hk|hong)
+  - DOMAIN,name: TW 台湾省
+  - DOMAIN,type: url-test
+  - DOMAIN,include-all: true
+  - DOMAIN,interval: 120
+  - DOMAIN,tolerance: 50
+  - DOMAIN,lazy: true
+  - DOMAIN,filter: (?i)(台|🇹🇼|湾|tw|taiwan)
+  - DOMAIN,name: JP 日本
+  - DOMAIN,type: url-test
+  - DOMAIN,include-all: true
+  - DOMAIN,interval: 120
+  - DOMAIN,tolerance: 50
+  - DOMAIN,lazy: true
+  - DOMAIN,filter: (?i)(日|🇯🇵|东京|大阪|jp|japan)
+  - DOMAIN,name: KR 韩国
+  - DOMAIN,type: url-test
+  - DOMAIN,include-all: true
+  - DOMAIN,interval: 120
+  - DOMAIN,tolerance: 50
+  - DOMAIN,lazy: true
+  - DOMAIN,filter: (?i)(韩|🇰🇷|kr|korea)
+  - DOMAIN,name: US 美国
+  - DOMAIN,type: url-test
+  - DOMAIN,include-all: true
+  - DOMAIN,interval: 120
+  - DOMAIN,tolerance: 50
+  - DOMAIN,lazy: true
+  - DOMAIN,filter: (?i)(美|🇺🇲|us|states|america)
+  - DOMAIN,name: SG 新加坡
+  - DOMAIN,type: url-test
+  - DOMAIN,include-all: true
+  - DOMAIN,interval: 120
+  - DOMAIN,tolerance: 50
+  - DOMAIN,lazy: true
+  - DOMAIN,filter: (?i)(新加坡|坡|狮城|🇸🇬|sg|singapore)
+  - DOMAIN,name: 其它地区
+  - DOMAIN,type: url-test
+  - DOMAIN,include-all: true
+  - DOMAIN,interval: 120
+  - DOMAIN,tolerance: 50
+  - DOMAIN,lazy: true
+  - DOMAIN,filter: (?i)^(?!.*(?:🇭🇰|🇹🇼|🇯🇵|🇰🇷|🇺🇸|🇸🇬|🇨🇳|港|hk|hong|台|tw|taiwan|日本|jp|japan|韩|kr|korea|美|us|states|新加坡|sg|singapore)).*
+  - DOMAIN,name: 自动选择
+  - DOMAIN,type: url-test
+  - DOMAIN,include-all: true
+  - DOMAIN,interval: 120
+  - DOMAIN,tolerance: 50
+  - DOMAIN,lazy: true
+  - DOMAIN,name: 全部节点
+  - DOMAIN,type: select
+  - DOMAIN,include-all: true
+  - DOMAIN,rules:
+  - SCRIPT,quic
+  - RULE-SET,category-ai-chat-!cn
+  - RULE-SET,telegram
+  - RULE-SET,biliintl
+  - RULE-SET,bahamut
+  - RULE-SET,youtube
+  - RULE-SET,netflix
+  - RULE-SET,spotify
+  - RULE-SET,disney
+  - RULE-SET,tiktok
+  - RULE-SET,steam@cn
+  - RULE-SET,steam
+  - RULE-SET,pixiv
+  - RULE-SET,google-cn
+  - RULE-SET,apple-cn
+  - RULE-SET,microsoft@cn
+  - RULE-SET,microsoft
+  - GEOIP,LAN,no-resolve
+  - GEOIP,CN,no-resolve
+  - MATCH,其他外网
+  - DOMAIN,rule-providers:
+  - DOMAIN,category-ai-chat-!cn:
+  - DOMAIN,type: http
+  - DOMAIN,interval: 86400
+  - DOMAIN,behavior: domain
+  - DOMAIN,format: text
+  - DOMAIN,telegram:
+  - DOMAIN,type: http
+  - DOMAIN,interval: 86400
+  - DOMAIN,behavior: domain
+  - DOMAIN,format: text
+  - DOMAIN,biliintl:
+  - DOMAIN,type: http
+  - DOMAIN,interval: 86400
+  - DOMAIN,behavior: domain
+  - DOMAIN,format: text
+  - DOMAIN,bahamut:
+  - DOMAIN,type: http
+  - DOMAIN,interval: 86400
+  - DOMAIN,behavior: domain
+  - DOMAIN,format: text
+  - DOMAIN,youtube:
+  - DOMAIN,type: http
+  - DOMAIN,interval: 86400
+  - DOMAIN,behavior: domain
+  - DOMAIN,format: text
+  - DOMAIN,netflix:
+  - DOMAIN,type: http
+  - DOMAIN,interval: 86400
+  - DOMAIN,behavior: domain
+  - DOMAIN,format: text
+  - DOMAIN,spotify:
+  - DOMAIN,type: http
+  - DOMAIN,interval: 86400
+  - DOMAIN,behavior: domain
+  - DOMAIN,format: text
+  - DOMAIN,disney:
+  - DOMAIN,type: http
+  - DOMAIN,interval: 86400
+  - DOMAIN,behavior: domain
+  - DOMAIN,format: text
+  - DOMAIN,tiktok:
+  - DOMAIN,type: http
+  - DOMAIN,interval: 86400
+  - DOMAIN,behavior: domain
+  - DOMAIN,format: text
+  - DOMAIN,steam@cn:
+  - DOMAIN,type: http
+  - DOMAIN,interval: 86400
+  - DOMAIN,behavior: domain
+  - DOMAIN,format: text
+  - DOMAIN,steam:
+  - DOMAIN,type: http
+  - DOMAIN,interval: 86400
+  - DOMAIN,behavior: domain
+  - DOMAIN,format: text
+  - DOMAIN,pixiv:
+  - DOMAIN,type: http
+  - DOMAIN,interval: 86400
+  - DOMAIN,behavior: domain
+  - DOMAIN,format: text
+  - DOMAIN,google-cn:
+  - DOMAIN,type: http
+  - DOMAIN,interval: 86400
+  - DOMAIN,behavior: domain
+  - DOMAIN,format: text
+  - DOMAIN,apple-cn:
+  - DOMAIN,type: http
+  - DOMAIN,interval: 86400
+  - DOMAIN,behavior: domain
+  - DOMAIN,format: text
+  - DOMAIN,microsoft@cn:
+  - DOMAIN,type: http
+  - DOMAIN,interval: 86400
+  - DOMAIN,behavior: domain
+  - DOMAIN,format: text
+  - DOMAIN,microsoft:
+  - DOMAIN,type: http
+  - DOMAIN,interval: 86400
+  - DOMAIN,behavior: domain
+  - DOMAIN,format: text
+  - DOMAIN,script:
+  - DOMAIN,shortcuts:
