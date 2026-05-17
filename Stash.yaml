@@ -657,19 +657,15 @@ proxies:
   - name: 喵帕斯
     port: 12345
     server: 102.205.44.32
-    type: VLESS
-    xtls: 2
-    method: none
-    obfs: none
-    publicKey: AvtO9YC4L4eCScsYqJZLDNhVsljkXIaTsD_tKSHLNmM
-    peer: apple.com
-    weight: 1778814645
-    title: vl-reality-ser634656983095
-    proto: none
+    type: vless
     password: 4836e8e2-b0b5-4d01-ac14-79ef5319192f
-    shortId: '44843487'
     tls: true
     flag: CDN
     ping: 7
-    uuid: A8406A3F-BAE7-4C7B-A56E-2465B43F8622
+    uuid: 4836e8e2-b0b5-4d01-ac14-79ef5319192f
+    flow: xtls-rprx-vision
+    servername: apple.com 
+    client-fingerprint: chrome, 
+    public-key: AvtO9YC4L4eCScsYqJZLDNhVsljkXIaTsD_tKSHLNmM
+    short-id: 44843487
 
