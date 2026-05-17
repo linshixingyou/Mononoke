@@ -608,7 +608,7 @@ rule-providers:
     behavior: domain
     format: text
     interval: 86400
-    url: https://raw.githubusercontent.com/linshixingyou/Mononoke/localhost/Rules/ProxyGFW.list
+    url: https://raw.githubusercontent.com/linshixingyou/Mononoke/localhost/ProxyGFW.list
   ProxyGFWIP:
     behavior: ipcidr
     format: text
