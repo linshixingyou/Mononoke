@@ -31,7 +31,7 @@ proxy-providers:
     url: https://peige.dpkj.qzz.io/dapei
 proxy-groups:
   - icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Rocket.png
-    name: 前置选一个好用的节点
+    name: 前置
     type: select
     proxies:
       - 云洞
@@ -59,15 +59,15 @@ proxy-groups:
     type: select
     proxies: null
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Clubhouse.png
-  - name: Proxy模式选择
+  - name: ProxySelect
     type: select
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Bypass.png
     proxies:
       - 手动
-      - 链式代理引用的话就选这个
-      - 前置选一个好用的节点
+      - Chain
+      - 前置
     use: null
-  - name: 落地选你需要的小众国家
+  - name: 落地
     type: select
     use: null
     proxies:
@@ -77,19 +77,19 @@ proxy-groups:
       - Kitty
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Blackhole.png
   - icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Available_1.png
-    name: 链式代理引用的话就选这个
+    name: Chain
     type: relay
     proxies:
-      - 前置选一个好用的节点
-      - 落地选你需要的小众国家
+      - 前置
+      - 落地
   - name: Final
     type: select
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Final.png
     proxies:
-      - Proxy模式选择
+      - ProxySelect
       - DIRECT
-      - 链式代理引用的话就选这个
-      - 前置选一个好用的节点
+      - Chain
+      - 前置
     use: null
   - name: Parity落地
     type: select
@@ -104,37 +104,37 @@ proxy-groups:
     type: select
     proxies:
       - DIRECT
-      - Proxy模式选择
+      - ProxySelect
       - 手动
   - name: Apple
     type: select
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Apple_1.png
     proxies:
       - DIRECT
-      - Proxy模式选择
+      - ProxySelect
       - 手动
   - name: Google
     type: select
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Google_Search.png
     proxies:
-      - Proxy模式选择
+      - ProxySelect
       - 云洞
       - Kitty
       - America
       - DIRECT
-      - 链式代理引用的话就选这个
+      - Chain
   - name: YouTube
     type: select
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/YouTube.png
     proxies:
-      - Proxy模式选择
+      - ProxySelect
       - HongKong
-      - 链式代理引用的话就选这个
+      - Chain
   - name: Emby
     type: select
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Emby.png
     proxies:
-      - Proxy模式选择
+      - ProxySelect
       - HongKong
       - TaiWan
       - Japan
@@ -145,7 +145,7 @@ proxy-groups:
     type: select
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/ChatGPT.png
     proxies:
-      - Proxy模式选择
+      - ProxySelect
       - HongKong
       - TaiWan
       - Japan
@@ -157,7 +157,7 @@ proxy-groups:
     type: select
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Telegram_X.png
     proxies:
-      - Proxy模式选择
+      - ProxySelect
       - 云洞
       - Kitty
       - HongKong
@@ -166,7 +166,7 @@ proxy-groups:
     type: select
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Streaming.png
     proxies:
-      - Proxy模式选择
+      - ProxySelect
       - HongKong
       - TaiWan
       - Japan
@@ -354,14 +354,14 @@ proxy-groups:
     type: select
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/GitHub_Letter.png
     proxies:
-      - Proxy模式选择
+      - ProxySelect
       - 云洞
       - PKU
   - name: X
     type: select
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/X.png
     proxies:
-      - Proxy模式选择
+      - ProxySelect
       - HongKong
       - TaiWan
       - Japan
@@ -387,7 +387,7 @@ proxy-groups:
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Windows_11.png
     proxies:
       - DIRECT
-      - Proxy模式选择
+      - ProxySelect
       - HongKong
       - TaiWan
       - Japan
@@ -397,7 +397,7 @@ proxy-groups:
     type: select
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Game.png
     proxies:
-      - Proxy模式选择
+      - ProxySelect
       - HongKong
       - TaiWan
       - Japan
@@ -409,7 +409,7 @@ proxy-groups:
     type: select
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/TikTok.png
     proxies:
-      - Proxy模式选择
+      - ProxySelect
       - HongKong
       - TaiWan
       - Japan
@@ -420,7 +420,7 @@ proxy-groups:
     type: select
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Disney.png
     proxies:
-      - Proxy模式选择
+      - ProxySelect
       - HongKong
       - TaiWan
       - Japan
@@ -431,7 +431,7 @@ proxy-groups:
     type: select
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Spotify.png
     proxies:
-      - Proxy模式选择
+      - ProxySelect
       - HongKong
       - TaiWan
       - Japan
@@ -444,7 +444,7 @@ proxy-groups:
     type: select
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Netflix.png
     proxies:
-      - Proxy模式选择
+      - ProxySelect
       - HongKong
       - TaiWan
       - Japan
