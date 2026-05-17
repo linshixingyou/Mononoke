@@ -645,14 +645,6 @@ proxies:
     skip-cert-verify: true
     sni: openssl.nodesni.com
     type: trojan
-  - name: http1
-    port: 8085
-    server: 5.181.170.234
-    type: http
-  - name: http50
-    port: 8085
-    server: 5.181.171.128
-    type: http
   - name: ipfoxyipfoxyipfoxy
     port: 58688
     server: gate.ipfoxy.io
