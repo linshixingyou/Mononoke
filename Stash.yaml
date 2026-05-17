@@ -1,4 +1,5 @@
 #SUBSCRIBED https://raw.githubusercontent.com/linshixingyou/Mononoke/localhost/Stash.yaml
+#SUBSCRIBED https://raw.githubusercontent.com/linshixingyou/Mononoke/localhost/1.yaml
 mode: rule
 log-level: info
 # DNS模块
@@ -467,6 +468,7 @@ rules:
   - DOMAIN-KEYWORD,reddit,云洞
   - RULE-SET,Direct,DIRECT
   - RULE-SET,Reject,REJECT
+  - RULE-SET,RejectIP,REJECT
   - RULE-SET,LAN,DIRECT
   - RULE-SET,AppleCN,Apple
   - RULE-SET,AppleServers,AppleGlobal
@@ -480,6 +482,7 @@ rules:
   - RULE-SET,YouTube,YouTube
   - RULE-SET,Emby,Emby
   - RULE-SET,ProxyGFW,Streaming
+  - RULE-SET,ProxyGFWIP,Streaming
   - RULE-SET,BiliIntl,Streaming
   - RULE-SET,ProxyMedia,Streaming
   - RULE-SET,Netflix,NETFLIX
