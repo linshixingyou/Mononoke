@@ -1,4 +1,4 @@
-#SUBSCRIBED https://raw.githubusercontent.com/linshixingyou/Mononoke/localhost/Stash.yaml
+#SUBSCRIBED https://raw.githubusercontent.com/linshixingyou/Mononoke/localhost/1.yaml
 mode: rule
 log-level: info
 # DNS模块
