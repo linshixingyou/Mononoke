@@ -29,6 +29,9 @@ proxy-providers:
   Peigedpkj:
     interval: 86400
     url: https://peige.dpkj.qzz.io/dapei
+  GitHubProxy:
+    interval: 86400
+    url: https://raw.githubusercontent.com/linshixingyou/Mononoke/localhost/Local
 proxy-groups:
   - icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Rocket.png
     name: 前置
@@ -37,10 +40,8 @@ proxy-groups:
       - 云洞
       - Kitty
       - PKU
-      - VPS无限
       - 云洞保底
-      - ipfoxyipfoxyipfoxy
-      - 喵帕斯
+      - 本地
   - name: 云洞
     type: select
     use:
@@ -59,6 +60,11 @@ proxy-groups:
     type: select
     proxies: null
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Clubhouse.png
+  - name: 本地
+    type: select
+    use:
+      - GitHubProxy
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Clubhouse.png
   - name: ProxySelect
     type: select
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Bypass.png
@@ -75,7 +81,7 @@ proxy-groups:
       - pedagou
       - 手动
       - Kitty
-      - 喵帕斯
+      - 本地
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Blackhole.png
   - icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Available_1.png
     name: Chain
@@ -629,17 +635,6 @@ rule-providers:
     interval: 86400
     url: https://raw.githubusercontent.com/linshixingyou/Mononoke/localhost/Lan.list
 proxies:
-  - auth: "3286b74d-a633-401f-8e22-6e8e61c5f1d9"
-    fast-open: false
-    name: VPS无限
-    port: 5555
-    server: 45.192.195.52
-    type: hysteria2
-    alpn:
-      - h3
-    down-speed: 1000
-    skip-cert-verify: true
-    up-speed: 1000
   - name: 云洞保底
     password: 0993c0f8-9e29-32b1-810c-65f448c5aa04
     port: 41510
@@ -648,22 +643,4 @@ proxies:
     skip-cert-verify: true
     sni: openssl.nodesni.com
     type: trojan
-  - name: ipfoxyipfoxyipfoxy
-    port: 58688
-    server: gate.ipfoxy.io
-    type: socks5
-    user: customer-cnt1OMFrok-cc-NG-st-Fct-sessid-1778777321_10000
-    password: LzPZfYvjGMAAkMC
-  - name: 喵帕斯
-    port: 12345
-    server: 102.205.44.32
-    type: vless
-    password: 4836e8e2-b0b5-4d01-ac14-79ef5319192f
-    tls: true
-    uuid: 4836e8e2-b0b5-4d01-ac14-79ef5319192f
-    flow: xtls-rprx-vision
-    servername: apple.com 
-    client-fingerprint: chrome
-    public-key: AvtO9YC4L4eCScsYqJZLDNhVsljkXIaTsD_tKSHLNmM
-    short-id: 44843487
 
