@@ -460,7 +460,10 @@ proxy-groups:
 rules:
   - IP-CIDR,102.205.44.32,云洞
   - DOMAIN,eco.potdot.de,HongKong
-  - RULE-SET,Direct,DIRECT
+  - RULE-SET,adrules_classical,REJECT
+  - RULE-SET,speedtest_classical,DIRECT
+  - RULE-SET,cdn_classical,DIRECT
+  - RULE-SET,dmca_classical,DIRECT
   - RULE-SET,Reject,REJECT
   - RULE-SET,RejectIP,REJECT
   - RULE-SET,LAN,DIRECT
@@ -491,11 +494,31 @@ rules:
   - GEOIP,CN,DIRECT
   - MATCH,Final
 rule-providers:
-  Direct:
+  dmca_classical:
+    behavior: classical
+    format: text
+    interval: 86400
+    url: https://raw.githubusercontent.com/linshixingyou/Mononoke/localhost/classical/dmca.list
+  cdn_classical:
+    behavior: classical
+    format: text
+    interval: 86400
+    url: https://raw.githubusercontent.com/linshixingyou/Mononoke/localhost/classical/cdn.list
+  speedtest_classical:
+    behavior: classical
+    format: text
+    interval: 86400
+    url: https://raw.githubusercontent.com/linshixingyou/Mononoke/localhost/classical/speedtest.list
+  adrules_classical:
+    behavior: classical
+    format: text
+    interval: 86400
+    url: https://raw.githubusercontent.com/linshixingyou/Mononoke/localhost/classical/adrules.list
+  Reject:
     behavior: domain
     format: text
     interval: 86400
-    url: https://raw.githubusercontent.com/linshixingyou/Mononoke/localhost/Direct.list
+    url: https://raw.githubusercontent.com/linshixingyou/Mononoke/localhost/Reject.list
   Reject:
     behavior: domain
     format: text
