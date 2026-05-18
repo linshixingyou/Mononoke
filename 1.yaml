@@ -464,32 +464,82 @@ rules:
   - RULE-SET,speedtest_classical,DIRECT
   - RULE-SET,cdn_classical,DIRECT
   - RULE-SET,dmca_classical,DIRECT
-  - RULE-SET,Reject,REJECT
-  - RULE-SET,RejectIP,REJECT
-  - RULE-SET,LAN,DIRECT
-  - RULE-SET,AppleCN,Apple
-  - RULE-SET,AppleServers,AppleGlobal
-  - RULE-SET,AI,AI
-  - RULE-SET,WeChat,DIRECT
-  - RULE-SET,Telegram,Telegram
-  - RULE-SET,GitHub,Github
-  - RULE-SET,Twitter,X
-  - RULE-SET,Google,Google
-  - RULE-SET,Microsoft,Microsoft
-  - RULE-SET,YouTube,YouTube
-  - RULE-SET,Emby,Emby
-  - RULE-SET,ProxyGFW,Streaming
-  - RULE-SET,ProxyGFWIP,Streaming
-  - RULE-SET,BiliIntl,Streaming
-  - RULE-SET,ProxyMedia,Streaming
-  - RULE-SET,Netflix,NETFLIX
-  - RULE-SET,Disney+,Disney+
-  - RULE-SET,TikTok,TikTok
-  - RULE-SET,Bahamut,TaiWan
-  - RULE-SET,Games,Games
-  - RULE-SET,bilibili,bilibili
-  - RULE-SET,Spotify,Spotify
-  - RULE-SET,NetEaseMusic,DIRECT
+
+  - RULE-SET,abema_domain,Japan
+  - RULE-SET,adrules_domain,REJECT
+  - RULE-SET,ai_domain,AI
+  - RULE-SET,apns_domain,ProxySelect
+  - RULE-SET,apple-cn_domain,ProxySelect
+  - RULE-SET,apple-proxy_domain,ProxySelect
+  - RULE-SET,apple-tv_domain,ProxySelect
+  - RULE-SET,apple_domain,ProxySelect
+  - RULE-SET,bahamut_domain,ProxySelect
+  - RULE-SET,bilibili_domain,ProxySelect
+  - RULE-SET,cdn_domain,ProxySelect
+  - RULE-SET,cn_domain,ProxySelect
+  - RULE-SET,crypto_domain,ProxySelect
+  - RULE-SET,dazn_domain,ProxySelect
+  - RULE-SET,disney_domain,ProxySelect
+  - RULE-SET,dmca_domain,ProxySelect
+  - RULE-SET,dmm_domain,ProxySelect
+  - RULE-SET,douyin_domain,ProxySelect
+  - RULE-SET,ecommerce_domain,ProxySelect
+  - RULE-SET,forum_domain,ProxySelect
+  - RULE-SET,games-cn_domain,ProxySelect
+  - RULE-SET,games_domain,ProxySelect
+  - RULE-SET,gfw_domain,ProxySelect
+  - RULE-SET,gits_domain,ProxySelect
+  - RULE-SET,google_domain,Google
+  - RULE-SET,googlefcm_domain,Google
+  - RULE-SET,hbo_domain,ProxySelect
+  - RULE-SET,httpdns_domain,ProxySelect
+  - RULE-SET,hulu_domain,ProxySelect
+  - RULE-SET,iplocation-direct_domain,ProxySelect
+  - RULE-SET,iplocation-proxy_domain,ProxySelect
+  - RULE-SET,microsoft-cn_domain,ProxySelect
+  - RULE-SET,microsoft_domain,ProxySelect
+  - RULE-SET,mytvsuper_domain,ProxySelect
+  - RULE-SET,netflix_domain,ProxySelect
+  - RULE-SET,niconico_domain,ProxySelect
+  - RULE-SET,onedrive_domain,ProxySelect
+  - RULE-SET,paypal_domain,ProxySelect
+  - RULE-SET,primevideo_domain,ProxySelect
+  - RULE-SET,private_domain,ProxySelect
+  - RULE-SET,proxy_domain,ProxySelect
+  - RULE-SET,socialmedia-cn_domain,ProxySelect
+  - RULE-SET,socialmedia_domain,ProxySelect
+  - RULE-SET,speedtest_domain,ProxySelect
+  - RULE-SET,spotify_domain,ProxySelect
+  - RULE-SET,talkatone_domain,ProxySelect
+  - RULE-SET,tiktok_domain,ProxySelect
+  - RULE-SET,tld-proxy_domain,ProxySelect
+  - RULE-SET,twitch_domain,ProxySelect
+  - RULE-SET,youtube_domain,YouTube
+  
+  - RULE-SET,adrules_ip,ProxySelect
+  - RULE-SET,apns_ip,ProxySelect
+  - RULE-SET,apple_ip,ProxySelect
+  - RULE-SET,bilibili_ip,ProxySelect
+  - RULE-SET,cn_ip,ProxySelect
+  - RULE-SET,dmca_ip,ProxySelect
+  - RULE-SET,dmm_ip,ProxySelect
+  - RULE-SET,ecommerce_ip,ProxySelect
+  - RULE-SET,games_ip,ProxySelect
+  - RULE-SET,gfw_ip,ProxySelect
+  - RULE-SET,google_ip,Google
+  - RULE-SET,googlefcm_ip,Google
+  - RULE-SET,httpdns_ip,ProxySelect
+  - RULE-SET,iplocation-proxy_ip,ProxySelect
+  - RULE-SET,netflix_ip,ProxySelect
+  - RULE-SET,private_ip,ProxySelect
+  - RULE-SET,proxy_ip,ProxySelect
+  - RULE-SET,socialmedia-cn_ip,Google
+  - RULE-SET,socialmedia_ip,Google
+  - RULE-SET,spotify_ip,Google
+  - RULE-SET,talkatone_ip,ProxySelect
+  - RULE-SET,twitch_ip,ProxySelect
+  - RULE-SET,youtube_ip,YouTube
+
   - RULE-SET,CN_Mainland,DIRECT
   - GEOIP,CN,DIRECT
   - MATCH,Final
@@ -514,136 +564,371 @@ rule-providers:
     format: text
     interval: 86400
     url: https://raw.githubusercontent.com/linshixingyou/Mononoke/localhost/classical/adrules.list
-  Reject:
+  abema_domain:
     behavior: domain
     format: text
     interval: 86400
-    url: https://raw.githubusercontent.com/linshixingyou/Mononoke/localhost/Reject.list
-  Reject:
+    url: https://raw.githubusercontent.com/linshixingyou/Mononoke/localhost/domain/abema.list
+  adrules_domain:
     behavior: domain
     format: text
     interval: 86400
-    url: https://raw.githubusercontent.com/linshixingyou/Mononoke/localhost/Reject.list
-  RejectIP:
+    url: https://raw.githubusercontent.com/linshixingyou/Mononoke/localhost/domain/adrules.list
+  ai_domain:
+    behavior: domain
+    format: text
+    interval: 86400
+    url: https://raw.githubusercontent.com/linshixingyou/Mononoke/localhost/domain/ai.list
+  apns_domain:
+    behavior: domain
+    format: text
+    interval: 86400
+    url: https://raw.githubusercontent.com/linshixingyou/Mononoke/localhost/domain/apns.list
+  apple-cn_domain:
+    behavior: domain
+    format: text
+    interval: 86400
+    url: https://raw.githubusercontent.com/linshixingyou/Mononoke/localhost/domain/apple-cn.list
+  apple-proxy_domain:
+    behavior: domain
+    format: text
+    interval: 86400
+    url: https://raw.githubusercontent.com/linshixingyou/Mononoke/localhost/domain/apple-proxy.list
+  apple-tv_domain:
+    behavior: domain
+    format: text
+    interval: 86400
+    url: https://raw.githubusercontent.com/linshixingyou/Mononoke/localhost/domain/apple-tv.list
+  apple_domain:
+    behavior: domain
+    format: text
+    interval: 86400
+    url: https://raw.githubusercontent.com/linshixingyou/Mononoke/localhost/domain/apple.list
+  bahamut_domain:
+    behavior: domain
+    format: text
+    interval: 86400
+    url: https://raw.githubusercontent.com/linshixingyou/Mononoke/localhost/domain/bahamut.list
+  bilibili_domain:
+    behavior: domain
+    format: text
+    interval: 86400
+    url: https://raw.githubusercontent.com/linshixingyou/Mononoke/localhost/domain/bilibili.list
+  cdn_domain:
+    behavior: domain
+    format: text
+    interval: 86400
+    url: https://raw.githubusercontent.com/linshixingyou/Mononoke/localhost/domain/cdn.list
+  cn_domain:
+    behavior: domain
+    format: text
+    interval: 86400
+    url: https://raw.githubusercontent.com/linshixingyou/Mononoke/localhost/domain/cn.list
+  crypto_domain:
+    behavior: domain
+    format: text
+    interval: 86400
+    url: https://raw.githubusercontent.com/linshixingyou/Mononoke/localhost/domain/crypto.list
+  dazn_domain:
+    behavior: domain
+    format: text
+    interval: 86400
+    url: https://raw.githubusercontent.com/linshixingyou/Mononoke/localhost/domain/dazn.list
+  disney_domain:
+    behavior: domain
+    format: text
+    interval: 86400
+    url: https://raw.githubusercontent.com/linshixingyou/Mononoke/localhost/domain/disney.list
+  dmca_domain:
+    behavior: domain
+    format: text
+    interval: 86400
+    url: https://raw.githubusercontent.com/linshixingyou/Mononoke/localhost/domain/dmca.list
+  dmm_domain:
+    behavior: domain
+    format: text
+    interval: 86400
+    url: https://raw.githubusercontent.com/linshixingyou/Mononoke/localhost/domain/dmm.list
+  douyin_domain:
+    behavior: domain
+    format: text
+    interval: 86400
+    url: https://raw.githubusercontent.com/linshixingyou/Mononoke/localhost/domain/douyin.list
+  ecommerce_domain:
+    behavior: domain
+    format: text
+    interval: 86400
+    url: https://raw.githubusercontent.com/linshixingyou/Mononoke/localhost/domain/ecommerce.list
+  forum_domain:
+    behavior: domain
+    format: text
+    interval: 86400
+    url: https://raw.githubusercontent.com/linshixingyou/Mononoke/localhost/domain/forum.list
+  games-cn_domain:
+    behavior: domain
+    format: text
+    interval: 86400
+    url: https://raw.githubusercontent.com/linshixingyou/Mononoke/localhost/domain/games-cn.list
+  games_domain:
+    behavior: domain
+    format: text
+    interval: 86400
+    url: https://raw.githubusercontent.com/linshixingyou/Mononoke/localhost/domain/games.list
+  gfw_domain:
+    behavior: domain
+    format: text
+    interval: 86400
+    url: https://raw.githubusercontent.com/linshixingyou/Mononoke/localhost/domain/gfw.list
+  gits_domain:
+    behavior: domain
+    format: text
+    interval: 86400
+    url: https://raw.githubusercontent.com/linshixingyou/Mononoke/localhost/domain/gits.list
+  google_domain:
+    behavior: domain
+    format: text
+    interval: 86400
+    url: https://raw.githubusercontent.com/linshixingyou/Mononoke/localhost/domain/google.list
+  googlefcm_domain:
+    behavior: domain
+    format: text
+    interval: 86400
+    url: https://raw.githubusercontent.com/linshixingyou/Mononoke/localhost/domain/googlefcm.list
+  hbo_domain:
+    behavior: domain
+    format: text
+    interval: 86400
+    url: https://raw.githubusercontent.com/linshixingyou/Mononoke/localhost/domain/hbo.list
+  httpdns_domain:
+    behavior: domain
+    format: text
+    interval: 86400
+    url: https://raw.githubusercontent.com/linshixingyou/Mononoke/localhost/domain/httpdns.list
+  hulu_domain:
+    behavior: domain
+    format: text
+    interval: 86400
+    url: https://raw.githubusercontent.com/linshixingyou/Mononoke/localhost/domain/hulu.list
+  iplocation-direct_domain:
+    behavior: domain
+    format: text
+    interval: 86400
+    url: https://raw.githubusercontent.com/linshixingyou/Mononoke/localhost/domain/iplocation-direct.list
+  iplocation-proxy_domain:
+    behavior: domain
+    format: text
+    interval: 86400
+    url: https://raw.githubusercontent.com/linshixingyou/Mononoke/localhost/domain/iplocation-proxy.list
+  microsoft-cn_domain:
+    behavior: domain
+    format: text
+    interval: 86400
+    url: https://raw.githubusercontent.com/linshixingyou/Mononoke/localhost/domain/microsoft-cn.list
+  microsoft_domain:
+    behavior: domain
+    format: text
+    interval: 86400
+    url: https://raw.githubusercontent.com/linshixingyou/Mononoke/localhost/domain/microsoft.list
+  mytvsuper_domain:
+    behavior: domain
+    format: text
+    interval: 86400
+    url: https://raw.githubusercontent.com/linshixingyou/Mononoke/localhost/domain/mytvsuper.list
+  netflix_domain:
+    behavior: domain
+    format: text
+    interval: 86400
+    url: https://raw.githubusercontent.com/linshixingyou/Mononoke/localhost/domain/netflix.list
+  niconico_domain:
+    behavior: domain
+    format: text
+    interval: 86400
+    url: https://raw.githubusercontent.com/linshixingyou/Mononoke/localhost/domain/niconico.list
+  onedrive_domain:
+    behavior: domain
+    format: text
+    interval: 86400
+    url: https://raw.githubusercontent.com/linshixingyou/Mononoke/localhost/domain/onedrive.list
+  paypal_domain:
+    behavior: domain
+    format: text
+    interval: 86400
+    url: https://raw.githubusercontent.com/linshixingyou/Mononoke/localhost/domain/paypal.list
+  primevideo_domain:
+    behavior: domain
+    format: text
+    interval: 86400
+    url: https://raw.githubusercontent.com/linshixingyou/Mononoke/localhost/domain/primevideo.list
+  private_domain:
+    behavior: domain
+    format: text
+    interval: 86400
+    url: https://raw.githubusercontent.com/linshixingyou/Mononoke/localhost/domain/private.list
+  proxy_domain:
+    behavior: domain
+    format: text
+    interval: 86400
+    url: https://raw.githubusercontent.com/linshixingyou/Mononoke/localhost/domain/proxy.list
+  socialmedia-cn_domain:
+    behavior: domain
+    format: text
+    interval: 86400
+    url: https://raw.githubusercontent.com/linshixingyou/Mononoke/localhost/domain/socialmedia-cn.list
+  socialmedia_domain:
+    behavior: domain
+    format: text
+    interval: 86400
+    url: https://raw.githubusercontent.com/linshixingyou/Mononoke/localhost/domain/socialmedia.list
+  speedtest_domain:
+    behavior: domain
+    format: text
+    interval: 86400
+    url: https://raw.githubusercontent.com/linshixingyou/Mononoke/localhost/domain/speedtest.list
+  spotify_domain:
+    behavior: domain
+    format: text
+    interval: 86400
+    url: https://raw.githubusercontent.com/linshixingyou/Mononoke/localhost/domain/spotify.list
+  talkatone_domain:
+    behavior: domain
+    format: text
+    interval: 86400
+    url: https://raw.githubusercontent.com/linshixingyou/Mononoke/localhost/domain/talkatone.list
+  tiktok_domain:
+    behavior: domain
+    format: text
+    interval: 86400
+    url: https://raw.githubusercontent.com/linshixingyou/Mononoke/localhost/domain/tiktok.list
+  tld-proxy_domain:
+    behavior: domain
+    format: text
+    interval: 86400
+    url: https://raw.githubusercontent.com/linshixingyou/Mononoke/localhost/domain/tld-proxy.list
+  twitch_domain:
+    behavior: domain
+    format: text
+    interval: 86400
+    url: https://raw.githubusercontent.com/linshixingyou/Mononoke/localhost/domain/twitch.list
+  youtube_domain:
+    behavior: domain
+    format: text
+    interval: 86400
+    url: https://raw.githubusercontent.com/linshixingyou/Mononoke/localhost/domain/youtube.list
+  adrules_ip:
     behavior: ipcidr
     format: text
     interval: 86400
-    url: https://raw.githubusercontent.com/linshixingyou/Mononoke/localhost/RejectIP.list
-  AI:
-    behavior: domain
-    format: text
-    interval: 86400
-    url: https://raw.githubusercontent.com/linshixingyou/Mononoke/localhost/AI.list
-  YouTube:
-    behavior: domain
-    format: text
-    interval: 86400
-    url: https://raw.githubusercontent.com/linshixingyou/Mononoke/localhost/YouTube.list
-  Netflix:
-    behavior: classical
-    format: text
-    interval: 86400
-    url: https://raw.githubusercontent.com/linshixingyou/Mononoke/localhost/Netflix.list
-  Disney+:
-    behavior: domain
-    format: text
-    interval: 86400
-    url: https://raw.githubusercontent.com/linshixingyou/Mononoke/localhost/Disney.list
-  Emby:
-    behavior: classical
-    format: text
-    interval: 86400
-    url: https://raw.githubusercontent.com/linshixingyou/Mononoke/localhost/Emby.list
-  TikTok:
-    behavior: domain
-    format: text
-    interval: 86400
-    url: https://raw.githubusercontent.com/linshixingyou/Mononoke/localhost/TikTok.list
-  Bahamut:
-    behavior: domain
-    format: text
-    interval: 86400
-    url: https://raw.githubusercontent.com/linshixingyou/Mononoke/localhost/Bahamut.list
-  BiliIntl:
-    behavior: domain
-    format: text
-    interval: 86400
-    url: https://raw.githubusercontent.com/linshixingyou/Mononoke/localhost/BiliBiliIntl.list
-  bilibili:
-    behavior: domain
-    format: text
-    interval: 86400
-    url: https://raw.githubusercontent.com/linshixingyou/Mononoke/localhost/bilibili.list
-  Spotify:
-    behavior: classical
-    format: text
-    interval: 86400
-    url: https://raw.githubusercontent.com/linshixingyou/Mononoke/localhost/Spotify.list
-  NetEaseMusic:
-    behavior: classical
-    format: text
-    interval: 86400
-    url: https://raw.githubusercontent.com/linshixingyou/Mononoke/localhost/NetEaseMusic.list
-  ProxyMedia:
-    behavior: classical
-    format: text
-    interval: 86400
-    url: https://raw.githubusercontent.com/linshixingyou/Mononoke/localhost/ProxyMedia.list
-  WeChat:
-    behavior: classical
-    format: text
-    interval: 86400
-    url: https://raw.githubusercontent.com/linshixingyou/Mononoke/localhost/WeChat.list
-  Telegram:
-    behavior: classical
-    format: text
-    interval: 86400
-    url: https://raw.githubusercontent.com/linshixingyou/Mononoke/localhost/Telegram.list
-  GitHub:
-    behavior: domain
-    format: text
-    interval: 86400
-    url: https://raw.githubusercontent.com/linshixingyou/Mononoke/localhost/Github.list
-  Twitter:
-    behavior: domain
-    format: text
-    interval: 86400
-    url: https://raw.githubusercontent.com/linshixingyou/Mononoke/localhost/Twitter.list
-  Google:
-    behavior: classical
-    format: text
-    interval: 86400
-    url: https://raw.githubusercontent.com/linshixingyou/Mononoke/localhost/Google.list
-  Microsoft:
-    behavior: domain
-    format: text
-    interval: 86400
-    url: https://raw.githubusercontent.com/linshixingyou/Mononoke/localhost/Microsoft.list
-  Games:
-    behavior: classical
-    format: text
-    interval: 86400
-    url: https://raw.githubusercontent.com/linshixingyou/Mononoke/localhost/Game.list
-  ProxyGFW:
-    behavior: domain
-    format: text
-    interval: 86400
-    url: https://raw.githubusercontent.com/linshixingyou/Mononoke/localhost/ProxyGFW.list
-  ProxyGFWIP:
+    url: https://raw.githubusercontent.com/linshixingyou/Mononoke/localhost/ipcidr/adrules.list
+  apns_ip:
     behavior: ipcidr
     format: text
     interval: 86400
-    url: https://raw.githubusercontent.com/linshixingyou/Mononoke/localhost/ProxyGFWIP.list
-  AppleCN:
-    behavior: domain
+    url: https://raw.githubusercontent.com/linshixingyou/Mononoke/localhost/ipcidr/apns.list
+  apple_ip:
+    behavior: ipcidr
     format: text
     interval: 86400
-    url: https://raw.githubusercontent.com/linshixingyou/Mononoke/localhost/AppleCN.list
-  AppleServers:
-    behavior: domain
+    url: https://raw.githubusercontent.com/linshixingyou/Mononoke/localhost/ipcidr/apple.list
+  bilibili_ip:
+    behavior: ipcidr
     format: text
     interval: 86400
-    url: https://raw.githubusercontent.com/linshixingyou/Mononoke/localhost/AppleServers.list
+    url: https://raw.githubusercontent.com/linshixingyou/Mononoke/localhost/ipcidr/bilibili.list
+  cn_ip:
+    behavior: ipcidr
+    format: text
+    interval: 86400
+    url: https://raw.githubusercontent.com/linshixingyou/Mononoke/localhost/ipcidr/cn.list
+  dmca_ip:
+    behavior: ipcidr
+    format: text
+    interval: 86400
+    url: https://raw.githubusercontent.com/linshixingyou/Mononoke/localhost/ipcidr/dmca.list
+  dmm_ip:
+    behavior: ipcidr
+    format: text
+    interval: 86400
+    url: https://raw.githubusercontent.com/linshixingyou/Mononoke/localhost/ipcidr/dmm.list
+  ecommerce_ip:
+    behavior: ipcidr
+    format: text
+    interval: 86400
+    url: https://raw.githubusercontent.com/linshixingyou/Mononoke/localhost/ipcidr/ecommerce.list
+  games_ip:
+    behavior: ipcidr
+    format: text
+    interval: 86400
+    url: https://raw.githubusercontent.com/linshixingyou/Mononoke/localhost/ipcidr/games.list
+  gfw_ip:
+    behavior: ipcidr
+    format: text
+    interval: 86400
+    url: https://raw.githubusercontent.com/linshixingyou/Mononoke/localhost/ipcidr/gfw.list
+  google_ip:
+    behavior: ipcidr
+    format: text
+    interval: 86400
+    url: https://raw.githubusercontent.com/linshixingyou/Mononoke/localhost/ipcidr/google.list
+  googlefcm_ip:
+    behavior: ipcidr
+    format: text
+    interval: 86400
+    url: https://raw.githubusercontent.com/linshixingyou/Mononoke/localhost/ipcidr/googlefcm.list
+  httpdns_ip:
+    behavior: ipcidr
+    format: text
+    interval: 86400
+    url: https://raw.githubusercontent.com/linshixingyou/Mononoke/localhost/ipcidr/httpdns.list
+  iplocation-proxy_ip:
+    behavior: ipcidr
+    format: text
+    interval: 86400
+    url: https://raw.githubusercontent.com/linshixingyou/Mononoke/localhost/ipcidr/iplocation-proxy.list
+  netflix_ip:
+    behavior: ipcidr
+    format: text
+    interval: 86400
+    url: https://raw.githubusercontent.com/linshixingyou/Mononoke/localhost/ipcidr/netflix.list
+  private_ip:
+    behavior: ipcidr
+    format: text
+    interval: 86400
+    url: https://raw.githubusercontent.com/linshixingyou/Mononoke/localhost/ipcidr/private.list
+  proxy_ip:
+    behavior: ipcidr
+    format: text
+    interval: 86400
+    url: https://raw.githubusercontent.com/linshixingyou/Mononoke/localhost/ipcidr/proxy.list
+  socialmedia-cn_ip:
+    behavior: ipcidr
+    format: text
+    interval: 86400
+    url: https://raw.githubusercontent.com/linshixingyou/Mononoke/localhost/ipcidr/socialmedia-cn.list
+  socialmedia_ip:
+    behavior: ipcidr
+    format: text
+    interval: 86400
+    url: https://raw.githubusercontent.com/linshixingyou/Mononoke/localhost/ipcidr/socialmedia.list
+  spotify_ip:
+    behavior: ipcidr
+    format: text
+    interval: 86400
+    url: https://raw.githubusercontent.com/linshixingyou/Mononoke/localhost/ipcidr/spotify.list
+  talkatone_ip:
+    behavior: ipcidr
+    format: text
+    interval: 86400
+    url: https://raw.githubusercontent.com/linshixingyou/Mononoke/localhost/ipcidr/talkatone.list
+  twitch_ip:
+    behavior: ipcidr
+    format: text
+    interval: 86400
+    url: https://raw.githubusercontent.com/linshixingyou/Mononoke/localhost/ipcidr/twitch.list
+  youtube_ip:
+    behavior: ipcidr
+    format: text
+    interval: 86400
+    url: https://raw.githubusercontent.com/linshixingyou/Mononoke/localhost/ipcidr/youtube.list
   CN_Mainland:
     behavior: domain
     format: text
