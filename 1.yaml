@@ -162,15 +162,13 @@ proxy-groups:
       - America
       - 云洞
       - Kitty
-  - name: Telegram
+  - name: Music
     type: select
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Telegram_X.png
     proxies:
-      - ProxySelect
-      - 云洞
-      - Kitty
+      - Japan
       - HongKong
-      - Singapore
+      - America
   - name: Media
     type: select
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Streaming.png
@@ -370,9 +368,8 @@ proxy-groups:
     type: select
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/X.png
     proxies:
-      - ProxySelect
-      - 云洞
       - All-Auto
+      - HongKong
   - name: All-Auto
     type: url-test
     hidden: true
@@ -465,7 +462,7 @@ rules:
   - RULE-SET,socialmedia-cn_domain,DIRECT
   - RULE-SET,socialmedia_domain,SNS
   - RULE-SET,speedtest_domain,ProxySelect
-  - RULE-SET,spotify_domain,ProxySelect
+  - RULE-SET,spotify_domain,Music
   - RULE-SET,talkatone_domain,ProxySelect
   - RULE-SET,tiktok_domain,TikTok
   - RULE-SET,tld-proxy_domain,ProxySelect
@@ -491,7 +488,7 @@ rules:
   - RULE-SET,proxy_ip,ProxySelect
   - RULE-SET,socialmedia-cn_ip,DIRECT
   - RULE-SET,socialmedia_ip,SNS
-  - RULE-SET,spotify_ip,Google
+  - RULE-SET,spotify_ip,Music
   - RULE-SET,talkatone_ip,ProxySelect
   - RULE-SET,twitch_ip,Media
   - RULE-SET,youtube_ip,YouTube
