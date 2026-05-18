@@ -171,7 +171,7 @@ proxy-groups:
       - Kitty
       - HongKong
       - Singapore
-  - name: Streaming
+  - name: Media
     type: select
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Streaming.png
     proxies:
@@ -366,7 +366,7 @@ proxy-groups:
       - ProxySelect
       - 云洞
       - PKU
-  - name: X
+  - name: SNS
     type: select
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/X.png
     proxies:
@@ -388,17 +388,6 @@ proxy-groups:
       - DIRECT
       - HongKong
       - TaiWan
-  - name: Microsoft
-    type: select
-    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Windows_11.png
-    proxies:
-      - DIRECT
-      - ProxySelect
-      - HongKong
-      - TaiWan
-      - Japan
-      - Singapore
-      - America
   - name: Games
     type: select
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Game.png
@@ -422,41 +411,8 @@ proxy-groups:
       - Singapore
       - America
       - All-Auto
-  - name: Disney+
-    type: select
-    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Disney.png
-    proxies:
-      - ProxySelect
-      - HongKong
-      - TaiWan
-      - Japan
-      - Singapore
-      - America
-      - All-Auto
-  - name: Spotify
-    type: select
-    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Spotify.png
-    proxies:
-      - ProxySelect
-      - HongKong
-      - TaiWan
-      - Japan
-      - Singapore
-      - America
-      - All-Auto
-      - DIRECT
-    use: null
-  - name: NETFLIX
-    type: select
-    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Netflix.png
-    proxies:
-      - ProxySelect
-      - HongKong
-      - TaiWan
-      - Japan
-      - Singapore
-      - America
-      - All-Auto
+
+
 rules:
   - IP-CIDR,102.205.44.32,云洞
   - DOMAIN,eco.potdot.de,HongKong
@@ -468,27 +424,27 @@ rules:
   - RULE-SET,abema_domain,Japan
   - RULE-SET,adrules_domain,REJECT
   - RULE-SET,ai_domain,AI
-  - RULE-SET,apns_domain,ProxySelect
-  - RULE-SET,apple-cn_domain,ProxySelect
-  - RULE-SET,apple-proxy_domain,ProxySelect
-  - RULE-SET,apple-tv_domain,ProxySelect
-  - RULE-SET,apple_domain,ProxySelect
-  - RULE-SET,bahamut_domain,ProxySelect
-  - RULE-SET,bilibili_domain,ProxySelect
-  - RULE-SET,cdn_domain,ProxySelect
-  - RULE-SET,cn_domain,ProxySelect
+  - RULE-SET,apns_domain,AppleGlobal
+  - RULE-SET,apple-cn_domain,Apple
+  - RULE-SET,apple-proxy_domain,AppleGlobal
+  - RULE-SET,apple-tv_domain,AppleGlobal
+  - RULE-SET,apple_domain,AppleGlobal
+  - RULE-SET,bahamut_domain,TaiWan
+  - RULE-SET,bilibili_domain,bilibili
+  - RULE-SET,cdn_domain,DIRECT
+  - RULE-SET,cn_domain,DIRECT
   - RULE-SET,crypto_domain,ProxySelect
-  - RULE-SET,dazn_domain,ProxySelect
-  - RULE-SET,disney_domain,ProxySelect
-  - RULE-SET,dmca_domain,ProxySelect
-  - RULE-SET,dmm_domain,ProxySelect
-  - RULE-SET,douyin_domain,ProxySelect
+  - RULE-SET,dazn_domain,Media
+  - RULE-SET,disney_domain,Media
+  - RULE-SET,dmca_domain,DIRECT
+  - RULE-SET,dmm_domain,Japan
+  - RULE-SET,douyin_domain,TikTok
   - RULE-SET,ecommerce_domain,ProxySelect
   - RULE-SET,forum_domain,ProxySelect
   - RULE-SET,games-cn_domain,ProxySelect
   - RULE-SET,games_domain,ProxySelect
   - RULE-SET,gfw_domain,ProxySelect
-  - RULE-SET,gits_domain,ProxySelect
+  - RULE-SET,gits_domain,Github
   - RULE-SET,google_domain,Google
   - RULE-SET,googlefcm_domain,Google
   - RULE-SET,hbo_domain,ProxySelect
@@ -496,48 +452,48 @@ rules:
   - RULE-SET,hulu_domain,ProxySelect
   - RULE-SET,iplocation-direct_domain,ProxySelect
   - RULE-SET,iplocation-proxy_domain,ProxySelect
-  - RULE-SET,microsoft-cn_domain,ProxySelect
+  - RULE-SET,microsoft-cn_domain,Direct
   - RULE-SET,microsoft_domain,ProxySelect
-  - RULE-SET,mytvsuper_domain,ProxySelect
-  - RULE-SET,netflix_domain,ProxySelect
-  - RULE-SET,niconico_domain,ProxySelect
+  - RULE-SET,mytvsuper_domain,Media
+  - RULE-SET,netflix_domain,Media
+  - RULE-SET,niconico_domain,Japan
   - RULE-SET,onedrive_domain,ProxySelect
   - RULE-SET,paypal_domain,ProxySelect
   - RULE-SET,primevideo_domain,ProxySelect
   - RULE-SET,private_domain,ProxySelect
   - RULE-SET,proxy_domain,ProxySelect
-  - RULE-SET,socialmedia-cn_domain,ProxySelect
-  - RULE-SET,socialmedia_domain,ProxySelect
+  - RULE-SET,socialmedia-cn_domain,DIRECT
+  - RULE-SET,socialmedia_domain,SNS
   - RULE-SET,speedtest_domain,ProxySelect
   - RULE-SET,spotify_domain,ProxySelect
   - RULE-SET,talkatone_domain,ProxySelect
-  - RULE-SET,tiktok_domain,ProxySelect
+  - RULE-SET,tiktok_domain,TikTok
   - RULE-SET,tld-proxy_domain,ProxySelect
-  - RULE-SET,twitch_domain,ProxySelect
+  - RULE-SET,twitch_domain,Media
   - RULE-SET,youtube_domain,YouTube
   
-  - RULE-SET,adrules_ip,ProxySelect
-  - RULE-SET,apns_ip,ProxySelect
-  - RULE-SET,apple_ip,ProxySelect
-  - RULE-SET,bilibili_ip,ProxySelect
-  - RULE-SET,cn_ip,ProxySelect
+  - RULE-SET,adrules_ip,REJECT
+  - RULE-SET,apns_ip,AppleGlobal
+  - RULE-SET,apple_ip,AppleGlobal
+  - RULE-SET,bilibili_ip,bilibili
+  - RULE-SET,cn_ip,DIRECT
   - RULE-SET,dmca_ip,ProxySelect
   - RULE-SET,dmm_ip,ProxySelect
   - RULE-SET,ecommerce_ip,ProxySelect
-  - RULE-SET,games_ip,ProxySelect
+  - RULE-SET,games_ip,Games
   - RULE-SET,gfw_ip,ProxySelect
   - RULE-SET,google_ip,Google
   - RULE-SET,googlefcm_ip,Google
   - RULE-SET,httpdns_ip,ProxySelect
   - RULE-SET,iplocation-proxy_ip,ProxySelect
-  - RULE-SET,netflix_ip,ProxySelect
+  - RULE-SET,netflix_ip,Media
   - RULE-SET,private_ip,ProxySelect
   - RULE-SET,proxy_ip,ProxySelect
-  - RULE-SET,socialmedia-cn_ip,Google
-  - RULE-SET,socialmedia_ip,Google
+  - RULE-SET,socialmedia-cn_ip,DIRECT
+  - RULE-SET,socialmedia_ip,SNS
   - RULE-SET,spotify_ip,Google
   - RULE-SET,talkatone_ip,ProxySelect
-  - RULE-SET,twitch_ip,ProxySelect
+  - RULE-SET,twitch_ip,Media
   - RULE-SET,youtube_ip,YouTube
 
   - RULE-SET,CN_Mainland,DIRECT
@@ -934,11 +890,6 @@ rule-providers:
     format: text
     interval: 86400
     url: https://raw.githubusercontent.com/linshixingyou/Mononoke/localhost/ChinaDomain.list
-  LAN:
-    behavior: classical
-    format: text
-    interval: 86400
-    url: https://raw.githubusercontent.com/linshixingyou/Mononoke/localhost/Lan.list
 proxies:
   - name: 云洞保底
     password: 0993c0f8-9e29-32b1-810c-65f448c5aa04
