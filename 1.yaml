@@ -639,4 +639,3 @@ proxies:
     skip-cert-verify: true
     sni: openssl.nodesni.com
     type: trojan
-
