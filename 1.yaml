@@ -370,11 +370,8 @@ proxy-groups:
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/X.png
     proxies:
       - ProxySelect
-      - HongKong
-      - TaiWan
-      - Japan
-      - Singapore
-      - America
+      - 云洞
+      - All-Auto
   - name: All-Auto
     type: url-test
     hidden: true
@@ -462,7 +459,6 @@ proxy-groups:
 rules:
   - IP-CIDR,102.205.44.32,云洞
   - DOMAIN,eco.potdot.de,HongKong
-  - DOMAIN-KEYWORD,reddit,云洞
   - RULE-SET,Direct,DIRECT
   - RULE-SET,Reject,REJECT
   - RULE-SET,RejectIP,REJECT
