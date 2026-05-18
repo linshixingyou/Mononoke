@@ -31,6 +31,9 @@ DOMAIN-SUFFIX,usercontent.dev
 DOMAIN-SUFFIX,walletbot.me
 DOMAIN-KEYWORD,nicegram
 DOMAIN-KEYWORD,telegram
+DOMAIN-SUFFIX,revenuecat.com
+DOMAIN-SUFFIX,nicegram.cloud
+DOMAIN-SUFFIX,nicegram.app
 IP-CIDR,149.154.160.0/20,no-resolve
 IP-CIDR,185.76.151.0/24,no-resolve
 IP-CIDR,5.28.192.0/18,no-resolve

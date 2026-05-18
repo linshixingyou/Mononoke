@@ -460,9 +460,6 @@ proxy-groups:
       - All-Auto
 rules:
   - DOMAIN,102.205.44.32,云洞
-  - DOMAIN-SUFFIX,revenuecat.com,Telegram
-  - DOMAIN-SUFFIX,nicegram.cloud,Telegram
-  - DOMAIN-SUFFIX,nicegram.app,Telegram
   - DOMAIN,eco.potdot.de,HongKong
   - DOMAIN-KEYWORD,reddit,云洞
   - RULE-SET,Direct,DIRECT
