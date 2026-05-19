@@ -868,3 +868,6 @@ rule-providers:
     format: text
     interval: 86400
     url: https://raw.githubusercontent.com/linshixingyou/Mononoke/localhost/ChinaDomain.list
+proxies:
+    - name: ds218
+      type: tailscale
