@@ -76,5 +76,5 @@ proxies:
         public-key: AvtO9YC4L4eCScsYqJZLDNhVsljkXIaTsD_tKSHLNmM    
         short-id: 44843487                      
       client-fingerprint: chrome   
-     - name: ds218
-       type: tailscale
+    - name: ds218
+      type: tailscale
