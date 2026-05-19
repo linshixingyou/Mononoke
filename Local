@@ -1,43 +1,5 @@
-allow-lan: true
-bind-address: '*'
-dns:
-    default-nameserver:
-        - 223.5.5.5
-        - 119.29.29.29
-        - 114.114.114.114
-    enable: true
-    enhanced-mode: fake-ip
-    fake-ip-range: 198.18.0.1/16
-    fallback:
-        - 1.1.1.1
-        - 8.8.8.8
-    fallback-filter:
-        domain:
-            - +.google.com
-            - +.facebook.com
-            - +.youtube.com
-        geoip: true
-        geoip-code: CN
-        geosite:
-            - gfw
-        ipcidr:
-            - 240.0.0.0/4
-    ipv6: false
-    nameserver:
-        - 223.5.5.5
-        - 119.29.29.29
-        - 114.114.114.114
-    proxy-server-nameserver:
-        - 223.5.5.5
-        - 119.29.29.29
-        - 114.114.114.114
-    respect-rules: true
-    use-hosts: true
-log-level: info
-mixed-port: 7890
-mode: rule
 proxies:
-    - name: 云洞保底
+    - name: 保底
       password: 0993c0f8-9e29-32b1-810c-65f448c5aa04
       port: 41510
       server: cave-hk.kunlun04dns.com
@@ -47,7 +9,7 @@ proxies:
       type: trojan
     - auth: "3286b74d-a633-401f-8e22-6e8e61c5f1d9"
       fast-open: false
-      name: VPS无限
+      name: 鸢尾VPS
       port: 5555
       server: 45.192.195.52
       type: hysteria2
@@ -56,13 +18,13 @@ proxies:
       down-speed: 1000
       skip-cert-verify: true
       up-speed: 1000
-    - name: ipfoxyipfoxyipfoxy
+    - name: ipfoxy
       port: 58688
       server: gate.ipfoxy.io
       type: socks5
       user: customer-cnt1OMFrok-cc-NG-st-Fct-sessid-1778777321_10000
       password: LzPZfYvjGMAAkMC
-    - name: vless-reality-vision-ser634656983095               
+    - name: 帕斯云              
       type: vless
       server: 102.205.44.32                           
       port: 12345                                
@@ -79,3 +41,7 @@ proxies:
     - name: ds218
       type: tailscale
       auth-key: tskey-auth-kQntFGvKbS11CNTRL-WmTdfmvUuJUcWJwbyDhxJUByNxmNFSH5
+
+
+
+

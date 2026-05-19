@@ -395,9 +395,9 @@ rules:
   - IP-CIDR,102.205.44.32,云洞
   - DOMAIN,eco.potdot.de,HongKong
   - RULE-SET,adrules_classical,REJECT
-  - RULE-SET,speedtest_classical,DIRECT
-  - RULE-SET,cdn_classical,DIRECT
-  - RULE-SET,dmca_classical,DIRECT
+  - RULE-SET,speedtest_classical,ProxySelect
+  - RULE-SET,cdn_classical,ProxySelect
+  - RULE-SET,dmca_classical,ProxySelect
 
   - RULE-SET,abema_domain,JP-Select
   - RULE-SET,adrules_domain,REJECT
@@ -407,15 +407,15 @@ rules:
   - RULE-SET,apple-proxy_domain,AppleGlobal
   - RULE-SET,apple-tv_domain,AppleGlobal
   - RULE-SET,apple_domain,AppleGlobal
-  - RULE-SET,bahamut_domain,TaiWan
+  - RULE-SET,bahamut_domain,TW-Auto
   - RULE-SET,bilibili_domain,bilibili
   - RULE-SET,cdn_domain,ProxySelect
   - RULE-SET,cn_domain,DIRECT
   - RULE-SET,crypto_domain,ProxySelect
   - RULE-SET,dazn_domain,Media
   - RULE-SET,disney_domain,Media
-  - RULE-SET,dmca_domain,DIRECT
-  - RULE-SET,dmm_domain,Japan
+  - RULE-SET,dmca_domain,ProxySelect
+  - RULE-SET,dmm_domain,JP-Select
   - RULE-SET,douyin_domain,TikTok
   - RULE-SET,ecommerce_domain,ProxySelect
   - RULE-SET,forum_domain,ProxySelect
@@ -428,14 +428,14 @@ rules:
   - RULE-SET,hbo_domain,ProxySelect
   - RULE-SET,httpdns_domain,ProxySelect
   - RULE-SET,hulu_domain,ProxySelect
-  - RULE-SET,iplocation-direct_domain,ProxySelect
+  - RULE-SET,iplocation-direct_domain,DIRECT
   - RULE-SET,iplocation-proxy_domain,ProxySelect
   - RULE-SET,microsoft-cn_domain,Direct
   - RULE-SET,microsoft_domain,ProxySelect
   - RULE-SET,mytvsuper_domain,Media
   - RULE-SET,netflix_domain,Media
-  - RULE-SET,niconico_domain,Japan
-  - RULE-SET,onedrive_domain,ProxySelect
+  - RULE-SET,niconico_domain,JP-Select
+  - RULE-SET,onedrive_domain,DIRECT
   - RULE-SET,paypal_domain,ProxySelect
   - RULE-SET,primevideo_domain,ProxySelect
   - RULE-SET,private_domain,ProxySelect
@@ -474,7 +474,6 @@ rules:
   - RULE-SET,twitch_ip,Media
   - RULE-SET,youtube_ip,YouTube
 
-  - RULE-SET,CN_Mainland,DIRECT
   - GEOIP,CN,DIRECT
   - MATCH,Final
 rule-providers:
@@ -862,12 +861,4 @@ rule-providers:
     behavior: ipcidr
     format: text
     interval: 86400
-    url: https://raw.githubusercontent.com/linshixingyou/Mononoke/localhost/ipcidr/youtube.list
-  CN_Mainland:
-    behavior: domain
-    format: text
-    interval: 86400
-    url: https://raw.githubusercontent.com/linshixingyou/Mononoke/localhost/ChinaDomain.list
-proxies:
-    - name: ds218
-      type: tailscale
+    url: https://raw.githubusercontent.com/linshixingyou/Mononoke/localhost/ipcidr/youtube.
