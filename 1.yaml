@@ -868,12 +868,3 @@ rule-providers:
     format: text
     interval: 86400
     url: https://raw.githubusercontent.com/linshixingyou/Mononoke/localhost/ChinaDomain.list
-proxies:
-  - name: 云洞保底
-    password: 0993c0f8-9e29-32b1-810c-65f448c5aa04
-    port: 41510
-    server: cave-hk.kunlun04dns.com
-    servername: openssl.nodesni.com
-    skip-cert-verify: true
-    sni: openssl.nodesni.com
-    type: trojan
