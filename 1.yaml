@@ -297,6 +297,7 @@ proxy-groups:
       - SG-Auto
       - 云洞Auto
       - KittyAuto
+      - PkuAuto
   - name: All-Auto
     type: url-test
     hidden: true
