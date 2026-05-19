@@ -135,20 +135,6 @@ proxy-groups:
     type: select
     use:
       - Peigedpkj
-  - icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Apple.png
-    name: AppleGlobal
-    type: select
-    proxies:
-      - DIRECT
-      - ProxySelect
-      - 手动
-  - name: Apple
-    type: select
-    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Apple_1.png
-    proxies:
-      - DIRECT
-      - ProxySelect
-      - 手动
   - name: Google
     type: select
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Google_Search.png
@@ -405,6 +391,18 @@ proxy-groups:
       - PkuAuto
       - KittyAuto
       - All-Auto
+  - icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Apple.png
+    name: AppleGlobal
+    type: select
+    proxies:
+      - DIRECT
+      - ProxySelect
+  - name: Apple
+    type: select
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Apple_1.png
+    proxies:
+      - DIRECT
+      - ProxySelect
 
 
 rules:
