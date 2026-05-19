@@ -94,7 +94,7 @@ proxy-groups:
       - Kitty
   - name: Music
     type: select
-    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Telegram_X.png
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Apple_Music.png
     proxies:
       - HK-Auto
       - TW-Auto
@@ -136,6 +136,7 @@ proxy-groups:
     type: select
     use:
       - pku
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/CC.png
   - name: KittyAuto
     type: url-test
     hidden: true
@@ -148,6 +149,7 @@ proxy-groups:
     type: select
     use:
       - kittysu
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/CC.png
   - include-all: true
     name: 手动
     type: select
@@ -158,7 +160,7 @@ proxy-groups:
     type: select
     use:
       - GitHubProxy
-    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Clubhouse.png
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Heart.png
   # 基于地区分组
   - name: HK-Auto
     type: url-test
