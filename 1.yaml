@@ -30,7 +30,7 @@ proxy-providers:
   Peigedpkj:
     interval: 86400
     url: https://peige.dpkj.qzz.io/dapei
-  GitHubProxy:
+  Local:
     interval: 86400
     url: https://raw.githubusercontent.com/linshixingyou/Mononoke/localhost/Local
 proxy-groups:
@@ -41,7 +41,7 @@ proxy-groups:
       - 云洞Auto
       - PkuAuto
       - KittyAuto
-      - 本地
+      - Customization
   - name: Final
     type: select
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Final.png
@@ -360,10 +360,10 @@ proxy-groups:
     proxies: null
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Clubhouse.png
     filter: ^(?=.*(.))(?!.*((?i)群|邀请|返利|循环|官网|客服|网站|网址|获取|订阅|流量|到期|机场|下次|版本|官址|备用|过期|已用|联系|失联|邮箱|工单|贩卖|通知|倒卖|防止|国内|地址|频道|无法|说明|使用|提示|特别|访问|支持|教程|关注|更新|作者|加入|(\b(USE|USED|TOTAL|Traffic|Expire|EMAIL|Panel|Channel|Author)\b|(\d{4}-\d{2}-\d{2}|\d+G)))).*$
-  - name: 本地
+  - name: Customization
     type: select
     use:
-      - GitHubProxy
+      - Local
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Heart.png
   - name: 落地
     type: select
@@ -373,7 +373,7 @@ proxy-groups:
       - pedagou落地
       - 手动
       - Kitty
-      - 本地
+      - Customization
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Blackhole.png
   - icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Available_1.png
     name: Chain
