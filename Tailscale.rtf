@@ -1,0 +1,170 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2869
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fnil\fcharset0 .SFNS-Regular;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww14280\viewh19660\viewkind0
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\f0\fs26 \cf0 mixed-port: 7890\
+allow-lan: true\
+bind-address: '*'\
+mode: rule\
+log-level: info\
+ipv6: true\
+prefer-ipv6: true\
+external-controller: '127.0.0.1:9090'\
+find-process-mode: strict\
+unified-delay: true\
+tcp-concurrent: true\
+geodata-mode: true\
+geo-auto-update: true\
+geo-update-interval: 24\
+geox-url:\
+\'a0\'a0\'a0\'a0geoip: 'https://cdn.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@release/geoip.dat'\
+\'a0\'a0\'a0\'a0geosite: 'https://cdn.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@release/geosite.dat'\
+\'a0\'a0\'a0\'a0mmdb: 'https://cdn.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@release/country.mmdb'\
+\'a0\'a0\'a0\'a0asn: 'https://cdn.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@release/GeoLite2-ASN.mmdb'\
+\'a0\'a0\'a0\'a0metadb: 'https://cdn.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@release/geoip.metadb'\
+keep-alive-interval: 30\
+keep-alive-idle: 120\
+profile:\
+\'a0\'a0\'a0\'a0store-selected: true\
+\'a0\'a0\'a0\'a0store-fake-ip: true\
+sniffer:\
+\'a0\'a0\'a0\'a0enable: true\
+\'a0\'a0\'a0\'a0force-dns-mapping: true\
+\'a0\'a0\'a0\'a0parse-pure-ip: true\
+\'a0\'a0\'a0\'a0override-destination: true\
+\'a0\'a0\'a0\'a0sniff: \{ HTTP: \{ ports: [80, 8080-8880], override-destination: true \}, TLS: \{ ports: [443, 8443] \}, QUIC: \{ ports: [443, 8443] \} \}\
+\'a0\'a0\'a0\'a0skip-domain: ['Mijia Cloud', +.push.apple.com]\
+dns:\
+\'a0\'a0\'a0\'a0enable: true\
+\'a0\'a0\'a0\'a0prefer-h3: true\
+\'a0\'a0\'a0\'a0enhanced-mode: fake-ip\
+\'a0\'a0\'a0\'a0fake-ip-range: 198.18.0.1/16\
+\'a0\'a0\'a0\'a0default-nameserver: [223.5.5.5, 119.29.29.29]\
+\'a0\'a0\'a0\'a0nameserver: ['https://dns.cloudflare.com/dns-query', 'https://dns.google/dns-query']\
+\'a0\'a0\'a0\'a0proxy-server-nameserver: ['https://dns.alidns.com/dns-query']\
+\'a0\'a0\'a0\'a0nameserver-policy: \{ 'geosite:cn,geolocation-cn': ['https://doh.pub/dns-query', 'https://dns.alidns.com/dns-query'] \}\
+\'a0\'a0\'a0\'a0fake-ip-filter: ['*.lan', '*.local', '*.direct', '*.localhost', 'time.*.com', 'ntp.*.com', 'time.*.gov', 'time.*.apple.com', time.windows.com, time.nist.gov, '*.msftconnecttest.com', '*.msftncsi.com', localhost.ptlogin2.qq.com, '*.cmpassport.com', '*.mcdn.bilivideo.cn', '*.battlenet.com.cn', +.wotgame.cn, +.wggames.cn, +.wowsgame.cn, id6.me, lens.l.google.com, captive.apple.com, connectivitycheck.gstatic.com]\
+proxies:\
+    - \{ name: 'ds218', type: tailscale, auth-key: tskey-auth-kQntFGvKbS11CNTRL-WmTdfmvUuJUcWJwbyDhxJUByNxmNFSH5 \}\
+\'a0\'a0\'a0\'a0- \{ name: '\uc0\u21097 \u20313 \u27969 \u37327 \u65306 94.07 GB', type: vless, server: us1.miyazono-kaori.com, port: 443, uuid: cf52246d-abe4-4029-86e4-341a6da64c2d, alterId: 0, cipher: auto, udp: true, flow: xtls-rprx-vision, encryption: none, tls: true, skip-cert-verify: false, servername: download-porter.hoyoverse.com, reality-opts: \{ public-key: 0_UOGGSOr0NZqCA-nQo-Ct0MjQPfghmBL_sh6XU5pW8, short-id: 8e218ca02a \}, client-fingerprint: chrome, network: tcp \}\
+\'a0\'a0\'a0\'a0- \{ name: '\uc0\u36317 \u31163 \u19979 \u27425 \u37325 \u32622 \u21097 \u20313 \u65306 5 \u22825 ', type: vless, server: us1.miyazono-kaori.com, port: 443, uuid: cf52246d-abe4-4029-86e4-341a6da64c2d, alterId: 0, cipher: auto, udp: true, flow: xtls-rprx-vision, encryption: none, tls: true, skip-cert-verify: false, servername: download-porter.hoyoverse.com, reality-opts: \{ public-key: 0_UOGGSOr0NZqCA-nQo-Ct0MjQPfghmBL_sh6XU5pW8, short-id: 8e218ca02a \}, client-fingerprint: chrome, network: tcp \}\
+\'a0\'a0\'a0\'a0- \{ name: \uc0\u22871 \u39184 \u21040 \u26399 \u65306 2026-10-24, type: vless, server: us1.miyazono-kaori.com, port: 443, uuid: cf52246d-abe4-4029-86e4-341a6da64c2d, alterId: 0, cipher: auto, udp: true, flow: xtls-rprx-vision, encryption: none, tls: true, skip-cert-verify: false, servername: download-porter.hoyoverse.com, reality-opts: \{ public-key: 0_UOGGSOr0NZqCA-nQo-Ct0MjQPfghmBL_sh6XU5pW8, short-id: 8e218ca02a \}, client-fingerprint: chrome, network: tcp \}\
+\'a0\'a0\'a0\'a0- \{ name: '\uc0\u55356 \u56826 \u55356 \u56824 United States 01', type: vless, server: us1.miyazono-kaori.com, port: 443, uuid: cf52246d-abe4-4029-86e4-341a6da64c2d, alterId: 0, cipher: auto, udp: true, flow: xtls-rprx-vision, encryption: none, tls: true, skip-cert-verify: false, servername: download-porter.hoyoverse.com, reality-opts: \{ public-key: 0_UOGGSOr0NZqCA-nQo-Ct0MjQPfghmBL_sh6XU5pW8, short-id: 8e218ca02a \}, client-fingerprint: chrome, network: tcp \}\
+\'a0\'a0\'a0\'a0- \{ name: '\uc0\u55356 \u56826 \u55356 \u56824 United States 02', type: vless, server: us2.miyazono-kaori.com, port: 443, uuid: cf52246d-abe4-4029-86e4-341a6da64c2d, alterId: 0, cipher: auto, udp: true, flow: xtls-rprx-vision, encryption: none, tls: true, skip-cert-verify: false, servername: download-porter.hoyoverse.com, reality-opts: \{ public-key: w5egR8fKNXrEJns2AfwStSzRQ9yHY_invtW7tnqm8Dk, short-id: 297842ea18bf \}, client-fingerprint: chrome, network: tcp \}\
+\'a0\'a0\'a0\'a0- \{ name: '\uc0\u55356 \u56826 \u55356 \u56824 United States 03', type: vless, server: us3.miyazono-kaori.com, port: 443, uuid: cf52246d-abe4-4029-86e4-341a6da64c2d, alterId: 0, cipher: auto, udp: true, flow: xtls-rprx-vision, encryption: none, tls: true, skip-cert-verify: false, servername: download-porter.hoyoverse.com, reality-opts: \{ public-key: dvXaj6cjjCxv1btRo7vHk93VR0BCQTF_xQClCjVZ1mM, short-id: 5cfd1c \}, client-fingerprint: chrome, network: tcp \}\
+\'a0\'a0\'a0\'a0- \{ name: '\uc0\u55356 \u56826 \u55356 \u56824 United States 04', type: vless, server: us4.miyazono-kaori.com, port: 443, uuid: cf52246d-abe4-4029-86e4-341a6da64c2d, alterId: 0, cipher: auto, udp: true, flow: xtls-rprx-vision, encryption: none, tls: true, skip-cert-verify: false, servername: download-porter.hoyoverse.com, reality-opts: \{ public-key: zyuUbkfNG5nWHUVIVjGCCYIs85gKcxho6vmHKXVMIWA, short-id: 2ad0cb03eb3fa5 \}, client-fingerprint: chrome, network: tcp \}\
+\'a0\'a0\'a0\'a0- \{ name: '\uc0\u55356 \u56824 \u55356 \u56812 Singapore 01', type: anytls, server: sg1.miyazono-kaori.com, port: 443, password: cf52246d-abe4-4029-86e4-341a6da64c2d, udp: true, sni: cdn-backup-pool-west.com, skip-cert-verify: true \}\
+\'a0\'a0\'a0\'a0- \{ name: '\uc0\u55356 \u56824 \u55356 \u56812 Singapore 02', type: anytls, server: sg2.miyazono-kaori.com, port: 443, password: cf52246d-abe4-4029-86e4-341a6da64c2d, udp: true, sni: cdn-backup-pool-west.com, skip-cert-verify: true \}\
+\'a0\'a0\'a0\'a0- \{ name: '\uc0\u55356 \u56824 \u55356 \u56812 Singapore 03', type: anytls, server: sg3.miyazono-kaori.com, port: 443, password: cf52246d-abe4-4029-86e4-341a6da64c2d, udp: true, sni: cdn-backup-pool-west.com, skip-cert-verify: true \}\
+\'a0\'a0\'a0\'a0- \{ name: '\uc0\u55356 \u56824 \u55356 \u56812 Singapore 04', type: anytls, server: sg4.miyazono-kaori.com, port: 443, password: cf52246d-abe4-4029-86e4-341a6da64c2d, udp: true, sni: cdn-backup-pool-west.com, skip-cert-verify: true \}\
+\'a0\'a0\'a0\'a0- \{ name: '\uc0\u55356 \u56815 \u55356 \u56821 Japan 01', type: anytls, server: jp1.miyazono-kaori.com, port: 443, password: cf52246d-abe4-4029-86e4-341a6da64c2d, udp: true, sni: media-internal-srv-ap.com, skip-cert-verify: true \}\
+\'a0\'a0\'a0\'a0- \{ name: '\uc0\u55356 \u56815 \u55356 \u56821 Japan 02', type: anytls, server: jp2.miyazono-kaori.com, port: 443, password: cf52246d-abe4-4029-86e4-341a6da64c2d, udp: true, sni: media-internal-srv-ap.com, skip-cert-verify: true \}\
+\'a0\'a0\'a0\'a0- \{ name: '\uc0\u55356 \u56815 \u55356 \u56821 Japan 03', type: anytls, server: jp3.miyazono-kaori.com, port: 443, password: cf52246d-abe4-4029-86e4-341a6da64c2d, udp: true, sni: media-internal-srv-ap.com, skip-cert-verify: true \}\
+\'a0\'a0\'a0\'a0- \{ name: '\uc0\u55356 \u56815 \u55356 \u56821 Japan 04', type: anytls, server: jp4.miyazono-kaori.com, port: 443, password: cf52246d-abe4-4029-86e4-341a6da64c2d, udp: true, sni: media-internal-srv-ap.com, skip-cert-verify: true \}\
+\'a0\'a0\'a0\'a0- \{ name: '\uc0\u55356 \u56819 \u55356 \u56817 Netherlands 01', type: vless, server: nl1.miyazono-kaori.com, port: 443, uuid: cf52246d-abe4-4029-86e4-341a6da64c2d, alterId: 0, cipher: auto, udp: true, flow: xtls-rprx-vision, encryption: none, tls: true, skip-cert-verify: false, servername: www.philips.com, reality-opts: \{ public-key: AFQAIB5u9Uu6nf9fkP1BdcSHivSuUv97l4FH-LoFYgw, short-id: 92dca6 \}, client-fingerprint: chrome, network: tcp \}\
+\'a0\'a0\'a0\'a0- \{ name: '\uc0\u55356 \u56819 \u55356 \u56817 Netherlands 02', type: vless, server: nl2.miyazono-kaori.com, port: 443, uuid: cf52246d-abe4-4029-86e4-341a6da64c2d, alterId: 0, cipher: auto, udp: true, flow: xtls-rprx-vision, encryption: none, tls: true, skip-cert-verify: false, servername: www.philips.com, reality-opts: \{ public-key: Ncb78PVwvwU2tB1eiOlJd0ZCG2CbqG7-dPIHztlq2yM, short-id: 69cc4c0d5e \}, client-fingerprint: chrome, network: tcp \}\
+\'a0\'a0\'a0\'a0- \{ name: '\uc0\u55356 \u56812 \u55356 \u56807 United Kingdom 01', type: vless, server: uk1.miyazono-kaori.com, port: 443, uuid: cf52246d-abe4-4029-86e4-341a6da64c2d, alterId: 0, cipher: auto, udp: true, flow: xtls-rprx-vision, encryption: none, tls: true, skip-cert-verify: false, servername: www.bp.com, reality-opts: \{ public-key: _dsOu_vxEU7pY3sIeGJxIpR0Ac2KoqIyBor2Bx0CwGA, short-id: d923 \}, client-fingerprint: chrome, network: tcp \}\
+\'a0\'a0\'a0\'a0- \{ name: '\uc0\u55356 \u56812 \u55356 \u56807 United Kingdom 02', type: vless, server: uk2.miyazono-kaori.com, port: 443, uuid: cf52246d-abe4-4029-86e4-341a6da64c2d, alterId: 0, cipher: auto, udp: true, flow: xtls-rprx-vision, encryption: none, tls: true, skip-cert-verify: false, servername: www.bp.com, reality-opts: \{ public-key: QdYs12kmf0mAXNOEPgMpLN5dbZUlgvRK2zCqynOmqBk, short-id: '20' \}, client-fingerprint: chrome, network: tcp \}\
+\'a0\'a0\'a0\'a0- \{ name: '\uc0\u55356 \u56812 \u55356 \u56807 United Kingdom 03', type: vless, server: uk3.miyazono-kaori.com, port: 443, uuid: cf52246d-abe4-4029-86e4-341a6da64c2d, alterId: 0, cipher: auto, udp: true, flow: xtls-rprx-vision, encryption: none, tls: true, skip-cert-verify: false, servername: www.bp.com, reality-opts: \{ public-key: cG7G4lJugF4QkxrzQR2F11TI1qYIOFkDWhFwsgTseX0, short-id: 243e29aac352bf \}, client-fingerprint: chrome, network: tcp \}\
+\'a0\'a0\'a0\'a0- \{ name: '\uc0\u55356 \u56812 \u55356 \u56807 United Kingdom 04', type: vless, server: uk4.miyazono-kaori.com, port: 443, uuid: cf52246d-abe4-4029-86e4-341a6da64c2d, alterId: 0, cipher: auto, udp: true, flow: xtls-rprx-vision, encryption: none, tls: true, skip-cert-verify: false, servername: www.bp.com, reality-opts: \{ public-key: FgXAU_dzSEJsVZqp2ijnjC_qHuXV5QxFB3KqQJlt-HI, short-id: a15df05b53bc0806 \}, client-fingerprint: chrome, network: tcp \}\
+\'a0\'a0\'a0\'a0- \{ name: '\uc0\u55356 \u56813 \u55356 \u56816 Hong Kong 01 [Home]', type: vless, server: hk1.miyazono-kaori.com, port: 443, uuid: cf52246d-abe4-4029-86e4-341a6da64c2d, alterId: 0, cipher: auto, udp: true, flow: xtls-rprx-vision, encryption: none, tls: true, skip-cert-verify: false, servername: www.microsoft.com, reality-opts: \{ public-key: JEH14p4YvGvmDdBct-yekywfh8xcbbHjTBoBteh_qSs, short-id: 7538ac \}, client-fingerprint: chrome, network: tcp \}\
+\'a0\'a0\'a0\'a0- \{ name: '\uc0\u55356 \u56813 \u55356 \u56816 Hong Kong 02 [Home]', type: vless, server: hk2.miyazono-kaori.com, port: 443, uuid: cf52246d-abe4-4029-86e4-341a6da64c2d, alterId: 0, cipher: auto, udp: true, flow: xtls-rprx-vision, encryption: none, tls: true, skip-cert-verify: false, servername: www.microsoft.com, reality-opts: \{ public-key: mZtlvdA_Hx2TJDInSO9WF4N241Y4oqUoCWjFcw3fNkA, short-id: 4c5632849b \}, client-fingerprint: chrome, network: tcp \}\
+\'a0\'a0\'a0\'a0- \{ name: '\uc0\u55356 \u56813 \u55356 \u56816 Hong Kong 03', type: anytls, server: hk3.miyazono-kaori.com, port: 443, password: cf52246d-abe4-4029-86e4-341a6da64c2d, udp: true, sni: srv-upload-edge-prod.io, skip-cert-verify: true \}\
+\'a0\'a0\'a0\'a0- \{ name: '\uc0\u55356 \u56813 \u55356 \u56816 Hong Kong 04', type: anytls, server: hk4.miyazono-kaori.com, port: 443, password: cf52246d-abe4-4029-86e4-341a6da64c2d, udp: true, sni: srv-upload-edge-prod.io, skip-cert-verify: true \}\
+\'a0\'a0\'a0\'a0- \{ name: '\uc0\u55356 \u56813 \u55356 \u56816 Hong Kong 05', type: anytls, server: hk5.miyazono-kaori.com, port: 443, password: cf52246d-abe4-4029-86e4-341a6da64c2d, udp: true, sni: srv-upload-edge-prod.io, skip-cert-verify: true \}\
+\'a0\'a0\'a0\'a0- \{ name: '\uc0\u55356 \u56813 \u55356 \u56816 Hong Kong 06', type: anytls, server: hk6.miyazono-kaori.com, port: 443, password: cf52246d-abe4-4029-86e4-341a6da64c2d, udp: true, sni: srv-upload-edge-prod.io, skip-cert-verify: true \}\
+\'a0\'a0\'a0\'a0- \{ name: '\uc0\u55356 \u56825 \u55356 \u56828 Taiwan 01 [Home]', type: vless, server: tw1.miyazono-kaori.com, port: 443, uuid: cf52246d-abe4-4029-86e4-341a6da64c2d, alterId: 0, cipher: auto, udp: true, flow: xtls-rprx-vision, encryption: none, tls: true, skip-cert-verify: false, servername: www.apple.com, reality-opts: \{ public-key: KJgODVMTQcncG_l1ZCDhzn8gEgMU2YRl2Yw2je6moWY, short-id: c0d856ec \}, client-fingerprint: chrome, network: tcp \}\
+\'a0\'a0\'a0\'a0- \{ name: '\uc0\u55356 \u56825 \u55356 \u56828 Taiwan 02 [Home]', type: vless, server: tw2.miyazono-kaori.com, port: 443, uuid: cf52246d-abe4-4029-86e4-341a6da64c2d, alterId: 0, cipher: auto, udp: true, flow: xtls-rprx-vision, encryption: none, tls: true, skip-cert-verify: false, servername: www.apple.com, reality-opts: \{ public-key: cJc4dNsluJs9LimkkO6uVVafilOvr6H8Jx2uM9JnhEE, short-id: '129271' \}, client-fingerprint: chrome, network: tcp \}\
+\'a0\'a0\'a0\'a0- \{ name: '\uc0\u55356 \u56825 \u55356 \u56828 Taiwan 03', type: anytls, server: tw3.miyazono-kaori.com, port: 443, password: cf52246d-abe4-4029-86e4-341a6da64c2d, udp: true, sni: static.dist-internal-04.net, skip-cert-verify: true \}\
+\'a0\'a0\'a0\'a0- \{ name: '\uc0\u55356 \u56825 \u55356 \u56828 Taiwan 04', type: anytls, server: tw4.miyazono-kaori.com, port: 443, password: cf52246d-abe4-4029-86e4-341a6da64c2d, udp: true, sni: static.dist-internal-04.net, skip-cert-verify: true \}\
+\'a0\'a0\'a0\'a0- \{ name: '\uc0\u55356 \u56809 \u55356 \u56810 Germany 01', type: vless, server: de1.miyazono-kaori.com, port: 443, uuid: cf52246d-abe4-4029-86e4-341a6da64c2d, alterId: 0, cipher: auto, udp: true, flow: xtls-rprx-vision, encryption: none, tls: true, skip-cert-verify: false, servername: www.siemens.com, reality-opts: \{ public-key: aEAdhhksLgyI_GWf7l_ES5hMZhigMAIWBn9emSXdaHc, short-id: 56f276ac52 \}, client-fingerprint: chrome, network: tcp \}\
+\'a0\'a0\'a0\'a0- \{ name: '\uc0\u55356 \u56809 \u55356 \u56810 Germany 02', type: vless, server: de2.miyazono-kaori.com, port: 443, uuid: cf52246d-abe4-4029-86e4-341a6da64c2d, alterId: 0, cipher: auto, udp: true, flow: xtls-rprx-vision, encryption: none, tls: true, skip-cert-verify: false, servername: www.siemens.com, reality-opts: \{ public-key: JH9UnU0LFCDS3Q8zR7dhQDYrQ4iZGDgDB-sQcQ1q-kA, short-id: 5a9ab320 \}, client-fingerprint: chrome, network: tcp \}\
+proxy-groups:\
+\'a0\'a0\'a0\'a0- \{ name: \uc0\u33410 \u28857 \u36873 \u25321 , type: select, proxies: [\u33258 \u21160 \u36873 \u25321 , '\u21097 \u20313 \u27969 \u37327 \u65306 94.07 GB', '\u36317 \u31163 \u19979 \u27425 \u37325 \u32622 \u21097 \u20313 \u65306 5 \u22825 ', \u22871 \u39184 \u21040 \u26399 \u65306 2026-10-24, '\u55356 \u56826 \u55356 \u56824 United States 01', '\u55356 \u56826 \u55356 \u56824 United States 02', '\u55356 \u56826 \u55356 \u56824 United States 03', '\u55356 \u56826 \u55356 \u56824 United States 04', '\u55356 \u56824 \u55356 \u56812 Singapore 01', '\u55356 \u56824 \u55356 \u56812 Singapore 02', '\u55356 \u56824 \u55356 \u56812 Singapore 03', '\u55356 \u56824 \u55356 \u56812 Singapore 04', '\u55356 \u56815 \u55356 \u56821 Japan 01', '\u55356 \u56815 \u55356 \u56821 Japan 02', '\u55356 \u56815 \u55356 \u56821 Japan 03', '\u55356 \u56815 \u55356 \u56821 Japan 04', '\u55356 \u56819 \u55356 \u56817 Netherlands 01', '\u55356 \u56819 \u55356 \u56817 Netherlands 02', '\u55356 \u56812 \u55356 \u56807 United Kingdom 01', '\u55356 \u56812 \u55356 \u56807 United Kingdom 02', '\u55356 \u56812 \u55356 \u56807 United Kingdom 03', '\u55356 \u56812 \u55356 \u56807 United Kingdom 04', '\u55356 \u56813 \u55356 \u56816 Hong Kong 01 [Home]', '\u55356 \u56813 \u55356 \u56816 Hong Kong 02 [Home]', '\u55356 \u56813 \u55356 \u56816 Hong Kong 03', '\u55356 \u56813 \u55356 \u56816 Hong Kong 04', '\u55356 \u56813 \u55356 \u56816 Hong Kong 05', '\u55356 \u56813 \u55356 \u56816 Hong Kong 06', '\u55356 \u56825 \u55356 \u56828 Taiwan 01 [Home]', '\u55356 \u56825 \u55356 \u56828 Taiwan 02 [Home]', '\u55356 \u56825 \u55356 \u56828 Taiwan 03', '\u55356 \u56825 \u55356 \u56828 Taiwan 04', '\u55356 \u56809 \u55356 \u56810 Germany 01', '\u55356 \u56809 \u55356 \u56810 Germany 02'] \}\
+\'a0\'a0\'a0\'a0- \{ name: \uc0\u33258 \u21160 \u36873 \u25321 , type: url-test, url: 'http://cp.cloudflare.com/generate_204', interval: 300, tolerance: 50, hidden: true, exclude-filter: '\\[Home\\]', proxies: ['\u21097 \u20313 \u27969 \u37327 \u65306 94.07 GB', '\u36317 \u31163 \u19979 \u27425 \u37325 \u32622 \u21097 \u20313 \u65306 5 \u22825 ', \u22871 \u39184 \u21040 \u26399 \u65306 2026-10-24, '\u55356 \u56826 \u55356 \u56824 United States 01', '\u55356 \u56826 \u55356 \u56824 United States 02', '\u55356 \u56826 \u55356 \u56824 United States 03', '\u55356 \u56826 \u55356 \u56824 United States 04', '\u55356 \u56824 \u55356 \u56812 Singapore 01', '\u55356 \u56824 \u55356 \u56812 Singapore 02', '\u55356 \u56824 \u55356 \u56812 Singapore 03', '\u55356 \u56824 \u55356 \u56812 Singapore 04', '\u55356 \u56815 \u55356 \u56821 Japan 01', '\u55356 \u56815 \u55356 \u56821 Japan 02', '\u55356 \u56815 \u55356 \u56821 Japan 03', '\u55356 \u56815 \u55356 \u56821 Japan 04', '\u55356 \u56819 \u55356 \u56817 Netherlands 01', '\u55356 \u56819 \u55356 \u56817 Netherlands 02', '\u55356 \u56812 \u55356 \u56807 United Kingdom 01', '\u55356 \u56812 \u55356 \u56807 United Kingdom 02', '\u55356 \u56812 \u55356 \u56807 United Kingdom 03', '\u55356 \u56812 \u55356 \u56807 United Kingdom 04', '\u55356 \u56813 \u55356 \u56816 Hong Kong 01 [Home]', '\u55356 \u56813 \u55356 \u56816 Hong Kong 02 [Home]', '\u55356 \u56813 \u55356 \u56816 Hong Kong 03', '\u55356 \u56813 \u55356 \u56816 Hong Kong 04', '\u55356 \u56813 \u55356 \u56816 Hong Kong 05', '\u55356 \u56813 \u55356 \u56816 Hong Kong 06', '\u55356 \u56825 \u55356 \u56828 Taiwan 01 [Home]', '\u55356 \u56825 \u55356 \u56828 Taiwan 02 [Home]', '\u55356 \u56825 \u55356 \u56828 Taiwan 03', '\u55356 \u56825 \u55356 \u56828 Taiwan 04', '\u55356 \u56809 \u55356 \u56810 Germany 01', '\u55356 \u56809 \u55356 \u56810 Germany 02'] \}\
+rule-providers:\
+\'a0\'a0\'a0\'a0overseas-ai: \{ type: http, behavior: classical, url: 'https://raw.githubusercontent.com/viewer12/OverseasAI.list/main/rule/Clash/OverseasAI/OverseasAI.list', path: ./ruleset/overseas-ai.list, interval: 86400, format: text \}\
+rules:\
+\'a0\'a0\'a0\'a0- 'DOMAIN,feed1.chitanda-eru.com,DIRECT'\
+\'a0\'a0\'a0\'a0- 'GEOSITE,private,DIRECT'\
+\'a0\'a0\'a0\'a0- 'IP-CIDR,127.0.0.0/8,DIRECT,no-resolve'\
+\'a0\'a0\'a0\'a0- 'IP-CIDR,10.0.0.0/8,DIRECT,no-resolve'\
+\'a0\'a0\'a0\'a0- 'IP-CIDR,172.16.0.0/12,DIRECT,no-resolve'\
+\'a0\'a0\'a0\'a0- 'IP-CIDR,192.168.0.0/16,DIRECT,no-resolve'\
+\'a0\'a0\'a0\'a0- 'IP-CIDR,100.64.0.0/10,DIRECT,no-resolve'\
+\'a0\'a0\'a0\'a0- 'IP-CIDR,169.254.0.0/16,DIRECT,no-resolve'\
+\'a0\'a0\'a0\'a0- 'IP-CIDR6,::1/128,DIRECT,no-resolve'\
+\'a0\'a0\'a0\'a0- 'IP-CIDR6,fc00::/7,DIRECT,no-resolve'\
+\'a0\'a0\'a0\'a0- 'IP-CIDR6,fe80::/10,DIRECT,no-resolve'\
+\'a0\'a0\'a0\'a0- 'DST-PORT,3478,REJECT'\
+\'a0\'a0\'a0\'a0- 'DST-PORT,3479,REJECT'\
+\'a0\'a0\'a0\'a0- 'DST-PORT,5349,REJECT'\
+\'a0\'a0\'a0\'a0- 'DST-PORT,5350,REJECT'\
+\'a0\'a0\'a0\'a0- 'DST-PORT,19302,REJECT'\
+\'a0\'a0\'a0\'a0- 'DST-PORT,19303,REJECT'\
+\'a0\'a0\'a0\'a0- 'DST-PORT,19304,REJECT'\
+\'a0\'a0\'a0\'a0- 'DST-PORT,19305,REJECT'\
+\'a0\'a0\'a0\'a0- 'DST-PORT,19306,REJECT'\
+\'a0\'a0\'a0\'a0- 'DST-PORT,19307,REJECT'\
+\'a0\'a0\'a0\'a0- 'DST-PORT,19308,REJECT'\
+\'a0\'a0\'a0\'a0- 'DST-PORT,19309,REJECT'\
+\'a0\'a0\'a0\'a0- 'DOMAIN-SUFFIX,stun.qq.com,REJECT'\
+\'a0\'a0\'a0\'a0- 'DOMAIN-SUFFIX,stun.miwifi.com,REJECT'\
+\'a0\'a0\'a0\'a0- 'DOMAIN-SUFFIX,stun.l.google.com,REJECT'\
+\'a0\'a0\'a0\'a0- 'DOMAIN-SUFFIX,stun1.l.google.com,REJECT'\
+\'a0\'a0\'a0\'a0- 'DOMAIN-SUFFIX,stun2.l.google.com,REJECT'\
+\'a0\'a0\'a0\'a0- 'DOMAIN-SUFFIX,stun3.l.google.com,REJECT'\
+\'a0\'a0\'a0\'a0- 'DOMAIN-SUFFIX,stun4.l.google.com,REJECT'\
+\'a0\'a0\'a0\'a0- 'DOMAIN-SUFFIX,stun.services.mozilla.com,REJECT'\
+\'a0\'a0\'a0\'a0- 'DOMAIN-SUFFIX,stun.cloudflare.com,REJECT'\
+\'a0\'a0\'a0\'a0- 'DOMAIN-SUFFIX,turn.speed.cloudflare.com,REJECT'\
+\'a0\'a0\'a0\'a0- 'DOMAIN-SUFFIX,global.turn.twilio.com,REJECT'\
+\'a0\'a0\'a0\'a0- 'DOMAIN-SUFFIX,turn.twilio.com,REJECT'\
+\'a0\'a0\'a0\'a0- 'DOMAIN-SUFFIX,stun.stunprotocol.org,REJECT'\
+\'a0\'a0\'a0\'a0- 'DOMAIN-SUFFIX,stun.ekiga.net,REJECT'\
+\'a0\'a0\'a0\'a0- 'DOMAIN-SUFFIX,stun.nextcloud.com,REJECT'\
+\'a0\'a0\'a0\'a0- 'DOMAIN-SUFFIX,relay.metered.ca,REJECT'\
+\'a0\'a0\'a0\'a0- 'DOMAIN-SUFFIX,openrelay.metered.ca,REJECT'\
+\'a0\'a0\'a0\'a0- 'DOMAIN-SUFFIX,xirsys.com,REJECT'\
+\'a0\'a0\'a0\'a0- 'DOMAIN-SUFFIX,freestun.net,REJECT'\
+\'a0\'a0\'a0\'a0- 'DOMAIN-SUFFIX,freeturn.net,REJECT'\
+\'a0\'a0\'a0\'a0- 'DOMAIN-SUFFIX,turnix.io,REJECT'\
+\'a0\'a0\'a0\'a0- 'GEOSITE,category-ads-all,REJECT'\
+\'a0\'a0\'a0\'a0- 'DOMAIN-SUFFIX,trace.qq.com,REJECT'\
+\'a0\'a0\'a0\'a0- 'DOMAIN-SUFFIX,beacon.qq.com,REJECT'\
+\'a0\'a0\'a0\'a0- 'DOMAIN-SUFFIX,report.qq.com,REJECT'\
+\'a0\'a0\'a0\'a0- 'DOMAIN-SUFFIX,pingtas.qq.com,REJECT'\
+\'a0\'a0\'a0\'a0- 'DOMAIN-SUFFIX,pingtcss.qq.com,REJECT'\
+\'a0\'a0\'a0\'a0- 'DOMAIN-SUFFIX,stats.g.qq.com,REJECT'\
+\'a0\'a0\'a0\'a0- 'DOMAIN-SUFFIX,isdspeed.qq.com,REJECT'\
+\'a0\'a0\'a0\'a0- 'DOMAIN-SUFFIX,tp.linksgo.qq.com,REJECT'\
+\'a0\'a0\'a0\'a0- 'DOMAIN-SUFFIX,webpush.wx.qq.com,REJECT'\
+\'a0\'a0\'a0\'a0- 'DOMAIN-SUFFIX,mi.gdt.qq.com,REJECT'\
+\'a0\'a0\'a0\'a0- 'DOMAIN-SUFFIX,t.gdt.qq.com,REJECT'\
+\'a0\'a0\'a0\'a0- 'DOMAIN-SUFFIX,e.qq.com,REJECT'\
+\'a0\'a0\'a0\'a0- 'DOMAIN-SUFFIX,l.qq.com,REJECT'\
+\'a0\'a0\'a0\'a0- 'DOMAIN-SUFFIX,btrace.qq.com,REJECT'\
+\'a0\'a0\'a0\'a0- 'DOMAIN-SUFFIX,gdt.qq.com,REJECT'\
+\'a0\'a0\'a0\'a0- 'DOMAIN-SUFFIX,pgdt.gtimg.cn,REJECT'\
+\'a0\'a0\'a0\'a0- 'DOMAIN-SUFFIX,adsmind.gdtimg.com,REJECT'\
+\'a0\'a0\'a0\'a0- 'RULE-SET,overseas-ai,\uc0\u33410 \u28857 \u36873 \u25321 '\
+\'a0\'a0\'a0\'a0- 'DOMAIN-SUFFIX,googleapis.cn,\uc0\u33410 \u28857 \u36873 \u25321 '\
+\'a0\'a0\'a0\'a0- 'DOMAIN-SUFFIX,xn--ngstr-lra8j.com,\uc0\u33410 \u28857 \u36873 \u25321 '\
+\'a0\'a0\'a0\'a0- 'DOMAIN-SUFFIX,ggpht.com,\uc0\u33410 \u28857 \u36873 \u25321 '\
+\'a0\'a0\'a0\'a0- 'DOMAIN-SUFFIX,googleusercontent.com,\uc0\u33410 \u28857 \u36873 \u25321 '\
+\'a0\'a0\'a0\'a0- 'DOMAIN-SUFFIX,gstatic.com,\uc0\u33410 \u28857 \u36873 \u25321 '\
+\'a0\'a0\'a0\'a0- 'GEOSITE,google,\uc0\u33410 \u28857 \u36873 \u25321 '\
+\'a0\'a0\'a0\'a0- 'GEOSITE,telegram,\uc0\u33410 \u28857 \u36873 \u25321 '\
+\'a0\'a0\'a0\'a0- 'GEOSITE,twitter,\uc0\u33410 \u28857 \u36873 \u25321 '\
+\'a0\'a0\'a0\'a0- 'GEOSITE,facebook,\uc0\u33410 \u28857 \u36873 \u25321 '\
+\'a0\'a0\'a0\'a0- 'GEOSITE,github,\uc0\u33410 \u28857 \u36873 \u25321 '\
+\'a0\'a0\'a0\'a0- 'GEOSITE,cn,DIRECT'\
+\'a0\'a0\'a0\'a0- 'GEOSITE,geolocation-cn,DIRECT'\
+\'a0\'a0\'a0\'a0- 'GEOSITE,geolocation-!cn,\uc0\u33410 \u28857 \u36873 \u25321 '\
+\'a0\'a0\'a0\'a0- 'GEOIP,CN,DIRECT,no-resolve'\
+\'a0\'a0\'a0\'a0- 'MATCH,\uc0\u33410 \u28857 \u36873 \u25321 '\
+\
+#url:https://2.luolicon.ru/oosaka/158e9b903acd6217befb82f9b2eede2e}
