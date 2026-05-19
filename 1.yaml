@@ -407,7 +407,7 @@ rules:
   - RULE-SET,apple-cn_domain,Apple
   - RULE-SET,apple-proxy_domain,AppleGlobal
   - RULE-SET,apple-tv_domain,AppleGlobal
-  - RULE-SET,apple_domain,AppleGlobal
+  - RULE-SET,apple_domain,Apple
   - RULE-SET,bahamut_domain,TW-Auto
   - RULE-SET,bilibili_domain,bilibili
   - RULE-SET,cdn_domain,ProxySelect
@@ -453,7 +453,7 @@ rules:
   
   - RULE-SET,adrules_ip,REJECT
   - RULE-SET,apns_ip,AppleGlobal
-  - RULE-SET,apple_ip,AppleGlobal
+  - RULE-SET,apple_ip,Apple
   - RULE-SET,bilibili_ip,bilibili
   - RULE-SET,cn_ip,DIRECT
   - RULE-SET,dmca_ip,ProxySelect
