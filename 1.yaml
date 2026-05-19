@@ -107,7 +107,7 @@ proxy-groups:
     use: null
     proxies:
       - Parity落地
-      - pedagou
+      - pedagou落地
       - 手动
       - Kitty
       - 本地
@@ -127,14 +127,6 @@ proxy-groups:
       - Chain
       - 前置
     use: null
-  - name: Parity落地
-    type: select
-    use:
-      - Parity落地
-  - name: pedagou
-    type: select
-    use:
-      - Peigedpkj
   - name: Google
     type: select
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Google_Search.png
@@ -394,6 +386,18 @@ proxy-groups:
     proxies:
       - DIRECT
       - ProxySelect
+  - name: Parity落地
+    type: select
+    use:
+      - Parity落地
+  - name: pedagou落地
+    type: select
+    use:
+      - Peigedpkj
+
+
+
+
 
 
 rules:
