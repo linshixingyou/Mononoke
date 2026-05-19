@@ -156,7 +156,7 @@ proxy-groups:
       - ProxySelect
       - 云洞
       - Kitty
-      - America
+      - US-Auto
       - DIRECT
       - Chain
   - name: YouTube
@@ -164,67 +164,51 @@ proxy-groups:
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/YouTube.png
     proxies:
       - ProxySelect
-      - HongKong
+      - HK-Auto
       - Chain
   - name: Emby
     type: select
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Emby.png
     proxies:
       - ProxySelect
-      - HongKong
-      - TaiWan
-      - Japan
-      - Singapore
-      - America
+      - HK-Auto
+      - TW-Auto
+      - JP-Auto
+      - SG-Auto
+      - US-Auto
       - DIRECT
   - name: AI
     type: select
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/ChatGPT.png
     proxies:
       - ProxySelect
-      - HongKong
-      - TaiWan
-      - Japan
-      - Singapore
-      - America
+      - HK-Auto
+      - TW-Auto
+      - JP-Auto
+      - SG-Auto
+      - US-Auto
       - 云洞
       - Kitty
   - name: Music
     type: select
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Telegram_X.png
     proxies:
-      - Japan
-      - HongKong
-      - America
+      - HK-Auto
+      - TW-Auto
+      - JP-Auto
+      - SG-Auto
+      - US-Auto
   - name: Media
     type: select
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Streaming.png
     proxies:
       - ProxySelect
-      - HongKong
-      - TaiWan
-      - Japan
-      - Singapore
-      - America
-  # 基于地区分组
-  - name: HongKong
-    type: select
-    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Hong_Kong.png
-    proxies:
       - HK-Auto
-      - HK-FallBack
-      - HK-Select
-      - HK-LoadBalance
-    filter: 港|🇭🇰|HK|(?i)Hong
-  - name: TaiWan
-    type: select
-    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/China.png
-    proxies:
       - TW-Auto
-      - TW-FallBack
-      - TW-Select
-      - TW-LoadBalance
-    filter: 台|🇨🇳|🇹🇼|湾|TW|(?i)Taiwan
+      - JP-Auto
+      - SG-Auto
+      - US-Auto
+  # 基于地区分组
   - name: Japan
     type: select
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Japan.png
@@ -234,24 +218,6 @@ proxy-groups:
       - JP-Select
       - JP-LoadBalance
     filter: 日|🇯🇵|东京|JP|(?i)Japan
-  - name: Singapore
-    type: select
-    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Singapore.png
-    proxies:
-      - SG-Auto
-      - SG-FallBack
-      - SG-Select
-      - SG-LoadBalance
-    filter: 新加坡|坡|狮城|🇸🇬|SG|(?i)Singapore
-  - name: America
-    type: select
-    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/United_States.png
-    proxies:
-      - US-Auto
-      - US-FallBack
-      - US-Select
-      - US-LoadBalance
-    filter: 美|🇺🇲|US|(?i)States|American
   - name: HK-Auto
     type: url-test
     hidden: true
@@ -389,14 +355,18 @@ proxy-groups:
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/GitHub_Letter.png
     proxies:
       - ProxySelect
-      - 云洞
-      - PKU
+      - 云洞Auto
+      - PkuAuto
+      - KittyAuto
   - name: SNS
     type: select
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/X.png
     proxies:
       - All-Auto
-      - HongKong
+      - HK-Auto
+      - SG-Auto
+      - 云洞Auto
+      - KittyAuto
   - name: All-Auto
     type: url-test
     hidden: true
@@ -410,30 +380,30 @@ proxy-groups:
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/bilibili_3.png
     proxies:
       - DIRECT
-      - HongKong
-      - TaiWan
+      - HK-Auto
+      - TW-Auto
   - name: Games
     type: select
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Game.png
     proxies:
       - ProxySelect
-      - HongKong
-      - TaiWan
-      - Japan
-      - Singapore
-      - America
-      - All-Auto
+      - 云洞Auto
+      - PkuAuto
+      - KittyAuto
       - DIRECT
   - name: TikTok
     type: select
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/TikTok.png
     proxies:
       - ProxySelect
-      - HongKong
-      - TaiWan
-      - Japan
-      - Singapore
-      - America
+      - HK-Auto
+      - TW-Auto
+      - JP-Auto
+      - SG-Auto
+      - US-Auto
+      - 云洞Auto
+      - PkuAuto
+      - KittyAuto
       - All-Auto
 
 
