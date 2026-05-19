@@ -195,15 +195,6 @@ proxy-groups:
       - SG-Auto
       - US-Auto
   # 基于地区分组
-  - name: Japan
-    type: select
-    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Japan.png
-    proxies:
-      - JP-Auto
-      - JP-FallBack
-      - JP-Select
-      - JP-LoadBalance
-    filter: 日|🇯🇵|东京|JP|(?i)Japan
   - name: HK-Auto
     type: url-test
     hidden: true
@@ -413,7 +404,7 @@ rules:
   - RULE-SET,cdn_classical,DIRECT
   - RULE-SET,dmca_classical,DIRECT
 
-  - RULE-SET,abema_domain,Japan
+  - RULE-SET,abema_domain,JP-Select
   - RULE-SET,adrules_domain,REJECT
   - RULE-SET,ai_domain,AI
   - RULE-SET,apns_domain,AppleGlobal
