@@ -42,16 +42,43 @@ proxy-groups:
       - Kitty
       - PKU
       - 云洞保底
+      - 云洞Auto
+      - PkuAuto
+      - KittyAuto
       - 本地
   - name: 云洞
     type: select
     use:
       - 云洞
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/IEPL.png
+  - name: 云洞Auto
+    type: url-test
+    hidden: true
+    use:
+      - 云洞
+    filter: ^(?=.*(.))(?!.*((?i)群|邀请|返利|循环|官网|客服|网站|网址|获取|订阅|流量|到期|机场|下次|版本|官址|备用|过期|已用|联系|失联|邮箱|工单|贩卖|通知|倒卖|防止|国内|地址|频道|无法|说明|使用|提示|特别|访问|支持|教程|关注|更新|作者|加入|(\b(USE|USED|TOTAL|Traffic|Expire|EMAIL|Panel|Channel|Author)\b|(\d{4}-\d{2}-\d{2}|\d+G)))).*$
+    interval: 300
+    lazy: true
+  - name: PkuAuto
+    type: url-test
+    hidden: true
+    use:
+      - pku
+    filter: ^(?=.*(.))(?!.*((?i)群|邀请|返利|循环|官网|客服|网站|网址|获取|订阅|流量|到期|机场|下次|版本|官址|备用|过期|已用|联系|失联|邮箱|工单|贩卖|通知|倒卖|防止|国内|地址|频道|无法|说明|使用|提示|特别|访问|支持|教程|关注|更新|作者|加入|(\b(USE|USED|TOTAL|Traffic|Expire|EMAIL|Panel|Channel|Author)\b|(\d{4}-\d{2}-\d{2}|\d+G)))).*$
+    interval: 300
+    lazy: true
   - name: PKU
     type: select
     use:
       - pku
+  - name: KittyAuto
+    type: url-test
+    hidden: true
+    use:
+      - kittysu
+    filter: ^(?=.*(.))(?!.*((?i)群|邀请|返利|循环|官网|客服|网站|网址|获取|订阅|流量|到期|机场|下次|版本|官址|备用|过期|已用|联系|失联|邮箱|工单|贩卖|通知|倒卖|防止|国内|地址|频道|无法|说明|使用|提示|特别|访问|支持|教程|关注|更新|作者|加入|(\b(USE|USED|TOTAL|Traffic|Expire|EMAIL|Panel|Channel|Author)\b|(\d{4}-\d{2}-\d{2}|\d+G)))).*$
+    interval: 300
+    lazy: true
   - name: Kitty
     type: select
     use:
@@ -428,7 +455,7 @@ rules:
   - RULE-SET,apple_domain,AppleGlobal
   - RULE-SET,bahamut_domain,TaiWan
   - RULE-SET,bilibili_domain,bilibili
-  - RULE-SET,cdn_domain,DIRECT
+  - RULE-SET,cdn_domain,ProxySelect
   - RULE-SET,cn_domain,DIRECT
   - RULE-SET,crypto_domain,ProxySelect
   - RULE-SET,dazn_domain,Media
