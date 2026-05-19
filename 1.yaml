@@ -38,10 +38,6 @@ proxy-groups:
     name: 前置
     type: select
     proxies:
-      - 云洞
-      - Kitty
-      - PKU
-      - 云洞保底
       - 云洞Auto
       - PkuAuto
       - KittyAuto
