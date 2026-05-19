@@ -87,13 +87,10 @@ proxy-groups:
     type: select
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/ChatGPT.png
     proxies:
-      - ProxySelect
-      - HK-Auto
       - TW-Auto
       - JP-Auto
       - SG-Auto
       - US-Auto
-      - 云洞
       - Kitty
   - name: Music
     type: select
