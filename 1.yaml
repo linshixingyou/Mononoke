@@ -380,6 +380,7 @@ proxy-groups:
       - 手动
       - Kitty
       - 本地
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Blackhole.png
   - icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Available_1.png
     name: Chain
     type: relay
@@ -395,7 +396,6 @@ proxy-groups:
       - Chain
       - 前置
     use: null
-    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Blackhole.png
 
 rules:
   - IP-CIDR,102.205.44.32,云洞
