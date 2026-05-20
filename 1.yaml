@@ -1,5 +1,4 @@
 #SUBSCRIBED https://raw.githubusercontent.com/linshixingyou/Mononoke/localhost/1.yaml
-#SUBSCRIBED https://raw.githubusercontent.com/linshixingyou/Mononoke/localhost/1.yaml
 mode: rule
 log-level: info
 # DNS模块
@@ -68,6 +67,17 @@ proxy-groups:
       - HK-Auto
       - Chain
   - name: Emby
+    type: select
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Emby.png
+    proxies:
+      - ProxySelect
+      - HK-Auto
+      - TW-Auto
+      - JP-Auto
+      - SG-Auto
+      - US-Auto
+      - DIRECT
+  - name: VPS
     type: select
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Emby.png
     proxies:
@@ -390,9 +400,8 @@ proxy-groups:
       - 前置
     use: null
 rules:
-  - DOMAIN,https://twilight.pre-s.com/login,Emby
-  - IP-CIDR,102.205.44.32,云洞
-  - DOMAIN,eco.potdot.de,HongKong
+  - RULE-SET,VPS,VPS
+  - RULE-SET,Emby,Emby
   - RULE-SET,adrules_classical,REJECT
   - RULE-SET,speedtest_classical,ProxySelect
   - RULE-SET,cdn_classical,ProxySelect
@@ -436,7 +445,7 @@ rules:
   - RULE-SET,onedrive_domain,DIRECT
   - RULE-SET,paypal_domain,ProxySelect
   - RULE-SET,primevideo_domain,ProxySelect
-  - RULE-SET,private_domain,ProxySelect
+  - RULE-SET,private_domain,DIRECT
   - RULE-SET,proxy_domain,ProxySelect
   - RULE-SET,socialmedia-cn_domain,DIRECT
   - RULE-SET,socialmedia_domain,SNS
@@ -462,7 +471,7 @@ rules:
   - RULE-SET,httpdns_ip,ProxySelect
   - RULE-SET,iplocation-proxy_ip,ProxySelect
   - RULE-SET,netflix_ip,Media
-  - RULE-SET,private_ip,ProxySelect
+  - RULE-SET,private_ip,DIRECT
   - RULE-SET,proxy_ip,ProxySelect
   - RULE-SET,socialmedia-cn_ip,DIRECT
   - RULE-SET,socialmedia_ip,SNS
@@ -858,6 +867,16 @@ rule-providers:
     format: text
     interval: 86400
     url: https://raw.githubusercontent.com/linshixingyou/Mononoke/localhost/ipcidr/youtube.list
+  Emby:
+    behavior: domain
+    format: text
+    interval: 86400
+    url: https://raw.githubusercontent.com/linshixingyou/Mononoke/localhost/domain/Emby.list
+  VPS:
+    behavior: ipcidr
+    format: text
+    interval: 86400
+    url: https://raw.githubusercontent.com/linshixingyou/Mononoke/localhost/ipcidr/VPS.list
 proxies:
   - name: 保底
     password: 0993c0f8-9e29-32b1-810c-65f448c5aa04
