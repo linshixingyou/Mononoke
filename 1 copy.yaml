@@ -1,0 +1,866 @@
+mode: rule
+log-level: info
+# DNS模块
+dns:
+  default-nameserver:
+    - 119.29.29.29
+    - 223.5.5.5
+  nameserver:
+    - https://dns.alidns.com/dns-query
+    - https://doh.pub/dns-query
+    - 1.1.1.1
+  fake-ip-filter:
+    - +.lan
+    - +.local
+proxy-providers:
+  Parity落地:
+    interval: 86400
+    url: https://pai.yt/clash?preset=other
+  云洞:
+    interval: 86400
+    url: https://0993c0f8-9e29-32b1-810c-65f448c5aa04.nginxsub-cave.top/link/AoKXdOul4Uy4RKZY?list=clash
+  kittysu:
+    interval: 86400
+    url: https://2.luolicon.ru/oosaka/158e9b903acd6217befb82f9b2eede2e
+  pku:
+    interval: 86400
+    url: https://941321.xyz/clash/caiyuhan@pku.edu.cn/c8rhd5gfjw
+  Peigedpkj:
+    interval: 86400
+    url: https://peige.dpkj.qzz.io/dapei
+  Local:
+    interval: 86400
+    url: https://raw.githubusercontent.com/linshixingyou/Mononoke/localhost/Local
+proxy-groups:
+  - icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Rocket.png
+    name: 前置
+    type: select
+    proxies:
+      - 云洞Auto
+      - PkuAuto
+      - KittyAuto
+      - Customization
+  - name: Final
+    type: select
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Final.png
+    proxies:
+      - ProxySelect
+      - DIRECT
+      - Chain
+      - 前置
+    use: null
+  - name: Google
+    type: select
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Google_Search.png
+    proxies:
+      - ProxySelect
+      - 云洞
+      - Kitty
+      - US-Auto
+      - DIRECT
+      - Chain
+  - name: YouTube
+    type: select
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/YouTube.png
+    proxies:
+      - ProxySelect
+      - HK-Auto
+      - Chain
+  - name: Emby
+    type: select
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Emby.png
+    proxies:
+      - ProxySelect
+      - HK-Auto
+      - TW-Auto
+      - JP-Auto
+      - SG-Auto
+      - US-Auto
+      - DIRECT
+  - name: AI
+    type: select
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/ChatGPT.png
+    proxies:
+      - TW-Auto
+      - JP-Auto
+      - SG-Auto
+      - US-Auto
+      - Kitty
+  - name: Music
+    type: select
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Apple_Music.png
+    proxies:
+      - HK-Auto
+      - TW-Auto
+      - JP-Auto
+      - SG-Auto
+      - US-Auto
+  - name: Media
+    type: select
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Streaming.png
+    proxies:
+      - ProxySelect
+      - HK-Auto
+      - TW-Auto
+      - JP-Auto
+      - SG-Auto
+      - US-Auto
+  - name: 云洞
+    type: select
+    use:
+      - 云洞
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/IEPL.png
+  - name: 云洞Auto
+    type: url-test
+    hidden: true
+    use:
+      - 云洞
+    filter: ^(?=.*(.))(?!.*((?i)群|邀请|返利|循环|官网|客服|网站|网址|获取|订阅|流量|到期|机场|下次|版本|官址|备用|过期|已用|联系|失联|邮箱|工单|贩卖|通知|倒卖|防止|国内|地址|频道|无法|说明|使用|提示|特别|访问|支持|教程|关注|更新|作者|加入|(\b(USE|USED|TOTAL|Traffic|Expire|EMAIL|Panel|Channel|Author)\b|(\d{4}-\d{2}-\d{2}|\d+G)))).*$
+    interval: 300
+    lazy: true
+  - name: PkuAuto
+    type: url-test
+    hidden: true
+    use:
+      - pku
+    filter: ^(?=.*(.))(?!.*((?i)群|邀请|返利|循环|官网|客服|网站|网址|获取|订阅|流量|到期|机场|下次|版本|官址|备用|过期|已用|联系|失联|邮箱|工单|贩卖|通知|倒卖|防止|国内|地址|频道|无法|说明|使用|提示|特别|访问|支持|教程|关注|更新|作者|加入|(\b(USE|USED|TOTAL|Traffic|Expire|EMAIL|Panel|Channel|Author)\b|(\d{4}-\d{2}-\d{2}|\d+G)))).*$
+    interval: 300
+    lazy: true
+  - name: PKU
+    type: select
+    use:
+      - pku
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/CC.png
+  - name: KittyAuto
+    type: url-test
+    hidden: true
+    use:
+      - kittysu
+    filter: ^(?=.*(.))(?!.*((?i)群|邀请|返利|循环|官网|客服|网站|网址|获取|订阅|流量|到期|机场|下次|版本|官址|备用|过期|已用|联系|失联|邮箱|工单|贩卖|通知|倒卖|防止|国内|地址|频道|无法|说明|使用|提示|特别|访问|支持|教程|关注|更新|作者|加入|(\b(USE|USED|TOTAL|Traffic|Expire|EMAIL|Panel|Channel|Author)\b|(\d{4}-\d{2}-\d{2}|\d+G)))).*$
+    interval: 300
+    lazy: true
+  - name: Kitty
+    type: select
+    use:
+      - kittysu
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/CC.png
+  # 基于地区分组
+  - name: HK-Auto
+    type: url-test
+    hidden: true
+    include-all: true
+    filter: 港|🇭🇰|HK|(?i)Hong
+    interval: 300
+    lazy: true
+  - name: TW-Auto
+    type: url-test
+    hidden: true
+    include-all: true
+    filter: 台|🇨🇳|🇹🇼|湾|TW|(?i)Taiwan
+    interval: 300
+    lazy: true
+  - name: JP-Auto
+    type: url-test
+    hidden: true
+    include-all: true
+    filter: 日|🇯🇵|东京|JP|(?i)Japan
+    interval: 300
+    lazy: true
+  - name: SG-Auto
+    type: url-test
+    hidden: true
+    include-all: true
+    filter: 新加坡|坡|狮城|🇸🇬|SG|(?i)Singapore
+    interval: 300
+    lazy: true
+  - name: US-Auto
+    type: url-test
+    hidden: true
+    include-all: true
+    filter: 美|🇺🇲|US|(?i)States|American
+    interval: 300
+    lazy: true
+  - name: HK-FallBack
+    type: fallback
+    hidden: true
+    include-all: true
+    filter: 港|🇭🇰|HK|(?i)Hong
+    interval: 300
+    lazy: true
+  - name: TW-FallBack
+    type: fallback
+    hidden: true
+    include-all: true
+    filter: 台|🇨🇳|🇹🇼|湾|TW|(?i)Taiwan
+    interval: 300
+    lazy: true
+  - name: JP-FallBack
+    type: fallback
+    hidden: true
+    include-all: true
+    filter: 日|🇯🇵|东京|JP|(?i)Japan
+    interval: 300
+    lazy: true
+  - name: SG-FallBack
+    type: fallback
+    hidden: true
+    include-all: true
+    filter: 新加坡|坡|狮城|🇸🇬|SG|(?i)Singapore
+    interval: 300
+    lazy: true
+  - name: US-FallBack
+    type: fallback
+    hidden: true
+    include-all: true
+    filter: 美|🇺🇲|US|(?i)States|American
+    interval: 300
+    lazy: true
+  - name: HK-Select
+    type: select
+    include-all: true
+    filter: 港|🇭🇰|HK|(?i)Hong
+  - name: TW-Select
+    type: select
+    include-all: true
+    filter: 台|🇨🇳|🇹🇼|湾|TW|(?i)Taiwan
+  - name: SG-Select
+    type: select
+    include-all: true
+    filter: 新加坡|坡|狮城|🇸🇬|SG|(?i)Singapore
+    proxies:
+      - 云洞
+  - name: JP-Select
+    type: select
+    include-all: true
+    filter: 日|🇯🇵|东京|JP|(?i)Japan
+  - name: US-Select
+    type: select
+    include-all: true
+    filter: 美|🇺🇲|US|(?i)States|American
+  - name: HK-LoadBalance
+    type: load-balance
+    hidden: true
+    include-all: true
+    filter: 港|🇭🇰|HK|(?i)Hong
+    strategy: consistent-hashing
+    interval: 300
+    lazy: true
+  - name: TW-LoadBalance
+    type: load-balance
+    hidden: true
+    include-all: true
+    filter: 台|🇨🇳|🇹🇼|湾|TW|(?i)Taiwan
+    strategy: consistent-hashing
+    interval: 300
+    lazy: true
+  - name: SG-LoadBalance
+    type: load-balance
+    hidden: true
+    include-all: true
+    filter: 新加坡|坡|狮城|🇸🇬|SG|(?i)Singapore
+    strategy: consistent-hashing
+    interval: 300
+    lazy: true
+  - name: JP-LoadBalance
+    type: load-balance
+    hidden: true
+    include-all: true
+    filter: 日|🇯🇵|东京|JP|(?i)Japan
+    strategy: consistent-hashing
+    interval: 300
+    lazy: true
+  - name: US-LoadBalance
+    type: load-balance
+    hidden: true
+    include-all: true
+    filter: 美|🇺🇲|US|(?i)States|American
+    strategy: consistent-hashing
+    interval: 300
+    lazy: true
+  - name: Github
+    type: select
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/GitHub_Letter.png
+    proxies:
+      - ProxySelect
+      - 云洞Auto
+      - PkuAuto
+      - KittyAuto
+  - name: SNS
+    type: select
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/X.png
+    proxies:
+      - All-Auto
+      - HK-Auto
+      - SG-Auto
+      - 云洞Auto
+      - KittyAuto
+      - PkuAuto
+  - name: All-Auto
+    type: url-test
+    hidden: true
+    include-all: true
+    filter: ^(?=.*(.))(?!.*((?i)群|邀请|返利|循环|官网|客服|网站|网址|获取|订阅|流量|到期|机场|下次|版本|官址|备用|过期|已用|联系|失联|邮箱|工单|贩卖|通知|倒卖|防止|国内|地址|频道|无法|说明|使用|提示|特别|访问|支持|教程|关注|更新|作者|加入|(\b(USE|USED|TOTAL|Traffic|Expire|EMAIL|Panel|Channel|Author)\b|(\d{4}-\d{2}-\d{2}|\d+G)))).*$
+    interval: 300
+    lazy: true
+    # 规则引用
+  - name: bilibili
+    type: select
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/bilibili_3.png
+    proxies:
+      - DIRECT
+      - HK-Auto
+      - TW-Auto
+  - name: Games
+    type: select
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Game.png
+    proxies:
+      - ProxySelect
+      - 云洞Auto
+      - PkuAuto
+      - KittyAuto
+      - DIRECT
+  - name: TikTok
+    type: select
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/TikTok.png
+    proxies:
+      - ProxySelect
+      - HK-Auto
+      - TW-Auto
+      - JP-Auto
+      - SG-Auto
+      - US-Auto
+      - 云洞Auto
+      - PkuAuto
+      - KittyAuto
+      - All-Auto
+  - icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Apple.png
+    name: AppleGlobal
+    type: select
+    proxies:
+      - DIRECT
+      - ProxySelect
+  - name: Apple
+    type: select
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Apple_1.png
+    proxies:
+      - DIRECT
+      - ProxySelect
+  - name: Parity落地
+    type: select
+    use:
+      - Parity落地
+  - name: pedagou落地
+    type: select
+    use:
+      - Peigedpkj
+  - include-all: true
+    name: 手动
+    type: select
+    proxies: null
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Clubhouse.png
+    filter: ^(?=.*(.))(?!.*((?i)群|邀请|返利|循环|官网|客服|网站|网址|获取|订阅|流量|到期|机场|下次|版本|官址|备用|过期|已用|联系|失联|邮箱|工单|贩卖|通知|倒卖|防止|国内|地址|频道|无法|说明|使用|提示|特别|访问|支持|教程|关注|更新|作者|加入|(\b(USE|USED|TOTAL|Traffic|Expire|EMAIL|Panel|Channel|Author)\b|(\d{4}-\d{2}-\d{2}|\d+G)))).*$
+  - name: Customization
+    type: select
+    use:
+      - Local
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Heart.png
+  - name: 落地
+    type: select
+    use: null
+    proxies:
+      - Parity落地
+      - pedagou落地
+      - 手动
+      - Kitty
+      - Customization
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Blackhole.png
+  - icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Available_1.png
+    name: Chain
+    type: relay
+    proxies:
+      - 前置
+      - 落地
+
+  - name: ProxySelect
+    type: select
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Bypass.png
+    proxies:
+      - 手动
+      - Chain
+      - 前置
+    use: null
+
+rules:
+  - IP-CIDR,102.205.44.32,云洞
+  - DOMAIN,eco.potdot.de,HongKong
+  - RULE-SET,adrules_classical,REJECT
+  - RULE-SET,speedtest_classical,ProxySelect
+  - RULE-SET,cdn_classical,ProxySelect
+  - RULE-SET,dmca_classical,ProxySelect
+
+  - RULE-SET,abema_domain,JP-Select
+  - RULE-SET,adrules_domain,REJECT
+  - RULE-SET,ai_domain,AI
+  - RULE-SET,apns_domain,AppleGlobal
+  - RULE-SET,apple-cn_domain,Apple
+  - RULE-SET,apple-proxy_domain,AppleGlobal
+  - RULE-SET,apple-tv_domain,AppleGlobal
+  - RULE-SET,apple_domain,Apple
+  - RULE-SET,bahamut_domain,TW-Auto
+  - RULE-SET,bilibili_domain,bilibili
+  - RULE-SET,cdn_domain,ProxySelect
+  - RULE-SET,cn_domain,DIRECT
+  - RULE-SET,crypto_domain,ProxySelect
+  - RULE-SET,dazn_domain,Media
+  - RULE-SET,disney_domain,Media
+  - RULE-SET,dmca_domain,ProxySelect
+  - RULE-SET,dmm_domain,JP-Select
+  - RULE-SET,douyin_domain,TikTok
+  - RULE-SET,ecommerce_domain,ProxySelect
+  - RULE-SET,forum_domain,ProxySelect
+  - RULE-SET,games-cn_domain,ProxySelect
+  - RULE-SET,games_domain,ProxySelect
+  - RULE-SET,gfw_domain,ProxySelect
+  - RULE-SET,gits_domain,Github
+  - RULE-SET,google_domain,Google
+  - RULE-SET,googlefcm_domain,Google
+  - RULE-SET,hbo_domain,ProxySelect
+  - RULE-SET,httpdns_domain,ProxySelect
+  - RULE-SET,hulu_domain,ProxySelect
+  - RULE-SET,iplocation-direct_domain,DIRECT
+  - RULE-SET,iplocation-proxy_domain,ProxySelect
+  - RULE-SET,microsoft-cn_domain,Direct
+  - RULE-SET,microsoft_domain,ProxySelect
+  - RULE-SET,mytvsuper_domain,Media
+  - RULE-SET,netflix_domain,Media
+  - RULE-SET,niconico_domain,JP-Select
+  - RULE-SET,onedrive_domain,DIRECT
+  - RULE-SET,paypal_domain,ProxySelect
+  - RULE-SET,primevideo_domain,ProxySelect
+  - RULE-SET,private_domain,ProxySelect
+  - RULE-SET,proxy_domain,ProxySelect
+  - RULE-SET,socialmedia-cn_domain,DIRECT
+  - RULE-SET,socialmedia_domain,SNS
+  - RULE-SET,speedtest_domain,ProxySelect
+  - RULE-SET,spotify_domain,Music
+  - RULE-SET,talkatone_domain,ProxySelect
+  - RULE-SET,tiktok_domain,TikTok
+  - RULE-SET,tld-proxy_domain,ProxySelect
+  - RULE-SET,twitch_domain,Media
+  - RULE-SET,youtube_domain,YouTube
+  
+  - RULE-SET,adrules_ip,REJECT
+  - RULE-SET,apns_ip,AppleGlobal
+  - RULE-SET,apple_ip,Apple
+  - RULE-SET,bilibili_ip,bilibili
+  - RULE-SET,cn_ip,DIRECT
+  - RULE-SET,dmca_ip,ProxySelect
+  - RULE-SET,dmm_ip,ProxySelect
+  - RULE-SET,ecommerce_ip,ProxySelect
+  - RULE-SET,games_ip,Games
+  - RULE-SET,gfw_ip,ProxySelect
+  - RULE-SET,google_ip,Google
+  - RULE-SET,googlefcm_ip,Google
+  - RULE-SET,httpdns_ip,ProxySelect
+  - RULE-SET,iplocation-proxy_ip,ProxySelect
+  - RULE-SET,netflix_ip,Media
+  - RULE-SET,private_ip,ProxySelect
+  - RULE-SET,proxy_ip,ProxySelect
+  - RULE-SET,socialmedia-cn_ip,DIRECT
+  - RULE-SET,socialmedia_ip,SNS
+  - RULE-SET,spotify_ip,Music
+  - RULE-SET,talkatone_ip,ProxySelect
+  - RULE-SET,twitch_ip,Media
+  - RULE-SET,youtube_ip,YouTube
+
+  - GEOIP,CN,DIRECT
+  - MATCH,Final
+rule-providers:
+  dmca_classical:
+    behavior: classical
+    format: text
+    interval: 86400
+    url: https://raw.githubusercontent.com/linshixingyou/Mononoke/localhost/classical/dmca.list
+  cdn_classical:
+    behavior: classical
+    format: text
+    interval: 86400
+    url: https://raw.githubusercontent.com/linshixingyou/Mononoke/localhost/classical/cdn.list
+  speedtest_classical:
+    behavior: classical
+    format: text
+    interval: 86400
+    url: https://raw.githubusercontent.com/linshixingyou/Mononoke/localhost/classical/speedtest.list
+  adrules_classical:
+    behavior: classical
+    format: text
+    interval: 86400
+    url: https://raw.githubusercontent.com/linshixingyou/Mononoke/localhost/classical/adrules.list
+  abema_domain:
+    behavior: domain
+    format: text
+    interval: 86400
+    url: https://raw.githubusercontent.com/linshixingyou/Mononoke/localhost/domain/abema.list
+  adrules_domain:
+    behavior: domain
+    format: text
+    interval: 86400
+    url: https://raw.githubusercontent.com/linshixingyou/Mononoke/localhost/domain/adrules.list
+  ai_domain:
+    behavior: domain
+    format: text
+    interval: 86400
+    url: https://raw.githubusercontent.com/linshixingyou/Mononoke/localhost/domain/ai.list
+  apns_domain:
+    behavior: domain
+    format: text
+    interval: 86400
+    url: https://raw.githubusercontent.com/linshixingyou/Mononoke/localhost/domain/apns.list
+  apple-cn_domain:
+    behavior: domain
+    format: text
+    interval: 86400
+    url: https://raw.githubusercontent.com/linshixingyou/Mononoke/localhost/domain/apple-cn.list
+  apple-proxy_domain:
+    behavior: domain
+    format: text
+    interval: 86400
+    url: https://raw.githubusercontent.com/linshixingyou/Mononoke/localhost/domain/apple-proxy.list
+  apple-tv_domain:
+    behavior: domain
+    format: text
+    interval: 86400
+    url: https://raw.githubusercontent.com/linshixingyou/Mononoke/localhost/domain/apple-tv.list
+  apple_domain:
+    behavior: domain
+    format: text
+    interval: 86400
+    url: https://raw.githubusercontent.com/linshixingyou/Mononoke/localhost/domain/apple.list
+  bahamut_domain:
+    behavior: domain
+    format: text
+    interval: 86400
+    url: https://raw.githubusercontent.com/linshixingyou/Mononoke/localhost/domain/bahamut.list
+  bilibili_domain:
+    behavior: domain
+    format: text
+    interval: 86400
+    url: https://raw.githubusercontent.com/linshixingyou/Mononoke/localhost/domain/bilibili.list
+  cdn_domain:
+    behavior: domain
+    format: text
+    interval: 86400
+    url: https://raw.githubusercontent.com/linshixingyou/Mononoke/localhost/domain/cdn.list
+  cn_domain:
+    behavior: domain
+    format: text
+    interval: 86400
+    url: https://raw.githubusercontent.com/linshixingyou/Mononoke/localhost/domain/cn.list
+  crypto_domain:
+    behavior: domain
+    format: text
+    interval: 86400
+    url: https://raw.githubusercontent.com/linshixingyou/Mononoke/localhost/domain/crypto.list
+  dazn_domain:
+    behavior: domain
+    format: text
+    interval: 86400
+    url: https://raw.githubusercontent.com/linshixingyou/Mononoke/localhost/domain/dazn.list
+  disney_domain:
+    behavior: domain
+    format: text
+    interval: 86400
+    url: https://raw.githubusercontent.com/linshixingyou/Mononoke/localhost/domain/disney.list
+  dmca_domain:
+    behavior: domain
+    format: text
+    interval: 86400
+    url: https://raw.githubusercontent.com/linshixingyou/Mononoke/localhost/domain/dmca.list
+  dmm_domain:
+    behavior: domain
+    format: text
+    interval: 86400
+    url: https://raw.githubusercontent.com/linshixingyou/Mononoke/localhost/domain/dmm.list
+  douyin_domain:
+    behavior: domain
+    format: text
+    interval: 86400
+    url: https://raw.githubusercontent.com/linshixingyou/Mononoke/localhost/domain/douyin.list
+  ecommerce_domain:
+    behavior: domain
+    format: text
+    interval: 86400
+    url: https://raw.githubusercontent.com/linshixingyou/Mononoke/localhost/domain/ecommerce.list
+  forum_domain:
+    behavior: domain
+    format: text
+    interval: 86400
+    url: https://raw.githubusercontent.com/linshixingyou/Mononoke/localhost/domain/forum.list
+  games-cn_domain:
+    behavior: domain
+    format: text
+    interval: 86400
+    url: https://raw.githubusercontent.com/linshixingyou/Mononoke/localhost/domain/games-cn.list
+  games_domain:
+    behavior: domain
+    format: text
+    interval: 86400
+    url: https://raw.githubusercontent.com/linshixingyou/Mononoke/localhost/domain/games.list
+  gfw_domain:
+    behavior: domain
+    format: text
+    interval: 86400
+    url: https://raw.githubusercontent.com/linshixingyou/Mononoke/localhost/domain/gfw.list
+  gits_domain:
+    behavior: domain
+    format: text
+    interval: 86400
+    url: https://raw.githubusercontent.com/linshixingyou/Mononoke/localhost/domain/gits.list
+  google_domain:
+    behavior: domain
+    format: text
+    interval: 86400
+    url: https://raw.githubusercontent.com/linshixingyou/Mononoke/localhost/domain/google.list
+  googlefcm_domain:
+    behavior: domain
+    format: text
+    interval: 86400
+    url: https://raw.githubusercontent.com/linshixingyou/Mononoke/localhost/domain/googlefcm.list
+  hbo_domain:
+    behavior: domain
+    format: text
+    interval: 86400
+    url: https://raw.githubusercontent.com/linshixingyou/Mononoke/localhost/domain/hbo.list
+  httpdns_domain:
+    behavior: domain
+    format: text
+    interval: 86400
+    url: https://raw.githubusercontent.com/linshixingyou/Mononoke/localhost/domain/httpdns.list
+  hulu_domain:
+    behavior: domain
+    format: text
+    interval: 86400
+    url: https://raw.githubusercontent.com/linshixingyou/Mononoke/localhost/domain/hulu.list
+  iplocation-direct_domain:
+    behavior: domain
+    format: text
+    interval: 86400
+    url: https://raw.githubusercontent.com/linshixingyou/Mononoke/localhost/domain/iplocation-direct.list
+  iplocation-proxy_domain:
+    behavior: domain
+    format: text
+    interval: 86400
+    url: https://raw.githubusercontent.com/linshixingyou/Mononoke/localhost/domain/iplocation-proxy.list
+  microsoft-cn_domain:
+    behavior: domain
+    format: text
+    interval: 86400
+    url: https://raw.githubusercontent.com/linshixingyou/Mononoke/localhost/domain/microsoft-cn.list
+  microsoft_domain:
+    behavior: domain
+    format: text
+    interval: 86400
+    url: https://raw.githubusercontent.com/linshixingyou/Mononoke/localhost/domain/microsoft.list
+  mytvsuper_domain:
+    behavior: domain
+    format: text
+    interval: 86400
+    url: https://raw.githubusercontent.com/linshixingyou/Mononoke/localhost/domain/mytvsuper.list
+  netflix_domain:
+    behavior: domain
+    format: text
+    interval: 86400
+    url: https://raw.githubusercontent.com/linshixingyou/Mononoke/localhost/domain/netflix.list
+  niconico_domain:
+    behavior: domain
+    format: text
+    interval: 86400
+    url: https://raw.githubusercontent.com/linshixingyou/Mononoke/localhost/domain/niconico.list
+  onedrive_domain:
+    behavior: domain
+    format: text
+    interval: 86400
+    url: https://raw.githubusercontent.com/linshixingyou/Mononoke/localhost/domain/onedrive.list
+  paypal_domain:
+    behavior: domain
+    format: text
+    interval: 86400
+    url: https://raw.githubusercontent.com/linshixingyou/Mononoke/localhost/domain/paypal.list
+  primevideo_domain:
+    behavior: domain
+    format: text
+    interval: 86400
+    url: https://raw.githubusercontent.com/linshixingyou/Mononoke/localhost/domain/primevideo.list
+  private_domain:
+    behavior: domain
+    format: text
+    interval: 86400
+    url: https://raw.githubusercontent.com/linshixingyou/Mononoke/localhost/domain/private.list
+  proxy_domain:
+    behavior: domain
+    format: text
+    interval: 86400
+    url: https://raw.githubusercontent.com/linshixingyou/Mononoke/localhost/domain/proxy.list
+  socialmedia-cn_domain:
+    behavior: domain
+    format: text
+    interval: 86400
+    url: https://raw.githubusercontent.com/linshixingyou/Mononoke/localhost/domain/socialmedia-cn.list
+  socialmedia_domain:
+    behavior: domain
+    format: text
+    interval: 86400
+    url: https://raw.githubusercontent.com/linshixingyou/Mononoke/localhost/domain/socialmedia.list
+  speedtest_domain:
+    behavior: domain
+    format: text
+    interval: 86400
+    url: https://raw.githubusercontent.com/linshixingyou/Mononoke/localhost/domain/speedtest.list
+  spotify_domain:
+    behavior: domain
+    format: text
+    interval: 86400
+    url: https://raw.githubusercontent.com/linshixingyou/Mononoke/localhost/domain/spotify.list
+  talkatone_domain:
+    behavior: domain
+    format: text
+    interval: 86400
+    url: https://raw.githubusercontent.com/linshixingyou/Mononoke/localhost/domain/talkatone.list
+  tiktok_domain:
+    behavior: domain
+    format: text
+    interval: 86400
+    url: https://raw.githubusercontent.com/linshixingyou/Mononoke/localhost/domain/tiktok.list
+  tld-proxy_domain:
+    behavior: domain
+    format: text
+    interval: 86400
+    url: https://raw.githubusercontent.com/linshixingyou/Mononoke/localhost/domain/tld-proxy.list
+  twitch_domain:
+    behavior: domain
+    format: text
+    interval: 86400
+    url: https://raw.githubusercontent.com/linshixingyou/Mononoke/localhost/domain/twitch.list
+  youtube_domain:
+    behavior: domain
+    format: text
+    interval: 86400
+    url: https://raw.githubusercontent.com/linshixingyou/Mononoke/localhost/domain/youtube.list
+  adrules_ip:
+    behavior: ipcidr
+    format: text
+    interval: 86400
+    url: https://raw.githubusercontent.com/linshixingyou/Mononoke/localhost/ipcidr/adrules.list
+  apns_ip:
+    behavior: ipcidr
+    format: text
+    interval: 86400
+    url: https://raw.githubusercontent.com/linshixingyou/Mononoke/localhost/ipcidr/apns.list
+  apple_ip:
+    behavior: ipcidr
+    format: text
+    interval: 86400
+    url: https://raw.githubusercontent.com/linshixingyou/Mononoke/localhost/ipcidr/apple.list
+  bilibili_ip:
+    behavior: ipcidr
+    format: text
+    interval: 86400
+    url: https://raw.githubusercontent.com/linshixingyou/Mononoke/localhost/ipcidr/bilibili.list
+  cn_ip:
+    behavior: ipcidr
+    format: text
+    interval: 86400
+    url: https://raw.githubusercontent.com/linshixingyou/Mononoke/localhost/ipcidr/cn.list
+  dmca_ip:
+    behavior: ipcidr
+    format: text
+    interval: 86400
+    url: https://raw.githubusercontent.com/linshixingyou/Mononoke/localhost/ipcidr/dmca.list
+  dmm_ip:
+    behavior: ipcidr
+    format: text
+    interval: 86400
+    url: https://raw.githubusercontent.com/linshixingyou/Mononoke/localhost/ipcidr/dmm.list
+  ecommerce_ip:
+    behavior: ipcidr
+    format: text
+    interval: 86400
+    url: https://raw.githubusercontent.com/linshixingyou/Mononoke/localhost/ipcidr/ecommerce.list
+  games_ip:
+    behavior: ipcidr
+    format: text
+    interval: 86400
+    url: https://raw.githubusercontent.com/linshixingyou/Mononoke/localhost/ipcidr/games.list
+  gfw_ip:
+    behavior: ipcidr
+    format: text
+    interval: 86400
+    url: https://raw.githubusercontent.com/linshixingyou/Mononoke/localhost/ipcidr/gfw.list
+  google_ip:
+    behavior: ipcidr
+    format: text
+    interval: 86400
+    url: https://raw.githubusercontent.com/linshixingyou/Mononoke/localhost/ipcidr/google.list
+  googlefcm_ip:
+    behavior: ipcidr
+    format: text
+    interval: 86400
+    url: https://raw.githubusercontent.com/linshixingyou/Mononoke/localhost/ipcidr/googlefcm.list
+  httpdns_ip:
+    behavior: ipcidr
+    format: text
+    interval: 86400
+    url: https://raw.githubusercontent.com/linshixingyou/Mononoke/localhost/ipcidr/httpdns.list
+  iplocation-proxy_ip:
+    behavior: ipcidr
+    format: text
+    interval: 86400
+    url: https://raw.githubusercontent.com/linshixingyou/Mononoke/localhost/ipcidr/iplocation-proxy.list
+  netflix_ip:
+    behavior: ipcidr
+    format: text
+    interval: 86400
+    url: https://raw.githubusercontent.com/linshixingyou/Mononoke/localhost/ipcidr/netflix.list
+  private_ip:
+    behavior: ipcidr
+    format: text
+    interval: 86400
+    url: https://raw.githubusercontent.com/linshixingyou/Mononoke/localhost/ipcidr/private.list
+  proxy_ip:
+    behavior: ipcidr
+    format: text
+    interval: 86400
+    url: https://raw.githubusercontent.com/linshixingyou/Mononoke/localhost/ipcidr/proxy.list
+  socialmedia-cn_ip:
+    behavior: ipcidr
+    format: text
+    interval: 86400
+    url: https://raw.githubusercontent.com/linshixingyou/Mononoke/localhost/ipcidr/socialmedia-cn.list
+  socialmedia_ip:
+    behavior: ipcidr
+    format: text
+    interval: 86400
+    url: https://raw.githubusercontent.com/linshixingyou/Mononoke/localhost/ipcidr/socialmedia.list
+  spotify_ip:
+    behavior: ipcidr
+    format: text
+    interval: 86400
+    url: https://raw.githubusercontent.com/linshixingyou/Mononoke/localhost/ipcidr/spotify.list
+  talkatone_ip:
+    behavior: ipcidr
+    format: text
+    interval: 86400
+    url: https://raw.githubusercontent.com/linshixingyou/Mononoke/localhost/ipcidr/talkatone.list
+  twitch_ip:
+    behavior: ipcidr
+    format: text
+    interval: 86400
+    url: https://raw.githubusercontent.com/linshixingyou/Mononoke/localhost/ipcidr/twitch.list
+  youtube_ip:
+    behavior: ipcidr
+    format: text
+    interval: 86400
+    url: https://raw.githubusercontent.com/linshixingyou/Mononoke/localhost/ipcidr/youtube.list
+proxies: 
+    - name: ds218
+      type: tailscale
