@@ -397,7 +397,7 @@ rules:
   - RULE-SET,adrules_classical,REJECT
   - RULE-SET,speedtest_classical,ProxySelect
   - RULE-SET,cdn_classical,ProxySelect
-  - RULE-SET,dmca_classical,ProxySelect
+  - RULE-SET,dmca_classical,DIRECT
 
   - RULE-SET,abema_domain,JP-Select
   - RULE-SET,adrules_domain,REJECT
@@ -414,7 +414,7 @@ rules:
   - RULE-SET,crypto_domain,ProxySelect
   - RULE-SET,dazn_domain,Media
   - RULE-SET,disney_domain,Media
-  - RULE-SET,dmca_domain,ProxySelect
+  - RULE-SET,dmca_domain,DIRECT
   - RULE-SET,dmm_domain,JP-Select
   - RULE-SET,douyin_domain,TikTok
   - RULE-SET,ecommerce_domain,ProxySelect
@@ -455,7 +455,7 @@ rules:
   - RULE-SET,apple_ip,Apple
   - RULE-SET,bilibili_ip,bilibili
   - RULE-SET,cn_ip,DIRECT
-  - RULE-SET,dmca_ip,ProxySelect
+  - RULE-SET,dmca_ip,DIRECT
   - RULE-SET,dmm_ip,ProxySelect
   - RULE-SET,ecommerce_ip,ProxySelect
   - RULE-SET,games_ip,Games
