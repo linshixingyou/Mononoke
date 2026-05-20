@@ -863,3 +863,23 @@ rule-providers:
     format: text
     interval: 86400
     url: https://raw.githubusercontent.com/linshixingyou/Mononoke/localhost/ipcidr/youtube.list
+proxies:
+    - name: 保底
+      password: 0993c0f8-9e29-32b1-810c-65f448c5aa04
+      port: 41510
+      server: cave-hk.kunlun04dns.com
+      servername: openssl.nodesni.com
+      skip-cert-verify: true
+      sni: openssl.nodesni.com
+      type: trojan
+    - auth: "3286b74d-a633-401f-8e22-6e8e61c5f1d9"
+      fast-open: false
+      name: 鸢尾VPS
+      port: 5555
+      server: 45.192.195.52
+      type: hysteria2
+      alpn:
+        - h3
+      down-speed: 1000
+      skip-cert-verify: true
+      up-speed: 1000
