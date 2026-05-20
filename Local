@@ -1,7 +1,6 @@
 proxies:
-    - name: ds218
+    - name: tailscale
       type: tailscale
-      auth-key: tskey-auth-kQntFGvKbS11CNTRL-WmTdfmvUuJUcWJwbyDhxJUByNxmNFSH5
     - name: ipfoxy
       port: 58688
       server: gate.ipfoxy.io
