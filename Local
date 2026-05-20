@@ -1,6 +1,15 @@
 proxies:
-    - name: tailscale
-      type: tailscale
+    - auth: "3286b74d-a633-401f-8e22-6e8e61c5f1d9"
+      fast-open: false
+      name: 鸢尾VPS
+      port: 5555
+      server: 45.192.195.52
+      type: hysteria2
+      alpn:
+        - h3
+      down-speed: 1000
+      skip-cert-verify: true
+      up-speed: 1000
     - name: ipfoxy
       port: 58688
       server: gate.ipfoxy.io
