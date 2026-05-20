@@ -381,7 +381,6 @@ proxy-groups:
     proxies:
       - 前置
       - 落地
-
   - name: ProxySelect
     type: select
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Bypass.png
@@ -390,15 +389,14 @@ proxy-groups:
       - Chain
       - 前置
     use: null
-
 rules:
+  - DOMAIN,https://twilight.pre-s.com/login,Emby
   - IP-CIDR,102.205.44.32,云洞
   - DOMAIN,eco.potdot.de,HongKong
   - RULE-SET,adrules_classical,REJECT
   - RULE-SET,speedtest_classical,ProxySelect
   - RULE-SET,cdn_classical,ProxySelect
   - RULE-SET,dmca_classical,DIRECT
-
   - RULE-SET,abema_domain,JP-Select
   - RULE-SET,adrules_domain,REJECT
   - RULE-SET,ai_domain,AI
@@ -449,7 +447,6 @@ rules:
   - RULE-SET,tld-proxy_domain,ProxySelect
   - RULE-SET,twitch_domain,Media
   - RULE-SET,youtube_domain,YouTube
-  
   - RULE-SET,adrules_ip,REJECT
   - RULE-SET,apns_ip,AppleGlobal
   - RULE-SET,apple_ip,Apple
@@ -473,7 +470,6 @@ rules:
   - RULE-SET,talkatone_ip,ProxySelect
   - RULE-SET,twitch_ip,Media
   - RULE-SET,youtube_ip,YouTube
-
   - GEOIP,CN,DIRECT
   - MATCH,Final
 rule-providers:
@@ -863,22 +859,22 @@ rule-providers:
     interval: 86400
     url: https://raw.githubusercontent.com/linshixingyou/Mononoke/localhost/ipcidr/youtube.list
 proxies:
-    - name: 保底
-      password: 0993c0f8-9e29-32b1-810c-65f448c5aa04
-      port: 41510
-      server: cave-hk.kunlun04dns.com
-      servername: openssl.nodesni.com
-      skip-cert-verify: true
-      sni: openssl.nodesni.com
-      type: trojan
-    - auth: "3286b74d-a633-401f-8e22-6e8e61c5f1d9"
-      fast-open: false
-      name: 鸢尾VPS
-      port: 5555
-      server: 45.192.195.52
-      type: hysteria2
-      alpn:
-        - h3
-      down-speed: 1000
-      skip-cert-verify: true
-      up-speed: 1000
+  - name: 保底
+    password: 0993c0f8-9e29-32b1-810c-65f448c5aa04
+    port: 41510
+    server: cave-hk.kunlun04dns.com
+    servername: openssl.nodesni.com
+    skip-cert-verify: true
+    sni: openssl.nodesni.com
+    type: trojan
+  - auth: "3286b74d-a633-401f-8e22-6e8e61c5f1d9"
+    fast-open: false
+    name: 鸢尾VPS
+    port: 5555
+    server: 45.192.195.52
+    type: hysteria2
+    alpn:
+      - h3
+    down-speed: 1000
+    skip-cert-verify: true
+    up-speed: 1000
