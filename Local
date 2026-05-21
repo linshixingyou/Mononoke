@@ -29,8 +29,5 @@ proxies:
       reality-opts: 
         public-key: AvtO9YC4L4eCScsYqJZLDNhVsljkXIaTsD_tKSHLNmM    
         short-id: 44843487                      
-      client-fingerprint: chrome   
-
-
-
+      client-fingerprint: chrome
 
