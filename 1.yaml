@@ -40,7 +40,6 @@ proxy-groups:
       - 云洞Auto
       - PkuAuto
       - KittyAuto
-      - Tailscale Exit Node
       - Customization
   - name: Final
     type: select
@@ -880,8 +879,6 @@ rule-providers:
     interval: 86400
     url: https://raw.githubusercontent.com/linshixingyou/Mononoke/localhost/ipcidr/VPS.list
 proxies:
-  - name: Tailscale Exit Node
-    Type :Tailscale
   - name: 保底
     password: 0993c0f8-9e29-32b1-810c-65f448c5aa04
     port: 41510
