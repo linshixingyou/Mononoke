@@ -1,4 +1,5 @@
 #SUBSCRIBED https://raw.githubusercontent.com/linshixingyou/Mononoke/localhost/1.yaml
+#SUBSCRIBED https://raw.githubusercontent.com/linshixingyou/Mononoke/localhost/1.yaml
 mode: rule
 log-level: info
 # DNS模块
@@ -879,6 +880,8 @@ rule-providers:
     interval: 86400
     url: https://raw.githubusercontent.com/linshixingyou/Mononoke/localhost/ipcidr/VPS.list
 proxies:
+  - name: 保底
+    type: tailscale
   - name: 保底
     password: 0993c0f8-9e29-32b1-810c-65f448c5aa04
     port: 41510
