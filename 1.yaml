@@ -40,6 +40,7 @@ proxy-groups:
       - 云洞Auto
       - PkuAuto
       - KittyAuto
+      - Tailscale Exit Node
       - Customization
   - name: Final
     type: select
@@ -121,7 +122,7 @@ proxy-groups:
     use:
       - 云洞
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/IEPL.png
- filter: ^(?=.*(.))(?!.*((?i)群|邀请|返利|循环|官网|客服|网站|网址|获取|订阅|流量|到期|机场|下次|版本|官址|备用|过期|已用|联系|失联|邮箱|工单|贩卖|通知|倒卖|防止|国内|地址|频道|无法|说明|使用|提示|特别|访问|支持|教程|关注|更新|作者|加入|(\b(USE|USED|TOTAL|Traffic|Expire|EMAIL|Panel|Channel|Author)\b|(\d{4}-\d{2}-\d{2}|\d+G)))).*$
+    filter: ^(?=.*(.))(?!.*((?i)群|邀请|返利|循环|官网|客服|网站|网址|获取|订阅|流量|到期|机场|下次|版本|官址|备用|过期|已用|联系|失联|邮箱|工单|贩卖|通知|倒卖|防止|国内|地址|频道|无法|说明|使用|提示|特别|访问|支持|教程|关注|更新|作者|加入|(\b(USE|USED|TOTAL|Traffic|Expire|EMAIL|Panel|Channel|Author)\b|(\d{4}-\d{2}-\d{2}|\d+G)))).*$
   - name: 云洞Auto
     type: url-test
     hidden: true
@@ -879,6 +880,8 @@ rule-providers:
     interval: 86400
     url: https://raw.githubusercontent.com/linshixingyou/Mononoke/localhost/ipcidr/VPS.list
 proxies:
+  - name: Tailscale Exit Node
+    Type :Tailscale
   - name: 保底
     password: 0993c0f8-9e29-32b1-810c-65f448c5aa04
     port: 41510
@@ -887,14 +890,4 @@ proxies:
     skip-cert-verify: true
     sni: openssl.nodesni.com
     type: trojan
-  - auth: "3286b74d-a633-401f-8e22-6e8e61c5f1d9"
-    fast-open: false
-    name: 鸢尾VPS
-    port: 5555
-    server: 45.192.195.52
-    type: hysteria2
-    alpn:
-      - h3
-    down-speed: 1000
-    skip-cert-verify: true
-    up-speed: 1000
+
