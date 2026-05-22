@@ -62,12 +62,11 @@ proxy-groups:
       - HK-LoadBalance
       - Chain
   - name: AI
-    type: url-test
+    type: fallback
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/ChatGPT.png
     proxies:
-      - TW-Auto
+      - SG-Auto     
       - JP-Auto
-      - SG-Auto
       - US-Auto
     hidden: true
   - name: Github
@@ -818,3 +817,6 @@ proxies:
       public-key: AvtO9YC4L4eCScsYqJZLDNhVsljkXIaTsD_tKSHLNmM
       short-id: 44843487
     client-fingerprint: chrome
+  - interface-name: utun4
+    name: VPN
+    type: direct
