@@ -32,15 +32,6 @@ proxy-providers:
   Local:
     interval: 86400
     url: https://raw.githubusercontent.com/linshixingyou/Mononoke/localhost/Local
-  Many:
-    type: http
-    url: https://node.zyfx6.xyz/clash
-    interval: 86400
-    path: ./providers/Many.yaml
-    health-check:
-      enable: true
-      url: http://www.gstatic.com/generate_204
-      interval: 300
 proxy-groups:
   - icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Rocket.png
     name: 前置
@@ -50,8 +41,6 @@ proxy-groups:
       - PkuAuto
       - KittyAuto
       - Customization
-      - Many
-      - ManyAuto
     use: null
   - name: Google
     type: select
