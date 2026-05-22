@@ -327,7 +327,7 @@ proxy-groups:
     use: null
 rules:
   - RULE-SET,youtube_domain,YouTube
-  - DOMAIN-SUFFIX,ippure.com,手动
+  - RULE-SET,youtube_ip,YouTube
   - RULE-SET,apns_ip,AppleGlobal
   - RULE-SET,apple_ip,Apple
   - RULE-SET,socialmedia_ip,前置
@@ -341,6 +341,7 @@ rules:
   - RULE-SET,apple-proxy_domain,AppleGlobal
   - RULE-SET,apple-tv_domain,Media
   - RULE-SET,apple_domain,Apple
+  - DOMAIN-SUFFIX,ippure.com,手动
   - GEOIP,CN,DIRECT
   - RULE-SET,gfw_ip,ProxySelect
   - RULE-SET,google_ip,Google
@@ -381,7 +382,6 @@ rules:
   - RULE-SET,hulu_domain,Media
   - RULE-SET,iplocation-proxy_domain,前置
   - RULE-SET,microsoft_domain,前置
-  - RULE-SET,youtube_ip,YouTube
   - RULE-SET,mytvsuper_domain,Media
   - RULE-SET,netflix_domain,Media
   - RULE-SET,paypal_domain,ProxySelect
