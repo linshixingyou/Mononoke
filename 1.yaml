@@ -1,5 +1,6 @@
 #SUBSCRIBED https://raw.githubusercontent.com/linshixingyou/Mononoke/localhost/1.yaml
 #SUBSCRIBED https://raw.githubusercontent.com/linshixingyou/Mononoke/localhost/1.yaml
+#SUBSCRIBED https://raw.githubusercontent.com/linshixingyou/Mononoke/localhost/1.yaml
 mode: rule
 log-level: info
 # DNS模块
@@ -59,7 +60,6 @@ proxy-groups:
       - ProxySelect
       - HK-LoadBalance
       - Chain
-      - VPN
   - name: AI
     type: url-test
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/ChatGPT.png
@@ -315,6 +315,7 @@ proxy-groups:
       - DIRECT
     use: null
 rules:
+  - DOMAIN-SUFFIX,ippure.com,手动
   - GEOIP,CN,DIRECT
   - RULE-SET,iplocation-direct_domain,DIRECT
   - RULE-SET,cn_domain,DIRECT
@@ -801,21 +802,18 @@ proxies:
     skip-cert-verify: true
     sni: openssl.nodesni.com
     type: trojan
-  - name: 帕斯云                         
+  - name: 帕斯云
     type: vless
-    server: 102.205.44.32                           
-    port: 12345                                
-    uuid: 4836e8e2-b0b5-4d01-ac14-79ef5319192f   
+    server: 102.205.44.32
+    port: 12345
+    uuid: 4836e8e2-b0b5-4d01-ac14-79ef5319192f
     network: tcp
     dialer-proxy: HK-Auto
     udp: true
     tls: true
     flow: xtls-rprx-vision
-    servername: apple.com                 
-    reality-opts: 
-      public-key: AvtO9YC4L4eCScsYqJZLDNhVsljkXIaTsD_tKSHLNmM    
-      short-id: 44843487                      
+    servername: apple.com
+    reality-opts:
+      public-key: AvtO9YC4L4eCScsYqJZLDNhVsljkXIaTsD_tKSHLNmM
+      short-id: 44843487
     client-fingerprint: chrome
-  - interface-name: en0
-    name: VPN
-    type: direct
