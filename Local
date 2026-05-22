@@ -1,36 +1,35 @@
 proxies:
-    - auth: "3286b74d-a633-401f-8e22-6e8e61c5f1d9"
-      fast-open: false
-      name: 鸢尾VPS
-      port: 5555
-      server: 45.192.195.52
-      type: hysteria2
-      alpn:
-        - h3
-      down-speed: 1000
-      skip-cert-verify: true
-      up-speed: 1000
-    - name: ipfoxy
-      port: 58688
-      server: gate.ipfoxy.io
-      type: socks5
-      user: customer-cnt1OMFrok-cc-NG-st-Fct-sessid-1778777321_10000
-      password: LzPZfYvjGMAAkMC
-    - name: 帕斯云              
-      type: vless
-      server: 102.205.44.32                           
-      port: 12345                                
-      uuid: 4836e8e2-b0b5-4d01-ac14-79ef5319192f   
-      network: tcp
-      dialer-proxy: All-Auto
-      udp: true
-      tls: true
-      flow: xtls-rprx-vision
-      servername: apple.com                 
-      reality-opts: 
-        public-key: AvtO9YC4L4eCScsYqJZLDNhVsljkXIaTsD_tKSHLNmM    
-        short-id: 44843487                      
-      client-fingerprint: chrome
-    - name: Tailscale Exit Node
-      type: tailscale
-
+  - auth: "3286b74d-a633-401f-8e22-6e8e61c5f1d9"
+    fast-open: false
+    name: 鸢尾VPS
+    port: 5555
+    server: 45.192.195.52
+    type: hysteria2
+    alpn:
+      - h3
+    down-speed: 1000
+    skip-cert-verify: true
+    up-speed: 1000
+  - name: ipfoxy
+    port: 58688
+    server: gate.ipfoxy.io
+    type: socks5
+    user: customer-cnt1OMFrok-cc-NG-st-Fct-sessid-1778777321_10000
+    password: LzPZfYvjGMAAkMC
+  - name: 帕斯云              
+    type: vless
+    server: 102.205.44.32                           
+    port: 12345                                
+    uuid: 4836e8e2-b0b5-4d01-ac14-79ef5319192f   
+    network: tcp
+    dialer-proxy: All-Auto
+    udp: true
+    tls: true
+    flow: xtls-rprx-vision
+    servername: apple.com                 
+    reality-opts: 
+      public-key: AvtO9YC4L4eCScsYqJZLDNhVsljkXIaTsD_tKSHLNmM    
+      short-id: 44843487                      
+    client-fingerprint: chrome
+  - name: Tailscale Exit Node
+    type: tailscale
