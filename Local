@@ -22,6 +22,7 @@ proxies:
       port: 12345                                
       uuid: 4836e8e2-b0b5-4d01-ac14-79ef5319192f   
       network: tcp
+      dialer-proxy: All-Auto
       udp: true
       tls: true
       flow: xtls-rprx-vision
