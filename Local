@@ -16,13 +16,13 @@ proxies:
     type: socks5
     user: customer-cnt1OMFrok-cc-NG-st-Fct-sessid-1778777321_10000
     password: LzPZfYvjGMAAkMC
-  - name: 帕斯云              
+  - name: 帕斯云Local              
     type: vless
     server: 102.205.44.32                           
     port: 12345                                
     uuid: 4836e8e2-b0b5-4d01-ac14-79ef5319192f   
     network: tcp
-    dialer-proxy: All-Auto
+    dialer-proxy: HK-Auto
     udp: true
     tls: true
     flow: xtls-rprx-vision

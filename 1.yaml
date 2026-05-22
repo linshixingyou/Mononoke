@@ -296,6 +296,7 @@ proxy-groups:
       - 手动
       - Kitty
       - Customization
+      - 帕斯云Local   
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Blackhole.png
   - icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Available_1.png
     name: Chain
@@ -805,7 +806,7 @@ proxies:
     port: 12345                                
     uuid: 4836e8e2-b0b5-4d01-ac14-79ef5319192f   
     network: tcp
-    dialer-proxy: All-Auto
+    dialer-proxy: HK-Auto
     udp: true
     tls: true
     flow: xtls-rprx-vision
