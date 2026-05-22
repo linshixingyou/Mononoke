@@ -799,7 +799,7 @@ proxies:
     skip-cert-verify: true
     sni: openssl.nodesni.com
     type: trojan
-  - name: 帕斯云                          
+  - name: 帕斯云                         
     type: vless
     server: 102.205.44.32                           
     port: 12345                                
