@@ -59,6 +59,7 @@ proxy-groups:
       - ProxySelect
       - HK-LoadBalance
       - Chain
+      - VPN
   - name: AI
     type: url-test
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/ChatGPT.png
@@ -815,3 +816,6 @@ proxies:
       public-key: AvtO9YC4L4eCScsYqJZLDNhVsljkXIaTsD_tKSHLNmM    
       short-id: 44843487                      
     client-fingerprint: chrome
+  - interface-name: en0
+    name: VPN
+    type: direct
