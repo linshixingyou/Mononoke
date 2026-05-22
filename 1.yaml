@@ -15,18 +15,18 @@ dns:
     - +.lan
     - +.local
 proxy-providers:
-  Parity落地:
-    interval: 86400
-    url: https://pai.yt/clash?preset=other
-  云洞:
-    interval: 86400
-    url: https://0993c0f8-9e29-32b1-810c-65f448c5aa04.nginxsub-cave.top/link/AoKXdOul4Uy4RKZY?list=clash
   kittysu:
     interval: 86400
     url: https://2.luolicon.ru/oosaka/158e9b903acd6217befb82f9b2eede2e
+  云洞:
+    interval: 86400
+    url: https://0993c0f8-9e29-32b1-810c-65f448c5aa04.nginxsub-cave.top/link/AoKXdOul4Uy4RKZY?list=clash
   pku:
     interval: 86400
     url: https://941321.xyz/clash/caiyuhan@pku.edu.cn/c8rhd5gfjw
+  Parity落地:
+    interval: 86400
+    url: https://pai.yt/clash?preset=other
   Peigedpkj:
     interval: 86400
     url: https://peige.dpkj.qzz.io/dapei
@@ -185,6 +185,11 @@ proxy-groups:
     filter: 美|🇺🇲|US|(?i)States|American
     interval: 300
     lazy: true
+  - name: HK-LoadBalance
+    type: load-balance
+    hidden: true
+    include-all: true
+    filter: 港|🇭🇰|HK|(?i)Hong
   - name: TW-FallBack
     type: fallback
     hidden: true
@@ -336,7 +341,7 @@ rules:
   - RULE-SET,apple-proxy_domain,AppleGlobal
   - RULE-SET,apple-tv_domain,Media
   - RULE-SET,apple_domain,Apple
-  - RULE-SET,bahamut_domain,TW-Auto
+  - RULE-SET,bahamut_domain,TW-FallBack
   - RULE-SET,bilibili_domain,bilibili
   - RULE-SET,speedtest_classical,ProxySelect
   - RULE-SET,cdn_domain,ProxySelect
