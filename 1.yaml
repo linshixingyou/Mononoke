@@ -372,7 +372,6 @@ rules:
   - RULE-SET,Emby,Emby
   - RULE-SET,abema_domain,JP-Media
   - RULE-SET,dmm_ip,JP-Media
-  - GEOIP,CN,DIRECT
   - RULE-SET,dmm_domain,JP-Media
   - RULE-SET,niconico_domain,JP-Media
   - RULE-SET,bahamut_domain,TW-FallBack
@@ -418,6 +417,7 @@ rules:
   - RULE-SET,adrules_classical,REJECT
   - RULE-SET,dmca_classical,DIRECT
   - RULE-SET,cdn_classical,Much
+  - GEOIP,CN,DIRECT
   - MATCH,ProxySelect
 rule-providers:
   dmca_classical:
