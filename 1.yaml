@@ -73,18 +73,13 @@ proxy-groups:
       - 移动
       - HK-Auto
       - 云洞Auto
-  - name: 家宽
-    type: select
-    include-all: true
-    filter: "ome|原生|住宅"
-    interval: 300
-    lazy: true
-    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/home.png
+    hidden: true
   - name: BGP
     type: url-test
     include-all: true
     filter: "优化|三网|BGP|专线|IEPL|高速｜epl"
     interval: 300
+    hidden: true
     lazy: true
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/BGP.png
   - name: 移动
@@ -94,6 +89,7 @@ proxy-groups:
     interval: 300
     lazy: true
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/BGP.png
+    hidden: true
   - name: 联通
     type: url-test
     include-all: true
@@ -101,6 +97,7 @@ proxy-groups:
     interval: 300
     lazy: true
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/BGP.png
+    hidden: true
   - name: 电信
     type: url-test
     include-all: true
@@ -108,6 +105,7 @@ proxy-groups:
     interval: 300
     lazy: true
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/BGP.png
+    hidden: true
   - name: AI
     type: fallback
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/ChatGPT.png
@@ -202,6 +200,7 @@ proxy-groups:
     filter: "下载|download|Download"
     lazy: true
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Download.png
+    hidden: true
   - name: 流媒体
     type: select
     include-all: true
@@ -279,6 +278,13 @@ proxy-groups:
       - US-Auto
       - Customization
       - 家宽
+  - name: 家宽
+    type: select
+    include-all: true
+    filter: "ome|原生|住宅"
+    interval: 300
+    lazy: true
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/home.png
   - name: Customization
     type: select
     use:
