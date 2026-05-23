@@ -91,7 +91,7 @@ proxy-groups:
     name: 线路
     type: select
     proxies:
-      - VPS
+      - Forum
       - BGP
       - 移动CM
     ssid-policy:
@@ -116,7 +116,7 @@ proxy-groups:
       - 99T
       - 99TAuto
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/GIA.png
-  - name: VPS
+  - name: Forum
     type: select
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Final.png
     proxies:
@@ -125,7 +125,7 @@ proxy-groups:
       - JP-Auto
       - SG-Auto
       - US-Auto
-      - Customization
+      - VPS
       - 家宽
   - name: Media
     type: select
@@ -389,7 +389,7 @@ proxy-groups:
     interval: 300
     lazy: true
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Unlock.png
-  - name: Customization
+  - name: VPS
     type: select
     use:
       - Local
@@ -446,7 +446,7 @@ rules:
   - RULE-SET,microsoft-cn_domain,DIRECT
   - RULE-SET,douyin_domain,DIRECT
   - RULE-SET,cn_ip,DIRECT
-  - RULE-SET,VPS,VPS
+  - RULE-SET,VPS,Forum
   - RULE-SET,gfw_ip,ProxySelect
   - RULE-SET,Emby,Media
   - RULE-SET,abema_domain,JP-Media
@@ -459,9 +459,9 @@ rules:
   - RULE-SET,dazn_domain,Media
   - RULE-SET,disney_domain,Media
   - RULE-SET,ecommerce_domain,ProxySelect
-  - RULE-SET,forum_domain,ProxySelect
+  - RULE-SET,forum_domain,Forum
   - RULE-SET,games_domain,Games
-  - RULE-SET,gfw_domain,ProxySelect
+  - RULE-SET,gfw_domain,Much
   - RULE-SET,gits_domain,线路
   - RULE-SET,hbo_domain,Media
   - RULE-SET,httpdns_domain,REJECT
