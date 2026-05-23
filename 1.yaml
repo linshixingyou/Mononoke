@@ -76,6 +76,14 @@ proxy-groups:
     hidden: true
   - name: BGP
     type: url-test
+    interval: 300
+    lazy: true
+    proxies:
+      - BGP1
+      - HK-Auto
+    hidden: true
+  - name: BGP1
+    type: url-test
     include-all: true
     filter: "优化|三网|BGP|专线|IEPL|高速｜epl"
     interval: 300
