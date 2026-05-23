@@ -352,7 +352,6 @@ rules:
   - RULE-SET,socialmedia_domain,前置
   - RULE-SET,ai_domain,AI
   - RULE-SET,apns_domain,AppleGlobal
-  - RULE-SET,cdn_classical,ProxySelect
   - RULE-SET,apple-cn_domain,Apple
   - RULE-SET,google_domain,Google
   - RULE-SET,googlefcm_domain,Google
@@ -370,7 +369,6 @@ rules:
   - RULE-SET,onedrive_domain,DIRECT
   - RULE-SET,socialmedia-cn_domain,DIRECT
   - RULE-SET,socialmedia-cn_ip,DIRECT
-  - RULE-SET,dmca_classical,DIRECT
   - RULE-SET,dmca_ip,DIRECT
   - RULE-SET,private_domain,DIRECT
   - RULE-SET,private_ip,DIRECT
@@ -385,7 +383,7 @@ rules:
   - RULE-SET,niconico_domain,JP-Select
   - RULE-SET,bahamut_domain,TW-FallBack
   - RULE-SET,bilibili_domain,bilibili
-  - RULE-SET,cdn_domain,ProxySelect
+  - RULE-SET,cdn_domain,Much
   - RULE-SET,crypto_domain,ProxySelect
   - RULE-SET,dazn_domain,Media
   - RULE-SET,disney_domain,Media
@@ -404,7 +402,6 @@ rules:
   - RULE-SET,paypal_domain,ProxySelect
   - RULE-SET,primevideo_domain,ProxySelect
   - RULE-SET,proxy_domain,ProxySelect
-  - RULE-SET,speedtest_domain,ProxySelect
   - RULE-SET,spotify_domain,Music
   - RULE-SET,talkatone_domain,US-Auto
   - RULE-SET,tiktok_domain,TikTok
@@ -417,13 +414,16 @@ rules:
   - RULE-SET,httpdns_ip,ProxySelect
   - RULE-SET,iplocation-proxy_ip,ProxySelect
   - RULE-SET,netflix_ip,Media
+  - RULE-SET,twitch_ip,Media
   - RULE-SET,spotify_ip,Music
   - RULE-SET,talkatone_ip,前置
-  - RULE-SET,twitch_ip,Media
-  - RULE-SET,adrules_classical,REJECT
   - RULE-SET,adrules_domain,REJECT
+  - RULE-SET,speedtest_domain,手动
   - RULE-SET,adrules_ip,REJECT
   - RULE-SET,speedtest_classical,手动
+  - RULE-SET,adrules_classical,REJECT
+  - RULE-SET,dmca_classical,DIRECT
+  - RULE-SET,cdn_classical,Much
   - MATCH,ProxySelect
 rule-providers:
   dmca_classical:
