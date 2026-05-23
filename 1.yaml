@@ -245,12 +245,14 @@ proxy-groups:
     filter: "游戏|ame|AME"
     lazy: true
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Game.png
+    hidden: true
   - name: Games
-    type: select
+    type: fallback
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Game.png
     proxies:
       - 游戏
       - BGP
+    hidden: true
   - name: TikTok
     type: select
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/TikTok.png
