@@ -68,6 +68,24 @@ proxy-providers:
       enable: true
       url: http://www.gstatic.com/generate_204
       interval: 300
+  SCP节点:
+    type: http
+    url: https://sub.scpnb.top/base64
+    interval: 86400
+    path: ./providers/SCP节点.yaml
+    health-check:
+      enable: true
+      url: http://www.gstatic.com/generate_204
+      interval: 300
+  99T:
+    type: http
+    url: https://downloads.onelighter.site/api/v1/client/subscribe?token=a98566da3743cc8a3ab8e9d16190c39a
+    interval: 86400
+    path: ./providers/99T.yaml
+    health-check:
+      enable: true
+      url: http://www.gstatic.com/generate_204
+      interval: 300
 proxy-groups:
   - icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Rocket.png
     name: 线路
@@ -93,6 +111,10 @@ proxy-groups:
       - udptoosAuto
       - Sublinks
       - SublinksAuto
+      - SCP节点
+      - SCP节点Auto
+      - 99T
+      - 99TAuto
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/GIA.png
   - name: VPS
     type: select
@@ -212,6 +234,34 @@ proxy-groups:
     hidden: true
     use:
       - Sublinks
+    url: http://www.gstatic.com/generate_204
+    interval: 300
+    tolerance: 50
+    filter: ^(?=.*(.))(?!.*((?i)群|邀请|返利|循环|官网|客服|网站|网址|获取|订阅|流量|到期|机场|下次|版本|官址|备用|过期|已用|联系|失联|邮箱|工单|贩卖|通知|倒卖|防止|国内|地址|频道|无法|说明|使用|提示|特别|访问|支持|教程|关注|更新|作者|加入|(\b(USE|USED|TOTAL|Traffic|Expire|EMAIL|Panel|Channel|Author)\b|(\d{4}-\d{2}-\d{2}|\d+G)))).*$
+  - name: SCP节点
+    type: select
+    use:
+      - SCP节点
+    filter: ^(?=.*(.))(?!.*((?i)群|邀请|返利|循环|官网|客服|网站|网址|获取|订阅|流量|到期|机场|下次|版本|官址|备用|过期|已用|联系|失联|邮箱|工单|贩卖|通知|倒卖|防止|国内|地址|频道|无法|说明|使用|提示|特别|访问|支持|教程|关注|更新|作者|加入|(\b(USE|USED|TOTAL|Traffic|Expire|EMAIL|Panel|Channel|Author)\b|(\d{4}-\d{2}-\d{2}|\d+G)))).*$
+  - name: SCP节点Auto
+    type: url-test
+    hidden: true
+    use:
+      - SCP节点
+    url: http://www.gstatic.com/generate_204
+    interval: 300
+    tolerance: 50
+    filter: ^(?=.*(.))(?!.*((?i)群|邀请|返利|循环|官网|客服|网站|网址|获取|订阅|流量|到期|机场|下次|版本|官址|备用|过期|已用|联系|失联|邮箱|工单|贩卖|通知|倒卖|防止|国内|地址|频道|无法|说明|使用|提示|特别|访问|支持|教程|关注|更新|作者|加入|(\b(USE|USED|TOTAL|Traffic|Expire|EMAIL|Panel|Channel|Author)\b|(\d{4}-\d{2}-\d{2}|\d+G)))).*$
+  - name: 99T
+    type: select
+    use:
+      - 99T
+    filter: ^(?=.*(.))(?!.*((?i)群|邀请|返利|循环|官网|客服|网站|网址|获取|订阅|流量|到期|机场|下次|版本|官址|备用|过期|已用|联系|失联|邮箱|工单|贩卖|通知|倒卖|防止|国内|地址|频道|无法|说明|使用|提示|特别|访问|支持|教程|关注|更新|作者|加入|(\b(USE|USED|TOTAL|Traffic|Expire|EMAIL|Panel|Channel|Author)\b|(\d{4}-\d{2}-\d{2}|\d+G)))).*$
+  - name: 99TAuto
+    type: url-test
+    hidden: true
+    use:
+      - 99T
     url: http://www.gstatic.com/generate_204
     interval: 300
     tolerance: 50
