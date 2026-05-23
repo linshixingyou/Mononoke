@@ -1,5 +1,4 @@
 #SUBSCRIBED https://raw.githubusercontent.com/linshixingyou/Mononoke/localhost/1.yaml
-#SUBSCRIBED https://raw.githubusercontent.com/linshixingyou/Mononoke/localhost/1.yaml
 mode: rule
 log-level: info
 # DNS模块
@@ -372,13 +371,12 @@ proxy-groups:
     type: select
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Final.png
     proxies:
-      - ProxySelect
       - HK-Auto
       - TW-Auto
       - JP-Auto
       - SG-Auto
       - US-Auto
-      - Much
+      - Customization
   - name: Customization
     type: select
     use:
@@ -394,6 +392,7 @@ proxy-groups:
     type: select
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Bypass.png
     proxies:
+      - VPS
       - Test
       - Chain
       - 前置
