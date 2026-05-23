@@ -69,9 +69,7 @@ proxy-groups:
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Google_Search.png
     proxies:
       - ProxySelect
-      - Kitty
       - US-Auto
-      - SG-Auto
       - Chain
   - name: YouTube
     type: select
@@ -86,15 +84,6 @@ proxy-groups:
     proxies:
       - JP-Auto
       - US-Auto
-    hidden: true
-  - name: Github
-    type: fallback
-    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/GitHub_Letter.png
-    proxies:
-      - PkuAuto
-      - KittyAuto
-      - 云洞Auto
-      - ProxySelect
     hidden: true
   - name: 云洞
     type: select
@@ -136,20 +125,10 @@ proxy-groups:
       - kittysu
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/CC.png
     filter: ^(?=.*(.))(?!.*((?i)群|邀请|返利|循环|官网|客服|网站|网址|获取|订阅|流量|到期|机场|下次|版本|官址|备用|过期|已用|联系|失联|邮箱|工单|贩卖|通知|倒卖|防止|国内|地址|频道|无法|说明|使用|提示|特别|访问|支持|教程|关注|更新|作者|加入|(\b(USE|USED|TOTAL|Traffic|Expire|EMAIL|Panel|Channel|Author)\b|(\d{4}-\d{2}-\d{2}|\d+G)))).*$
-  - name: Many
+  - name: Much
     type: select
     use:
       - Many
-    filter: ^(?=.*(.))(?!.*((?i)群|邀请|返利|循环|官网|客服|网站|网址|获取|订阅|流量|到期|机场|下次|版本|官址|备用|过期|已用|联系|失联|邮箱|工单|贩卖|通知|倒卖|防止|国内|地址|频道|无法|说明|使用|提示|特别|访问|支持|教程|关注|更新|作者|加入|(\b(USE|USED|TOTAL|Traffic|Expire|EMAIL|Panel|Channel|Author)\b|(\d{4}-\d{2}-\d{2}|\d+G)))).*$
-  - name: ManyAuto
-    type: url-test
-    hidden: true
-    use:
-      - Many
-    url: http://www.gstatic.com/generate_204
-    interval: 300
-    tolerance: 50
-    filter: ^(?=.*(.))(?!.*((?i)群|邀请|返利|循环|官网|客服|网站|网址|获取|订阅|流量|到期|机场|下次|版本|官址|备用|过期|已用|联系|失联|邮箱|工单|贩卖|通知|倒卖|防止|国内|地址|频道|无法|说明|使用|提示|特别|访问|支持|教程|关注|更新|作者|加入|(\b(USE|USED|TOTAL|Traffic|Expire|EMAIL|Panel|Channel|Author)\b|(\d{4}-\d{2}-\d{2}|\d+G)))).*$
   - name: 良心云到7月
     type: select
     use:
@@ -377,6 +356,7 @@ rules:
   - RULE-SET,google_domain,Google
   - RULE-SET,googlefcm_domain,Google
   - RULE-SET,apple-proxy_domain,AppleGlobal
+  - RULE-SET,apple-tv_domain,Media
   - RULE-SET,apple_domain,Apple
   - DOMAIN-SUFFIX,ippure.com,手动
   - GEOIP,CN,DIRECT
