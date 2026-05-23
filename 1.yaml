@@ -74,21 +74,40 @@ proxy-groups:
       AU: 云洞Auto
       cellular: 移动
       default: BGP
-  - name: Google
+  - name: 专线
     type: select
-    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Google_Search.png
-    proxies:
-      - ProxySelect
-      - US-Auto
-      - Chain
-  - name: YouTube
+    include-all: true
+    filter: "专线|IEPL"
+    lazy: true
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/IEPL.png
+  - name: BGP
     type: select
-    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/YouTube.png
-    proxies:
-      - ProxySelect
-      - HK-LoadBalance
-      - Much
-      - Chain
+    include-all: true
+    filter: "优化|三网|BGP"
+    interval: 300
+    lazy: true
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/BGP.png
+  - name: 移动
+    type: select
+    include-all: true
+    filter: "移动|CM|移动"
+    interval: 300
+    lazy: true
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/BGP.png
+  - name: 联通
+    type: select
+    include-all: true
+    filter: "联通|CU|联通"
+    interval: 300
+    lazy: true
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/BGP.png
+  - name: 电信
+    type: select
+    include-all: true
+    filter: "电信|CT|CN2"
+    interval: 300
+    lazy: true
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/BGP.png
   - name: AI
     type: fallback
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/ChatGPT.png
@@ -136,16 +155,12 @@ proxy-groups:
       - kittysu
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/CC.png
     filter: ^(?=.*(.))(?!.*((?i)群|邀请|返利|循环|官网|客服|网站|网址|获取|订阅|流量|到期|机场|下次|版本|官址|备用|过期|已用|联系|失联|邮箱|工单|贩卖|通知|倒卖|防止|国内|地址|频道|无法|说明|使用|提示|特别|访问|支持|教程|关注|更新|作者|加入|(\b(USE|USED|TOTAL|Traffic|Expire|EMAIL|Panel|Channel|Author)\b|(\d{4}-\d{2}-\d{2}|\d+G)))).*$
-  - name: Much
-    type: select
-    proxies:
-      - 良心云到7月Auto
-      - 下载
   - name: 良心云到7月
     type: select
     use:
       - 良心云到7月
     filter: ^(?=.*(.))(?!.*((?i)群|邀请|返利|循环|官网|客服|网站|网址|获取|订阅|流量|到期|机场|下次|版本|官址|备用|过期|已用|联系|失联|邮箱|工单|贩卖|通知|倒卖|防止|国内|地址|频道|无法|说明|使用|提示|特别|访问|支持|教程|关注|更新|作者|加入|(\b(USE|USED|TOTAL|Traffic|Expire|EMAIL|Panel|Channel|Author)\b|(\d{4}-\d{2}-\d{2}|\d+G)))).*$
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/GIA.png
   - name: 良心云到7月Auto
     type: url-test
     hidden: true
@@ -219,56 +234,6 @@ proxy-groups:
     filter: "台|🇨🇳|🇹🇼|湾|TW|(?i)Taiwan"
     interval: 300
     lazy: true
-  - name: JP-Media
-    type: select
-    include-all: true
-    filter: "日|🇯🇵|东京|JP|(?i)Japan"
-    lazy: true
-  - name: 下载
-    type: select
-    include-all: true
-    filter: "下载|download|Download"
-    lazy: true
-  - name: 游戏
-    type: select
-    include-all: true
-    filter: "游戏|ame|AME"
-    lazy: true
-  - name: 专线
-    type: select
-    include-all: true
-    filter: "专线|IEPL"
-    lazy: true
-  - name: 流媒体
-    type: select
-    include-all: true
-    filter: "媒体|Media"
-    interval: 300
-    lazy: true
-  - name: BGP
-    type: select
-    include-all: true
-    filter: "优化|三网|BGP"
-    interval: 300
-    lazy: true
-  - name: 移动
-    type: select
-    include-all: true
-    filter: "移动|CM|移动"
-    interval: 300
-    lazy: true
-  - name: 联通
-    type: select
-    include-all: true
-    filter: "联通|CU|联通"
-    interval: 300
-    lazy: true
-  - name: 电信
-    type: select
-    include-all: true
-    filter: "电信|CT|CN2"
-    interval: 300
-    lazy: true
   - name: All-Auto
     type: url-test
     hidden: true
@@ -292,6 +257,40 @@ proxy-groups:
       - 下载
       - 流媒体
       - Much
+  - name: Much
+    type: select
+    proxies:
+      - 良心云到7月Auto
+      - 下载
+      - HK-LoadBalance
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/GIA.png
+  - name: 下载
+    type: select
+    include-all: true
+    filter: "下载|download|Download"
+    lazy: true
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Download.png
+
+  - name: 流媒体
+    type: select
+    include-all: true
+    filter: "媒体|Media"
+    interval: 300
+    lazy: true
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Streaming.png
+  - name: YouTube
+    type: select
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/YouTube.png
+    proxies:
+      - ProxySelect
+      - Much
+      - Chain
+  - name: JP-Media
+    type: select
+    include-all: true
+    filter: "日|🇯🇵|东京|JP|(?i)Japan"
+    lazy: true
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Streaming.png
   - name: Media
     type: select
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Streaming.png
@@ -315,17 +314,7 @@ proxy-groups:
       - ProxySelect
       - HK-Auto
       - US-Auto
-      - Much
-  - name: VPS
-    type: select
-    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Final.png
-    proxies:
-      - ProxySelect
-      - HK-Auto
-      - TW-Auto
-      - JP-Auto
-      - SG-Auto
-      - US-Auto
+      - 流媒体
       - Much
   - name: bilibili
     type: select
@@ -333,6 +322,12 @@ proxy-groups:
     proxies:
       - DIRECT
       - Media
+  - name: 游戏
+    type: select
+    include-all: true
+    filter: "游戏|ame|AME"
+    lazy: true
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Game.png
   - name: Games
     type: select
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Game.png
@@ -373,25 +368,28 @@ proxy-groups:
     type: select
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Speedtest.png
     filter: ^(?=.*(.))(?!.*((?i)群|邀请|返利|循环|官网|客服|网站|网址|获取|订阅|流量|到期|机场|下次|版本|官址|备用|过期|已用|联系|失联|邮箱|工单|贩卖|通知|倒卖|防止|国内|地址|频道|无法|说明|使用|提示|特别|访问|支持|教程|关注|更新|作者|加入|(\b(USE|USED|TOTAL|Traffic|Expire|EMAIL|Panel|Channel|Author)\b|(\d{4}-\d{2}-\d{2}|\d+G)))).*$
+  - name: VPS
+    type: select
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Final.png
+    proxies:
+      - ProxySelect
+      - HK-Auto
+      - TW-Auto
+      - JP-Auto
+      - SG-Auto
+      - US-Auto
+      - Much
   - name: Customization
     type: select
     use:
       - Local
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Heart.png
-  - name: 落地
-    type: select
-    use: null
-    proxies:
-      - 小众国家
-      - Customization
-      - 帕斯云
-    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Blackhole.png
   - icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Available_1.png
     name: Chain
     type: relay
     proxies:
       - 前置
-      - 落地
+      - 小众国家
   - name: ProxySelect
     type: select
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Bypass.png
@@ -413,10 +411,10 @@ rules:
   - RULE-SET,socialmedia_ip,前置
   - RULE-SET,socialmedia_domain,前置
   - RULE-SET,ai_domain,AI
-  - RULE-SET,google_domain,Google
-  - RULE-SET,googlefcm_domain,Google
-  - RULE-SET,google_ip,Google
-  - RULE-SET,googlefcm_ip,Google
+  - RULE-SET,google_domain,ProxySelect
+  - RULE-SET,googlefcm_domain,ProxySelect
+  - RULE-SET,google_ip,ProxySelect
+  - RULE-SET,googlefcm_ip,ProxySelect
   - DOMAIN-SUFFIX,ippure.com,手动
   - RULE-SET,apple-cn_domain,DIRECT
   - RULE-SET,iplocation-direct_domain,DIRECT
@@ -876,7 +874,7 @@ rule-providers:
     interval: 86400
     url: https://raw.githubusercontent.com/linshixingyou/Mononoke/localhost/ipcidr/VPS.list
 proxies:
-  - name: 保底
+  - name: 香港保底
     password: 0993c0f8-9e29-32b1-810c-65f448c5aa04
     port: 41510
     server: cave-hk.kunlun04dns.com
@@ -884,7 +882,7 @@ proxies:
     skip-cert-verify: true
     sni: openssl.nodesni.com
     type: trojan
-  - name: 帕斯云
+  - name: 尼日利亚帕斯云
     type: vless
     server: 102.205.44.32
     port: 12345
@@ -900,5 +898,5 @@ proxies:
       short-id: 44843487
     client-fingerprint: chrome
   - interface-name: utun4
-    name: VPN
+    name: 本机VPN
     type: direct
