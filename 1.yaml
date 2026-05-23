@@ -228,6 +228,7 @@ proxy-groups:
       - JP-Auto
       - SG-Auto
       - US-Auto
+      - Much
   - name: Media
     type: select
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Streaming.png
@@ -238,6 +239,7 @@ proxy-groups:
       - JP-Auto
       - SG-Auto
       - US-Auto
+      - Much
   - name: Emby
     type: select
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Emby.png
@@ -245,6 +247,7 @@ proxy-groups:
       - ProxySelect
       - HK-Auto
       - US-Auto
+      - Much
   - name: VPS
     type: select
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Final.png
@@ -255,6 +258,7 @@ proxy-groups:
       - JP-Auto
       - SG-Auto
       - US-Auto
+      - Much
       - DIRECT
   - name: bilibili
     type: select
@@ -263,6 +267,7 @@ proxy-groups:
       - DIRECT
       - HK-Auto
       - TW-Auto
+      - Much
   - name: Games
     type: select
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Game.png
@@ -352,7 +357,6 @@ rules:
   - RULE-SET,google_domain,Google
   - RULE-SET,googlefcm_domain,Google
   - RULE-SET,apple-proxy_domain,AppleGlobal
-  - RULE-SET,apple-tv_domain,Media
   - RULE-SET,apple_domain,Apple
   - DOMAIN-SUFFIX,ippure.com,手动
   - GEOIP,CN,DIRECT
@@ -472,11 +476,6 @@ rule-providers:
     format: text
     interval: 86400
     url: https://raw.githubusercontent.com/linshixingyou/Mononoke/localhost/domain/apple-proxy.list
-  apple-tv_domain:
-    behavior: domain
-    format: text
-    interval: 86400
-    url: https://raw.githubusercontent.com/linshixingyou/Mononoke/localhost/domain/apple-tv.list
   apple_domain:
     behavior: domain
     format: text
