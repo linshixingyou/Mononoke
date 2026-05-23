@@ -288,7 +288,7 @@ proxy-groups:
     filter: "ome|原生|住宅"
     interval: 300
     lazy: true
-    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/unlock.png
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Unlock.png
   - name: Customization
     type: select
     use:
