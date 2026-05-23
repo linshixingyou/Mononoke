@@ -107,14 +107,6 @@ proxy-groups:
       - 良心云到7月Auto
       - 下载
       - HK-LoadBalance
-      - udptoos
-      - udptoosAuto
-      - Sublinks
-      - SublinksAuto
-      - SCP节点
-      - SCP节点Auto
-      - 99T
-      - 99TAuto
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/YouTube.png
   - name: Forum
     type: select
