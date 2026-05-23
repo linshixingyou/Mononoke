@@ -84,7 +84,6 @@ proxy-groups:
     type: fallback
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/ChatGPT.png
     proxies:
-      - SG-Auto
       - JP-Auto
       - US-Auto
     hidden: true
@@ -184,54 +183,54 @@ proxy-groups:
     type: url-test
     hidden: true
     include-all: true
-    filter: "港|\U0001F1ED\U0001F1F0|HK|(?i)Hong"
+    filter: "港|🇭🇰|HK|(?i)Hong"
     interval: 300
     lazy: true
   - name: TW-Auto
     type: url-test
     hidden: true
     include-all: true
-    filter: "台|\U0001F1E8\U0001F1F3|\U0001F1F9\U0001F1FC|湾|TW|(?i)Taiwan"
+    filter: "台|🇨🇳|🇹🇼|湾|TW|(?i)Taiwan"
     interval: 300
     lazy: true
   - name: JP-Auto
     type: url-test
     hidden: true
     include-all: true
-    filter: "日|\U0001F1EF\U0001F1F5|东京|JP|(?i)Japan"
+    filter: "日|🇯🇵|东京|JP|(?i)Japan"
     interval: 300
     lazy: true
   - name: SG-Auto
     type: url-test
     hidden: true
     include-all: true
-    filter: "新加坡|坡|狮城|\U0001F1F8\U0001F1EC|SG|(?i)Singapore"
+    filter: "新加坡|坡|狮城|🇸🇬|SG|(?i)Singapore"
     interval: 300
     lazy: true
   - name: US-Auto
     type: url-test
     hidden: true
     include-all: true
-    filter: "美|\U0001F1FA\U0001F1F2|US|(?i)States|American"
+    filter: "美|🇺🇲|US|(?i)States|American"
     interval: 300
     lazy: true
   - name: HK-LoadBalance
     type: load-balance
     hidden: true
     include-all: true
-    filter: "港|\U0001F1ED\U0001F1F0|HK|(?i)Hong"
+    filter: "港|🇭🇰|HK|(?i)Hong"
     interval: 200
   - name: TW-FallBack
     type: fallback
     hidden: true
     include-all: true
-    filter: "台|\U0001F1E8\U0001F1F3|\U0001F1F9\U0001F1FC|湾|TW|(?i)Taiwan"
+    filter: "台|🇨🇳|🇹🇼|湾|TW|(?i)Taiwan"
     interval: 300
     lazy: true
   - name: JP-Select
     type: select
     include-all: true
-    filter: "日|\U0001F1EF\U0001F1F5|东京|JP|(?i)Japan"
+    filter: "日|🇯🇵|东京|JP|(?i)Japan"
   - name: All-Auto
     type: url-test
     hidden: true
@@ -378,7 +377,6 @@ rules:
   - RULE-SET,google_domain,Google
   - RULE-SET,googlefcm_domain,Google
   - RULE-SET,apple-proxy_domain,AppleGlobal
-  - RULE-SET,apple-tv_domain,Media
   - RULE-SET,apple_domain,Apple
   - DOMAIN-SUFFIX,ippure.com,手动
   - GEOIP,CN,DIRECT
@@ -415,7 +413,7 @@ rules:
   - RULE-SET,forum_domain,ProxySelect
   - RULE-SET,games_domain,ProxySelect
   - RULE-SET,gfw_domain,前置
-  - RULE-SET,gits_domain,Github
+  - RULE-SET,gits_domain,前置
   - RULE-SET,hbo_domain,Media
   - RULE-SET,httpdns_domain,ProxySelect
   - RULE-SET,hulu_domain,Media
