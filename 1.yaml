@@ -269,7 +269,6 @@ proxy-groups:
     filter: "下载|download|Download"
     lazy: true
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Download.png
-
   - name: 流媒体
     type: select
     include-all: true
@@ -277,13 +276,6 @@ proxy-groups:
     interval: 300
     lazy: true
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Streaming.png
-  - name: YouTube
-    type: select
-    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/YouTube.png
-    proxies:
-      - ProxySelect
-      - Much
-      - Chain
   - name: JP-Media
     type: select
     include-all: true
@@ -294,18 +286,14 @@ proxy-groups:
     type: select
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Streaming.png
     proxies:
+      - 流媒体
+      - Much
       - ProxySelect
       - HK-Auto
       - TW-Auto
       - JP-Auto
       - SG-Auto
       - US-Auto
-      - 游戏
-      - 专线
-      - BGP
-      - 下载
-      - 流媒体
-      - Much
   - name: Emby
     type: select
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Emby.png
@@ -400,8 +388,8 @@ proxy-groups:
     use: null
 rules:
   - DOMAIN-SUFFIX,mail.me.com,DIRECT
-  - RULE-SET,youtube_domain,YouTube
-  - RULE-SET,youtube_ip,YouTube
+  - RULE-SET,youtube_domain,Media
+  - RULE-SET,youtube_ip,Media
   - RULE-SET,apns_ip,前置
   - RULE-SET,apns_domain,前置
   - RULE-SET,apple_domain,Apple
