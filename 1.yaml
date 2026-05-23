@@ -271,7 +271,7 @@ proxy-groups:
     type: url-test
     hidden: true
     include-all: true
-    filter: "港|🇭🇰|HK|(?i)Hong"
+    filter: "^(?=.*(港|🇭🇰|HK|(?i)Hong))(?!.*(免费|杀人))"
     interval: 300
     lazy: true
   - name: TW-Auto
@@ -430,7 +430,7 @@ rules:
   - RULE-SET,google_domain,ProxySelect
   - RULE-SET,googlefcm_domain,ProxySelect
   - RULE-SET,googlefcm_ip,ProxySelect
-  - DOMAIN-SUFFIX,ippure.com,Test
+  - DOMAIN-SUFFIX,ippure.com,JP-Media
   - RULE-SET,apple-cn_domain,DIRECT
   - RULE-SET,iplocation-direct_domain,DIRECT
   - RULE-SET,cn_domain,DIRECT
