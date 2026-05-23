@@ -341,21 +341,19 @@ rules:
   - RULE-SET,youtube_domain,YouTube
   - RULE-SET,youtube_ip,YouTube
   - RULE-SET,apns_ip,前置
+  - RULE-SET,apns_domain,前置
+  - RULE-SET,apple_domain,Apple
   - RULE-SET,apple_ip,Apple
+  - RULE-SET,apple-proxy_domain,Apple
   - RULE-SET,socialmedia_ip,前置
   - RULE-SET,socialmedia_domain,前置
   - RULE-SET,ai_domain,AI
-  - RULE-SET,apns_domain,前置
-  - RULE-SET,apple-cn_domain,DIRECT
   - RULE-SET,google_domain,Google
   - RULE-SET,googlefcm_domain,Google
-  - RULE-SET,apple-proxy_domain,前置
-  - RULE-SET,apple_domain,Apple
-  - DOMAIN-SUFFIX,ippure.com,手动
-  - GEOIP,CN,DIRECT
-  - RULE-SET,gfw_ip,ProxySelect
   - RULE-SET,google_ip,Google
   - RULE-SET,googlefcm_ip,Google
+  - DOMAIN-SUFFIX,ippure.com,手动
+  - RULE-SET,apple-cn_domain,DIRECT
   - RULE-SET,iplocation-direct_domain,DIRECT
   - RULE-SET,cn_domain,DIRECT
   - RULE-SET,dmca_domain,DIRECT
@@ -370,14 +368,15 @@ rules:
   - RULE-SET,douyin_domain,DIRECT
   - RULE-SET,cn_ip,DIRECT
   - RULE-SET,VPS,VPS
+  - RULE-SET,gfw_ip,ProxySelect
   - RULE-SET,Emby,Emby
   - RULE-SET,abema_domain,JP-Media
   - RULE-SET,dmm_ip,JP-Media
+  - GEOIP,CN,DIRECT
   - RULE-SET,dmm_domain,JP-Media
   - RULE-SET,niconico_domain,JP-Media
   - RULE-SET,bahamut_domain,TW-FallBack
   - RULE-SET,bilibili_domain,bilibili
-  - RULE-SET,cdn_domain,Much
   - RULE-SET,crypto_domain,ProxySelect
   - RULE-SET,dazn_domain,Media
   - RULE-SET,disney_domain,Media
@@ -387,7 +386,7 @@ rules:
   - RULE-SET,gfw_domain,ProxySelect
   - RULE-SET,gits_domain,前置
   - RULE-SET,hbo_domain,Media
-  - RULE-SET,httpdns_domain,ProxySelect
+  - RULE-SET,httpdns_domain,REJECT
   - RULE-SET,hulu_domain,Media
   - RULE-SET,iplocation-proxy_domain,ProxySelect
   - RULE-SET,microsoft_domain,前置
@@ -395,6 +394,7 @@ rules:
   - RULE-SET,netflix_domain,Media
   - RULE-SET,paypal_domain,ProxySelect
   - RULE-SET,primevideo_domain,Media
+  - RULE-SET,cdn_domain,Much
   - RULE-SET,proxy_domain,ProxySelect
   - RULE-SET,spotify_domain,Music
   - RULE-SET,talkatone_domain,US-Auto
@@ -405,7 +405,7 @@ rules:
   - RULE-SET,bilibili_ip,bilibili
   - RULE-SET,games_ip,Games
   - RULE-SET,ecommerce_ip,ProxySelect
-  - RULE-SET,httpdns_ip,ProxySelect
+  - RULE-SET,httpdns_ip,REJECT
   - RULE-SET,iplocation-proxy_ip,ProxySelect
   - RULE-SET,netflix_ip,Media
   - RULE-SET,twitch_ip,Media
