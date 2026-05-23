@@ -14,7 +14,7 @@ dns:
     - +.lan
     - +.local
 proxy-providers:
-  kittysu:
+  kity:
     interval: 86400
     url: https://2.luolicon.ru/oosaka/158e9b903acd6217befb82f9b2eede2e
   云洞:
@@ -23,10 +23,10 @@ proxy-providers:
   pku:
     interval: 86400
     url: https://941321.xyz/clash/caiyuhan@pku.edu.cn/c8rhd5gfjw
-  Parity落地:
+  Pa:
     interval: 86400
     url: https://pai.yt/clash?preset=other
-  Peigedpkj:
+  Pe:
     interval: 86400
     url: https://peige.dpkj.qzz.io/dapei
   Local:
@@ -334,7 +334,7 @@ proxy-groups:
   - name: JP-Media
     type: select
     include-all: true
-    filter: "日|🇯🇵|东京|JP|(?i)Japan"
+    filter: "^(?=.*(日|🇯🇵|东京|JP|(?i)Japan))(?!.*(免费|2))"
     lazy: true
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Japan.png
   - name: 游戏
