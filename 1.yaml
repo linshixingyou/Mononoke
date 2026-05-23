@@ -417,8 +417,8 @@ proxy-groups:
     use: null
 rules:
   - DOMAIN-SUFFIX,mail.me.com,DIRECT
-  - RULE-SET,youtube_domain,Media
-  - RULE-SET,youtube_ip,Media
+  - RULE-SET,youtube_domain,Much
+  - RULE-SET,youtube_ip,Much
   - RULE-SET,apns_ip,线路
   - RULE-SET,apns_domain,线路
   - RULE-SET,apple_domain,Apple
