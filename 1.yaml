@@ -1,4 +1,5 @@
 #SUBSCRIBED https://raw.githubusercontent.com/linshixingyou/Mononoke/localhost/1.yaml
+#SUBSCRIBED https://raw.githubusercontent.com/linshixingyou/Mononoke/localhost/1.yaml
 mode: rule
 log-level: info
 # DNS模块
@@ -338,6 +339,7 @@ proxy-groups:
       - DIRECT
     use: null
 rules:
+  - DOMAIN-SUFFIX,mail.me.com,DIRECT
   - RULE-SET,youtube_domain,YouTube
   - RULE-SET,youtube_ip,YouTube
   - RULE-SET,apns_ip,前置
