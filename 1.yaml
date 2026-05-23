@@ -334,7 +334,7 @@ proxy-groups:
   - name: JP-Media
     type: select
     include-all: true
-    filter: "^(?=.*(日|🇯🇵|东京|JP|(?i)Japan))(?!.*(免费|2))"
+    filter: "^(?=.*(日|🇯🇵|东京|JP|(?i)Japan))(?!.*(免费|杀人))"
     lazy: true
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Japan.png
   - name: 游戏
