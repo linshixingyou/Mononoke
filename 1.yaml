@@ -69,7 +69,11 @@ proxy-groups:
       - 联通
       - BGP
       - 专线
-    use: null
+    ssid-policy:
+      Cgh-1: 良心云到7月Auto
+      AU: 云洞Auto
+      cellular: 移动
+      default: BGP
   - name: Google
     type: select
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Google_Search.png
