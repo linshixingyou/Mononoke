@@ -195,7 +195,7 @@ proxy-groups:
       - HK-LoadBalance
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/GIA.png
   - name: 下载
-    type: select
+    type: url-test
     include-all: true
     filter: "下载|download|Download"
     lazy: true
