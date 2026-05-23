@@ -64,6 +64,11 @@ proxy-groups:
       - 良心云到7月Auto
       - ikuuu
       - ikuuuAuto
+      - 电信
+      - 移动
+      - 联通
+      - BGP
+      - 专线
     use: null
   - name: Google
     type: select
@@ -128,9 +133,10 @@ proxy-groups:
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/CC.png
     filter: ^(?=.*(.))(?!.*((?i)群|邀请|返利|循环|官网|客服|网站|网址|获取|订阅|流量|到期|机场|下次|版本|官址|备用|过期|已用|联系|失联|邮箱|工单|贩卖|通知|倒卖|防止|国内|地址|频道|无法|说明|使用|提示|特别|访问|支持|教程|关注|更新|作者|加入|(\b(USE|USED|TOTAL|Traffic|Expire|EMAIL|Panel|Channel|Author)\b|(\d{4}-\d{2}-\d{2}|\d+G)))).*$
   - name: Much
-    type: load-balance
+    type: select
     proxies:
       - 良心云到7月Auto
+      - 下载
   - name: 良心云到7月
     type: select
     use:
@@ -199,6 +205,7 @@ proxy-groups:
     type: load-balance
     hidden: true
     include-all: true
+    lazy: true
     filter: "港|🇭🇰|HK|(?i)Hong"
     interval: 200
   - name: TW-FallBack
@@ -212,6 +219,52 @@ proxy-groups:
     type: select
     include-all: true
     filter: "日|🇯🇵|东京|JP|(?i)Japan"
+    lazy: true
+  - name: 下载
+    type: select
+    include-all: true
+    filter: "下载|download|Download"
+    lazy: true
+  - name: 游戏
+    type: select
+    include-all: true
+    filter: "游戏|ame|AME"
+    lazy: true
+  - name: 专线
+    type: select
+    include-all: true
+    filter: "专线|IEPL"
+    lazy: true
+  - name: 流媒体
+    type: select
+    include-all: true
+    filter: "媒体|Media"
+    interval: 300
+    lazy: true
+  - name: BGP
+    type: select
+    include-all: true
+    filter: "优化|三网|BGP"
+    interval: 300
+    lazy: true
+  - name: 移动
+    type: select
+    include-all: true
+    filter: "移动|CM|移动"
+    interval: 300
+    lazy: true
+  - name: 联通
+    type: select
+    include-all: true
+    filter: "联通|CU|联通"
+    interval: 300
+    lazy: true
+  - name: 电信
+    type: select
+    include-all: true
+    filter: "电信|CT|CN2"
+    interval: 300
+    lazy: true
   - name: All-Auto
     type: url-test
     hidden: true
@@ -229,6 +282,11 @@ proxy-groups:
       - JP-Auto
       - SG-Auto
       - US-Auto
+      - 游戏
+      - 专线
+      - BGP
+      - 下载
+      - 流媒体
       - Much
   - name: Media
     type: select
@@ -240,6 +298,11 @@ proxy-groups:
       - JP-Auto
       - SG-Auto
       - US-Auto
+      - 游戏
+      - 专线
+      - BGP
+      - 下载
+      - 流媒体
       - Much
   - name: Emby
     type: select
@@ -274,7 +337,11 @@ proxy-groups:
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Game.png
     proxies:
       - ProxySelect
-      - 云洞Auto
+      - 游戏
+      - 专线
+      - BGP
+      - 下载
+      - 流媒体
       - Much
       - DIRECT
   - name: TikTok
@@ -287,6 +354,12 @@ proxy-groups:
       - JP-Auto
       - SG-Auto
       - US-Auto
+      - 游戏
+      - 专线
+      - BGP
+      - 下载
+      - 流媒体
+      - Much
   - name: Apple
     type: select
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Apple.png
