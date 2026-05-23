@@ -268,8 +268,7 @@ proxy-groups:
     proxies:
       - ProxySelect
       - 云洞Auto
-      - PkuAuto
-      - KittyAuto
+      - Much
       - DIRECT
   - name: TikTok
     type: select
@@ -281,10 +280,6 @@ proxy-groups:
       - JP-Auto
       - SG-Auto
       - US-Auto
-      - 云洞Auto
-      - PkuAuto
-      - KittyAuto
-      - All-Auto
   - icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Apple.png
     name: AppleGlobal
     type: select
