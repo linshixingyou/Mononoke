@@ -55,18 +55,24 @@ proxy-groups:
     name: 线路
     type: select
     proxies:
-      - HK-Auto
       - VPS
       - BGP
-      - 移动
-      - 云洞Auto
+      - 移动CM
     ssid-policy:
-      917: 移动
-      WHU_XIAOMI: 移动
+      917: 移动CM
+      WHU_XIAOMI: 移动CM
       CUHK(SZ): BGP
-      AU: 移动
+      AU: 移动CM
       cellular: BGP
-      default: BGP
+      default: 移动CM
+  - name: 移动CM
+    type: url-test
+    interval: 300
+    lazy: true
+    proxies:
+      - 移动
+      - HK-Auto
+      - 云洞Auto
   - name: 家宽
     type: select
     include-all: true
@@ -75,28 +81,28 @@ proxy-groups:
     lazy: true
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/home.png
   - name: BGP
-    type: select
+    type: url-test
     include-all: true
     filter: "优化|三网|BGP|专线|IEPL|高速｜epl"
     interval: 300
     lazy: true
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/BGP.png
   - name: 移动
-    type: select
+    type: url-test
     include-all: true
     filter: "移动|CM|移动"
     interval: 300
     lazy: true
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/BGP.png
   - name: 联通
-    type: select
+    type: url-test
     include-all: true
     filter: "联通|CU|联通"
     interval: 300
     lazy: true
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/BGP.png
   - name: 电信
-    type: select
+    type: url-test
     include-all: true
     filter: "电信|CT|CN2"
     interval: 300
