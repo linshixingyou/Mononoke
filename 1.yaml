@@ -158,7 +158,7 @@ proxy-groups:
   - name: BGP1
     type: url-test
     include-all: true
-    filter: "优化|三网|BGP|专线|IEPL|高速｜epl"
+    filter: "^(?=.*(优化|三网|BGP|IEPL|高速｜epl))(?!.*专线)"
     interval: 300
     hidden: true
     lazy: true
@@ -166,9 +166,8 @@ proxy-groups:
   - name: 移动
     type: url-test
     include-all: true
-    filter: "移动|CM|移动"
+    filter: "^(?=.*(移动|CM|移动))(?!.*专线)"
     interval: 300
-    lazy: true
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/BGP.png
     hidden: true
   - name: 联通
@@ -210,68 +209,12 @@ proxy-groups:
     filter: ^(?=.*(.))(?!.*((?i)群|邀请|返利|循环|官网|客服|网站|网址|获取|订阅|流量|到期|机场|下次|版本|官址|备用|过期|已用|联系|失联|邮箱|工单|专线|贩卖|通知|倒卖|防止|国内|地址|频道|无法|说明|使用|提示|特别|访问|支持|教程|关注|更新|作者|加入|(\b(USE|USED|TOTAL|Traffic|Expire|EMAIL|Panel|Channel|Author)\b|(\d{4}-\d{2}-\d{2}|\d+G)))).*$
     interval: 300
     lazy: true
-  - name: udptoos
-    type: select
-    use:
-      - udptoos
-    filter: ^(?=.*(.))(?!.*((?i)群|邀请|返利|循环|官网|客服|网站|网址|获取|订阅|流量|到期|机场|下次|版本|官址|备用|过期|已用|联系|失联|邮箱|工单|贩卖|通知|倒卖|防止|国内|地址|频道|无法|说明|使用|提示|特别|访问|支持|教程|关注|更新|作者|加入|(\b(USE|USED|TOTAL|Traffic|Expire|EMAIL|Panel|Channel|Author)\b|(\d{4}-\d{2}-\d{2}|\d+G)))).*$
-  - name: udptoosAuto
-    type: url-test
-    hidden: true
-    use:
-      - udptoos
-    url: http://www.gstatic.com/generate_204
-    interval: 300
-    tolerance: 50
-    filter: ^(?=.*(.))(?!.*((?i)群|邀请|返利|循环|官网|客服|网站|网址|获取|订阅|流量|到期|机场|下次|版本|官址|备用|过期|已用|联系|失联|邮箱|工单|贩卖|通知|倒卖|防止|国内|地址|频道|无法|说明|使用|提示|特别|访问|支持|教程|关注|更新|作者|加入|(\b(USE|USED|TOTAL|Traffic|Expire|EMAIL|Panel|Channel|Author)\b|(\d{4}-\d{2}-\d{2}|\d+G)))).*$
-  - name: Sublinks
-    type: select
-    use:
-      - Sublinks
-    filter: ^(?=.*(.))(?!.*((?i)群|邀请|返利|循环|官网|客服|网站|网址|获取|订阅|流量|到期|机场|下次|版本|官址|备用|过期|已用|联系|失联|邮箱|工单|贩卖|通知|倒卖|防止|国内|地址|频道|无法|说明|使用|提示|特别|访问|支持|教程|关注|更新|作者|加入|(\b(USE|USED|TOTAL|Traffic|Expire|EMAIL|Panel|Channel|Author)\b|(\d{4}-\d{2}-\d{2}|\d+G)))).*$
-  - name: SublinksAuto
-    type: url-test
-    hidden: true
-    use:
-      - Sublinks
-    url: http://www.gstatic.com/generate_204
-    interval: 300
-    tolerance: 50
-    filter: ^(?=.*(.))(?!.*((?i)群|邀请|返利|循环|官网|客服|网站|网址|获取|订阅|流量|到期|机场|下次|版本|官址|备用|过期|已用|联系|失联|邮箱|工单|贩卖|通知|倒卖|防止|国内|地址|频道|无法|说明|使用|提示|特别|访问|支持|教程|关注|更新|作者|加入|(\b(USE|USED|TOTAL|Traffic|Expire|EMAIL|Panel|Channel|Author)\b|(\d{4}-\d{2}-\d{2}|\d+G)))).*$
-  - name: SCP节点
-    type: select
-    use:
-      - SCP节点
-    filter: ^(?=.*(.))(?!.*((?i)群|邀请|返利|循环|官网|客服|网站|网址|获取|订阅|流量|到期|机场|下次|版本|官址|备用|过期|已用|联系|失联|邮箱|工单|贩卖|通知|倒卖|防止|国内|地址|频道|无法|说明|使用|提示|特别|访问|支持|教程|关注|更新|作者|加入|(\b(USE|USED|TOTAL|Traffic|Expire|EMAIL|Panel|Channel|Author)\b|(\d{4}-\d{2}-\d{2}|\d+G)))).*$
-  - name: SCP节点Auto
-    type: url-test
-    hidden: true
-    use:
-      - SCP节点
-    url: http://www.gstatic.com/generate_204
-    interval: 300
-    tolerance: 50
-    filter: ^(?=.*(.))(?!.*((?i)群|邀请|返利|循环|官网|客服|网站|网址|获取|订阅|流量|到期|机场|下次|版本|官址|备用|过期|已用|联系|失联|邮箱|工单|贩卖|通知|倒卖|防止|国内|地址|频道|无法|说明|使用|提示|特别|访问|支持|教程|关注|更新|作者|加入|(\b(USE|USED|TOTAL|Traffic|Expire|EMAIL|Panel|Channel|Author)\b|(\d{4}-\d{2}-\d{2}|\d+G)))).*$
-  - name: 99T
-    type: select
-    use:
-      - 99T
-    filter: ^(?=.*(.))(?!.*((?i)群|邀请|返利|循环|官网|客服|网站|网址|获取|订阅|流量|到期|机场|下次|版本|官址|备用|过期|已用|联系|失联|邮箱|工单|贩卖|通知|倒卖|防止|国内|地址|频道|无法|说明|使用|提示|特别|访问|支持|教程|关注|更新|作者|加入|(\b(USE|USED|TOTAL|Traffic|Expire|EMAIL|Panel|Channel|Author)\b|(\d{4}-\d{2}-\d{2}|\d+G)))).*$
-  - name: 99TAuto
-    type: url-test
-    hidden: true
-    use:
-      - 99T
-    url: http://www.gstatic.com/generate_204
-    interval: 300
-    tolerance: 50
-    filter: ^(?=.*(.))(?!.*((?i)群|邀请|返利|循环|官网|客服|网站|网址|获取|订阅|流量|到期|机场|下次|版本|官址|备用|过期|已用|联系|失联|邮箱|工单|贩卖|通知|倒卖|防止|国内|地址|频道|无法|说明|使用|提示|特别|访问|支持|教程|关注|更新|作者|加入|(\b(USE|USED|TOTAL|Traffic|Expire|EMAIL|Panel|Channel|Author)\b|(\d{4}-\d{2}-\d{2}|\d+G)))).*$
-  # 基于地区分组
+ # 基于地区分组
   - name: HK-Auto
     type: url-test
     hidden: true
     include-all: true
-    filter: "^(?=.*(港|🇭🇰|HK|(?i)Hong))(?!.*(免费|杀人))"
+    filter: "^(?=.*(港|🇭🇰|HK|(?i)Hong))(?!.*(免费|下载))"
     interval: 300
     lazy: true
   - name: TW-Auto
