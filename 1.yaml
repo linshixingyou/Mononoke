@@ -406,7 +406,7 @@ rules:
   - RULE-SET,proxy_domain,ProxySelect
   - RULE-SET,speedtest_domain,ProxySelect
   - RULE-SET,spotify_domain,Music
-  - RULE-SET,talkatone_domain,ProxySelect
+  - RULE-SET,talkatone_domain,US-Auto
   - RULE-SET,tiktok_domain,TikTok
   - RULE-SET,tld-proxy_domain,ProxySelect
   - RULE-SET,twitch_domain,Media
@@ -423,7 +423,7 @@ rules:
   - RULE-SET,adrules_classical,REJECT
   - RULE-SET,adrules_domain,REJECT
   - RULE-SET,adrules_ip,REJECT
-  - RULE-SET,speedtest_classical,ProxySelect
+  - RULE-SET,speedtest_classical,手动
   - MATCH,ProxySelect
 rule-providers:
   dmca_classical:
