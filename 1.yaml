@@ -52,28 +52,32 @@ proxy-providers:
       interval: 300
 proxy-groups:
   - icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Rocket.png
-    name: 前置
+    name: 线路
     type: select
     proxies:
-      - 云洞Auto
+      - HK-Auto
       - VPS
-      - 专线
       - BGP
+      - 移动
+      - 云洞Auto
     ssid-policy:
-      Cgh-1: BGP
-      AU: 云洞Auto
+      917: 移动
+      WHU_XIAOMI: 移动
+      CUHK(SZ): BGP
+      AU: 移动
       cellular: BGP
-      default: 云洞Auto
-  - name: 专线
+      default: BGP
+  - name: 家宽
     type: select
     include-all: true
-    filter: "专线|IEPL"
+    filter: "ome|原生|住宅"
+    interval: 300
     lazy: true
-    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/IEPL.png
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/home.png
   - name: BGP
     type: select
     include-all: true
-    filter: "优化|三网|BGP"
+    filter: "优化|三网|BGP|专线|IEPL|高速｜epl"
     interval: 300
     lazy: true
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/BGP.png
@@ -105,12 +109,6 @@ proxy-groups:
       - JP-Auto
       - US-Auto
     hidden: true
-  - name: 云洞
-    type: select
-    use:
-      - 云洞
-    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/IEPL.png
-    filter: ^(?=.*(.))(?!.*((?i)群|邀请|返利|循环|官网|客服|网站|网址|获取|订阅|流量|到期|机场|下次|版本|官址|备用|过期|已用|联系|失联|邮箱|工单|贩卖|通知|倒卖|防止|国内|地址|频道|无法|说明|使用|提示|特别|访问|支持|教程|关注|更新|作者|加入|(\b(USE|USED|TOTAL|Traffic|Expire|EMAIL|Panel|Channel|Author)\b|(\d{4}-\d{2}-\d{2}|\d+G)))).*$
   - name: 云洞Auto
     type: url-test
     hidden: true
@@ -119,61 +117,14 @@ proxy-groups:
     filter: ^(?=.*(.))(?!.*((?i)群|邀请|返利|循环|官网|客服|网站|网址|获取|订阅|流量|到期|机场|下次|版本|官址|备用|过期|已用|联系|失联|邮箱|工单|贩卖|通知|倒卖|防止|国内|地址|频道|无法|说明|使用|提示|特别|访问|支持|教程|关注|更新|作者|加入|(\b(USE|USED|TOTAL|Traffic|Expire|EMAIL|Panel|Channel|Author)\b|(\d{4}-\d{2}-\d{2}|\d+G)))).*$
     interval: 300
     lazy: true
-  - name: PkuAuto
-    type: url-test
-    hidden: true
-    use:
-      - pku
-    interval: 300
-    lazy: true
-  - name: PKU
-    type: select
-    use:
-      - pku
-    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/CC.png
-  - name: KittyAuto
-    type: url-test
-    hidden: true
-    use:
-      - kittysu
-    filter: ^(?=.*(.))(?!.*((?i)群|邀请|返利|循环|官网|客服|网站|网址|获取|订阅|流量|到期|机场|下次|版本|官址|备用|过期|已用|联系|失联|邮箱|工单|贩卖|通知|倒卖|防止|国内|地址|频道|无法|说明|使用|提示|特别|访问|支持|教程|关注|更新|作者|加入|(\b(USE|USED|TOTAL|Traffic|Expire|EMAIL|Panel|Channel|Author)\b|(\d{4}-\d{2}-\d{2}|\d+G)))).*$
-    interval: 300
-    lazy: true
-  - name: Kitty
-    type: select
-    use:
-      - kittysu
-    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/CC.png
-    filter: ^(?=.*(.))(?!.*((?i)群|邀请|返利|循环|官网|客服|网站|网址|获取|订阅|流量|到期|机场|下次|版本|官址|备用|过期|已用|联系|失联|邮箱|工单|贩卖|通知|倒卖|防止|国内|地址|频道|无法|说明|使用|提示|特别|访问|支持|教程|关注|更新|作者|加入|(\b(USE|USED|TOTAL|Traffic|Expire|EMAIL|Panel|Channel|Author)\b|(\d{4}-\d{2}-\d{2}|\d+G)))).*$
-  - name: 良心云到7月
-    type: select
-    use:
-      - 良心云到7月
-    filter: ^(?=.*(.))(?!.*((?i)群|邀请|返利|循环|官网|客服|网站|网址|获取|订阅|流量|到期|机场|下次|版本|官址|备用|过期|已用|联系|失联|邮箱|工单|贩卖|通知|倒卖|防止|国内|地址|频道|无法|说明|使用|提示|特别|访问|支持|教程|关注|更新|作者|加入|(\b(USE|USED|TOTAL|Traffic|Expire|EMAIL|Panel|Channel|Author)\b|(\d{4}-\d{2}-\d{2}|\d+G)))).*$
-    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/GIA.png
   - name: 良心云到7月Auto
     type: url-test
     hidden: true
     use:
       - 良心云到7月
-    url: http://www.gstatic.com/generate_204
+    filter: ^(?=.*(.))(?!.*((?i)群|邀请|返利|循环|官网|客服|网站|网址|获取|订阅|流量|到期|机场|下次|版本|官址|备用|过期|已用|联系|失联|邮箱|工单|贩卖|通知|倒卖|防止|国内|地址|频道|无法|说明|使用|提示|特别|访问|支持|教程|关注|更新|作者|加入|(\b(USE|USED|TOTAL|Traffic|Expire|EMAIL|Panel|Channel|Author)\b|(\d{4}-\d{2}-\d{2}|\d+G)))).*$
     interval: 300
-    tolerance: 50
-    filter: ^(?=.*(.))(?!.*((?i)群|邀请|返利|循环|官网|客服|网站|网址|获取|订阅|流量|到期|机场|下次|版本|官址|备用|过期|已用|联系|失联|邮箱|工单|贩卖|通知|倒卖|防止|国内|地址|频道|无法|说明|使用|提示|特别|访问|支持|教程|关注|更新|作者|加入|(\b(USE|USED|TOTAL|Traffic|Expire|EMAIL|Panel|Channel|Author)\b|(\d{4}-\d{2}-\d{2}|\d+G)))).*$
-  - name: ikuuu
-    type: select
-    use:
-      - ikuuu
-    filter: ^(?=.*(.))(?!.*((?i)群|邀请|返利|循环|官网|客服|网站|网址|获取|订阅|流量|到期|机场|下次|版本|官址|备用|过期|已用|联系|失联|邮箱|工单|贩卖|通知|倒卖|防止|国内|地址|频道|无法|说明|使用|提示|特别|访问|支持|教程|关注|更新|作者|加入|(\b(USE|USED|TOTAL|Traffic|Expire|EMAIL|Panel|Channel|Author)\b|(\d{4}-\d{2}-\d{2}|\d+G)))).*$
-  - name: ikuuuAuto
-    type: url-test
-    hidden: true
-    use:
-      - ikuuu
-    url: http://www.gstatic.com/generate_204
-    interval: 300
-    tolerance: 50
-    filter: ^(?=.*(.))(?!.*((?i)群|邀请|返利|循环|官网|客服|网站|网址|获取|订阅|流量|到期|机场|下次|版本|官址|备用|过期|已用|联系|失联|邮箱|工单|贩卖|通知|倒卖|防止|国内|地址|频道|无法|说明|使用|提示|特别|访问|支持|教程|关注|更新|作者|加入|(\b(USE|USED|TOTAL|Traffic|Expire|EMAIL|Panel|Channel|Author)\b|(\d{4}-\d{2}-\d{2}|\d+G)))).*$
+    lazy: true
   # 基于地区分组
   - name: HK-Auto
     type: url-test
@@ -232,21 +183,6 @@ proxy-groups:
     interval: 300
     lazy: true
     # 根据地区规划的服务规则引用
-  - name: Music
-    type: select
-    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Apple_Music.png
-    proxies:
-      - HK-Auto
-      - TW-Auto
-      - JP-Auto
-      - SG-Auto
-      - US-Auto
-      - 游戏
-      - 专线
-      - BGP
-      - 下载
-      - 流媒体
-      - Much
   - name: Much
     type: select
     proxies:
@@ -279,21 +215,11 @@ proxy-groups:
     proxies:
       - 流媒体
       - Much
-      - ProxySelect
       - HK-Auto
       - TW-Auto
       - JP-Auto
       - SG-Auto
       - US-Auto
-  - name: Emby
-    type: select
-    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Emby.png
-    proxies:
-      - ProxySelect
-      - HK-Auto
-      - US-Auto
-      - 流媒体
-      - Much
   - name: bilibili
     type: select
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/bilibili_3.png
@@ -311,22 +237,12 @@ proxy-groups:
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Game.png
     proxies:
       - 游戏
-      - 专线
       - BGP
   - name: TikTok
     type: select
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/TikTok.png
     proxies:
-      - ProxySelect
-      - HK-Auto
-      - TW-Auto
-      - JP-Auto
-      - SG-Auto
-      - US-Auto
-      - 游戏
-      - 专线
-      - BGP
-      - 下载
+      - VPS
       - 流媒体
       - Much
     hidden: true
@@ -356,6 +272,7 @@ proxy-groups:
       - SG-Auto
       - US-Auto
       - Customization
+      - 家宽
   - name: Customization
     type: select
     use:
@@ -365,29 +282,28 @@ proxy-groups:
     name: Chain
     type: relay
     proxies:
-      - 前置
+      - 线路
       - 小众国家
   - name: ProxySelect
     type: select
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Bypass.png
     proxies:
-      - VPS
       - Test
       - Chain
-      - 前置
+      - 线路
       - DIRECT
     use: null
 rules:
   - DOMAIN-SUFFIX,mail.me.com,DIRECT
   - RULE-SET,youtube_domain,Media
   - RULE-SET,youtube_ip,Media
-  - RULE-SET,apns_ip,前置
-  - RULE-SET,apns_domain,前置
+  - RULE-SET,apns_ip,线路
+  - RULE-SET,apns_domain,线路
   - RULE-SET,apple_domain,Apple
   - RULE-SET,apple_ip,Apple
   - RULE-SET,apple-proxy_domain,Apple
-  - RULE-SET,socialmedia_ip,前置
-  - RULE-SET,socialmedia_domain,前置
+  - RULE-SET,socialmedia_ip,线路
+  - RULE-SET,socialmedia_domain,线路
   - RULE-SET,ai_domain,AI
   - RULE-SET,google_domain,ProxySelect
   - RULE-SET,googlefcm_domain,ProxySelect
@@ -410,7 +326,7 @@ rules:
   - RULE-SET,cn_ip,DIRECT
   - RULE-SET,VPS,VPS
   - RULE-SET,gfw_ip,ProxySelect
-  - RULE-SET,Emby,Emby
+  - RULE-SET,Emby,Media
   - RULE-SET,abema_domain,JP-Media
   - RULE-SET,dmm_ip,JP-Media
   - RULE-SET,dmm_domain,JP-Media
@@ -424,19 +340,19 @@ rules:
   - RULE-SET,forum_domain,ProxySelect
   - RULE-SET,games_domain,Games
   - RULE-SET,gfw_domain,ProxySelect
-  - RULE-SET,gits_domain,前置
+  - RULE-SET,gits_domain,线路
   - RULE-SET,hbo_domain,Media
   - RULE-SET,httpdns_domain,REJECT
   - RULE-SET,hulu_domain,Media
   - RULE-SET,iplocation-proxy_domain,ProxySelect
-  - RULE-SET,microsoft_domain,前置
+  - RULE-SET,microsoft_domain,线路
   - RULE-SET,mytvsuper_domain,Media
   - RULE-SET,netflix_domain,Media
   - RULE-SET,paypal_domain,ProxySelect
   - RULE-SET,primevideo_domain,Media
   - RULE-SET,cdn_domain,Much
   - RULE-SET,proxy_domain,ProxySelect
-  - RULE-SET,spotify_domain,Music
+  - RULE-SET,spotify_domain,Media
   - RULE-SET,talkatone_domain,US-Auto
   - RULE-SET,tiktok_domain,TikTok
   - RULE-SET,tld-proxy_domain,ProxySelect
@@ -449,7 +365,7 @@ rules:
   - RULE-SET,iplocation-proxy_ip,ProxySelect
   - RULE-SET,netflix_ip,Media
   - RULE-SET,twitch_ip,Media
-  - RULE-SET,spotify_ip,Music
+  - RULE-SET,spotify_ip,Media
   - RULE-SET,talkatone_ip,US-Auto
   - RULE-SET,adrules_domain,REJECT
   - RULE-SET,speedtest_domain,手动
@@ -860,7 +776,7 @@ proxies:
     skip-cert-verify: true
     sni: openssl.nodesni.com
     type: trojan
-  - name: 尼日利亚帕斯云
+  - name: Nigeria帕斯云
     type: vless
     server: 102.205.44.32
     port: 12345
