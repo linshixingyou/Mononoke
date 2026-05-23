@@ -50,6 +50,24 @@ proxy-providers:
       enable: true
       url: http://www.gstatic.com/generate_204
       interval: 300
+  udptoos:
+    type: http
+    url: https://xy.udptoos.com/pd01
+    interval: 86400
+    path: ./providers/udptoos.yaml
+    health-check:
+      enable: true
+      url: http://www.gstatic.com/generate_204
+      interval: 300
+  Sublinks:
+    type: http
+    url: https://app.sublink.works/x/4uVmM4N
+    interval: 86400
+    path: ./providers/Sublinks.yaml
+    health-check:
+      enable: true
+      url: http://www.gstatic.com/generate_204
+      interval: 300
 proxy-groups:
   - icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Rocket.png
     name: 线路
@@ -71,6 +89,10 @@ proxy-groups:
       - 良心云到7月Auto
       - 下载
       - HK-LoadBalance
+      - udptoos
+      - udptoosAuto
+      - Sublinks
+      - SublinksAuto
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/GIA.png
   - name: VPS
     type: select
@@ -163,43 +185,71 @@ proxy-groups:
     hidden: true
     use:
       - 良心云到7月
-    filter: ^(?=.*(.))(?!.*((?i)群|邀请|返利|循环|官网|客服|网站|网址|获取|订阅|流量|到期|机场|下次|版本|官址|备用|过期|已用|联系|失联|邮箱|工单|贩卖|通知|倒卖|防止|国内|地址|频道|无法|说明|使用|提示|特别|访问|支持|教程|关注|更新|作者|加入|(\b(USE|USED|TOTAL|Traffic|Expire|EMAIL|Panel|Channel|Author)\b|(\d{4}-\d{2}-\d{2}|\d+G)))).*$
+    filter: ^(?=.*(.))(?!.*((?i)群|邀请|返利|循环|官网|客服|网站|网址|获取|订阅|流量|到期|机场|下次|版本|官址|备用|过期|已用|联系|失联|邮箱|工单|专线|贩卖|通知|倒卖|防止|国内|地址|频道|无法|说明|使用|提示|特别|访问|支持|教程|关注|更新|作者|加入|(\b(USE|USED|TOTAL|Traffic|Expire|EMAIL|Panel|Channel|Author)\b|(\d{4}-\d{2}-\d{2}|\d+G)))).*$
     interval: 300
     lazy: true
+  - name: udptoos
+    type: select
+    use:
+      - udptoos
+    filter: ^(?=.*(.))(?!.*((?i)群|邀请|返利|循环|官网|客服|网站|网址|获取|订阅|流量|到期|机场|下次|版本|官址|备用|过期|已用|联系|失联|邮箱|工单|贩卖|通知|倒卖|防止|国内|地址|频道|无法|说明|使用|提示|特别|访问|支持|教程|关注|更新|作者|加入|(\b(USE|USED|TOTAL|Traffic|Expire|EMAIL|Panel|Channel|Author)\b|(\d{4}-\d{2}-\d{2}|\d+G)))).*$
+  - name: udptoosAuto
+    type: url-test
+    hidden: true
+    use:
+      - udptoos
+    url: http://www.gstatic.com/generate_204
+    interval: 300
+    tolerance: 50
+    filter: ^(?=.*(.))(?!.*((?i)群|邀请|返利|循环|官网|客服|网站|网址|获取|订阅|流量|到期|机场|下次|版本|官址|备用|过期|已用|联系|失联|邮箱|工单|贩卖|通知|倒卖|防止|国内|地址|频道|无法|说明|使用|提示|特别|访问|支持|教程|关注|更新|作者|加入|(\b(USE|USED|TOTAL|Traffic|Expire|EMAIL|Panel|Channel|Author)\b|(\d{4}-\d{2}-\d{2}|\d+G)))).*$
+  - name: Sublinks
+    type: select
+    use:
+      - Sublinks
+    filter: ^(?=.*(.))(?!.*((?i)群|邀请|返利|循环|官网|客服|网站|网址|获取|订阅|流量|到期|机场|下次|版本|官址|备用|过期|已用|联系|失联|邮箱|工单|贩卖|通知|倒卖|防止|国内|地址|频道|无法|说明|使用|提示|特别|访问|支持|教程|关注|更新|作者|加入|(\b(USE|USED|TOTAL|Traffic|Expire|EMAIL|Panel|Channel|Author)\b|(\d{4}-\d{2}-\d{2}|\d+G)))).*$
+  - name: SublinksAuto
+    type: url-test
+    hidden: true
+    use:
+      - Sublinks
+    url: http://www.gstatic.com/generate_204
+    interval: 300
+    tolerance: 50
+    filter: ^(?=.*(.))(?!.*((?i)群|邀请|返利|循环|官网|客服|网站|网址|获取|订阅|流量|到期|机场|下次|版本|官址|备用|过期|已用|联系|失联|邮箱|工单|贩卖|通知|倒卖|防止|国内|地址|频道|无法|说明|使用|提示|特别|访问|支持|教程|关注|更新|作者|加入|(\b(USE|USED|TOTAL|Traffic|Expire|EMAIL|Panel|Channel|Author)\b|(\d{4}-\d{2}-\d{2}|\d+G)))).*$
   # 基于地区分组
   - name: HK-Auto
     type: url-test
     hidden: true
     include-all: true
-    filter: "港|🇭🇰|HK|(?i)Hong"
+    filter: "港|\U0001F1ED\U0001F1F0|HK|(?i)Hong"
     interval: 300
     lazy: true
   - name: TW-Auto
     type: url-test
     hidden: true
     include-all: true
-    filter: "台|🇨🇳|🇹🇼|湾|TW|(?i)Taiwan"
+    filter: "台|\U0001F1E8\U0001F1F3|\U0001F1F9\U0001F1FC|湾|TW|(?i)Taiwan"
     interval: 300
     lazy: true
   - name: JP-Auto
     type: url-test
     hidden: true
     include-all: true
-    filter: "日|🇯🇵|东京|JP|(?i)Japan"
+    filter: "日|\U0001F1EF\U0001F1F5|东京|JP|(?i)Japan"
     interval: 300
     lazy: true
   - name: SG-Auto
     type: url-test
     hidden: true
     include-all: true
-    filter: "新加坡|坡|狮城|🇸🇬|SG|(?i)Singapore"
+    filter: "新加坡|坡|狮城|\U0001F1F8\U0001F1EC|SG|(?i)Singapore"
     interval: 300
     lazy: true
   - name: US-Auto
     type: url-test
     hidden: true
     include-all: true
-    filter: "美|🇺🇲|US|(?i)States|American"
+    filter: "美|\U0001F1FA\U0001F1F2|US|(?i)States|American"
     interval: 300
     lazy: true
   - name: HK-LoadBalance
@@ -207,13 +257,13 @@ proxy-groups:
     hidden: true
     include-all: true
     lazy: true
-    filter: "港|🇭🇰|HK|(?i)Hong"
+    filter: "港|\U0001F1ED\U0001F1F0|HK|(?i)Hong"
     interval: 200
   - name: TW-FallBack
     type: fallback
     hidden: true
     include-all: true
-    filter: "台|🇨🇳|🇹🇼|湾|TW|(?i)Taiwan"
+    filter: "台|\U0001F1E8\U0001F1F3|\U0001F1F9\U0001F1FC|湾|TW|(?i)Taiwan"
     interval: 300
     lazy: true
   - name: All-Auto
@@ -234,7 +284,7 @@ proxy-groups:
   - name: JP-Media
     type: select
     include-all: true
-    filter: "日|🇯🇵|东京|JP|(?i)Japan"
+    filter: "日|\U0001F1EF\U0001F1F5|东京|JP|(?i)Japan"
     lazy: true
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Japan.png
   - name: 游戏
@@ -276,7 +326,7 @@ proxy-groups:
     name: 小众国家
     type: select
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Apple.png
-    filter: ^(?=.*(.))(?!.*((?i)群|邀请|返利|循环|官网|客服|网站|网址|获取|订阅|流量|到期|机场|下次|版本|官址|备用|过期|已用|港|🇭🇰|HK|(?i)Hong|台|🇨🇳|🇹🇼|湾|TW|(?i)Taiwan|日|🇯🇵|东京|JP|(?i)Japan|新加坡|坡|狮城|🇸🇬|SG|(?i)Singapore|美|🇺🇲|US|(?i)States|American|联系|失联|邮箱|工单|贩卖|通知|倒卖|防止|国内|地址|频道|无法|说明|使用|提示|特别|访问|支持|教程|关注|更新|作者|加入|(\b(USE|USED|TOTAL|Traffic|Expire|EMAIL|Panel|Channel|Author)\b|(\d{4}-\d{2}-\d{2}|\d+G)))).*$
+    filter: "^(?=.*(.))(?!.*((?i)群|邀请|返利|循环|官网|客服|网站|网址|获取|订阅|流量|到期|机场|下次|版本|官址|备用|过期|已用|港|\U0001F1ED\U0001F1F0|HK|(?i)Hong|台|\U0001F1E8\U0001F1F3|\U0001F1F9\U0001F1FC|湾|TW|(?i)Taiwan|日|\U0001F1EF\U0001F1F5|东京|JP|(?i)Japan|新加坡|坡|狮城|\U0001F1F8\U0001F1EC|SG|(?i)Singapore|美|\U0001F1FA\U0001F1F2|US|(?i)States|American|联系|失联|邮箱|工单|贩卖|通知|倒卖|防止|国内|地址|频道|无法|说明|使用|提示|特别|访问|支持|教程|关注|更新|作者|加入|(\\b(USE|USED|TOTAL|Traffic|Expire|EMAIL|Panel|Channel|Author)\\b|(\\d{4}-\\d{2}-\\d{2}|\\d+G)))).*$"
   - include-all: true
     name: Test
     type: select
