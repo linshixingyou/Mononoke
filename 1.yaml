@@ -207,7 +207,7 @@ proxy-groups:
     filter: "台|🇨🇳|🇹🇼|湾|TW|(?i)Taiwan"
     interval: 300
     lazy: true
-  - name: JP-Select
+  - name: JP-Media
     type: select
     include-all: true
     filter: "日|🇯🇵|东京|JP|(?i)Japan"
@@ -286,15 +286,9 @@ proxy-groups:
       - JP-Auto
       - SG-Auto
       - US-Auto
-  - icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Apple.png
-    name: AppleGlobal
-    type: select
-    proxies:
-      - DIRECT
-      - ProxySelect
   - name: Apple
     type: select
-    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Apple_1.png
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Apple.png
     proxies:
       - DIRECT
       - ProxySelect
@@ -346,16 +340,16 @@ proxy-groups:
 rules:
   - RULE-SET,youtube_domain,YouTube
   - RULE-SET,youtube_ip,YouTube
-  - RULE-SET,apns_ip,AppleGlobal
+  - RULE-SET,apns_ip,前置
   - RULE-SET,apple_ip,Apple
   - RULE-SET,socialmedia_ip,前置
   - RULE-SET,socialmedia_domain,前置
   - RULE-SET,ai_domain,AI
-  - RULE-SET,apns_domain,AppleGlobal
-  - RULE-SET,apple-cn_domain,Apple
+  - RULE-SET,apns_domain,前置
+  - RULE-SET,apple-cn_domain,DIRECT
   - RULE-SET,google_domain,Google
   - RULE-SET,googlefcm_domain,Google
-  - RULE-SET,apple-proxy_domain,AppleGlobal
+  - RULE-SET,apple-proxy_domain,前置
   - RULE-SET,apple_domain,Apple
   - DOMAIN-SUFFIX,ippure.com,手动
   - GEOIP,CN,DIRECT
@@ -377,10 +371,10 @@ rules:
   - RULE-SET,cn_ip,DIRECT
   - RULE-SET,VPS,VPS
   - RULE-SET,Emby,Emby
-  - RULE-SET,abema_domain,JP-Select
-  - RULE-SET,dmm_ip,JP-Select
-  - RULE-SET,dmm_domain,JP-Select
-  - RULE-SET,niconico_domain,JP-Select
+  - RULE-SET,abema_domain,JP-Media
+  - RULE-SET,dmm_ip,JP-Media
+  - RULE-SET,dmm_domain,JP-Media
+  - RULE-SET,niconico_domain,JP-Media
   - RULE-SET,bahamut_domain,TW-FallBack
   - RULE-SET,bilibili_domain,bilibili
   - RULE-SET,cdn_domain,Much
@@ -389,18 +383,18 @@ rules:
   - RULE-SET,disney_domain,Media
   - RULE-SET,ecommerce_domain,ProxySelect
   - RULE-SET,forum_domain,ProxySelect
-  - RULE-SET,games_domain,ProxySelect
-  - RULE-SET,gfw_domain,前置
+  - RULE-SET,games_domain,Games
+  - RULE-SET,gfw_domain,ProxySelect
   - RULE-SET,gits_domain,前置
   - RULE-SET,hbo_domain,Media
   - RULE-SET,httpdns_domain,ProxySelect
   - RULE-SET,hulu_domain,Media
-  - RULE-SET,iplocation-proxy_domain,前置
+  - RULE-SET,iplocation-proxy_domain,ProxySelect
   - RULE-SET,microsoft_domain,前置
   - RULE-SET,mytvsuper_domain,Media
   - RULE-SET,netflix_domain,Media
   - RULE-SET,paypal_domain,ProxySelect
-  - RULE-SET,primevideo_domain,ProxySelect
+  - RULE-SET,primevideo_domain,Media
   - RULE-SET,proxy_domain,ProxySelect
   - RULE-SET,spotify_domain,Music
   - RULE-SET,talkatone_domain,US-Auto
@@ -409,14 +403,14 @@ rules:
   - RULE-SET,twitch_domain,Media
   - RULE-SET,proxy_ip,ProxySelect
   - RULE-SET,bilibili_ip,bilibili
-  - RULE-SET,ecommerce_ip,ProxySelect
   - RULE-SET,games_ip,Games
+  - RULE-SET,ecommerce_ip,ProxySelect
   - RULE-SET,httpdns_ip,ProxySelect
   - RULE-SET,iplocation-proxy_ip,ProxySelect
   - RULE-SET,netflix_ip,Media
   - RULE-SET,twitch_ip,Media
   - RULE-SET,spotify_ip,Music
-  - RULE-SET,talkatone_ip,前置
+  - RULE-SET,talkatone_ip,US-Auto
   - RULE-SET,adrules_domain,REJECT
   - RULE-SET,speedtest_domain,手动
   - RULE-SET,adrules_ip,REJECT
