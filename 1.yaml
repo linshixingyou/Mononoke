@@ -56,23 +56,14 @@ proxy-groups:
     type: select
     proxies:
       - 云洞Auto
-      - PkuAuto
-      - KittyAuto
-      - Customization
-      - 良心云到7月
-      - 良心云到7月Auto
-      - ikuuu
-      - ikuuuAuto
-      - 电信
-      - 移动
-      - 联通
-      - BGP
+      - VPS
       - 专线
+      - BGP
     ssid-policy:
-      Cgh-1: 良心云到7月Auto
+      Cgh-1: BGP
       AU: 云洞Auto
-      cellular: 移动
-      default: BGP
+      cellular: BGP
+      default: 云洞Auto
   - name: 专线
     type: select
     include-all: true
