@@ -115,7 +115,7 @@ proxy-groups:
       - SCP节点Auto
       - 99T
       - 99TAuto
-    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/GIA.png
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/YouTube.png
   - name: Forum
     type: select
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Final.png
@@ -424,13 +424,11 @@ rules:
   - RULE-SET,apple_domain,Apple
   - RULE-SET,apple_ip,Apple
   - RULE-SET,apple-proxy_domain,Apple
-  - RULE-SET,gfw_domain,Much
   - RULE-SET,socialmedia_domain,线路
   - RULE-SET,socialmedia_ip,线路
   - RULE-SET,ai_domain,AI
   - RULE-SET,google_domain,ProxySelect
   - RULE-SET,googlefcm_domain,ProxySelect
-  - RULE-SET,google_ip,ProxySelect
   - RULE-SET,googlefcm_ip,ProxySelect
   - DOMAIN-SUFFIX,ippure.com,Test
   - RULE-SET,apple-cn_domain,DIRECT
@@ -448,9 +446,9 @@ rules:
   - RULE-SET,douyin_domain,DIRECT
   - RULE-SET,cn_ip,DIRECT
   - RULE-SET,VPS,Forum
-  - RULE-SET,gfw_ip,ProxySelect
   - RULE-SET,Emby,Media
   - RULE-SET,abema_domain,JP-Media
+  - RULE-SET,google_ip,ProxySelect
   - RULE-SET,dmm_ip,JP-Media
   - RULE-SET,dmm_domain,JP-Media
   - RULE-SET,niconico_domain,JP-Media
@@ -473,7 +471,7 @@ rules:
   - RULE-SET,paypal_domain,ProxySelect
   - RULE-SET,primevideo_domain,Media
   - RULE-SET,cdn_domain,Much
-  - RULE-SET,proxy_domain,ProxySelect
+  - RULE-SET,proxy_domain,Much
   - RULE-SET,spotify_domain,Media
   - RULE-SET,talkatone_domain,US-Auto
   - RULE-SET,tiktok_domain,TikTok
@@ -624,11 +622,6 @@ rule-providers:
     format: text
     interval: 86400
     url: https://raw.githubusercontent.com/linshixingyou/Mononoke/localhost/domain/games.list
-  gfw_domain:
-    behavior: domain
-    format: text
-    interval: 86400
-    url: https://raw.githubusercontent.com/linshixingyou/Mononoke/localhost/domain/gfw.list
   gits_domain:
     behavior: domain
     format: text
@@ -809,11 +802,6 @@ rule-providers:
     format: text
     interval: 86400
     url: https://raw.githubusercontent.com/linshixingyou/Mononoke/localhost/ipcidr/games.list
-  gfw_ip:
-    behavior: ipcidr
-    format: text
-    interval: 86400
-    url: https://raw.githubusercontent.com/linshixingyou/Mononoke/localhost/ipcidr/gfw.list
   google_ip:
     behavior: ipcidr
     format: text
