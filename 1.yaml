@@ -431,26 +431,6 @@ rules:
   - RULE-SET,adrules_ip,REJECT
   - MATCH,线路
 rule-providers:
-  dmca_classical:
-    behavior: classical
-    format: text
-    interval: 86400
-    url: https://raw.githubusercontent.com/linshixingyou/Mononoke/localhost/classical/dmca.list
-  cdn_classical:
-    behavior: classical
-    format: text
-    interval: 86400
-    url: https://raw.githubusercontent.com/linshixingyou/Mononoke/localhost/classical/cdn.list
-  speedtest_classical:
-    behavior: classical
-    format: text
-    interval: 86400
-    url: https://raw.githubusercontent.com/linshixingyou/Mononoke/localhost/classical/speedtest.list
-  adrules_classical:
-    behavior: classical
-    format: text
-    interval: 86400
-    url: https://raw.githubusercontent.com/linshixingyou/Mononoke/localhost/classical/adrules.list
   abema_domain:
     behavior: domain
     format: text
