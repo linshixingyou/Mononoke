@@ -1,4 +1,5 @@
 #SUBSCRIBED https://raw.githubusercontent.com/linshixingyou/Mononoke/localhost/1.yaml
+#SUBSCRIBED https://raw.githubusercontent.com/linshixingyou/Mononoke/localhost/1.yaml
 mode: rule
 log-level: info
 # DNS模块
@@ -105,16 +106,19 @@ proxy-groups:
   - name: Much
     type: select
     proxies:
-      - 良心云到7月Auto
-      - 下载
+      - 良心云到7月-Auto
+      - 下载-Auto
       - HK-LoadBalance
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/YouTube.png
-  - name: Forum
+  - name: Pure
     type: select
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Final.png
     proxies:
+      - 家宽-Auto
       - 家宽
       - 线路
+      - JP-Auto
+      - US-Auto
   - name: Media
     type: select
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Media.png
@@ -173,22 +177,7 @@ proxy-groups:
     lazy: true
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/BGP.png
     hidden: true
-  - name: AI-Auto
-    type: fallback
-    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/ChatGPT.png
-    proxies:
-      - JP-Auto
-      - US-Auto
-    hidden: true
-  - name: 云洞Auto
-    type: url-test
-    hidden: true
-    use:
-      - 云洞
-    filter: ^(?=.*(.))(?!.*((?i)群|邀请|返利|循环|官网|客服|网站|网址|获取|订阅|流量|到期|机场|下次|版本|官址|备用|过期|已用|联系|失联|邮箱|工单|贩卖|通知|倒卖|防止|AME|国内|地址|频道|无法|说明|使用|提示|特别|访问|支持|教程|关注|更新|作者|加入|(\b(USE|USED|TOTAL|Traffic|Expire|EMAIL|Panel|Channel|Author)\b|(\d{4}-\d{2}-\d{2}|\d+G)))).*$
-    interval: 300
-    lazy: true
-  - name: 良心云到7月Auto
+  - name: 良心云到7月-Auto
     type: url-test
     hidden: true
     use:
@@ -254,7 +243,7 @@ proxy-groups:
     interval: 300
     lazy: true
     # 根据地区规划的服务规则引用
-  - name: 下载
+  - name: 下载-Auto
     type: url-test
     include-all: true
     filter: "下载|download|Download"
@@ -315,7 +304,7 @@ proxy-groups:
   - name: 家宽
     type: url-test
     include-all: true
-    filter: "ome|原生|住宅"
+    filter: "ome|原生|住宅|emini|ai|AI"
     interval: 300
     lazy: true
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Unlock.png
@@ -356,11 +345,10 @@ rules:
   - RULE-SET,apple-proxy_domain,Apple
   - RULE-SET,socialmedia_domain,线路
   - RULE-SET,socialmedia_ip,线路
-  - RULE-SET,ai_domain,AI-Auto
+  - RULE-SET,ai_domain,Pure
   - RULE-SET,google_domain,ProxySelect
   - RULE-SET,googlefcm_domain,ProxySelect
   - RULE-SET,googlefcm_ip,ProxySelect
-  - DOMAIN-SUFFIX,ippure.com,JP-Media
   - RULE-SET,apple-cn_domain,DIRECT
   - RULE-SET,iplocation-direct_domain,DIRECT
   - RULE-SET,cn_domain,DIRECT
@@ -388,7 +376,7 @@ rules:
   - RULE-SET,dazn_domain,Media
   - RULE-SET,disney_domain,Media
   - RULE-SET,ecommerce_domain,ProxySelect
-  - RULE-SET,forum_domain,Forum
+  - RULE-SET,forum_domain,Pure
   - RULE-SET,games_domain,Games
   - RULE-SET,gits_domain,线路
   - RULE-SET,hbo_domain,Media
