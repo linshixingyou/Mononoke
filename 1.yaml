@@ -1,5 +1,4 @@
 #SUBSCRIBED https://raw.githubusercontent.com/linshixingyou/Mononoke/localhost/1.yaml
-#SUBSCRIBED https://raw.githubusercontent.com/linshixingyou/Mononoke/localhost/1.yaml
 mode: rule
 log-level: info
 # DNS模块
@@ -43,6 +42,10 @@ proxy-providers:
       url: http://www.gstatic.com/generate_204
       interval: 300
     filter: "^(?!.*专线).*$"
+  超级:
+    url: https://node.zyfx6.xyz/clash
+    interval: 86400
+    filter: "^(?!.*(香港|台湾|日本|新加坡|备用|美国|地址|群聊|用户名|客户端|United State)).*$"
   ikuuu:
     type: http
     url: https://vg9mo.no-mad-world.club/link/GfgdiEtqI61kjg9L?clash=3
@@ -175,6 +178,10 @@ proxy-groups:
     filter: ^(?=.*(.))(?!.*((?i)群|邀请|返利|循环|官网|客服|网站|网址|获取|订阅|流量|到期|机场|下次|版本|官址|备用|过期|已用|联系|失联|邮箱|工单|专线|贩卖|通知|倒卖|防止|国内|地址|频道|无法|说明|使用|提示|特别|访问|支持|教程|关注|更新|作者|加入|(\b(USE|USED|TOTAL|Traffic|Expire|EMAIL|Panel|Channel|Author)\b|(\d{4}-\d{2}-\d{2}|\d+G)))).*$
     interval: 300
     lazy: true
+  - name: 超级
+    type: select
+    use:
+      - 超级
     # 基于地区分组
   - name: 奈云
     type: select
