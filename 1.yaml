@@ -257,12 +257,6 @@ proxy-groups:
       - 流媒体
       - 流量
     hidden: true
-  - name: Apple
-    type: select
-    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Apple.png
-    proxies:
-      - 线路
-    hidden: true
   - name: 流媒体
     type: select
     include-all: true
@@ -343,9 +337,9 @@ rules:
   - RULE-SET,youtube_ip,流量
   - RULE-SET,apns_ip,低延迟
   - RULE-SET,apns_domain,低延迟
-  - RULE-SET,apple_domain,Apple
-  - RULE-SET,apple_ip,Apple
-  - RULE-SET,apple-proxy_domain,Apple
+  - RULE-SET,apple_domain,线路
+  - RULE-SET,apple_ip,线路
+  - RULE-SET,apple-proxy_domain,线路
   - RULE-SET,socialmedia_domain,低延迟
   - RULE-SET,socialmedia_ip,低延迟
   - RULE-SET,ai_domain,Pure
