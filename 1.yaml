@@ -90,12 +90,11 @@ proxy-providers:
       interval: 300
 proxy-groups:
   - icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Rocket.png
-    name: 线路
-    type: select
+    name: 低延迟
+    type: url-test
     proxies:
       - 移动
       - BGP
-      - VPS
     ssid-policy:
       917: 移动
       WHU_XIAOMI: 移动
@@ -103,13 +102,14 @@ proxy-groups:
       AU: 移动
       cellular: BGP
       default: 移动
-  - name: Much
+    hidden: true
+  - name: 流量
     type: select
     proxies:
       - 良心云到7月-Auto
       - 下载-Auto
       - HK-LoadBalance
-      - 线路
+      - 低延迟
       - ikuuu-Auto
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/YouTube.png
   - name: Pure
@@ -118,15 +118,16 @@ proxy-groups:
     proxies:
       - 家宽-Auto
       - 家宽
-      - 线路
+      - 低延迟
       - JP-Auto
       - US-Auto
+      - VPS
   - name: Media
     type: select
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Media.png
     proxies:
       - 流媒体
-      - Much
+      - 流量
       - HK-Auto
       - TW-Auto
       - JP-Auto
@@ -286,13 +287,13 @@ proxy-groups:
     proxies:
       - VPS
       - 流媒体
-      - Much
+      - 流量
     hidden: true
   - name: Apple
     type: select
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Apple.png
     proxies:
-      - ProxySelect
+      - 线路
     hidden: true
   - name: 流媒体
     type: select
@@ -335,7 +336,7 @@ proxy-groups:
     name: Chain
     type: relay
     proxies:
-      - 线路
+      - 低延迟
       - 小众国家
   - name: bilibili
     type: select
@@ -343,30 +344,32 @@ proxy-groups:
     proxies:
       - DIRECT
       - Media
-  - name: ProxySelect
+  - name: 线路
     type: select
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Bypass.png
     proxies:
       - Test
       - Chain
-      - 线路
+      - 低延迟
       - DIRECT
+      - 流量
+      - Pure
     use: null
 rules:
   - DOMAIN-SUFFIX,mail.me.com,DIRECT
-  - RULE-SET,youtube_domain,Much
-  - RULE-SET,youtube_ip,Much
-  - RULE-SET,apns_ip,线路
-  - RULE-SET,apns_domain,线路
+  - RULE-SET,youtube_domain,流量
+  - RULE-SET,youtube_ip,流量
+  - RULE-SET,apns_ip,低延迟
+  - RULE-SET,apns_domain,低延迟
   - RULE-SET,apple_domain,Apple
   - RULE-SET,apple_ip,Apple
   - RULE-SET,apple-proxy_domain,Apple
-  - RULE-SET,socialmedia_domain,线路
-  - RULE-SET,socialmedia_ip,线路
+  - RULE-SET,socialmedia_domain,低延迟
+  - RULE-SET,socialmedia_ip,低延迟
   - RULE-SET,ai_domain,Pure
-  - RULE-SET,google_domain,ProxySelect
-  - RULE-SET,googlefcm_domain,ProxySelect
-  - RULE-SET,googlefcm_ip,ProxySelect
+  - RULE-SET,google_domain,线路
+  - RULE-SET,googlefcm_domain,线路
+  - RULE-SET,googlefcm_ip,线路
   - RULE-SET,apple-cn_domain,DIRECT
   - RULE-SET,iplocation-direct_domain,DIRECT
   - RULE-SET,cn_domain,DIRECT
@@ -381,44 +384,44 @@ rules:
   - RULE-SET,microsoft-cn_domain,DIRECT
   - RULE-SET,douyin_domain,DIRECT
   - RULE-SET,cn_ip,DIRECT
-  - RULE-SET,VPS,线路
+  - RULE-SET,VPS,低延迟
   - RULE-SET,Emby,Media
   - RULE-SET,abema_domain,JP-Media
-  - RULE-SET,google_ip,ProxySelect
+  - RULE-SET,google_ip,线路
   - RULE-SET,dmm_ip,JP-Media
   - RULE-SET,dmm_domain,JP-Media
   - RULE-SET,niconico_domain,JP-Media
   - RULE-SET,bahamut_domain,TW-FallBack
   - RULE-SET,bilibili_domain,bilibili
-  - RULE-SET,crypto_domain,ProxySelect
+  - RULE-SET,crypto_domain,线路
   - RULE-SET,dazn_domain,Media
   - RULE-SET,disney_domain,Media
-  - RULE-SET,ecommerce_domain,ProxySelect
+  - RULE-SET,ecommerce_domain,线路
   - RULE-SET,forum_domain,Pure
   - RULE-SET,games_domain,Games
-  - RULE-SET,gits_domain,线路
+  - RULE-SET,gits_domain,低延迟
   - RULE-SET,hbo_domain,Media
   - RULE-SET,httpdns_domain,REJECT
   - RULE-SET,hulu_domain,Media
-  - RULE-SET,iplocation-proxy_domain,ProxySelect
-  - RULE-SET,microsoft_domain,线路
+  - RULE-SET,iplocation-proxy_domain,线路
+  - RULE-SET,microsoft_domain,低延迟
   - RULE-SET,mytvsuper_domain,Media
   - RULE-SET,netflix_domain,Media
-  - RULE-SET,paypal_domain,ProxySelect
+  - RULE-SET,paypal_domain,线路
   - RULE-SET,primevideo_domain,Media
-  - RULE-SET,cdn_domain,Much
-  - RULE-SET,proxy_domain,Much
+  - RULE-SET,cdn_domain,流量
+  - RULE-SET,proxy_domain,流量
   - RULE-SET,spotify_domain,Media
   - RULE-SET,talkatone_domain,US-Auto
   - RULE-SET,tiktok_domain,TikTok
-  - RULE-SET,tld-proxy_domain,ProxySelect
+  - RULE-SET,tld-proxy_domain,线路
   - RULE-SET,twitch_domain,Media
-  - RULE-SET,proxy_ip,ProxySelect
+  - RULE-SET,proxy_ip,线路
   - RULE-SET,bilibili_ip,bilibili
   - RULE-SET,games_ip,Games
-  - RULE-SET,ecommerce_ip,ProxySelect
+  - RULE-SET,ecommerce_ip,线路
   - RULE-SET,httpdns_ip,REJECT
-  - RULE-SET,iplocation-proxy_ip,ProxySelect
+  - RULE-SET,iplocation-proxy_ip,线路
   - RULE-SET,netflix_ip,Media
   - RULE-SET,twitch_ip,Media
   - RULE-SET,spotify_ip,Media
@@ -429,9 +432,9 @@ rules:
   - RULE-SET,speedtest_classical,Test
   - RULE-SET,adrules_classical,REJECT
   - RULE-SET,dmca_classical,DIRECT
-  - RULE-SET,cdn_classical,Much
+  - RULE-SET,cdn_classical,流量
   - GEOIP,CN,DIRECT
-  - MATCH,ProxySelect
+  - MATCH,线路
 rule-providers:
   dmca_classical:
     behavior: classical
