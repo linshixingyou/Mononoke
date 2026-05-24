@@ -236,7 +236,7 @@ proxy-groups:
     hidden: true
     include-all: true
     lazy: true
-    filter: "港|🇭🇰|HK|(?i)Hong"
+    filter: "^(?!.*(?i)GAME)(?=.*(港|🇭🇰|(?i)HK|Hong)).*$"
     interval: 200
   - name: TW-FallBack
     type: fallback
@@ -314,7 +314,7 @@ proxy-groups:
   - name: 家宽
     type: select
     include-all: true
-    filter: "^(?=.*(me|原生|住宅|emini|ai|AI))(?!.*nodpai)"
+    filter: "me|原生|住宅|emini|AI"
     interval: 300
     lazy: true
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Unlock.png
