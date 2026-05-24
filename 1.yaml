@@ -29,9 +29,9 @@ proxy-providers:
   Pe:
     interval: 86400
     url: https://peige.dpkj.qzz.io/dapei
-  Local:
+  VPS:
     interval: 86400
-    url: https://raw.githubusercontent.com/linshixingyou/Mononoke/localhost/Local
+    url: https://raw.githubusercontent.com/linshixingyou/Mononoke/localhost/VPS
   良心云到7月:
     type: http
     url: https://liangxin.xyz/api/v1/liangxin?OwO=5fb608cadd512bea88f8bc7f981675c2
@@ -92,16 +92,16 @@ proxy-groups:
     name: 线路
     type: select
     proxies:
-      - Forum
+      - 移动
       - BGP
-      - 移动CM
+      - VPS
     ssid-policy:
-      917: 移动CM
-      WHU_XIAOMI: 移动CM
+      917: 移动
+      WHU_XIAOMI: 移动
       CUHK(SZ): BGP
-      AU: 移动CM
+      AU: 移动
       cellular: BGP
-      default: 移动CM
+      default: 移动
   - name: Much
     type: select
     proxies:
@@ -113,13 +113,8 @@ proxy-groups:
     type: select
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Final.png
     proxies:
-      - HK-Auto
-      - TW-Auto
-      - JP-Auto
-      - SG-Auto
-      - US-Auto
-      - VPS
       - 家宽
+      - 线路
   - name: Media
     type: select
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Media.png
@@ -131,24 +126,23 @@ proxy-groups:
       - JP-Auto
       - SG-Auto
       - US-Auto
-  - name: 移动CM
+  - name: 移动
     type: url-test
     interval: 300
     lazy: true
     proxies:
-      - 移动
+      - 移动-Auto
       - HK-Auto
-      - 云洞Auto
     hidden: true
   - name: BGP
     type: url-test
     interval: 300
     lazy: true
     proxies:
-      - BGPauto
+      - BGP-Auto
       - HK-Auto
     hidden: true
-  - name: BGPauto
+  - name: BGP-Auto
     type: url-test
     include-all: true
     filter: "优化|三网|BGP|IEPL|高速|epl|专线"
@@ -156,14 +150,14 @@ proxy-groups:
     hidden: true
     lazy: true
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/BGP.png
-  - name: 移动
+  - name: 移动-Auto
     type: url-test
     include-all: true
     filter: "移动|CM|移动"
     interval: 300
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/BGP.png
     hidden: true
-  - name: 联通
+  - name: 联通-Auto
     type: url-test
     include-all: true
     filter: "联通|CU|联通"
@@ -171,7 +165,7 @@ proxy-groups:
     lazy: true
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/BGP.png
     hidden: true
-  - name: 电信
+  - name: 电信-Auto
     type: url-test
     include-all: true
     filter: "电信|CT|CN2"
@@ -179,7 +173,7 @@ proxy-groups:
     lazy: true
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/BGP.png
     hidden: true
-  - name: AI
+  - name: AI-Auto
     type: fallback
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/ChatGPT.png
     proxies:
@@ -328,7 +322,7 @@ proxy-groups:
   - name: VPS
     type: select
     use:
-      - Local
+      - VPS
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Heart.png
   - icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Available_1.png
     name: Chain
@@ -362,7 +356,7 @@ rules:
   - RULE-SET,apple-proxy_domain,Apple
   - RULE-SET,socialmedia_domain,线路
   - RULE-SET,socialmedia_ip,线路
-  - RULE-SET,ai_domain,AI
+  - RULE-SET,ai_domain,AI-Auto
   - RULE-SET,google_domain,ProxySelect
   - RULE-SET,googlefcm_domain,ProxySelect
   - RULE-SET,googlefcm_ip,ProxySelect
@@ -381,7 +375,7 @@ rules:
   - RULE-SET,microsoft-cn_domain,DIRECT
   - RULE-SET,douyin_domain,DIRECT
   - RULE-SET,cn_ip,DIRECT
-  - RULE-SET,VPS,Forum
+  - RULE-SET,VPS,线路
   - RULE-SET,Emby,Media
   - RULE-SET,abema_domain,JP-Media
   - RULE-SET,google_ip,ProxySelect
