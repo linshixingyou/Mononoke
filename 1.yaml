@@ -429,11 +429,6 @@ rules:
   - RULE-SET,adrules_domain,REJECT
   - RULE-SET,speedtest_domain,Test
   - RULE-SET,adrules_ip,REJECT
-  - RULE-SET,speedtest_classical,Test
-  - RULE-SET,adrules_classical,REJECT
-  - RULE-SET,dmca_classical,DIRECT
-  - RULE-SET,cdn_classical,流量
-  - GEOIP,CN,DIRECT
   - MATCH,线路
 rule-providers:
   dmca_classical:
