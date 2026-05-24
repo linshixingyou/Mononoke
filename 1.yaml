@@ -41,6 +41,7 @@ proxy-providers:
       enable: true
       url: http://www.gstatic.com/generate_204
       interval: 300
+    filter: "^(?!.*专线).*$"
   ikuuu:
     type: http
     url: https://vg9mo.no-mad-world.club/link/GfgdiEtqI61kjg9L?clash=3
@@ -144,13 +145,13 @@ proxy-groups:
     interval: 300
     lazy: true
     proxies:
-      - BGP1
+      - BGPauto
       - HK-Auto
     hidden: true
-  - name: BGP1
+  - name: BGPauto
     type: url-test
     include-all: true
-    filter: "^(?=.*(优化|三网|BGP|IEPL|高速｜epl))(?!.*专线)"
+    filter: "优化|三网|BGP|IEPL|高速|epl|专线"
     interval: 300
     hidden: true
     lazy: true
@@ -158,7 +159,7 @@ proxy-groups:
   - name: 移动
     type: url-test
     include-all: true
-    filter: "^(?=.*(移动|CM|移动))(?!.*专线)"
+    filter: "移动|CM|移动"
     interval: 300
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/BGP.png
     hidden: true
@@ -206,7 +207,7 @@ proxy-groups:
     type: url-test
     hidden: true
     include-all: true
-    filter: "^(?=.*(港|🇭🇰|HK|(?i)Hong))(?!.*(免费|下载))"
+    filter: "港|🇭🇰|HK|(?i)Hong"
     interval: 300
     lazy: true
   - name: TW-Auto
@@ -269,7 +270,7 @@ proxy-groups:
   - name: JP-Media
     type: select
     include-all: true
-    filter: "^(?=.*(日|🇯🇵|东京|JP|(?i)Japan))(?!.*(免费|杀人))"
+    filter: "^(?=.*(日|🇯🇵|东京|JP|(?i)Japan))(?!.*(免费|下载))"
     lazy: true
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Japan.png
   - name: 游戏
