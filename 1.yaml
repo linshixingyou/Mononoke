@@ -304,7 +304,7 @@ proxy-groups:
   - name: 家宽
     type: select
     include-all: true
-    filter: "ome|原生|住宅|emini|ai|AI"
+    filter: "^(?=.*(me|原生|住宅|emini|ai|AI))(?!.*nodpai)"
     interval: 300
     lazy: true
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Unlock.png
