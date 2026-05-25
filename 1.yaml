@@ -338,6 +338,11 @@ proxy-groups:
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Unlock.png
     hidden: true
   - include-all: true
+    name: 印度土耳其尼日利亚
+    type: select
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Apple.png
+    filter: India|印度|土耳其|Turkey|尼日利亚|Nigeria|🇳🇬|🇹🇷|🇮🇳|住宅|em
+  - include-all: true
     name: 小众国家
     type: select
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Apple.png
