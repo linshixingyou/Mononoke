@@ -109,10 +109,8 @@ proxy-groups:
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Media.png
     proxies:
       - 流媒体
-      - 流量
       - HK-Auto
       - TW-Auto
-      - JP-Auto
       - SG-Auto
       - US-Auto
   - name: 移动
@@ -393,7 +391,7 @@ rules:
   - RULE-SET,douyin_domain,DIRECT
   - RULE-SET,cn_ip,DIRECT
   - RULE-SET,VPS,低延迟
-  - RULE-SET,Emby,流量
+  - RULE-SET,Emby,Media
   - RULE-SET,abema_domain,JP-Media
   - RULE-SET,google_ip,线路
   - RULE-SET,dmm_ip,JP-Media
