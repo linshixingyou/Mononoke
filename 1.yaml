@@ -46,6 +46,11 @@ proxy-providers:
     url: https://node.zyfx6.xyz/clash
     interval: 86400
     filter: "^(?!.*(香港|台湾|日本|新加坡|备用|美国|地址|群聊|用户名|客户端|United State)).*$"
+    health-check:
+      enable: true
+      url: http://www.gstatic.com/generate_204
+      interval: 300
+      timeout: 2000
   ikuuu:
     type: http
     url: https://vg9mo.no-mad-world.club/link/GfgdiEtqI61kjg9L?clash=3
@@ -55,9 +60,14 @@ proxy-providers:
       enable: true
       url: http://www.gstatic.com/generate_204
       interval: 300
+      timeout: 2000
   组合:
     interval: 86400
     url: http://sub.store/download/collection/%E7%BB%84%E5%90%88
+    health-check:
+      url: http://www.gstatic.com/generate_204
+      interval: 300
+      timeout: 2000
   奈云:
     type: http
     url: https://naiun.adfgawidhioawjd.site/api/v1/client/subscribe?token=d56ab02c025909e92680b66ea7a7ab77
@@ -180,7 +190,6 @@ proxy-groups:
     type: select
     use:
       - 超级
-      # 基于地区分组
   - name: 奈云
     type: select
     use:
@@ -213,7 +222,7 @@ proxy-groups:
     type: url-test
     hidden: true
     include-all: true
-    filter: "日|🇯🇵|东京|JP|(?i)Japan"
+    filter: "日本|🇯🇵|东京|JP|(?i)Japan"
     interval: 300
     lazy: true
   - name: SG-Auto
@@ -262,7 +271,7 @@ proxy-groups:
   - name: JP-Media
     type: select
     include-all: true
-    filter: "^(?=.*(日|🇯🇵|东京|JP|(?i)Japan))(?!.*(免费|下载))"
+    filter: "^(?=.*(日本|🇯🇵|东京|JP|(?i)Japan))(?!.*(免费|下载))"
     lazy: true
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Japan.png
   - name: 游戏
@@ -391,7 +400,7 @@ rules:
   - RULE-SET,douyin_domain,DIRECT
   - RULE-SET,cn_ip,DIRECT
   - RULE-SET,VPS,低延迟
-  - RULE-SET,Emby,Media
+  - RULE-SET,Emby,流量
   - RULE-SET,abema_domain,JP-Media
   - RULE-SET,google_ip,线路
   - RULE-SET,dmm_ip,JP-Media
