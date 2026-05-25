@@ -114,6 +114,10 @@ proxy-groups:
       - JP-Auto
       - US-Auto
       - VPS
+      - 奈云
+      - 奈云-Auto
+    use:
+      - pku
   - name: Media
     type: select
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Media.png
@@ -123,6 +127,7 @@ proxy-groups:
       - TW-Auto
       - SG-Auto
       - US-Auto
+      - 小众国家
   - name: 移动
     type: url-test
     interval: 300
