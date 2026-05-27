@@ -354,7 +354,6 @@ proxy-groups:
     type: select
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Bypass.png
     proxies:
-      - Chain
       - 低延迟
       - 流量
       - Pure
