@@ -19,7 +19,7 @@ proxy-providers:
     url: https://2.luolicon.ru/oosaka/158e9b903acd6217befb82f9b2eede2e
   云洞:
     interval: 86400
-    url: https://0993c0f8-9e29-32b1-810c-65f448c5aa04.nginxsub-cave.top/link/AoKXdOul4Uy4RKZY?list=clash
+    url: https://config.cavecn.com/link/AoKXdOul4Uy4RKZY?list=clash
   pku:
     interval: 86400
     url: https://941321.xyz/clash/caiyuhan@pku.edu.cn/c8rhd5gfjw
@@ -708,3 +708,11 @@ proxies:
   - interface-name: utun4
     name: 本机VPN
     type: direct
+  - name: HK移动BGP下载
+    type: trojan
+    server: cave-hk.kunlun04dns.com
+    port:41501
+    password: 0993c0f8-9e29-32b1-810c-65f448c5aa04
+    sni: openssl.nodesni.com
+    skip-cert-verify: true
+    network: tcp
