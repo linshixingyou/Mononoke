@@ -80,8 +80,13 @@ proxy-groups:
       - JP-Auto
       - US-Auto
       - VPS
-    use:
-      - pku
+  - name: 线路
+    proxies:
+      - 低延迟
+      - 流量
+      - Pure
+    type: select
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Bypass.png
   - name: Media
     type: select
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Media.png
@@ -279,14 +284,6 @@ proxy-groups:
     proxies:
       - DIRECT
       - Media
-  - name: 线路
-    type: select
-    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Bypass.png
-    proxies:
-      - 低延迟
-      - 流量
-      - Pure
-    use: null
 rules:
   - DOMAIN-SUFFIX,mail.me.com,DIRECT
   - RULE-SET,youtube_domain,流量
