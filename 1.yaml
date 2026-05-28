@@ -1,6 +1,4 @@
 #SUBSCRIBED https://raw.githubusercontent.com/linshixingyou/Mononoke/localhost/1.yaml
-
-#SUBSCRIBED https://raw.githubusercontent.com/linshixingyou/Mononoke/localhost/1.yaml
 mode: rule
 log-level: info
 # DNS模块
@@ -25,12 +23,6 @@ proxy-providers:
   pku:
     interval: 86400
     url: https://941321.xyz/clash/caiyuhan@pku.edu.cn/c8rhd5gfjw
-  Pa:
-    interval: 86400
-    url: https://pai.yt/clash?preset=other
-  Pe:
-    interval: 86400
-    url: https://peige.dpkj.qzz.io/dapei
   VPS:
     interval: 86400
     url: https://raw.githubusercontent.com/linshixingyou/Mononoke/localhost/VPS
