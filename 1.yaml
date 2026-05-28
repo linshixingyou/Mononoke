@@ -85,8 +85,8 @@ proxy-groups:
       - 低延迟
       - 流量
       - Pure
-    type: select
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Bypass.png
+    type: select
   - name: Media
     type: select
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Media.png
