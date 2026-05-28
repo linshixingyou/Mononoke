@@ -359,7 +359,6 @@ rules:
   - RULE-SET,apns_domain,低延迟
   - RULE-SET,apple_domain,线路
   - RULE-SET,apple_ip,线路
-  - RULE-SET,apple-proxy_domain,线路
   - RULE-SET,socialmedia_domain,低延迟
   - RULE-SET,socialmedia_ip,低延迟
   - RULE-SET,ai_domain,Pure
@@ -447,11 +446,6 @@ rule-providers:
     format: text
     interval: 86400
     url: https://raw.githubusercontent.com/linshixingyou/Mononoke/localhost/domain/apple-cn.list
-  apple-proxy_domain:
-    behavior: domain
-    format: text
-    interval: 86400
-    url: https://raw.githubusercontent.com/linshixingyou/Mononoke/localhost/domain/apple-proxy.list
   apple_domain:
     behavior: domain
     format: text
