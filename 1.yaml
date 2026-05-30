@@ -711,7 +711,7 @@ proxies:
   - name: HK移动BGP下载
     type: trojan
     server: cave-hk.kunlun04dns.com
-    port:41501
+    port: 41501
     password: 0993c0f8-9e29-32b1-810c-65f448c5aa04
     sni: openssl.nodesni.com
     skip-cert-verify: true
