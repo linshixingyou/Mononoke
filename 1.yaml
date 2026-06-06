@@ -39,7 +39,7 @@ proxy-providers:
     filter: "^(?!.*专线).*$"
   ikuuu:
     type: http
-    url: https://vg9mo.no-mad-world.club/link/GfgdiEtqI61kjg9L?clash=3
+    url: https://otis0.no-mad-world.club/link/LnOO957031liXkfV?sub=3&extend=1
     interval: 8640000
     path: ./providers/ikuuu.yaml
     health-check:
