@@ -9,8 +9,8 @@ author: |-
 homepage: "https://Global.BiliUniverse.io"
 icon: "https://github.com/BiliUniverse/Global/raw/main/src/assets/icon_rounded.png"
 category: "🪐 BiliUniverse"
-date: "2026-02-02 02:44:34"
-version: "0.8.20"
+date: "2026-05-22 05:38:14"
+version: "0.8.21"
 
 http:
   mitm:
@@ -112,8 +112,8 @@ http:
 
 script-providers:
   📺 BiliBili.Global.request:
-    url: https://github.com/BiliUniverse/Global/releases/download/v0.8.20/request.bundle.js
+    url: https://github.com/BiliUniverse/Global/releases/download/v0.8.21/request.bundle.js
     interval: 86400
   📺 BiliBili.Global.response:
-    url: https://github.com/BiliUniverse/Global/releases/download/v0.8.20/response.bundle.js
+    url: https://github.com/BiliUniverse/Global/releases/download/v0.8.21/response.bundle.js
     interval: 86400

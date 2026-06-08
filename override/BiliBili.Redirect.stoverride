@@ -9,8 +9,8 @@ author: |-
 homepage: "https://Redirect.BiliUniverse.io"
 icon: "https://github.com/BiliUniverse/Redirect/raw/main/src/assets/icon_rounded.png"
 category: "🪐 BiliUniverse"
-date: "2026-01-30 08:40:03"
-version: "0.2.19"
+date: "2026-05-27 15:22:39"
+version: "0.2.20"
 
 http:
   force-http-engine:
@@ -45,6 +45,6 @@ http:
       argument:
 script-providers:
   "📺 BiliBili.Redirect.request":
-    url: https://github.com/BiliUniverse/Redirect/releases/download/v0.2.19/request.bundle.js
+    url: https://github.com/BiliUniverse/Redirect/releases/download/v0.2.20/request.bundle.js
     interval: 86400
 
