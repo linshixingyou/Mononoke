@@ -148,3 +148,134 @@ proxies:
   - interface-name: utun4
     name: 本机VPN
     type: direct
+  - name: "[vless]US+Ultimate+09"
+    type: vless
+    server: luia.bybyyb.com
+    port: 443
+    uuid: 011970f6-0ae0-46e7-b9eb-0dfd5c631cd2
+    cipher: auto
+    tls: true
+    udp: true
+    flow: xtls-rprx-vision
+    network: tcp
+    servername: vinmec.com
+    reality-opts:
+      public-key: snVsUu_qUdKk8gqZmaS6GZrdm81JlNR5lSCzpvDfs2c
+      short-id: fd42468a
+    client-fingerprint: safari
+
+  - name: "[vless]US+Ultimate+20"
+    type: vless
+    server: 23.247.137.142
+    port: 443
+    uuid: 011970f6-0ae0-46e7-b9eb-0dfd5c631cd2
+    cipher: auto
+    tls: true
+    udp: true
+    flow: xtls-rprx-vision
+    network: tcp
+    servername: forrent.com
+    reality-opts:
+      public-key: zKzMvOKTk1NqGHFwLAlfyfYDGLp5cq8zMSFvEezhM0o
+      short-id: 1fa7b6
+    client-fingerprint: edge
+
+  - name: "[vless]SG+Ultimate+电信专用+04"
+    type: vless
+    server: 163.223.72.236
+    port: 21111
+    uuid: 011970f6-0ae0-46e7-b9eb-0dfd5c631cd2
+    cipher: auto
+    tls: true
+    udp: true
+    flow: xtls-rprx-vision
+    network: tcp
+    servername: mot.gov.sg
+    reality-opts:
+      public-key: 8X85nsphqr7bXFNrloGToyvKh3WkOB_PDUw0-ymiiD8
+      short-id: adea23b5cf49d7
+    client-fingerprint: ios
+
+  - name: "[vless]US+Ultimate+04"
+    type: vless
+    server: 23.142.200.74
+    port: 443
+    uuid: 011970f6-0ae0-46e7-b9eb-0dfd5c631cd2
+    cipher: auto
+    tls: true
+    udp: true
+    flow: xtls-rprx-vision
+    network: tcp
+    servername: esquire.com
+    reality-opts:
+      public-key: g6mQLhaHYqQwPE8OWKCiyK1mn_mNOYOrtrGPS31ehhs
+      short-id: 2274b1c8
+    client-fingerprint: safari
+
+  - name: "[vless]US+Ultimate+电信专用+06"
+    type: vless
+    server: 163.223.72.236
+    port: 31811
+    uuid: 011970f6-0ae0-46e7-b9eb-0dfd5c631cd2
+    cipher: auto
+    tls: true
+    udp: true
+    flow: xtls-rprx-vision
+    network: tcp
+    servername: tuasaude.com
+    reality-opts:
+      public-key: ah8QGBBd5_YcBl6npHTxNFcGq2z95aRz1UZakclR8SI
+      short-id: bc46
+    client-fingerprint: chrome
+
+  - name: "[vless]SG+Ultimate+12"
+    type: vless
+    server: 103.190.178.250
+    port: 443
+    uuid: 011970f6-0ae0-46e7-b9eb-0dfd5c631cd2
+    cipher: auto
+    tls: true
+    udp: true
+    flow: xtls-rprx-vision
+    network: tcp
+    servername: mot.gov.sg
+    reality-opts:
+      public-key: 8X85nsphqr7bXFNrloGToyvKh3WkOB_PDUw0-ymiiD8
+      short-id: adea23b5cf49d7
+    client-fingerprint: chrome
+
+  - name: "[vless]US+Ultimate+11"
+    type: vless
+    server: luka.bybyyb.com
+    port: 443
+    uuid: 011970f6-0ae0-46e7-b9eb-0dfd5c631cd2
+    cipher: auto
+    tls: true
+    udp: true
+    flow: xtls-rprx-vision
+    network: tcp
+    servername: quizlet.com
+    reality-opts:
+      public-key: _GgCvh3_UFTd4zXceEUsb9ZOyJ5UBbltO70SuntH_RE
+      short-id: d3455ee2
+    client-fingerprint: edge
+
+  - name: "[vless]SG+Ultimate+电信专用+02"
+    type: vless
+    server: 163.223.72.236
+    port: 11108
+    uuid: 011970f6-0ae0-46e7-b9eb-0dfd5c631cd2
+    cipher: auto
+    tls: true
+    udp: true
+    flow: xtls-rprx-vision
+    network: tcp
+    servername: singaporeair.com
+    reality-opts:
+      public-key: 6hK5gPOkWt2niz-6PtAwh-JWXiJlT7iJpRXzlSC2OCY
+      short-id: 63c893066f
+    client-fingerprint: qq
+
+  - name: "[vless]US+Max+08"
+    type: vless
+    server

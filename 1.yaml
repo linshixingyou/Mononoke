@@ -21,6 +21,10 @@ proxy-providers:
   云洞:
     interval: 86400
     url: https://config.cavecn.com/link/AoKXdOul4Uy4RKZY?list=clash
+
+  Combine:
+    interval: 86400
+    url: https://sub.store/download/collection/Combine?target=Stash
   VPS:
     interval: 86400
     url: https://raw.githubusercontent.com/linshixingyou/Mononoke/localhost/VPS
@@ -35,6 +39,11 @@ proxy-providers:
       interval: 300
     filter: "^(?!.*专线).*$"
 proxy-groups:
+  - name: Combine
+    type: select
+    hidden: true
+    use:
+      - Combine
   - icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Rocket.png
     name: 低延迟
     type: url-test
