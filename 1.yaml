@@ -41,7 +41,6 @@ proxy-providers:
 proxy-groups:
   - name: Combine
     type: select
-    hidden: true
     use:
       - Combine
   - icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Rocket.png
