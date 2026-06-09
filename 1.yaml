@@ -669,24 +669,6 @@ rule-providers:
     interval: 86400
     url: https://raw.githubusercontent.com/linshixingyou/Mononoke/localhost/ipcidr/VPS.list
 proxies:
-  - name: Nigeria帕斯云
-    type: vless
-    server: 102.205.44.32
-    port: 12345
-    uuid: 4836e8e2-b0b5-4d01-ac14-79ef5319192f
-    network: tcp
-    dialer-proxy: HK-Auto
-    udp: true
-    tls: true
-    flow: xtls-rprx-vision
-    servername: apple.com
-    reality-opts:
-      public-key: AvtO9YC4L4eCScsYqJZLDNhVsljkXIaTsD_tKSHLNmM
-      short-id: 44843487
-    client-fingerprint: chrome
-  - interface-name: utun4
-    name: 本机VPN
-    type: direct
   - name: HK移动BGP下载
     type: trojan
     server: cave-hk.kunlun04dns.com
@@ -695,98 +677,8 @@ proxies:
     sni: openssl.nodesni.com
     skip-cert-verify: true
     network: tcp
-  - name: V2-113|美国|x2.0
-    type: vmess
-    server: ggsd5.cdn.node.a.datahub7.net
-    port: 50113
-    uuid: 3448ea33-ab18-32f2-b09c-3aa2f0500c08
-    alterId: 0
-    cipher: auto
-    udp: true
-    network: ws
-    ws-opts:
-      path: /009c250b-54f5-43a8-8b18-dccbb5d8c66a.y.live01.m3u8
 
-  - name: V2-119|香港|x1.0
-    type: vmess
-    server: qszx.cdn.node.a.datahub7.net
-    port: 50119
-    uuid: 3448ea33-ab18-32f2-b09c-3aa2f0500c08
-    alterId: 0
-    cipher: auto
-    udp: true
-    network: ws
-    ws-opts:
-      path: /009c250b-54f5-43a8-8b18-dccbb5d8c66a.y.live01.m3u8
 
-  - name: V2-144|美国|x1.0
-    type: vmess
-    server: ggsd5.cdn.node.a.datahub7.net
-    port: 50144
-    uuid: 3448ea33-ab18-32f2-b09c-3aa2f0500c08
-    alterId: 0
-    cipher: auto
-    udp: true
-    network: ws
-    ws-opts:
-      path: /009c250b-54f5-43a8-8b18-dccbb5d8c66a.y.live01.m3u8
 
-  - name: V2-151|香港|x1.5
-    type: vmess
-    server: sutyckla1.cdn.node.a.datahub7.net
-    port: 50151
-    uuid: 3448ea33-ab18-32f2-b09c-3aa2f0500c08
-    alterId: 0
-    cipher: auto
-    udp: true
-    network: ws
-    ws-opts:
-      path: /009c250b-54f5-43a8-8b18-dccbb5d8c66a.y.live01.m3u8
 
-  - name: V2-159|香港|x2.0
-    type: vmess
-    server: sutzgdv6.cdn.node.a.datahub7.net
-    port: 50159
-    uuid: 3448ea33-ab18-32f2-b09c-3aa2f0500c08
-    alterId: 0
-    cipher: auto
-    udp: true
-    network: ws
-    ws-opts:
-      path: /009c250b-54f5-43a8-8b18-dccbb5d8c66a.y.live01.m3u8
 
-  - name: V2-172|香港|x2.0
-    type: vmess
-    server: sutzgdv6.cdn.node.a.datahub7.net
-    port: 50172
-    uuid: 3448ea33-ab18-32f2-b09c-3aa2f0500c08
-    alterId: 0
-    cipher: auto
-    udp: true
-    network: ws
-    ws-opts:
-      path: /009c250b-54f5-43a8-8b18-dccbb5d8c66a.y.live01.m3u8
-
-  - name: V2-187|日本GPT|x1.0
-    type: vmess
-    server: sttrbjp.cdn.node.a.datahub7.net
-    port: 50187
-    uuid: 3448ea33-ab18-32f2-b09c-3aa2f0500c08
-    alterId: 0
-    cipher: auto
-    udp: true
-    network: ws
-    ws-opts:
-      path: /009c250b-54f5-43a8-8b18-dccbb5d8c66a.y.live01.m3u8
-
-  - name: V2-188|日本GPT|x1.5
-    type: vmess
-    server: sttrbjp.cdn.node.a.datahub7.net
-    port: 50188
-    uuid: 3448ea33-ab18-32f2-b09c-3aa2f0500c08
-    alterId: 0
-    cipher: auto
-    udp: true
-    network: ws
-    ws-opts:
-      path: /009c250b-54f5-43a8-8b18-dccbb5d8c66a.y.live01.m3u8
