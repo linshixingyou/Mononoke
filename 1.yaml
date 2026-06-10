@@ -46,7 +46,6 @@ proxy-groups:
   - name: 流量
     type: select
     proxies:
-      - 良心云到7月-Auto
       - 下载-Auto
       - HK-LoadBalance
       - 低延迟
