@@ -13,26 +13,6 @@ dns:
   fake-ip-filter:
     - +.lan
     - +.local
-proxy-providers:
-  kity:
-    interval: 86400
-    url: https://2.luolicon.ru/oosaka/158e9b903acd6217befb82f9b2eede2e
-  云洞:
-    interval: 86400
-    url: https://0993c0f8-9e29-32b1-810c-65f448c5aa04.nginxsub-cave.top/link/AoKXdOul4Uy4RKZY?list=clash
-  VPS:
-    interval: 86400
-    url: https://raw.githubusercontent.com/linshixingyou/Mononoke/localhost/VPS
-  良心云到7月:
-    type: http
-    url: https://liangxin.xyz/api/v1/liangxin?OwO=5fb608cadd512bea88f8bc7f981675c2
-    interval: 8640000
-    path: ./providers/良心云到7月.yaml
-    health-check:
-      enable: true
-      url: http://www.gstatic.com/generate_204
-      interval: 300
-    filter: "^(?!.*专线).*$"
 proxy-groups:
   - icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Rocket.png
     name: 低延迟
