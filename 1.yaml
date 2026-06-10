@@ -21,10 +21,10 @@ proxy-providers:
   云洞:
     interval: 86400
     url: https://config.cavecn.com/link/AoKXdOul4Uy4RKZY?list=clash
-
   Combine:
     interval: 86400
     url: https://sub.store/download/collection/Combine?target=Stash
+    filter: ^(?=.*(.))(?!.*((?i)群|邀请|过滤|返利|循环|登陆|下面|官网|客服|网站|网址|获取|订阅|流量|到期|机场|下次|版本|官址|备用|过期|已用|联系|失联|邮箱|工单|专线|贩卖|通知|倒卖|防止|国内|地址|频道|无法|说明|使用|提示|特别|访问|支持|教程|关注|更新|作者|加入|(\b(USE|USED|TOTAL|Traffic|Expire|EMAIL|Panel|Channel|Author)\b|(\d{4}-\d{2}-\d{2}|\d+G)))).*$
   VPS:
     interval: 86400
     url: https://raw.githubusercontent.com/linshixingyou/Mononoke/localhost/VPS
@@ -110,7 +110,7 @@ proxy-groups:
   - name: BGP-Auto
     type: url-test
     include-all: true
-    filter: "优化|三网|BGP|IEPL|高速|epl|专线"
+    filter: "优|三网|高速|专线|BGP|IEPL|Iepl|iepl|IPLC|Iplc|iplc"
     interval: 300
     hidden: true
     lazy: true
@@ -118,14 +118,14 @@ proxy-groups:
   - name: 移动-Auto
     type: url-test
     include-all: true
-    filter: "移动|CM|移动"
+    filter: "移动|CM|移优"
     interval: 300
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/BGP.png
     hidden: true
   - name: 联通-Auto
     type: url-test
     include-all: true
-    filter: "联通|CU|联通"
+    filter: "联通|CU|联优"
     interval: 300
     lazy: true
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/BGP.png
@@ -219,7 +219,7 @@ proxy-groups:
   - name: 游戏
     type: select
     include-all: true
-    filter: "游戏|ame|AME"
+    filter: "游戏|game|GAME|game|Game|高速"
     lazy: true
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Game.png
     hidden: true
@@ -241,14 +241,14 @@ proxy-groups:
   - name: 流媒体
     type: select
     include-all: true
-    filter: "媒体|Media"
+    filter: "媒体|Media|Netflix|NF|Disney|HBO|Stream"
     interval: 300
     lazy: true
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Streaming.png
   - name: 家宽
     type: select
     include-all: true
-    filter: "ome|原生|住宅|emini|AI"
+    filter: "home|原生|住宅|家宽|ISP｜gemini|AI|Gemini|GPT|Chat|纯净"
     interval: 300
     lazy: true
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Unlock.png
