@@ -657,14 +657,390 @@ rule-providers:
     interval: 86400
     url: https://raw.githubusercontent.com/linshixingyou/Mononoke/localhost/ipcidr/VPS.list
 proxies:
-  - name: HK移动BGP下载
+  -
+    name: 'A香港 01'
     type: trojan
     server: cave-hk.kunlun04dns.com
     port: 41501
     password: 0993c0f8-9e29-32b1-810c-65f448c5aa04
     sni: openssl.nodesni.com
     skip-cert-verify: true
-    network: tcp
+  -
+    name: 'A香港 02'
+    type: trojan
+    server: cave-hk.kunlun04dns.com
+    port: 41502
+    password: 0993c0f8-9e29-32b1-810c-65f448c5aa04
+    sni: openssl.nodesni.com
+    skip-cert-verify: true
+  -
+    name: 'A香港 03'
+    type: trojan
+    server: cave-hk.kunlun04dns.com
+    port: 41503
+    password: 0993c0f8-9e29-32b1-810c-65f448c5aa04
+    sni: openssl.nodesni.com
+    skip-cert-verify: true
+  -
+    name: 'A香港 04'
+    type: trojan
+    server: cave-hk.kunlun04dns.com
+    port: 41504
+    password: 0993c0f8-9e29-32b1-810c-65f448c5aa04
+    sni: openssl.nodesni.com
+    skip-cert-verify: true
+  -
+    name: 'A香港 05'
+    type: trojan
+    server: cave-hk.kunlun04dns.com
+    port: 41505
+    password: 0993c0f8-9e29-32b1-810c-65f448c5aa04
+    sni: openssl.nodesni.com
+    skip-cert-verify: true
+  -
+    name: 'A香港 06'
+    type: trojan
+    server: cave-hk.kunlun04dns.com
+    port: 41506
+    password: 0993c0f8-9e29-32b1-810c-65f448c5aa04
+    sni: openssl.nodesni.com
+    skip-cert-verify: true
+  -
+    name: 'A香港 07'
+    type: trojan
+    server: cave-hk.kunlun04dns.com
+    port: 41507
+    password: 0993c0f8-9e29-32b1-810c-65f448c5aa04
+    sni: openssl.nodesni.com
+    skip-cert-verify: true
+  -
+    name: 'A香港 08'
+    type: trojan
+    server: cave-hk.kunlun04dns.com
+    port: 41508
+    password: 0993c0f8-9e29-32b1-810c-65f448c5aa04
+    sni: openssl.nodesni.com
+    skip-cert-verify: true
+  -
+    name: 'A香港 09'
+    type: trojan
+    server: cave-hk.kunlun04dns.com
+    port: 41509
+    password: 0993c0f8-9e29-32b1-810c-65f448c5aa04
+    sni: openssl.nodesni.com
+    skip-cert-verify: true
+  -
+    name: 'A香港 10'
+    type: trojan
+    server: cave-hk.kunlun04dns.com
+    port: 41510
+    password: 0993c0f8-9e29-32b1-810c-65f448c5aa04
+    sni: openssl.nodesni.com
+    skip-cert-verify: true
+  -
+    name: 'B美国 01'
+    type: trojan
+    server: cave-us.kunlun04dns.com
+    port: 41521
+    password: 0993c0f8-9e29-32b1-810c-65f448c5aa04
+    sni: openssl.nodesni.com
+    skip-cert-verify: true
+  -
+    name: 'B美国 02'
+    type: trojan
+    server: cave-us.kunlun04dns.com
+    port: 41522
+    password: 0993c0f8-9e29-32b1-810c-65f448c5aa04
+    sni: openssl.nodesni.com
+    skip-cert-verify: true
+  -
+    name: 'B美国 03'
+    type: trojan
+    server: cave-us.kunlun04dns.com
+    port: 41523
+    password: 0993c0f8-9e29-32b1-810c-65f448c5aa04
+    sni: openssl.nodesni.com
+    skip-cert-verify: true
+  -
+    name: 'B美国 04'
+    type: trojan
+    server: cave-us.kunlun04dns.com
+    port: 41524
+    password: 0993c0f8-9e29-32b1-810c-65f448c5aa04
+    sni: openssl.nodesni.com
+    skip-cert-verify: true
+  -
+    name: 'B美国 05'
+    type: trojan
+    server: cave-us.kunlun04dns.com
+    port: 41525
+    password: 0993c0f8-9e29-32b1-810c-65f448c5aa04
+    sni: openssl.nodesni.com
+    skip-cert-verify: true
+  -
+    name: 'B美国 06'
+    type: trojan
+    server: cave-us.kunlun04dns.com
+    port: 41526
+    password: 0993c0f8-9e29-32b1-810c-65f448c5aa04
+    sni: openssl.nodesni.com
+    skip-cert-verify: true
+  -
+    name: 'C日本 01'
+    type: trojan
+    server: cave-jp.kunlun04dns.com
+    port: 41527
+    password: 0993c0f8-9e29-32b1-810c-65f448c5aa04
+    sni: openssl.nodesni.com
+    skip-cert-verify: true
+  -
+    name: 'C日本 02'
+    type: trojan
+    server: cave-jp.kunlun04dns.com
+    port: 41528
+    password: 0993c0f8-9e29-32b1-810c-65f448c5aa04
+    sni: openssl.nodesni.com
+    skip-cert-verify: true
+  -
+    name: 'C日本 03'
+    type: trojan
+    server: cave-jp.kunlun04dns.com
+    port: 41529
+    password: 0993c0f8-9e29-32b1-810c-65f448c5aa04
+    sni: openssl.nodesni.com
+    skip-cert-verify: true
+  -
+    name: 'C日本 04'
+    type: trojan
+    server: cave-jp.kunlun04dns.com
+    port: 41530
+    password: 0993c0f8-9e29-32b1-810c-65f448c5aa04
+    sni: openssl.nodesni.com
+    skip-cert-verify: true
+  -
+    name: 'C日本 05'
+    type: trojan
+    server: cave-jp.kunlun04dns.com
+    port: 41531
+    password: 0993c0f8-9e29-32b1-810c-65f448c5aa04
+    sni: openssl.nodesni.com
+    skip-cert-verify: true
+  -
+    name: 'C日本 06'
+    type: trojan
+    server: cave-jp.kunlun04dns.com
+    port: 41532
+    password: 0993c0f8-9e29-32b1-810c-65f448c5aa04
+    sni: openssl.nodesni.com
+    skip-cert-verify: true
+  -
+    name: 'D台湾 01'
+    type: trojan
+    server: cave-tw.kunlun04dns.com
+    port: 41533
+    password: 0993c0f8-9e29-32b1-810c-65f448c5aa04
+    sni: openssl.nodesni.com
+    skip-cert-verify: true
+  -
+    name: 'D台湾 02'
+    type: trojan
+    server: cave-tw.kunlun04dns.com
+    port: 41534
+    password: 0993c0f8-9e29-32b1-810c-65f448c5aa04
+    sni: openssl.nodesni.com
+    skip-cert-verify: true
+  -
+    name: 'D台湾 03'
+    type: trojan
+    server: cave-tw.kunlun04dns.com
+    port: 41535
+    password: 0993c0f8-9e29-32b1-810c-65f448c5aa04
+    sni: openssl.nodesni.com
+    skip-cert-verify: true
+  -
+    name: 'D台湾 04'
+    type: trojan
+    server: cave-tw.kunlun04dns.com
+    port: 41536
+    password: 0993c0f8-9e29-32b1-810c-65f448c5aa04
+    sni: openssl.nodesni.com
+    skip-cert-verify: true
+  -
+    name: 'D台湾 05'
+    type: trojan
+    server: cave-tw.kunlun04dns.com
+    port: 41537
+    password: 0993c0f8-9e29-32b1-810c-65f448c5aa04
+    sni: openssl.nodesni.com
+    skip-cert-verify: true
+  -
+    name: 'D台湾 06'
+    type: trojan
+    server: cave-tw.kunlun04dns.com
+    port: 41538
+    password: 0993c0f8-9e29-32b1-810c-65f448c5aa04
+    sni: openssl.nodesni.com
+    skip-cert-verify: true
+  -
+    name: 'E新加坡 01'
+    type: trojan
+    server: cave-sg.kunlun04dns.com
+    port: 41539
+    password: 0993c0f8-9e29-32b1-810c-65f448c5aa04
+    sni: openssl.nodesni.com
+    skip-cert-verify: true
+  -
+    name: 'E新加坡 02'
+    type: trojan
+    server: cave-sg.kunlun04dns.com
+    port: 41540
+    password: 0993c0f8-9e29-32b1-810c-65f448c5aa04
+    sni: openssl.nodesni.com
+    skip-cert-verify: true
+  -
+    name: 'E新加坡 03'
+    type: trojan
+    server: cave-sg.kunlun04dns.com
+    port: 41541
+    password: 0993c0f8-9e29-32b1-810c-65f448c5aa04
+    sni: openssl.nodesni.com
+    skip-cert-verify: true
+  -
+    name: 'E新加坡 04'
+    type: trojan
+    server: cave-sg.kunlun04dns.com
+    port: 41542
+    password: 0993c0f8-9e29-32b1-810c-65f448c5aa04
+    sni: openssl.nodesni.com
+    skip-cert-verify: true
+  -
+    name: 'E新加坡 05'
+    type: trojan
+    server: cave-sg.kunlun04dns.com
+    port: 41543
+    password: 0993c0f8-9e29-32b1-810c-65f448c5aa04
+    sni: openssl.nodesni.com
+    skip-cert-verify: true
+  -
+    name: 'E新加坡 06'
+    type: trojan
+    server: cave-sg.kunlun04dns.com
+    port: 41544
+    password: 0993c0f8-9e29-32b1-810c-65f448c5aa04
+    sni: openssl.nodesni.com
+    skip-cert-verify: true
+  -
+    name: 'F德国 01'
+    type: trojan
+    server: cave-other.kunlun04dns.com
+    port: 41545
+    password: 0993c0f8-9e29-32b1-810c-65f448c5aa04
+    sni: openssl.nodesni.com
+    skip-cert-verify: true
+  -
+    name: 'F德国 02'
+    type: trojan
+    server: cave-other.kunlun04dns.com
+    port: 41546
+    password: 0993c0f8-9e29-32b1-810c-65f448c5aa04
+    sni: openssl.nodesni.com
+    skip-cert-verify: true
+  -
+    name: 'G印度 01'
+    type: trojan
+    server: cave-other.kunlun04dns.com
+    port: 41547
+    password: 0993c0f8-9e29-32b1-810c-65f448c5aa04
+    sni: openssl.nodesni.com
+    skip-cert-verify: true
+  -
+    name: 'G印度 02'
+    type: trojan
+    server: cave-other.kunlun04dns.com
+    port: 41548
+    password: 0993c0f8-9e29-32b1-810c-65f448c5aa04
+    sni: openssl.nodesni.com
+    skip-cert-verify: true
+  -
+    name: 'H英国 01'
+    type: trojan
+    server: cave-other.kunlun04dns.com
+    port: 41549
+    password: 0993c0f8-9e29-32b1-810c-65f448c5aa04
+    sni: openssl.nodesni.com
+    skip-cert-verify: true
+  -
+    name: 'H英国 02'
+    type: trojan
+    server: cave-other.kunlun04dns.com
+    port: 41550
+    password: 0993c0f8-9e29-32b1-810c-65f448c5aa04
+    sni: openssl.nodesni.com
+    skip-cert-verify: true
+  -
+    name: 'I加拿大 01'
+    type: trojan
+    server: cave-other.kunlun04dns.com
+    port: 41551
+    password: 0993c0f8-9e29-32b1-810c-65f448c5aa04
+    sni: openssl.nodesni.com
+    skip-cert-verify: true
+  -
+    name: 'I加拿大 02'
+    type: trojan
+    server: cave-other.kunlun04dns.com
+    port: 41552
+    password: 0993c0f8-9e29-32b1-810c-65f448c5aa04
+    sni: openssl.nodesni.com
+    skip-cert-verify: true
+  -
+    name: 'J荷兰 01'
+    type: trojan
+    server: cave-other.kunlun04dns.com
+    port: 41553
+    password: 0993c0f8-9e29-32b1-810c-65f448c5aa04
+    sni: openssl.nodesni.com
+    skip-cert-verify: true
+  -
+    name: 'J荷兰 02'
+    type: trojan
+    server: cave-other.kunlun04dns.com
+    port: 41554
+    password: 0993c0f8-9e29-32b1-810c-65f448c5aa04
+    sni: openssl.nodesni.com
+    skip-cert-verify: true
+  -
+    name: K日本GAME
+    type: trojan
+    server: cave-jp.kunlun04dns.com
+    port: 41556
+    password: 0993c0f8-9e29-32b1-810c-65f448c5aa04
+    sni: openssl.nodesni.com
+    skip-cert-verify: true
+  -
+    name: K柬埔寨UNLOCK
+    type: trojan
+    server: cave-other.kunlun04dns.com
+    port: 41558
+    password: 0993c0f8-9e29-32b1-810c-65f448c5aa04
+    sni: openssl.nodesni.com
+    skip-cert-verify: true
+  -
+    name: K香港GAME
+    type: trojan
+    server: cave-hk.kunlun04dns.com
+    port: 41555
+    password: 0993c0f8-9e29-32b1-810c-65f448c5aa04
+    sni: openssl.nodesni.com
+    skip-cert-verify: true
+  -
+    name: K马来西亚UNLOCK
+    type: trojan
+    server: cave-other.kunlun04dns.com
+    port: 41557
+    password: 0993c0f8-9e29-32b1-810c-65f448c5aa04
+    sni: openssl.nodesni.com
+    skip-cert-verify: true
 
 
 
