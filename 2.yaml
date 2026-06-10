@@ -44,9 +44,6 @@ proxy-groups:
     proxies:
       - 移动
       - BGP
-    use-url: 
-      - https://www.luobenyun.homes/getjiedian/66800536a26207e4f1d03545cba41db8
-      - https://sub.luobenyun.homes/DJaN2kx6jeemHGR_
     ssid-policy:
       917: 移动
       WHU_XIAOMI: 移动
