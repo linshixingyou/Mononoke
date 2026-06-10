@@ -19,7 +19,7 @@ proxy-providers:
     url: https://2.luolicon.ru/oosaka/158e9b903acd6217befb82f9b2eede2e
   云洞:
     interval: 86400
-    url: https://config.cavecn.com/link/AoKXdOul4Uy4RKZY?list=clash
+    url: https://0993c0f8-9e29-32b1-810c-65f448c5aa04.nginxsub-cave.top/link/AoKXdOul4Uy4RKZY?list=clash
   Combine:
     interval: 86400
     url: https://raw.githubusercontent.com/linshixingyou/Mononoke/localhost/Combine
