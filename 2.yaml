@@ -126,7 +126,7 @@ proxy-groups:
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Game.png
     proxies:
       - 游戏
-      - BGP
+      - 低延迟
     hidden: true
   - name: TikTok
     type: select
