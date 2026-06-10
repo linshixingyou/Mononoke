@@ -275,7 +275,3 @@ proxies:
       public-key: 6hK5gPOkWt2niz-6PtAwh-JWXiJlT7iJpRXzlSC2OCY
       short-id: 63c893066f
     client-fingerprint: qq
-
-  - name: "[vless]US+Max+08"
-    type: vless
-    server
