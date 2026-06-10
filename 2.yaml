@@ -44,6 +44,7 @@ proxy-groups:
     proxies:
       - 移动
       - BGP
+      - HK-Auto
     ssid-policy:
       917: 移动
       WHU_XIAOMI: 移动
@@ -514,11 +515,6 @@ rule-providers:
     format: text
     interval: 86400
     url: https://raw.githubusercontent.com/linshixingyou/Mononoke/localhost/domain/socialmedia.list
-  speedtest_domain:
-    behavior: domain
-    format: text
-    interval: 86400
-    url: https://raw.githubusercontent.com/linshixingyou/Mononoke/localhost/domain/speedtest.list
   spotify_domain:
     behavior: domain
     format: text

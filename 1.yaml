@@ -49,6 +49,7 @@ proxy-groups:
     proxies:
       - 移动
       - BGP
+      - HK-Auto
     use-url: 
       - https://www.luobenyun.homes/getjiedian/66800536a26207e4f1d03545cba41db8
       - https://sub.luobenyun.homes/DJaN2kx6jeemHGR_
