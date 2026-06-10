@@ -326,7 +326,6 @@ rules:
   - RULE-SET,paypal_domain,Pure
   - RULE-SET,primevideo_domain,Media
   - RULE-SET,cdn_domain,流量
-  - RULE-SET,proxy_domain,流量
   - RULE-SET,spotify_domain,Media
   - RULE-SET,talkatone_domain,US-Auto
   - RULE-SET,tiktok_domain,TikTok
