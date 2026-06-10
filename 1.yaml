@@ -289,7 +289,6 @@ rules:
   - RULE-SET,googlefcm_ip,线路
   - RULE-SET,apple-cn_domain,DIRECT
   - RULE-SET,iplocation-direct_domain,DIRECT
-  - RULE-SET,cn_domain,DIRECT
   - RULE-SET,dmca_domain,DIRECT
   - RULE-SET,games-cn_domain,DIRECT
   - RULE-SET,onedrive_domain,DIRECT
@@ -300,8 +299,6 @@ rules:
   - RULE-SET,private_ip,DIRECT
   - RULE-SET,microsoft-cn_domain,DIRECT
   - RULE-SET,douyin_domain,DIRECT
-  - RULE-SET,cn_ip,DIRECT
-  - RULE-SET,VPS,低延迟
   - RULE-SET,Emby,流量
   - RULE-SET,abema_domain,JP-Media
   - RULE-SET,google_ip,线路
