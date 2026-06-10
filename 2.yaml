@@ -327,8 +327,6 @@ rules:
   - RULE-SET,twitch_ip,Media
   - RULE-SET,spotify_ip,Media
   - RULE-SET,talkatone_ip,US-Auto
-  - RULE-SET,adrules_domain,REJECT
-  - RULE-SET,adrules_ip,REJECT
   - MATCH,线路
 rule-providers:
   abema_domain:
