@@ -33,6 +33,8 @@ proxy-groups:
       - 移动
       - BGP
       - HK-Auto
+      - BGP-Auto
+      - 移动-Auto
     use-url: 
       - https://www.luobenyun.homes/getjiedian/66800536a26207e4f1d03545cba41db8
       - https://sub.luobenyun.homes/DJaN2kx6jeemHGR_
@@ -77,21 +79,16 @@ proxy-groups:
       - SG-Auto
       - US-Auto
   - name: 移动
-    type: url-test
-    interval: 300
-    lazy: true
-    proxies:
-      - 移动-Auto
-      - HK-Auto
-    hidden: true
+    type: select
+    include-all: true
+    filter: "移动|CM|移优"
   - name: BGP
-    type: url-test
+    type: select
+    include-all: true
+    filter: "优|三网|高速|专线|BGP|IEPL|Iepl|iepl|IPLC|Iplc|iplc"
     interval: 300
     lazy: true
-    proxies:
-      - BGP-Auto
-      - HK-Auto
-    hidden: true
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/BGP.png
   - name: BGP-Auto
     type: url-test
     include-all: true
@@ -647,4 +644,15 @@ rule-providers:
     format: text
     interval: 86400
     url: https://raw.githubusercontent.com/linshixingyou/Mononoke/localhost/ipcidr/VPS.list
+proxies:
+  - {"name":"A香港 01","type":"trojan","server":"cave-hk.kunlun04dns.com","port":41501,"password":"0993c0f8-9e29-32b1-810c-65f448c5aa04","sni":"openssl.nodesni.com","skip-cert-verify":true,"network":"tcp"}
+  - {"name":"A香港 02","type":"trojan","server":"cave-hk.kunlun04dns.com","port":41502,"password":"0993c0f8-9e29-32b1-810c-65f448c5aa04","sni":"openssl.nodesni.com","skip-cert-verify":true,"network":"tcp"}
+  - {"name":"A香港 03","type":"trojan","server":"cave-hk.kunlun04dns.com","port":41503,"password":"0993c0f8-9e29-32b1-810c-65f448c5aa04","sni":"openssl.nodesni.com","skip-cert-verify":true,"network":"tcp"}
+  - {"name":"A香港 04","type":"trojan","server":"cave-hk.kunlun04dns.com","port":41504,"password":"0993c0f8-9e29-32b1-810c-65f448c5aa04","sni":"openssl.nodesni.com","skip-cert-verify":true,"network":"tcp"}
+  - {"name":"A香港 05","type":"trojan","server":"cave-hk.kunlun04dns.com","port":41505,"password":"0993c0f8-9e29-32b1-810c-65f448c5aa04","sni":"openssl.nodesni.com","skip-cert-verify":true,"network":"tcp"}
+  - {"name":"A香港 06","type":"trojan","server":"cave-hk.kunlun04dns.com","port":41506,"password":"0993c0f8-9e29-32b1-810c-65f448c5aa04","sni":"openssl.nodesni.com","skip-cert-verify":true,"network":"tcp"}
+  - {"name":"A香港 07","type":"trojan","server":"cave-hk.kunlun04dns.com","port":41507,"password":"0993c0f8-9e29-32b1-810c-65f448c5aa04","sni":"openssl.nodesni.com","skip-cert-verify":true,"network":"tcp"}
+  - {"name":"A香港 08","type":"trojan","server":"cave-hk.kunlun04dns.com","port":41508,"password":"0993c0f8-9e29-32b1-810c-65f448c5aa04","sni":"openssl.nodesni.com","skip-cert-verify":true,"network":"tcp"}
+  - {"name":"A香港 09","type":"trojan","server":"cave-hk.kunlun04dns.com","port":41509,"password":"0993c0f8-9e29-32b1-810c-65f448c5aa04","sni":"openssl.nodesni.com","skip-cert-verify":true,"network":"tcp"}
+  - {"name":"A香港 10","type":"trojan","server":"cave-hk.kunlun04dns.com","port":41510,"password":"0993c0f8-9e29-32b1-810c-65f448c5aa04","sni":"openssl.nodesni.com","skip-cert-verify":true,"network":"tcp"}
 
