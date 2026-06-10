@@ -38,16 +38,7 @@ proxy-groups:
     name: 低延迟
     type: select
     proxies:
-      - 移动
-      - BGP
       - HK-Auto
-    ssid-policy:
-      917: 移动
-      WHU_XIAOMI: 移动
-      CUHK(SZ): BGP
-      AU: 移动
-      cellular: BGP
-      default: 移动
   - name: 流量
     type: select
     proxies:
