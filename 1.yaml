@@ -49,7 +49,8 @@ proxy-groups:
     proxies:
       - 移动
       - BGP
-    
+    use-url: 
+      - https://sub.luobenyun.homes/DJaN2kx6jeemHGR_
     ssid-policy:
       917: 移动
       WHU_XIAOMI: 移动
@@ -57,7 +58,6 @@ proxy-groups:
       AU: 移动
       cellular: BGP
       default: 移动
-    hidden: true
   - name: 流量
     type: select
     proxies:
