@@ -45,10 +45,11 @@ proxy-groups:
       - Combine
   - icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Rocket.png
     name: 低延迟
-    type: url-test
+    type: select
     proxies:
       - 移动
       - BGP
+    
     ssid-policy:
       917: 移动
       WHU_XIAOMI: 移动
