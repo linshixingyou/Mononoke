@@ -376,11 +376,6 @@ rule-providers:
     format: text
     interval: 86400
     url: https://raw.githubusercontent.com/linshixingyou/Mononoke/localhost/domain/cdn.list
-  cn_domain:
-    behavior: domain
-    format: text
-    interval: 86400
-    url: https://raw.githubusercontent.com/linshixingyou/Mononoke/localhost/domain/cn.list
   crypto_domain:
     behavior: domain
     format: text
@@ -511,11 +506,6 @@ rule-providers:
     format: text
     interval: 86400
     url: https://raw.githubusercontent.com/linshixingyou/Mononoke/localhost/domain/private.list
-  proxy_domain:
-    behavior: domain
-    format: text
-    interval: 86400
-    url: https://raw.githubusercontent.com/linshixingyou/Mononoke/localhost/domain/proxy.list
   socialmedia-cn_domain:
     behavior: domain
     format: text
@@ -576,11 +566,6 @@ rule-providers:
     format: text
     interval: 86400
     url: https://raw.githubusercontent.com/linshixingyou/Mononoke/localhost/ipcidr/bilibili.list
-  cn_ip:
-    behavior: ipcidr
-    format: text
-    interval: 86400
-    url: https://raw.githubusercontent.com/linshixingyou/Mononoke/localhost/ipcidr/cn.list
   dmca_ip:
     behavior: ipcidr
     format: text
