@@ -292,7 +292,6 @@ rules:
   - RULE-SET,private_ip,DIRECT
   - RULE-SET,microsoft-cn_domain,DIRECT
   - RULE-SET,douyin_domain,DIRECT
-  - RULE-SET,cn_ip,DIRECT
   - RULE-SET,VPS,低延迟
   - RULE-SET,Emby,流量
   - RULE-SET,abema_domain,JP-Media
