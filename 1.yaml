@@ -671,6 +671,11 @@ rule-providers:
     format: text
     interval: 86400
     url: https://raw.githubusercontent.com/linshixingyou/Mononoke/localhost/domain/Emby.list
+  EmbyDirect:
+    behavior: domain
+    format: text
+    interval: 86400
+    url: https://raw.githubusercontent.com/linshixingyou/Mononoke/localhost/domain/EmbyDirect.list
   VPS:
     behavior: ipcidr
     format: text
