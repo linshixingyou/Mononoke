@@ -146,7 +146,7 @@ proxy-groups:
   - name: 家宽
     type: select
     include-all: true
-    filter: "home|原生|住宅|家宽|ISP｜gemini|AI|Gemini|GPT|Chat|纯净"
+    filter: "Home|home|原生|住宅|家宽|ISP｜gemini|AI|Gemini|GPT|Chat|纯净"
     interval: 300
     lazy: true
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Unlock.png
