@@ -647,27 +647,4 @@ rule-providers:
     format: text
     interval: 86400
     url: https://raw.githubusercontent.com/linshixingyou/Mononoke/localhost/ipcidr/VPS.list
-proxies:
-  - name: HK移动BGP下载
-    type: trojan
-    server: cave-hk.kunlun04dns.com
-    port: 41501
-    password: 0993c0f8-9e29-32b1-810c-65f448c5aa04
-    sni: openssl.nodesni.com
-    skip-cert-verify: true
-    network: tcp
-  - name: 02
-    type: trojan
-    server: cave-hk.kunlun04dns.com
-    port: 41502
-    password: 0993c0f8-9e29-32b1-810c-65f448c5aa04
-    sni: openssl.nodesni.com
-    skip-cert-verify: true
-  - name: 香港 03
-    type: trojan
-    server: cave-hk.kunlun04dns.com
-    port: 41503
-    password: 0993c0f8-9e29-32b1-810c-65f448c5aa04
-    sni: openssl.nodesni.com
-    skip-cert-verify: true
 

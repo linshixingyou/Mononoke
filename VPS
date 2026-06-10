@@ -1,4 +1,26 @@
 proxies:
+  - name: HK移动BGP下载
+    type: trojan
+    server: cave-hk.kunlun04dns.com
+    port: 41501
+    password: 0993c0f8-9e29-32b1-810c-65f448c5aa04
+    sni: openssl.nodesni.com
+    skip-cert-verify: true
+    network: tcp
+  - name: 02
+    type: trojan
+    server: cave-hk.kunlun04dns.com
+    port: 41502
+    password: 0993c0f8-9e29-32b1-810c-65f448c5aa04
+    sni: openssl.nodesni.com
+    skip-cert-verify: true
+  - name: 香港 03
+    type: trojan
+    server: cave-hk.kunlun04dns.com
+    port: 41503
+    password: 0993c0f8-9e29-32b1-810c-65f448c5aa04
+    sni: openssl.nodesni.com
+    skip-cert-verify: true
   - auth: "3286b74d-a633-401f-8e22-6e8e61c5f1d9"
     fast-open: false
     name: 鸢尾VPS
