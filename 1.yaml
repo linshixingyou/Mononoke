@@ -56,25 +56,12 @@ proxy-groups:
   - icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Rocket.png
     name: 低延迟
     type: select
-    proxies:
-      - 移动
-      - BGP
-      - HK-Auto
-      - BGP-Auto
-      - 移动-Auto
-    ssid-policy:
-      917: 移动
-      WHU_XIAOMI: 移动
-      CUHK(SZ): BGP
-      AU: 移动
-      cellular: BGP
-      default: 移动
+    use:
+      - 延迟
   - name: 流量
-    type: select
-    proxies:
-      - 下载-Auto
-      - HK-LoadBalance
-      - 低延迟
+    type: url-test
+    use:
+      - 高流量
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/YouTube.png
   - name: Pure
     type: select
@@ -82,10 +69,11 @@ proxy-groups:
     proxies:
       - 家宽-Auto
       - 家宽
-      - 低延迟
-      - JP-Auto
-      - US-Auto
-      - VPS
+  - name: 家宽-Auto
+    type: url-test
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Final.png
+    use:
+      - 纯净家宽
   - name: 线路
     proxies:
       - 低延迟
@@ -249,14 +237,6 @@ proxy-groups:
     interval: 300
     lazy: true
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Unlock.png
-  - name: 家宽-Auto
-    type: url-test
-    include-all: true
-    filter: "Home|home|原生|住宅|家宽|ISP｜gemini|AI|Gemini|GPT|Chat|纯净"
-    interval: 300
-    lazy: true
-    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Unlock.png
-    hidden: true
   - name: VPS
     type: select
     use:
