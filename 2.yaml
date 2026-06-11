@@ -782,6 +782,25 @@ proxies:
   - {"name":"🇺🇸美国 02 | 专线","type":"trojan","server":"us2.d6e5a7d2-3e26-c0f5-1bc0-e481d73fd66c.2f6cd430.the-best-airport.com","port":443,"password":"8375f628-5d93-4ef1-bf52-3612e68abbcd","udp":true,"sni":"new.download.the-best-airport.com","skip-cert-verify":true,"network":"tcp"}
   - {"name":"🇺🇸美国 03 | 专线","type":"trojan","server":"us3.d6e5a7d2-3e26-c0f5-1bc0-e481d73fd66c.47253001.the-best-airport.com","port":443,"password":"8375f628-5d93-4ef1-bf52-3612e68abbcd","udp":true,"sni":"new.download.the-best-airport.com","skip-cert-verify":true,"network":"tcp"}
   - {"name":"🇺🇸美国 04 | 专线","type":"trojan","server":"us4.d6e5a7d2-3e26-c0f5-1bc0-e481d73fd66c.30d6a0d0.the-best-airport.com","port":443,"password":"8375f628-5d93-4ef1-bf52-3612e68abbcd","udp":true,"sni":"new.download.the-best-airport.com","skip-cert-verify":true,"network":"tcp"}
+  - {"name":"[anytls]日本4-V6-移动联通优化","type":"anytls","server":"gho104.icuvdproduction.org","port":18443,"password":"609aa734-24e9-4d3c-b534-d57e77994c14","udp":true,"sni":"d1--ov-gotcha07.bilivideo.com","skip-cert-verify":true}
+  - {"name":"[anytls]新加坡5-v6-移动联通优化","type":"anytls","server":"gho105.icuvdproduction.org","port":18443,"password":"609aa734-24e9-4d3c-b534-d57e77994c14","udp":true,"sni":"d1--ov-gotcha07.bilivideo.com","skip-cert-verify":true}
+  - {"name":"[anytls]台湾6-三网优化","type":"anytls","server":"gho106.icuvdproduction.org","port":18443,"password":"609aa734-24e9-4d3c-b534-d57e77994c14","udp":true,"sni":"d1--ov-gotcha07.bilivideo.com","skip-cert-verify":true}
+  - {"name":"[Hy2]新加坡15-v6-移动联通优化","server":"gho105.icuvdproduction.org","port":18441,"sni":"d1--ov-gotcha07.bilivideo.com","skip-cert-verify":true,"type":"hysteria2","auth":"609aa734-24e9-4d3c-b534-d57e77994c14","down-speed":"200","up-speed":"50"}
+  - {"name":"[anytls]香港7-v6-移动联通优化","type":"anytls","server":"gho107.icuvdproduction.org","port":18443,"password":"609aa734-24e9-4d3c-b534-d57e77994c14","udp":true,"sni":"d1--ov-gotcha07.bilivideo.com","skip-cert-verify":true}
+  - {"name":"[anytls]香港8-移动联通优化","type":"anytls","server":"gho108.icuvdproduction.org","port":18443,"password":"609aa734-24e9-4d3c-b534-d57e77994c14","udp":true,"sni":"d1--ov-gotcha07.bilivideo.com","skip-cert-verify":true}
+  - {"name":"[anytls]香港9-移动联通优化","type":"anytls","server":"gho109.icuvdproduction.org","port":18443,"password":"609aa734-24e9-4d3c-b534-d57e77994c14","udp":true,"sni":"d1--ov-gotcha07.bilivideo.com","skip-cert-verify":true}
+  - {"name":"[anytls]马来西亚2-v6-三网优化","type":"anytls","server":"gho102.icuvdproduction.org","port":18443,"password":"609aa734-24e9-4d3c-b534-d57e77994c14","udp":true,"sni":"d1--ov-gotcha07.bilivideo.com","skip-cert-verify":true}
+  - {"name":"[anytls]台湾1","type":"anytls","server":"gho101.icuvdproduction.org","port":18443,"password":"609aa734-24e9-4d3c-b534-d57e77994c14","udp":true,"sni":"d1--ov-gotcha07.bilivideo.com","skip-cert-verify":true}
+  - {"name":"[anytls]美国三网优化3","type":"anytls","server":"gho103.icuvdproduction.org","port":18443,"password":"609aa734-24e9-4d3c-b534-d57e77994c14","udp":true,"sni":"d1--ov-gotcha07.bilivideo.com","skip-cert-verify":true}
+  - {"name":"[anytls]新加坡10","type":"anytls","server":"gho110.icuvdproduction.org","port":18443,"password":"609aa734-24e9-4d3c-b534-d57e77994c14","udp":true,"sni":"d1--ov-gotcha07.bilivideo.com","skip-cert-verify":true}
+  - {"name":"[anytls]美国33-移动联通优化","type":"anytls","server":"gho111.icuvdproduction.org","port":18443,"password":"609aa734-24e9-4d3c-b534-d57e77994c14","udp":true,"sni":"d1--ov-gotcha07.bilivideo.com","skip-cert-verify":true}
+  - {"name":"[anytls]美国34-移动联通优化","type":"anytls","server":"gho112.icuvdproduction.org","port":18443,"password":"609aa734-24e9-4d3c-b534-d57e77994c14","udp":true,"sni":"d1--ov-gotcha07.bilivideo.com","skip-cert-verify":true}
+  - {"name":"[anytls]美国35-移动联通优化","type":"anytls","server":"gho113.icuvdproduction.org","port":18443,"password":"609aa734-24e9-4d3c-b534-d57e77994c14","udp":true,"sni":"d1--ov-gotcha07.bilivideo.com","skip-cert-verify":true}
+  - {"name":"[anytls]美国36-移动联通优化","type":"anytls","server":"gho114.icuvdproduction.org","port":18443,"password":"609aa734-24e9-4d3c-b534-d57e77994c14","udp":true,"sni":"d1--ov-gotcha07.bilivideo.com","skip-cert-verify":true}
+  - {"name":"[anytls]新加坡41","type":"anytls","server":"gho115.icuvdproduction.org","port":18443,"password":"609aa734-24e9-4d3c-b534-d57e77994c14","udp":true,"sni":"d1--ov-gotcha07.bilivideo.com","skip-cert-verify":true}
+  - {"name":"[anytls]香港移动优化V6-43","type":"anytls","server":"gho116.icuvdproduction.org","port":18443,"password":"609aa734-24e9-4d3c-b534-d57e77994c14","udp":true,"sni":"d1--ov-gotcha07.bilivideo.com","skip-cert-verify":true}
+  - {"name":"[anytls]日本移动联通优化V6-44","type":"anytls","server":"gho117.icuvdproduction.org","port":18443,"password":"609aa734-24e9-4d3c-b534-d57e77994c14","udp":true,"sni":"d1--ov-gotcha07.bilivideo.com","skip-cert-verify":true}
+  - {"name":"[anytls]韩国三网优化V6-45","type":"anytls","server":"gho118.icuvdproduction.org","port":18443,"password":"609aa734-24e9-4d3c-b534-d57e77994c14","udp":true,"sni":"d1--ov-gotcha07.bilivideo.com","skip-cert-verify":true}
 
 
 
