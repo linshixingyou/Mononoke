@@ -35,9 +35,6 @@ proxy-groups:
       - HK-Auto
       - BGP-Auto
       - 移动-Auto
-    use-url: 
-      - https://www.luobenyun.homes/getjiedian/66800536a26207e4f1d03545cba41db8
-      - https://sub.luobenyun.homes/DJaN2kx6jeemHGR_
     ssid-policy:
       917: 移动
       WHU_XIAOMI: 移动
@@ -655,4 +652,24 @@ proxies:
   - {"name":"A香港 08","type":"trojan","server":"cave-hk.kunlun04dns.com","port":41508,"password":"0993c0f8-9e29-32b1-810c-65f448c5aa04","sni":"openssl.nodesni.com","skip-cert-verify":true,"network":"tcp"}
   - {"name":"A香港 09","type":"trojan","server":"cave-hk.kunlun04dns.com","port":41509,"password":"0993c0f8-9e29-32b1-810c-65f448c5aa04","sni":"openssl.nodesni.com","skip-cert-verify":true,"network":"tcp"}
   - {"name":"A香港 10","type":"trojan","server":"cave-hk.kunlun04dns.com","port":41510,"password":"0993c0f8-9e29-32b1-810c-65f448c5aa04","sni":"openssl.nodesni.com","skip-cert-verify":true,"network":"tcp"}
+  - { name: HK-快乐裸奔, type: socks5, server: 34.150.3.125, port: 10086, username: 08ce88dc-2e7c-45c8-93d7-23b5545c9f2d, password: 08ce88dc-2e7c-45c8-93d7-23b5545c9f2d, udp: true }
+  - { name: '🇭🇰 香港-1 gov', type: vless, server: 162.245.221.73, port: 28831, uuid: 08ce88dc-2e7c-45c8-93d7-23b5545c9f2d, udp: true, client-fingerprint: chrome, tls: true, skip-cert-verify: true, servername: www.gov.cn, sni: www.gov.cn, flow: null, reality-opts: { public-key: eavlaukwH1-W-v59JZlRwdHp0v83LaKNu2c_cISUZ0c, short-id: '868451e3' }, network: tcp }
+  - { name: '🇭🇰 香港-2 gov', type: vless, server: z2nwags.yujie.pics, port: 8964, uuid: 08ce88dc-2e7c-45c8-93d7-23b5545c9f2d, udp: true, client-fingerprint: chrome, tls: true, skip-cert-verify: true, servername: www.gov.cn, sni: www.gov.cn, flow: null, reality-opts: { public-key: V0LLa3oUU4GpDAoZZpy0ACbs_Ry0-AsABPJa4xCX21M, short-id: b6 }, network: tcp }
+  - { name: '🇭🇰 香港-2 gov 深圳中转', type: vless, server: 8.163.28.112, port: 12131, uuid: 08ce88dc-2e7c-45c8-93d7-23b5545c9f2d, udp: true, client-fingerprint: chrome, tls: true, skip-cert-verify: true, servername: www.gov.cn, sni: www.gov.cn, flow: null, reality-opts: { public-key: V0LLa3oUU4GpDAoZZpy0ACbs_Ry0-AsABPJa4xCX21M, short-id: b6 }, network: tcp }
+  - { name: '🇭🇰 香港-2 gov 灵', type: vless, server: 82.156.151.208, port: 36726, uuid: 08ce88dc-2e7c-45c8-93d7-23b5545c9f2d, udp: true, client-fingerprint: chrome, tls: true, skip-cert-verify: true, servername: www.gov.cn, sni: www.gov.cn, flow: null, reality-opts: { public-key: V0LLa3oUU4GpDAoZZpy0ACbs_Ry0-AsABPJa4xCX21M, short-id: b6 }, network: tcp }
+  - { name: '🇭🇰 香港-3 gov', type: vless, server: 216.236.6.167, port: 8964, uuid: 08ce88dc-2e7c-45c8-93d7-23b5545c9f2d, udp: true, client-fingerprint: chrome, tls: true, skip-cert-verify: true, servername: www.gov.cn, sni: www.gov.cn, flow: null, reality-opts: { public-key: V0LLa3oUU4GpDAoZZpy0ACbs_Ry0-AsABPJa4xCX21M, short-id: b6 }, network: tcp }
+  - { name: '🇭🇰 香港-3 gov 灵', type: vless, server: 23.147.172.7, port: 42400, uuid: 08ce88dc-2e7c-45c8-93d7-23b5545c9f2d, udp: true, client-fingerprint: chrome, tls: true, skip-cert-verify: true, servername: www.gov.cn, sni: www.gov.cn, flow: null, reality-opts: { public-key: V0LLa3oUU4GpDAoZZpy0ACbs_Ry0-AsABPJa4xCX21M, short-id: b6 }, network: tcp }
+  - { name: '🇯🇵 日本-1 gov', type: vless, server: 141.147.155.138, port: 8964, uuid: 08ce88dc-2e7c-45c8-93d7-23b5545c9f2d, udp: true, client-fingerprint: chrome, tls: true, skip-cert-verify: true, servername: www.gov.cn, sni: www.gov.cn, flow: null, reality-opts: { public-key: eavlaukwH1-W-v59JZlRwdHp0v83LaKNu2c_cISUZ0c, short-id: '868451e3' }, network: tcp }
+  - { name: '🇯🇵 日本-2 gov', type: vless, server: 161.33.13.76, port: 8964, uuid: 08ce88dc-2e7c-45c8-93d7-23b5545c9f2d, udp: true, client-fingerprint: chrome, tls: true, skip-cert-verify: true, servername: www.gov.cn, sni: www.gov.cn, flow: null, reality-opts: { public-key: eavlaukwH1-W-v59JZlRwdHp0v83LaKNu2c_cISUZ0c, short-id: '868451e3' }, network: tcp }
+  - { name: '🇸🇬 新加坡-1 gov', type: vless, server: 140.245.62.184, port: 8964, uuid: 08ce88dc-2e7c-45c8-93d7-23b5545c9f2d, udp: true, client-fingerprint: chrome, tls: true, skip-cert-verify: true, servername: www.gov.cn, sni: www.gov.cn, flow: null, reality-opts: { public-key: eavlaukwH1-W-v59JZlRwdHp0v83LaKNu2c_cISUZ0c, short-id: '868451e3' }, network: tcp }
+  - { name: '🇸🇬 新加坡-2 gov', type: vless, server: 45.38.210.187, port: 18964, uuid: 08ce88dc-2e7c-45c8-93d7-23b5545c9f2d, udp: true, client-fingerprint: chrome, tls: true, skip-cert-verify: true, servername: www.gov.cn, sni: www.gov.cn, flow: null, reality-opts: { public-key: V0LLa3oUU4GpDAoZZpy0ACbs_Ry0-AsABPJa4xCX21M, short-id: 998d2f3a63 }, network: tcp }
+  - { name: '🇸🇬 新加坡-2 gov 灵', type: vless, server: 38.246.73.238, port: 54324, uuid: 08ce88dc-2e7c-45c8-93d7-23b5545c9f2d, udp: true, client-fingerprint: chrome, tls: true, skip-cert-verify: true, servername: www.gov.cn, sni: www.gov.cn, flow: null, reality-opts: { public-key: V0LLa3oUU4GpDAoZZpy0ACbs_Ry0-AsABPJa4xCX21M, short-id: 998d2f3a63 }, network: tcp }
+  - { name: '🇨🇳 中国台湾-1 gov', type: vless, server: z2nwdhc.yujie.pics, port: 8964, uuid: 08ce88dc-2e7c-45c8-93d7-23b5545c9f2d, udp: true, client-fingerprint: chrome, tls: true, skip-cert-verify: true, servername: www.gov.cn, sni: www.gov.cn, flow: null, reality-opts: { public-key: eavlaukwH1-W-v59JZlRwdHp0v83LaKNu2c_cISUZ0c, short-id: '868451e3' }, network: tcp }
+  - { name: '🇺🇸 美国-1 gov', type: vless, server: 107.175.234.9, port: 8964, uuid: 08ce88dc-2e7c-45c8-93d7-23b5545c9f2d, udp: true, client-fingerprint: chrome, tls: true, skip-cert-verify: true, servername: www.gov.cn, sni: www.gov.cn, flow: null, reality-opts: { public-key: V0LLa3oUU4GpDAoZZpy0ACbs_Ry0-AsABPJa4xCX21M, short-id: 998d2f3a63 }, network: tcp }
+  - { name: '🇺🇸 美国-1 gov 灵', type: vless, server: 154.44.9.152, port: 10003, uuid: 08ce88dc-2e7c-45c8-93d7-23b5545c9f2d, udp: true, client-fingerprint: chrome, tls: true, skip-cert-verify: true, servername: www.gov.cn, sni: www.gov.cn, flow: null, reality-opts: { public-key: V0LLa3oUU4GpDAoZZpy0ACbs_Ry0-AsABPJa4xCX21M, short-id: 998d2f3a63 }, network: tcp }
+  - { name: '🇺🇸 美国-3 gov', type: vless, server: 107.148.225.77, port: 8964, uuid: 08ce88dc-2e7c-45c8-93d7-23b5545c9f2d, udp: true, client-fingerprint: chrome, tls: true, skip-cert-verify: true, servername: www.gov.cn, sni: www.gov.cn, flow: null, reality-opts: { public-key: eavlaukwH1-W-v59JZlRwdHp0v83LaKNu2c_cISUZ0c, short-id: '868451e3' }, network: tcp }
+  - { name: '🇨🇭 瑞士-1 gov', type: vless, server: 104.244.75.106, port: 8964, uuid: 08ce88dc-2e7c-45c8-93d7-23b5545c9f2d, udp: true, client-fingerprint: chrome, tls: true, skip-cert-verify: true, servername: www.gov.cn, sni: www.gov.cn, flow: null, reality-opts: { public-key: V0LLa3oUU4GpDAoZZpy0ACbs_Ry0-AsABPJa4xCX21M, short-id: 998d2f3a63 }, network: tcp }
+
+
+
 
