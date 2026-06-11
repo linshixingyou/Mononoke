@@ -15,21 +15,29 @@ dns:
   fake-ip-filter:
     - +.lan
     - +.local
+proxy-providers:
+  延迟:
+    interval: 86400
+    url: https://raw.githubusercontent.com/linshixingyou/Mononoke/localhost/延迟
+    filter: ^(?=.*(.))(?!.*((?i)群|邀请|过滤|返利|循环|循环|安卓|登陆|下面|官网|客服|网站|网址|获取|订阅|流量|到期|机场|下次|版本|官址|备用|过期|已用|联系|失联|邮箱|工单|专线|贩卖|通知|倒卖|防止|国内|地址|频道|无法|说明|使用|提示|特别|访问|支持|教程|关注|更新|作者|加入|(\b(USE|USED|TOTAL|Traffic|Expire|EMAIL|Panel|Channel|Author)\b|(\d{4}-\d{2}-\d{2}|\d+G)))).*$
+  高流量:
+    interval: 86400
+    url: https://raw.githubusercontent.com/linshixingyou/Mononoke/localhost/流量
+    filter: ^(?=.*(.))(?!.*((?i)群|邀请|过滤|返利|循环|循环|安卓|登陆|下面|官网|客服|网站|网址|获取|订阅|流量|到期|机场|下次|版本|官址|备用|过期|已用|联系|失联|邮箱|工单|专线|贩卖|通知|倒卖|防止|国内|地址|频道|无法|说明|使用|提示|特别|访问|支持|教程|关注|更新|作者|加入|(\b(USE|USED|TOTAL|Traffic|Expire|EMAIL|Panel|Channel|Author)\b|(\d{4}-\d{2}-\d{2}|\d+G)))).*$
+  纯净家宽:
+    interval: 86400
+    url: https://raw.githubusercontent.com/linshixingyou/Mononoke/localhost/家宽
+    filter: ^(?=.*(.))(?!.*((?i)群|邀请|过滤|返利|循环|循环|安卓|登陆|下面|官网|客服|网站|网址|获取|订阅|流量|到期|机场|下次|版本|官址|备用|过期|已用|联系|失联|邮箱|工单|专线|贩卖|通知|倒卖|防止|国内|地址|频道|无法|说明|使用|提示|特别|访问|支持|教程|关注|更新|作者|加入|(\b(USE|USED|TOTAL|Traffic|Expire|EMAIL|Panel|Channel|Author)\b|(\d{4}-\d{2}-\d{2}|\d+G)))).*$
 proxy-groups:
   - icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Rocket.png
     name: 低延迟
-    type: url-test
-    hidden: true
-    include-all: true
-    filter: "^(?!.*(?i)GAME)(?=.*(港|🇭🇰|(?i)HK|Hong)).*$"
-    interval: 300
-    lazy: true
-  - name: 流量
     type: select
-    proxies:
-      - 下载-Auto
-      - HK-LoadBalance
-      - 低延迟
+    use:
+      - 延迟
+  - name: 流量
+    type: url-test
+    use:
+      - 高流量
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/YouTube.png
   - name: Pure
     type: select
@@ -37,7 +45,11 @@ proxy-groups:
     proxies:
       - 家宽-Auto
       - 家宽
-      - 低延迟
+  - name: 家宽-Auto
+    type: url-test
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Final.png
+    use:
+      - 纯净家宽
   - name: 线路
     proxies:
       - 低延迟
@@ -152,14 +164,6 @@ proxy-groups:
     interval: 300
     lazy: true
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Unlock.png
-  - name: 家宽-Auto
-    type: url-test
-    include-all: true
-    filter: "ome|原生|住宅|emini|AI"
-    interval: 300
-    lazy: true
-    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Unlock.png
-    hidden: true
   - name: VPS
     type: select
     use:
