@@ -1536,7 +1536,6 @@ proxies:
   - {"name":"🇺🇸 美国 2号线 NETFLIX等流媒体解锁 解锁-1M-895","server":"cdnfire.xiaomispeed.com","port":25502,"type":"trojan","password":"260139b8-c5fc-4404-9a7a-f74f6bf7226a","sni":"cdnfire.xiaomispeed.com","skip-cert-verify":true,"udp":true,"network":"tcp"}
   - {"name":"🏴‍☠️ NODE2-VPN-1B-896","server":"node2-vpn.hrzy.me","port":443,"type":"trojan","password":"30668277-e37b-4888-a5b1-251b37815a08","skip-cert-verify":false,"udp":true,"network":"tcp","sni":"node2-vpn.hrzy.me"}
   - {"name":"🇯🇵 日本 3号线 NETFLIX等流媒体解锁 解锁-1H-903","server":"cdnfire.xiaomispeed.com","port":24423,"type":"trojan","password":"dd5703fa-7cf6-475c-a83d-1f8b604969a7","sni":"cdnfire.xiaomispeed.com","skip-cert-verify":true,"udp":true,"network":"tcp"}
-
   - {"name":"🇺🇸 美国 1号线 NETFLIX等流媒体解锁 解锁-1J-905","server":"cdnfire.xiaomispeed.com","port":25501,"type":"trojan","password":"90c07b65-f430-48ba-9128-719ec7153a9b","sni":"cdnfire.xiaomispeed.com","skip-cert-verify":true,"udp":true,"network":"tcp"}
   - {"name":"🇮🇸 冰岛 1 X1-906","server":"slur.izenny.com","port":32009,"type":"ss","cipher":"chacha20-ietf-poly1305","password":"43c9fc8c-a900-4539-8c43-5da6aaa5a255","udp":true}
   - {"name":"🇺🇸 ss-US-1-922","type":"ss","server":"155.117.87.123","port":10378,"cipher":"2022-blake3-aes-128-gcm","password":"MjAyNjJrNXN6WWtHQVZPeA==:QzVGQzRFRDMtMjVBMC00QQ==","udp":true}
