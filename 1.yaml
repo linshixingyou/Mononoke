@@ -835,6 +835,14 @@ proxies:
   - {"name":"🇰🇷【亚洲】韩国家宽02丨专线【6x】","type":"trojan","server":"pokemon-01.yunjnet.com","port":59099,"password":"93d6ca48-be5e-42ef-9dbd-c6813f82f132","udp":true,"sni":"www.lamer.com.hk","skip-cert-verify":true,"network":"tcp"}
   - {"name":"🇨🇳 台湾 家宽 | 01 0.5倍率-15","type":"tuic","server":"hinet-ddns.baipiao0721-dns78655.eu","port":2096,"uuid":"1136cf06-9d94-4916-bfa8-1fbc35f7e632","password":"1136cf06-9d94-4916-bfa8-1fbc35f7e632","alpn":["h3"],"disable-sni":true,"reduce-rtt":false,"udp-relay-mode":"native","congestion-controller":"cubic","skip-cert-verify":true,"sni":"","version":5}
   - {"name":"🇨🇳 台湾 家宽 | 02 0.5倍率-16","type":"tuic","server":"hinet-ddns.baipiao0721-dns78655.eu","port":2096,"uuid":"1136cf06-9d94-4916-bfa8-1fbc35f7e632","password":"1136cf06-9d94-4916-bfa8-1fbc35f7e632","alpn":["h3"],"disable-sni":true,"reduce-rtt":false,"udp-relay-mode":"native","congestion-controller":"cubic","skip-cert-verify":true,"sni":"","version":5}
+  - {"name":"[Hy2]马来西亚 12-v6-三网优化","server":"gho102.icuvdproduction.org","port":18441,"sni":"d1--ov-gotcha07.bilivideo.com","skip-cert-verify":true,"type":"hysteria2","auth":"609aa734-24e9-4d3c-b534-d57e77994c14","down-speed":"200","up-speed":"50"}
+
+  - {"name":"[Hy2]台湾11","server":"gho101.icuvdproduction.org","port":18441,"sni":"d1--ov-gotcha07.bilivideo.com","skip-cert-verify":true,"type":"hysteria2","auth":"609aa734-24e9-4d3c-b534-d57e77994c14","down-speed":"200","up-speed":"50"}
+  - {"name":"[Hy2]美国三网优化13","server":"gho103.icuvdproduction.org","port":18441,"sni":"d1--ov-gotcha07.bilivideo.com","skip-cert-verify":true,"type":"hysteria2","auth":"609aa734-24e9-4d3c-b534-d57e77994c14","down-speed":"200","up-speed":"50"}
+  - {"name":"[Hy2]日本14-V6-移动联通优化","server":"gho104.icuvdproduction.org","port":18441,"sni":"d1--ov-gotcha07.bilivideo.com","skip-cert-verify":true,"type":"hysteria2","auth":"609aa734-24e9-4d3c-b534-d57e77994c14","down-speed":"200","up-speed":"50"}
+  - {"name":"[Hy2]台湾16","server":"gho106.icuvdproduction.org","port":18441,"sni":"d1--ov-gotcha07.bilivideo.com","skip-cert-verify":true,"type":"hysteria2","auth":"609aa734-24e9-4d3c-b534-d57e77994c14","down-speed":"200","up-speed":"50"}
+  - {"name":"[Hy2]香港18-移动联通优化","server":"gho108.icuvdproduction.org","port":18441,"sni":"d1--ov-gotcha07.bilivideo.com","skip-cert-verify":true,"type":"hysteria2","auth":"609aa734-24e9-4d3c-b534-d57e77994c14","down-speed":"200","up-speed":"50"}
+  - {"name":"[Hy2]香港19-移动联通优化","server":"gho109.icuvdproduction.org","port":18441,"sni":"d1--ov-gotcha07.bilivideo.com","skip-cert-verify":true,"type":"hysteria2","auth":"609aa734-24e9-4d3c-b534-d57e77994c14","down-speed":"200","up-speed":"50"}
 
 
 
