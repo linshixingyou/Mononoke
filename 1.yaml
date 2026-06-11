@@ -277,6 +277,7 @@ rules:
   - RULE-SET,microsoft-cn_domain,DIRECT
   - RULE-SET,douyin_domain,DIRECT
   - RULE-SET,Emby,流量
+  - RULE-SET,EmbyDirect,DIRECT
   - RULE-SET,abema_domain,JP-Media
   - RULE-SET,google_ip,线路
   - RULE-SET,dmm_ip,JP-Media
