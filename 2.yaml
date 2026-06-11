@@ -18,15 +18,15 @@ dns:
 proxy-providers:
   延迟:
     interval: 86400
-    url: https://raw.githubusercontent.com/linshixingyou/Mononoke/localhost/延迟
+    url: https://raw.githubusercontent.com/linshixingyou/Mononoke/localhost/延迟1
     filter: ^(?=.*(.))(?!.*((?i)群|邀请|过滤|返利|循环|循环|安卓|登陆|下面|官网|客服|网站|网址|获取|订阅|流量|到期|机场|下次|版本|官址|备用|过期|已用|联系|失联|邮箱|工单|专线|贩卖|通知|倒卖|防止|国内|地址|频道|无法|说明|使用|提示|特别|访问|支持|教程|关注|更新|作者|加入|(\b(USE|USED|TOTAL|Traffic|Expire|EMAIL|Panel|Channel|Author)\b|(\d{4}-\d{2}-\d{2}|\d+G)))).*$
   高流量:
     interval: 86400
-    url: https://raw.githubusercontent.com/linshixingyou/Mononoke/localhost/流量
+    url: https://raw.githubusercontent.com/linshixingyou/Mononoke/localhost/流量1
     filter: ^(?=.*(.))(?!.*((?i)群|邀请|过滤|返利|循环|循环|安卓|登陆|下面|官网|客服|网站|网址|获取|订阅|流量|到期|机场|下次|版本|官址|备用|过期|已用|联系|失联|邮箱|工单|专线|贩卖|通知|倒卖|防止|国内|地址|频道|无法|说明|使用|提示|特别|访问|支持|教程|关注|更新|作者|加入|(\b(USE|USED|TOTAL|Traffic|Expire|EMAIL|Panel|Channel|Author)\b|(\d{4}-\d{2}-\d{2}|\d+G)))).*$
   纯净家宽:
     interval: 86400
-    url: https://raw.githubusercontent.com/linshixingyou/Mononoke/localhost/家宽
+    url: https://raw.githubusercontent.com/linshixingyou/Mononoke/localhost/家宽1
     filter: ^(?=.*(.))(?!.*((?i)群|邀请|过滤|返利|循环|循环|安卓|登陆|下面|官网|客服|网站|网址|获取|订阅|流量|到期|机场|下次|版本|官址|备用|过期|已用|联系|失联|邮箱|工单|专线|贩卖|通知|倒卖|防止|国内|地址|频道|无法|说明|使用|提示|特别|访问|支持|教程|关注|更新|作者|加入|(\b(USE|USED|TOTAL|Traffic|Expire|EMAIL|Panel|Channel|Author)\b|(\d{4}-\d{2}-\d{2}|\d+G)))).*$
 proxy-groups:
   - icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Rocket.png
@@ -189,7 +189,8 @@ rules:
   - RULE-SET,google_domain,线路
   - RULE-SET,googlefcm_domain,线路
   - RULE-SET,googlefcm_ip,线路
-  - RULE-SET,apple-cn_domain,DIRECT
+  - RULE-SET,apple-cn_domain,DIRECT  
+  - RULE-SET,cn_domain,DIRECT
   - RULE-SET,iplocation-direct_domain,DIRECT
   - RULE-SET,dmca_domain,DIRECT
   - RULE-SET,games-cn_domain,DIRECT
@@ -559,6 +560,11 @@ rule-providers:
     format: text
     interval: 86400
     url: https://raw.githubusercontent.com/linshixingyou/Mononoke/localhost/ipcidr/VPS.list
+  cn_domain:
+    behavior: domain
+    format: text
+    interval: 86400
+    url: https://raw.githubusercontent.com/linshixingyou/Mononoke/localhost/domain/cn.list
 proxies:
   - {"name":"A香港 01","type":"trojan","server":"cave-hk.kunlun04dns.com","port":41501,"password":"0993c0f8-9e29-32b1-810c-65f448c5aa04","sni":"openssl.nodesni.com","skip-cert-verify":true,"network":"tcp"}
   - {"name":"A香港 02","type":"trojan","server":"cave-hk.kunlun04dns.com","port":41502,"password":"0993c0f8-9e29-32b1-810c-65f448c5aa04","sni":"openssl.nodesni.com","skip-cert-verify":true,"network":"tcp"}
