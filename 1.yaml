@@ -321,6 +321,7 @@ rules:
   - RULE-SET,spotify_ip,Media
   - RULE-SET,talkatone_ip,US-Auto
   - GEOIP,CN,DIRECT
+  - RULE-SET,VPS,低延迟
   - MATCH,线路
 rule-providers:
   abema_domain:
