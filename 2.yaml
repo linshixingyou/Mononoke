@@ -1,7 +1,4 @@
 #SUBSCRIBED https://raw.githubusercontent.com/linshixingyou/Mononoke/localhost/2.yaml
-#SUBSCRIBED https://raw.githubusercontent.com/linshixingyou/Mononoke/localhost/2.yaml
-#SUBSCRIBED https://raw.githubusercontent.com/linshixingyou/Mononoke/localhost/2.yaml
-#SUBSCRIBED https://raw.githubusercontent.com/linshixingyou/Mononoke/localhost/2.yaml
 mode: rule
 log-level: info
 # DNS模块
@@ -167,18 +164,34 @@ rules:
   - DOMAIN-SUFFIX,mail.me.com,DIRECT
   - RULE-SET,youtube_domain,流量
   - RULE-SET,youtube_ip,流量
+  - RULE-SET,Emby,流量
   - RULE-SET,apns_ip,低延迟
   - RULE-SET,apns_domain,低延迟
-  - RULE-SET,apple_domain,线路
-  - RULE-SET,apple_ip,线路
+  - RULE-SET,gits_domain,低延迟
   - RULE-SET,socialmedia_domain,低延迟
   - RULE-SET,socialmedia_ip,低延迟
+  - RULE-SET,apple_domain,线路
+  - RULE-SET,apple_ip,线路
   - RULE-SET,ai_domain,Pure
   - RULE-SET,google_domain,线路
   - RULE-SET,googlefcm_domain,线路
   - RULE-SET,googlefcm_ip,线路
-  - RULE-SET,apple-cn_domain,DIRECT  
-  - RULE-SET,cn_domain,DIRECT
+  - RULE-SET,dmm_ip,JP-Media
+  - RULE-SET,dmm_domain,JP-Media
+  - RULE-SET,niconico_domain,JP-Media
+  - RULE-SET,bahamut_domain,TW-FallBack
+  - RULE-SET,bilibili_domain,bilibili
+  - RULE-SET,crypto_domain,Pure
+  - RULE-SET,dazn_domain,Media
+  - RULE-SET,disney_domain,Media
+  - RULE-SET,paypal_domain,Pure
+  - RULE-SET,ecommerce_domain,Pure
+  - RULE-SET,forum_domain,Pure
+  - RULE-SET,ecommerce_ip,Pure
+  - RULE-SET,games_domain,Games
+  - RULE-SET,bilibili_ip,bilibili
+  - RULE-SET,games_ip,Games
+  - RULE-SET,apple-cn_domain,DIRECT
   - RULE-SET,iplocation-direct_domain,DIRECT
   - RULE-SET,dmca_domain,DIRECT
   - RULE-SET,games-cn_domain,DIRECT
@@ -190,42 +203,29 @@ rules:
   - RULE-SET,private_ip,DIRECT
   - RULE-SET,microsoft-cn_domain,DIRECT
   - RULE-SET,douyin_domain,DIRECT
-  - RULE-SET,Emby,流量
+  - RULE-SET,EmbyDirect,DIRECT
   - RULE-SET,abema_domain,JP-Media
   - RULE-SET,google_ip,线路
-  - RULE-SET,dmm_ip,JP-Media
-  - RULE-SET,dmm_domain,JP-Media
-  - RULE-SET,niconico_domain,JP-Media
-  - RULE-SET,bahamut_domain,TW-FallBack
-  - RULE-SET,bilibili_domain,bilibili
-  - RULE-SET,crypto_domain,Pure
-  - RULE-SET,dazn_domain,Media
-  - RULE-SET,disney_domain,Media
-  - RULE-SET,ecommerce_domain,Pure
-  - RULE-SET,forum_domain,Pure
-  - RULE-SET,games_domain,Games
-  - RULE-SET,gits_domain,低延迟
+  - RULE-SET,adrules_domain,REJECT
+  - RULE-SET,adrules_ip,REJECT
   - RULE-SET,hbo_domain,Media
   - RULE-SET,httpdns_domain,REJECT
   - RULE-SET,hulu_domain,Media
   - RULE-SET,microsoft_domain,低延迟
   - RULE-SET,mytvsuper_domain,Media
   - RULE-SET,netflix_domain,Media
-  - RULE-SET,paypal_domain,Pure
   - RULE-SET,primevideo_domain,Media
   - RULE-SET,cdn_domain,流量
   - RULE-SET,spotify_domain,Media
   - RULE-SET,talkatone_domain,US-Auto
   - RULE-SET,tiktok_domain,TikTok
   - RULE-SET,twitch_domain,Media
-  - RULE-SET,bilibili_ip,bilibili
-  - RULE-SET,games_ip,Games
-  - RULE-SET,ecommerce_ip,Pure
   - RULE-SET,httpdns_ip,REJECT
   - RULE-SET,netflix_ip,Media
   - RULE-SET,twitch_ip,Media
   - RULE-SET,spotify_ip,Media
   - RULE-SET,talkatone_ip,US-Auto
+  - GEOIP,CN,DIRECT
   - MATCH,线路
 rule-providers:
   abema_domain:
@@ -548,8 +548,3 @@ rule-providers:
     format: text
     interval: 86400
     url: https://raw.githubusercontent.com/linshixingyou/Mononoke/localhost/ipcidr/VPS.list
-  cn_domain:
-    behavior: domain
-    format: text
-    interval: 86400
-    url: https://raw.githubusercontent.com/linshixingyou/Mononoke/localhost/domain/cn.list

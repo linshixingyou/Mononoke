@@ -320,7 +320,6 @@ rules:
   - RULE-SET,twitch_ip,Media
   - RULE-SET,spotify_ip,Media
   - RULE-SET,talkatone_ip,US-Auto
-  - RULE-SET,VPS,低延迟
   - GEOIP,CN,DIRECT
   - MATCH,线路
 rule-providers:
