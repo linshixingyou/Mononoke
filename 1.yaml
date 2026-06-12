@@ -55,11 +55,27 @@ proxy-providers:
 proxy-groups:
   - icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Rocket.png
     name: 低延迟
+    type: select
+    proxies:
+      - 0优选延迟
+    use:
+      - 延迟
+  - icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Rocket.png
+    name: 0优选延迟
+    hidden: true
     type: url-test
     use:
       - 延迟
   - name: 流量
+    type: select
+    use:
+      - 高流量
+    proxies:
+      - 0优选流量
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/YouTube.png
+  - name: 0优选流量
     type: fallback
+    hidden: true
     use:
       - 高流量
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/YouTube.png
@@ -67,13 +83,23 @@ proxy-groups:
     type: select
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Final.png
     proxies:
-      - 家宽-Auto
-      - 家宽
-  - name: 家宽-Auto
+      - 0优选家宽
+      - 0全部家宽手选
+    use:
+      - 纯净家宽
+  - name: 0优选家宽
     type: url-test
+    hidden: true
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Final.png
     use:
       - 纯净家宽
+  - name: 0全部家宽手选
+    type: select
+    include-all: true
+    filter: "Home|home|原生|住宅|家宽|ISP｜gemini|AI|Gemini|GPT|Chat|纯净"
+    interval: 300
+    lazy: true
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Unlock.png
   - name: 线路
     proxies:
       - 低延迟
@@ -102,21 +128,6 @@ proxy-groups:
     interval: 300
     lazy: true
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/BGP.png
-  - name: BGP-Auto
-    type: url-test
-    include-all: true
-    filter: "优|三网|高速|专线|BGP|IEPL|Iepl|iepl|IPLC|Iplc|iplc"
-    interval: 300
-    hidden: true
-    lazy: true
-    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/BGP.png
-  - name: 移动-Auto
-    type: url-test
-    include-all: true
-    filter: "移动|CM|移优"
-    interval: 300
-    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/BGP.png
-    hidden: true
   - name: 联通-Auto
     type: url-test
     include-all: true
@@ -237,13 +248,6 @@ proxy-groups:
     interval: 300
     lazy: true
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Streaming.png
-  - name: 家宽
-    type: select
-    include-all: true
-    filter: "Home|home|原生|住宅|家宽|ISP｜gemini|AI|Gemini|GPT|Chat|纯净"
-    interval: 300
-    lazy: true
-    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Unlock.png
   - name: VPS
     type: select
     use:
