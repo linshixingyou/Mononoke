@@ -320,7 +320,7 @@ rules:
   - RULE-SET,talkatone_ip,US-Auto
   - RULE-SET,adrules_domain,REJECT
   - RULE-SET,adrules_ip,REJECT
-  - RULE-SET,cn_domain,DIRECT
+  - GEOIP,CN,DIRECT
   - RULE-SET,VPS,低延迟
   - MATCH,线路
 rule-providers:
