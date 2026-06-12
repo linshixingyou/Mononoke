@@ -58,6 +58,9 @@ proxy-groups:
     type: select
     proxies:
       - 0优选延迟
+      - 0BGP
+      - 0移动
+      - 0HK-Auto
     use:
       - 延迟
   - icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Rocket.png
@@ -113,22 +116,22 @@ proxy-groups:
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Media.png
     proxies:
       - 流媒体
-      - HK-Auto
+      - 0HK-Auto
       - TW-Auto
       - SG-Auto
       - US-Auto
-  - name: 移动
+  - name: 0移动
     type: select
     include-all: true
     filter: "移动|CM|移优"
-  - name: BGP
+  - name: 0BGP
     type: select
     include-all: true
     filter: "优|三网|高速|专线|BGP|IEPL|Iepl|iepl|IPLC|Iplc|iplc"
     interval: 300
     lazy: true
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/BGP.png
-  - name: 联通-Auto
+  - name: 0联通-Auto
     type: url-test
     include-all: true
     filter: "联通|CU|联优"
@@ -136,7 +139,7 @@ proxy-groups:
     lazy: true
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/BGP.png
     hidden: true
-  - name: 电信-Auto
+  - name: 0电信-Auto
     type: url-test
     include-all: true
     filter: "电信|CT|CN2"
@@ -144,9 +147,8 @@ proxy-groups:
     lazy: true
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/BGP.png
     hidden: true
-  - name: HK-Auto
+  - name: 0HK-Auto
     type: url-test
-    hidden: true
     include-all: true
     filter: "^(?!.*(?i)GAME)(?=.*(港|🇭🇰|(?i)HK|Hong)).*$"
     interval: 300
@@ -231,7 +233,7 @@ proxy-groups:
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Game.png
     proxies:
       - 游戏
-      - BGP
+      - 0BGP
     hidden: true
   - name: TikTok
     type: select
