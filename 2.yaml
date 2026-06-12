@@ -1,6 +1,7 @@
 #SUBSCRIBED https://raw.githubusercontent.com/linshixingyou/Mononoke/localhost/2.yaml
 #SUBSCRIBED https://raw.githubusercontent.com/linshixingyou/Mononoke/localhost/2.yaml
 #SUBSCRIBED https://raw.githubusercontent.com/linshixingyou/Mononoke/localhost/2.yaml
+#SUBSCRIBED https://raw.githubusercontent.com/linshixingyou/Mononoke/localhost/2.yaml
 mode: rule
 log-level: info
 # DNS模块
