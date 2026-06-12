@@ -79,6 +79,7 @@ proxy-groups:
       - 低延迟
       - 流量
       - Pure
+      - 定位
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Bypass.png
     type: select
   - name: Media
@@ -167,6 +168,12 @@ proxy-groups:
     filter: "美|🇺🇲|US|(?i)States|American"
     interval: 300
     lazy: true
+  - name: 定位
+    type: select
+    include-all: true
+    lazy: true
+    filter: ^(?=.*(.))(?!.*((?i)群|邀请|返利|美国|🇭🇰|🇭🇰|日本|新加坡|订阅|流量|到期|机场|下次|版本|官址|备用|过期|已用|联系|失联|邮箱|工单|贩卖|通知|倒卖|防止|国内|地址|频道|无法|说明|使用|提示|特别|访问|支持|教程|关注|更新|作者|加入|(\b(USE|USED|TOTAL|Traffic|Expire|EMAIL|Panel|Channel|Author)\b|(\d{4}-\d{2}-\d{2}|\d+G)))).*$
+    interval: 300
   - name: HK-LoadBalance
     type: load-balance
     hidden: true
@@ -314,8 +321,6 @@ rules:
   - RULE-SET,adrules_domain,REJECT
   - RULE-SET,adrules_ip,REJECT
   - RULE-SET,cn_domain,DIRECT
-  - RULE-SET,proxy_domain,流量
-  - RULE-SET,cn_ip,DIRECT
   - RULE-SET,VPS,低延迟
   - MATCH,线路
 rule-providers:
@@ -499,11 +504,6 @@ rule-providers:
     format: text
     interval: 86400
     url: https://raw.githubusercontent.com/linshixingyou/Mononoke/localhost/domain/cn.list
-  proxy_domain:
-    behavior: domain
-    format: text
-    interval: 86400
-    url: https://raw.githubusercontent.com/linshixingyou/Mononoke/localhost/domain/proxy.list
   socialmedia-cn_domain:
     behavior: domain
     format: text
@@ -559,11 +559,6 @@ rule-providers:
     format: text
     interval: 86400
     url: https://raw.githubusercontent.com/linshixingyou/Mononoke/localhost/ipcidr/bilibili.list
-  cn_ip:
-    behavior: ipcidr
-    format: text
-    interval: 86400
-    url: https://raw.githubusercontent.com/linshixingyou/Mononoke/localhost/ipcidr/cn.list
   dmca_ip:
     behavior: ipcidr
     format: text
