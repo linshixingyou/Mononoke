@@ -296,7 +296,7 @@ rules:
   - RULE-SET,ecommerce_domain,Pure
   - RULE-SET,forum_domain,Pure
   - RULE-SET,games_domain,Games
-  - RULE-SET,gits_domain,家宽-Auto
+  - RULE-SET,gits_domain,低延迟
   - RULE-SET,hbo_domain,Media
   - RULE-SET,httpdns_domain,REJECT
   - RULE-SET,hulu_domain,Media
