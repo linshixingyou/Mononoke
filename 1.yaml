@@ -55,11 +55,11 @@ proxy-providers:
 proxy-groups:
   - icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Rocket.png
     name: 低延迟
-    type: select
+    type: url-test
     use:
       - 延迟
   - name: 流量
-    type: url-test
+    type: fallback
     use:
       - 高流量
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/YouTube.png
@@ -259,16 +259,33 @@ rules:
   - DOMAIN-SUFFIX,mail.me.com,DIRECT
   - RULE-SET,youtube_domain,流量
   - RULE-SET,youtube_ip,流量
+  - RULE-SET,Emby,流量
   - RULE-SET,apns_ip,低延迟
   - RULE-SET,apns_domain,低延迟
-  - RULE-SET,apple_domain,线路
-  - RULE-SET,apple_ip,线路
+  - RULE-SET,gits_domain,低延迟
   - RULE-SET,socialmedia_domain,低延迟
   - RULE-SET,socialmedia_ip,低延迟
+  - RULE-SET,apple_domain,线路
+  - RULE-SET,apple_ip,线路
   - RULE-SET,ai_domain,Pure
   - RULE-SET,google_domain,线路
   - RULE-SET,googlefcm_domain,线路
   - RULE-SET,googlefcm_ip,线路
+  - RULE-SET,dmm_ip,JP-Media
+  - RULE-SET,dmm_domain,JP-Media
+  - RULE-SET,niconico_domain,JP-Media
+  - RULE-SET,bahamut_domain,TW-FallBack
+  - RULE-SET,bilibili_domain,bilibili
+  - RULE-SET,crypto_domain,Pure
+  - RULE-SET,dazn_domain,Media
+  - RULE-SET,disney_domain,Media
+  - RULE-SET,paypal_domain,Pure
+  - RULE-SET,ecommerce_domain,Pure
+  - RULE-SET,forum_domain,Pure
+  - RULE-SET,ecommerce_ip,Pure
+  - RULE-SET,games_domain,Games
+  - RULE-SET,bilibili_ip,bilibili
+  - RULE-SET,games_ip,Games
   - RULE-SET,apple-cn_domain,DIRECT
   - RULE-SET,iplocation-direct_domain,DIRECT
   - RULE-SET,dmca_domain,DIRECT
@@ -281,46 +298,30 @@ rules:
   - RULE-SET,private_ip,DIRECT
   - RULE-SET,microsoft-cn_domain,DIRECT
   - RULE-SET,douyin_domain,DIRECT
-  - RULE-SET,Emby,流量
   - RULE-SET,EmbyDirect,DIRECT
   - RULE-SET,abema_domain,JP-Media
   - RULE-SET,google_ip,线路
-  - RULE-SET,dmm_ip,JP-Media
-  - RULE-SET,dmm_domain,JP-Media
-  - RULE-SET,niconico_domain,JP-Media
-  - RULE-SET,bahamut_domain,TW-FallBack
-  - RULE-SET,bilibili_domain,bilibili
-  - RULE-SET,crypto_domain,Pure
-  - RULE-SET,dazn_domain,Media
-  - RULE-SET,disney_domain,Media
-  - RULE-SET,ecommerce_domain,Pure
-  - RULE-SET,forum_domain,Pure
-  - RULE-SET,games_domain,Games
-  - RULE-SET,gits_domain,低延迟
+  - RULE-SET,adrules_domain,REJECT
+  - RULE-SET,adrules_ip,REJECT
   - RULE-SET,hbo_domain,Media
   - RULE-SET,httpdns_domain,REJECT
   - RULE-SET,hulu_domain,Media
   - RULE-SET,microsoft_domain,低延迟
   - RULE-SET,mytvsuper_domain,Media
   - RULE-SET,netflix_domain,Media
-  - RULE-SET,paypal_domain,Pure
   - RULE-SET,primevideo_domain,Media
   - RULE-SET,cdn_domain,流量
   - RULE-SET,spotify_domain,Media
   - RULE-SET,talkatone_domain,US-Auto
   - RULE-SET,tiktok_domain,TikTok
   - RULE-SET,twitch_domain,Media
-  - RULE-SET,bilibili_ip,bilibili
-  - RULE-SET,games_ip,Games
-  - RULE-SET,ecommerce_ip,Pure
   - RULE-SET,httpdns_ip,REJECT
   - RULE-SET,netflix_ip,Media
   - RULE-SET,twitch_ip,Media
   - RULE-SET,spotify_ip,Media
   - RULE-SET,talkatone_ip,US-Auto
-  - RULE-SET,adrules_domain,REJECT
-  - RULE-SET,adrules_ip,REJECT
   - RULE-SET,VPS,低延迟
+  - GEOIP,CN,DIRECT
   - MATCH,线路
 rule-providers:
   abema_domain:
@@ -651,97 +652,6 @@ rule-providers:
 proxies:
   - {"name": "🇯🇵日本高速01-0.1倍", "type": "vless", "server": "69.84.182.18", "port": 443, "uuid": "537aaf7d-7120-492e-89f9-cc828b1f4e0a", "udp": true, "tls": true, "skip-cert-verify": false, "client-fingerprint": "ios", "network": "ws", "ws-opts": {"path": "/pq/jp1", "headers": {"Host": "jpa1.xn--ghqu5fm27b67w.com"}}, "servername": "jpa1.xn--ghqu5fm27b67w.com"}
   - {"name": "A香港 01", "type": "trojan", "server": "cave-hk.kunlun04dns.com", "port": 41501, "password": "0993c0f8-9e29-32b1-810c-65f448c5aa04", "sni": "openssl.nodesni.com", "skip-cert-verify": true, "network": "tcp"}
-  - {"name": "A香港 02", "type": "trojan", "server": "cave-hk.kunlun04dns.com", "port": 41502, "password": "0993c0f8-9e29-32b1-810c-65f448c5aa04", "sni": "openssl.nodesni.com", "skip-cert-verify": true, "network": "tcp"}
-  - {"name": "A香港 03", "type": "trojan", "server": "cave-hk.kunlun04dns.com", "port": 41503, "password": "0993c0f8-9e29-32b1-810c-65f448c5aa04", "sni": "openssl.nodesni.com", "skip-cert-verify": true, "network": "tcp"}
-  - {"name": "A香港 04", "type": "trojan", "server": "cave-hk.kunlun04dns.com", "port": 41504, "password": "0993c0f8-9e29-32b1-810c-65f448c5aa04", "sni": "openssl.nodesni.com", "skip-cert-verify": true, "network": "tcp"}
-  - {"name": "A香港 05", "type": "trojan", "server": "cave-hk.kunlun04dns.com", "port": 41505, "password": "0993c0f8-9e29-32b1-810c-65f448c5aa04", "sni": "openssl.nodesni.com", "skip-cert-verify": true, "network": "tcp"}
-  - {"name": "A香港 06", "type": "trojan", "server": "cave-hk.kunlun04dns.com", "port": 41506, "password": "0993c0f8-9e29-32b1-810c-65f448c5aa04", "sni": "openssl.nodesni.com", "skip-cert-verify": true, "network": "tcp"}
-  - {"name": "A香港 07", "type": "trojan", "server": "cave-hk.kunlun04dns.com", "port": 41507, "password": "0993c0f8-9e29-32b1-810c-65f448c5aa04", "sni": "openssl.nodesni.com", "skip-cert-verify": true, "network": "tcp"}
-  - {"name": "A香港 08", "type": "trojan", "server": "cave-hk.kunlun04dns.com", "port": 41508, "password": "0993c0f8-9e29-32b1-810c-65f448c5aa04", "sni": "openssl.nodesni.com", "skip-cert-verify": true, "network": "tcp"}
-  - {"name": "A香港 09", "type": "trojan", "server": "cave-hk.kunlun04dns.com", "port": 41509, "password": "0993c0f8-9e29-32b1-810c-65f448c5aa04", "sni": "openssl.nodesni.com", "skip-cert-verify": true, "network": "tcp"}
-  - {"name": "A香港 10", "type": "trojan", "server": "cave-hk.kunlun04dns.com", "port": 41510, "password": "0993c0f8-9e29-32b1-810c-65f448c5aa04", "sni": "openssl.nodesni.com", "skip-cert-verify": true, "network": "tcp"}
-  - {name: HK-快乐裸奔, type: socks5, server: 34.150.3.125, port: 10086, username: 08ce88dc-2e7c-45c8-93d7-23b5545c9f2d, password: 08ce88dc-2e7c-45c8-93d7-23b5545c9f2d, udp: true}
-  - {name: '🇭🇰 香港-1 gov', type: vless, server: 162.245.221.73, port: 28831, uuid: 08ce88dc-2e7c-45c8-93d7-23b5545c9f2d, udp: true, client-fingerprint: chrome, tls: true, skip-cert-verify: true, servername: www.gov.cn, sni: www.gov.cn, flow: null, reality-opts: {public-key: eavlaukwH1-W-v59JZlRwdHp0v83LaKNu2c_cISUZ0c, short-id: '868451e3'}, network: tcp}
-  - {name: '🇭🇰 香港-2 gov', type: vless, server: z2nwags.yujie.pics, port: 8964, uuid: 08ce88dc-2e7c-45c8-93d7-23b5545c9f2d, udp: true, client-fingerprint: chrome, tls: true, skip-cert-verify: true, servername: www.gov.cn, sni: www.gov.cn, flow: null, reality-opts: {public-key: V0LLa3oUU4GpDAoZZpy0ACbs_Ry0-AsABPJa4xCX21M, short-id: b6}, network: tcp}
-  - {name: '🇭🇰 香港-2 gov 深圳中转', type: vless, server: 8.163.28.112, port: 12131, uuid: 08ce88dc-2e7c-45c8-93d7-23b5545c9f2d, udp: true, client-fingerprint: chrome, tls: true, skip-cert-verify: true, servername: www.gov.cn, sni: www.gov.cn, flow: null, reality-opts: {public-key: V0LLa3oUU4GpDAoZZpy0ACbs_Ry0-AsABPJa4xCX21M, short-id: b6}, network: tcp}
-  - {name: '🇭🇰 香港-2 gov 灵', type: vless, server: 82.156.151.208, port: 36726, uuid: 08ce88dc-2e7c-45c8-93d7-23b5545c9f2d, udp: true, client-fingerprint: chrome, tls: true, skip-cert-verify: true, servername: www.gov.cn, sni: www.gov.cn, flow: null, reality-opts: {public-key: V0LLa3oUU4GpDAoZZpy0ACbs_Ry0-AsABPJa4xCX21M, short-id: b6}, network: tcp}
-  - {name: '🇭🇰 香港-3 gov', type: vless, server: 216.236.6.167, port: 8964, uuid: 08ce88dc-2e7c-45c8-93d7-23b5545c9f2d, udp: true, client-fingerprint: chrome, tls: true, skip-cert-verify: true, servername: www.gov.cn, sni: www.gov.cn, flow: null, reality-opts: {public-key: V0LLa3oUU4GpDAoZZpy0ACbs_Ry0-AsABPJa4xCX21M, short-id: b6}, network: tcp}
-  - {name: '🇭🇰 香港-3 gov 灵', type: vless, server: 23.147.172.7, port: 42400, uuid: 08ce88dc-2e7c-45c8-93d7-23b5545c9f2d, udp: true, client-fingerprint: chrome, tls: true, skip-cert-verify: true, servername: www.gov.cn, sni: www.gov.cn, flow: null, reality-opts: {public-key: V0LLa3oUU4GpDAoZZpy0ACbs_Ry0-AsABPJa4xCX21M, short-id: b6}, network: tcp}
-  - {name: '🇯🇵 日本-1 gov', type: vless, server: 141.147.155.138, port: 8964, uuid: 08ce88dc-2e7c-45c8-93d7-23b5545c9f2d, udp: true, client-fingerprint: chrome, tls: true, skip-cert-verify: true, servername: www.gov.cn, sni: www.gov.cn, flow: null, reality-opts: {public-key: eavlaukwH1-W-v59JZlRwdHp0v83LaKNu2c_cISUZ0c, short-id: '868451e3'}, network: tcp}
-  - {name: '🇯🇵 日本-2 gov', type: vless, server: 161.33.13.76, port: 8964, uuid: 08ce88dc-2e7c-45c8-93d7-23b5545c9f2d, udp: true, client-fingerprint: chrome, tls: true, skip-cert-verify: true, servername: www.gov.cn, sni: www.gov.cn, flow: null, reality-opts: {public-key: eavlaukwH1-W-v59JZlRwdHp0v83LaKNu2c_cISUZ0c, short-id: '868451e3'}, network: tcp}
-  - {name: '🇸🇬 新加坡-1 gov', type: vless, server: 140.245.62.184, port: 8964, uuid: 08ce88dc-2e7c-45c8-93d7-23b5545c9f2d, udp: true, client-fingerprint: chrome, tls: true, skip-cert-verify: true, servername: www.gov.cn, sni: www.gov.cn, flow: null, reality-opts: {public-key: eavlaukwH1-W-v59JZlRwdHp0v83LaKNu2c_cISUZ0c, short-id: '868451e3'}, network: tcp}
-  - {name: '🇸🇬 新加坡-2 gov', type: vless, server: 45.38.210.187, port: 18964, uuid: 08ce88dc-2e7c-45c8-93d7-23b5545c9f2d, udp: true, client-fingerprint: chrome, tls: true, skip-cert-verify: true, servername: www.gov.cn, sni: www.gov.cn, flow: null, reality-opts: {public-key: V0LLa3oUU4GpDAoZZpy0ACbs_Ry0-AsABPJa4xCX21M, short-id: 998d2f3a63}, network: tcp}
-  - {name: '🇸🇬 新加坡-2 gov 灵', type: vless, server: 38.246.73.238, port: 54324, uuid: 08ce88dc-2e7c-45c8-93d7-23b5545c9f2d, udp: true, client-fingerprint: chrome, tls: true, skip-cert-verify: true, servername: www.gov.cn, sni: www.gov.cn, flow: null, reality-opts: {public-key: V0LLa3oUU4GpDAoZZpy0ACbs_Ry0-AsABPJa4xCX21M, short-id: 998d2f3a63}, network: tcp}
-  - {name: '🇨🇳 中国台湾-1 gov', type: vless, server: z2nwdhc.yujie.pics, port: 8964, uuid: 08ce88dc-2e7c-45c8-93d7-23b5545c9f2d, udp: true, client-fingerprint: chrome, tls: true, skip-cert-verify: true, servername: www.gov.cn, sni: www.gov.cn, flow: null, reality-opts: {public-key: eavlaukwH1-W-v59JZlRwdHp0v83LaKNu2c_cISUZ0c, short-id: '868451e3'}, network: tcp}
-  - {name: '🇺🇸 美国-1 gov', type: vless, server: 107.175.234.9, port: 8964, uuid: 08ce88dc-2e7c-45c8-93d7-23b5545c9f2d, udp: true, client-fingerprint: chrome, tls: true, skip-cert-verify: true, servername: www.gov.cn, sni: www.gov.cn, flow: null, reality-opts: {public-key: V0LLa3oUU4GpDAoZZpy0ACbs_Ry0-AsABPJa4xCX21M, short-id: 998d2f3a63}, network: tcp}
-  - {name: '🇺🇸 美国-1 gov 灵', type: vless, server: 154.44.9.152, port: 10003, uuid: 08ce88dc-2e7c-45c8-93d7-23b5545c9f2d, udp: true, client-fingerprint: chrome, tls: true, skip-cert-verify: true, servername: www.gov.cn, sni: www.gov.cn, flow: null, reality-opts: {public-key: V0LLa3oUU4GpDAoZZpy0ACbs_Ry0-AsABPJa4xCX21M, short-id: 998d2f3a63}, network: tcp}
-  - {name: '🇺🇸 美国-3 gov', type: vless, server: 107.148.225.77, port: 8964, uuid: 08ce88dc-2e7c-45c8-93d7-23b5545c9f2d, udp: true, client-fingerprint: chrome, tls: true, skip-cert-verify: true, servername: www.gov.cn, sni: www.gov.cn, flow: null, reality-opts: {public-key: eavlaukwH1-W-v59JZlRwdHp0v83LaKNu2c_cISUZ0c, short-id: '868451e3'}, network: tcp}
-  - {name: '🇨🇭 瑞士-1 gov', type: vless, server: 104.244.75.106, port: 8964, uuid: 08ce88dc-2e7c-45c8-93d7-23b5545c9f2d, udp: true, client-fingerprint: chrome, tls: true, skip-cert-verify: true, servername: www.gov.cn, sni: www.gov.cn, flow: null, reality-opts: {public-key: V0LLa3oUU4GpDAoZZpy0ACbs_Ry0-AsABPJa4xCX21M, short-id: 998d2f3a63}, network: tcp}
-  - {"name": "🇭🇰Gomami|Turin >> Dmit-HK", "type": "trojan", "server": "gomahk-turin.itkeba.online", "port": 13129, "password": "7635950f-fd3e-4ee1-a906-a741762a474e", "udp": true, "skip-cert-verify": true, "network": "tcp", "sni": "gomahk-turin.itkeba.online"}
-  - {"name": "🇭🇰Gomami|Peak >> Dmit-HK", "type": "trojan", "server": "gomahk-peak.itkeba.online", "port": 17586, "password": "7635950f-fd3e-4ee1-a906-a741762a474e", "udp": true, "skip-cert-verify": true, "network": "tcp", "sni": "gomahk-peak.itkeba.online"}
-  - {"name": "🇭🇰Sharon|Inf >> Dmit-HK", "type": "trojan", "server": "sharoninf-hk.itkeba.online", "port": 36129, "password": "7635950f-fd3e-4ee1-a906-a741762a474e", "udp": true, "skip-cert-verify": true, "network": "tcp", "sni": "sharoninf-hk.itkeba.online"}
-  - {"name": "🇭🇰Sharon|Std >> Dmit-HK", "type": "trojan", "server": "sharonstd-hk.itkeba.online", "port": 54609, "password": "7635950f-fd3e-4ee1-a906-a741762a474e", "udp": true, "skip-cert-verify": true, "network": "tcp", "sni": "sharonstd-hk.itkeba.online"}
-  - {"name": "🇭🇰Gomami|Turin >> FX-HK", "type": "trojan", "server": "gomahk-turin.itkeba.online", "port": 38143, "password": "7635950f-fd3e-4ee1-a906-a741762a474e", "udp": true, "skip-cert-verify": true, "network": "tcp", "sni": "gomahk-turin.itkeba.online"}
-  - {"name": "🇭🇰Gomami|Peak >> FX-HK", "type": "trojan", "server": "gomahk-peak.itkeba.online", "port": 59994, "password": "7635950f-fd3e-4ee1-a906-a741762a474e", "udp": true, "skip-cert-verify": true, "network": "tcp", "sni": "gomahk-peak.itkeba.online"}
-  - {"name": "🇭🇰Sharon|Inf >> FX-HK", "type": "trojan", "server": "sharoninf-hk.itkeba.online", "port": 56858, "password": "7635950f-fd3e-4ee1-a906-a741762a474e", "udp": true, "skip-cert-verify": true, "network": "tcp", "sni": "sharoninf-hk.itkeba.online"}
-  - {"name": "🇭🇰Sharon|Std >> FX-HK", "type": "trojan", "server": "sharonstd-hk.itkeba.online", "port": 14798, "password": "7635950f-fd3e-4ee1-a906-a741762a474e", "udp": true, "skip-cert-verify": true, "network": "tcp", "sni": "sharonstd-hk.itkeba.online"}
-  - {"name": "🇭🇰Gomami|Turin >> RFC-HK", "type": "trojan", "server": "gomahk-turin.itkeba.online", "port": 2048, "password": "7635950f-fd3e-4ee1-a906-a741762a474e", "udp": true, "skip-cert-verify": true, "network": "tcp", "sni": "gomahk-turin.itkeba.online"}
-  - {"name": "🇭🇰Gomami|Peak >> RFC-HK", "type": "trojan", "server": "gomahk-peak.itkeba.online", "port": 52104, "password": "7635950f-fd3e-4ee1-a906-a741762a474e", "udp": true, "skip-cert-verify": true, "network": "tcp", "sni": "gomahk-peak.itkeba.online"}
-  - {"name": "🇭🇰Sharon|Inf >> RFC-HK", "type": "trojan", "server": "sharoninf-hk.itkeba.online", "port": 65344, "password": "7635950f-fd3e-4ee1-a906-a741762a474e", "udp": true, "skip-cert-verify": true, "network": "tcp", "sni": "sharoninf-hk.itkeba.online"}
-  - {"name": "🇭🇰Sharon|Std >> RFC-HK", "type": "trojan", "server": "sharonstd-hk.itkeba.online", "port": 40409, "password": "7635950f-fd3e-4ee1-a906-a741762a474e", "udp": true, "skip-cert-verify": true, "network": "tcp", "sni": "sharonstd-hk.itkeba.online"}
-  - {"name": "🇭🇰Gomami|Turin >> Bage-HKS", "type": "trojan", "server": "gomahk-turin.itkeba.online", "port": 56067, "password": "7635950f-fd3e-4ee1-a906-a741762a474e", "udp": true, "skip-cert-verify": true, "network": "tcp", "sni": "gomahk-turin.itkeba.online"}
-  - {"name": "🇭🇰Gomami|Peak >> Bage-HKS", "type": "trojan", "server": "gomahk-peak.itkeba.online", "port": 37853, "password": "7635950f-fd3e-4ee1-a906-a741762a474e", "udp": true, "skip-cert-verify": true, "network": "tcp", "sni": "gomahk-peak.itkeba.online"}
-  - {"name": "🇭🇰Gomami|Turin >> Bage-HK", "type": "trojan", "server": "gomahk-turin.itkeba.online", "port": 20989, "password": "7635950f-fd3e-4ee1-a906-a741762a474e", "udp": true, "skip-cert-verify": true, "network": "tcp", "sni": "gomahk-turin.itkeba.online"}
-  - {"name": "🇭🇰Gomami|Peak >> Bage-HK", "type": "trojan", "server": "gomahk-peak.itkeba.online", "port": 9525, "password": "7635950f-fd3e-4ee1-a906-a741762a474e", "udp": true, "skip-cert-verify": true, "network": "tcp", "sni": "gomahk-peak.itkeba.online"}
-  - {"name": "🇭🇰Gomami-HK", "type": "trojan", "server": "gomahk-turin.itkeba.online", "port": 23313, "password": "7635950f-fd3e-4ee1-a906-a741762a474e", "udp": true, "skip-cert-verify": true, "network": "tcp", "sni": "gomahk-turin.itkeba.online"}
-  - {"name": "🇯🇵Gomami|Pluse >>DMIT-JP", "type": "trojan", "server": "gomajp-pluse.itkeba.online", "port": 33147, "password": "7635950f-fd3e-4ee1-a906-a741762a474e", "udp": true, "skip-cert-verify": true, "network": "tcp", "sni": "gomajp-pluse.itkeba.online"}
-  - {"name": "🇯🇵Gomami|Pluse >> FX-JP", "type": "trojan", "server": "gomajp-pluse.itkeba.online", "port": 5163, "password": "7635950f-fd3e-4ee1-a906-a741762a474e", "udp": true, "skip-cert-verify": true, "network": "tcp", "sni": "gomajp-pluse.itkeba.online"}
-  - {"name": "🇯🇵Gomami|Pluse >> Bage-JP", "type": "trojan", "server": "gomajp-pluse.itkeba.online", "port": 10608, "password": "7635950f-fd3e-4ee1-a906-a741762a474e", "udp": true, "skip-cert-verify": true, "network": "tcp", "sni": "gomajp-pluse.itkeba.online"}
-  - {"name": "🇸🇬Gomami|Peak >> 100TB-SG", "type": "trojan", "server": "gomahk-peak.itkeba.online", "port": 9995, "password": "7635950f-fd3e-4ee1-a906-a741762a474e", "udp": true, "skip-cert-verify": true, "network": "tcp", "sni": "gomahk-peak.itkeba.online"}
-  - {"name": "🇸🇬Gomami|Turin >> 100TB-SG", "type": "trojan", "server": "gomahk-turin.itkeba.online", "port": 42206, "password": "7635950f-fd3e-4ee1-a906-a741762a474e", "udp": true, "skip-cert-verify": true, "network": "tcp", "sni": "gomahk-turin.itkeba.online"}
-  - {"name": "🇸🇬Gomami|Turin >> Bage-SGS", "type": "trojan", "server": "gomahk-turin.itkeba.online", "port": 47762, "password": "7635950f-fd3e-4ee1-a906-a741762a474e", "udp": true, "skip-cert-verify": true, "network": "tcp", "sni": "gomahk-turin.itkeba.online"}
-  - {"name": "🇸🇬Gomami|Peak >> Bage-SGS", "type": "trojan", "server": "gomahk-peak.itkeba.online", "port": 15885, "password": "7635950f-fd3e-4ee1-a906-a741762a474e", "udp": true, "skip-cert-verify": true, "network": "tcp", "sni": "gomahk-peak.itkeba.online"}
-  - {"name": "🇸🇬Gomami|Peak >> RFC-SG", "type": "trojan", "server": "gomahk-peak.itkeba.online", "port": 49118, "password": "7635950f-fd3e-4ee1-a906-a741762a474e", "udp": true, "skip-cert-verify": true, "network": "tcp", "sni": "gomahk-peak.itkeba.online"}
-  - {"name": "🇸🇬Gomami|Turin >> RFC-SG", "type": "trojan", "server": "gomahk-turin.itkeba.online", "port": 7453, "password": "7635950f-fd3e-4ee1-a906-a741762a474e", "udp": true, "skip-cert-verify": true, "network": "tcp", "sni": "gomahk-turin.itkeba.online"}
-  - {"name": "🇨🇳Gomami|Turin >> BestVM-TW", "type": "trojan", "server": "gomahk-turin.itkeba.online", "port": 46519, "password": "7635950f-fd3e-4ee1-a906-a741762a474e", "udp": true, "skip-cert-verify": true, "network": "tcp", "sni": "gomahk-turin.itkeba.online"}
-  - {"name": "🇨🇳Gomami|Peak >> BestVM-TW", "type": "trojan", "server": "gomahk-peak.itkeba.online", "port": 45526, "password": "7635950f-fd3e-4ee1-a906-a741762a474e", "udp": true, "skip-cert-verify": true, "network": "tcp", "sni": "gomahk-peak.itkeba.online"}
-  - {"name": "🇨🇳Sharon|Std-TW", "type": "trojan", "server": "sharonstd-tw.itkeba.online", "port": 13211, "password": "7635950f-fd3e-4ee1-a906-a741762a474e", "udp": true, "skip-cert-verify": true, "network": "tcp", "sni": "sharonstd-tw.itkeba.online"}
-  - {"name": "🇰🇷Gomami|Turin >> ISIF-Kr", "type": "trojan", "server": "gomahk-turin.itkeba.online", "port": 24299, "password": "7635950f-fd3e-4ee1-a906-a741762a474e", "udp": true, "skip-cert-verify": true, "network": "tcp", "sni": "gomahk-turin.itkeba.online"}
-  - {"name": "🇰🇷Gomami|Peak >> ISIF-Kr", "type": "trojan", "server": "gomahk-turin.itkeba.online", "port": 11261, "password": "7635950f-fd3e-4ee1-a906-a741762a474e", "udp": true, "skip-cert-verify": true, "network": "tcp", "sni": "gomahk-turin.itkeba.online"}
-  - {"name": "🇰🇷Sharon|Pre >> ISIF-Kr", "type": "trojan", "server": "sharonpre-kr.itkeba.online", "port": 18910, "password": "7635950f-fd3e-4ee1-a906-a741762a474e", "udp": true, "skip-cert-verify": true, "network": "tcp", "sni": "sharonpre-kr.itkeba.online"}
-  - {"name": "🇰🇷Sharon|Pre-KR", "type": "trojan", "server": "sharonpre-kr.itkeba.online", "port": 16722, "password": "7635950f-fd3e-4ee1-a906-a741762a474e", "udp": true, "skip-cert-verify": true, "network": "tcp", "sni": "sharonpre-kr.itkeba.online"}
-  - {"name": "🇺🇸BWG-MegaBox|B", "type": "trojan", "server": "bwgla-b.itkeba.online", "port": 19921, "password": "7635950f-fd3e-4ee1-a906-a741762a474e", "udp": true, "skip-cert-verify": true, "network": "tcp", "sni": "bwgla-b.itkeba.online"}
-  - {"name": "🇺🇸BWG-MegaBox|C", "type": "trojan", "server": "bwgla-c.itkeba.online", "port": 14921, "password": "7635950f-fd3e-4ee1-a906-a741762a474e", "udp": true, "skip-cert-verify": true, "network": "tcp", "sni": "bwgla-c.itkeba.online"}
-  - {"name": "🇺🇸Dmit|Pro >> Bage-La", "type": "trojan", "server": "dmitla-pro.itkeba.online", "port": 34142, "password": "7635950f-fd3e-4ee1-a906-a741762a474e", "udp": true, "skip-cert-verify": true, "network": "tcp", "sni": "dmitla-pro.itkeba.online"}
-  - {"name": "🇬🇧Gomami|Peak >> Bage-UK", "type": "trojan", "server": "gomahk-peak.itkeba.online", "port": 51992, "password": "7635950f-fd3e-4ee1-a906-a741762a474e", "udp": true, "skip-cert-verify": true, "network": "tcp", "sni": "gomahk-peak.itkeba.online"}
-  - {"name": "🇩🇪Gomami|Peak >> Bage-De", "type": "trojan", "server": "gomahk-peak.itkeba.online", "port": 14381, "password": "7635950f-fd3e-4ee1-a906-a741762a474e", "udp": true, "skip-cert-verify": true, "network": "tcp", "sni": "gomahk-peak.itkeba.online"}
-  - {"name": "🇯🇵日本东京01-0.1倍 | 电信联通推荐", "type": "vless", "server": "unamecf.xn--ghqu5fm27b67w.com", "port": 443, "uuid": "383e7ee6-2089-4dba-b9d3-f8e1d10feafc", "udp": true, "tls": true, "skip-cert-verify": false, "client-fingerprint": "ios", "network": "ws", "ws-opts": {"path": "/pq/jp1", "headers": {"Host": "ujp1.xn--ghqu5fm27b67w.com"}}, "servername": "ujp1.xn--ghqu5fm27b67w.com"}
-  - {"name": "🇯🇵日本东京02-0.1倍 | 电信联通推荐", "type": "vless", "server": "unamecf.xn--ghqu5fm27b67w.com", "port": 443, "uuid": "383e7ee6-2089-4dba-b9d3-f8e1d10feafc", "udp": true, "tls": true, "skip-cert-verify": false, "client-fingerprint": "ios", "network": "ws", "ws-opts": {"path": "/pq/jp2", "headers": {"Host": "ujp2.xn--ghqu5fm27b67w.com"}}, "servername": "ujp2.xn--ghqu5fm27b67w.com"}
-  - {"name": "🇯🇵日本东京03-0.1倍 | 电信联通推荐", "type": "vless", "server": "unamecf.xn--ghqu5fm27b67w.com", "port": 443, "uuid": "383e7ee6-2089-4dba-b9d3-f8e1d10feafc", "udp": true, "tls": true, "skip-cert-verify": false, "client-fingerprint": "ios", "network": "ws", "ws-opts": {"path": "/pq/jp3", "headers": {"Host": "ujp3.xn--ghqu5fm27b67w.com"}}, "servername": "ujp3.xn--ghqu5fm27b67w.com"}
-  - {"name": "🇯🇵日本东京04-0.1倍 | 电信联通推荐", "type": "vless", "server": "unamecf.xn--ghqu5fm27b67w.com", "port": 443, "uuid": "383e7ee6-2089-4dba-b9d3-f8e1d10feafc", "udp": true, "tls": true, "skip-cert-verify": false, "client-fingerprint": "ios", "network": "ws", "ws-opts": {"path": "/pq/jp4", "headers": {"Host": "ujp4.xn--ghqu5fm27b67w.com"}}, "servername": "ujp4.xn--ghqu5fm27b67w.com"}
-  - {"name": "🇯🇵日本东京05-0.1倍 | 电信联通推荐", "type": "vless", "server": "unamecf.xn--ghqu5fm27b67w.com", "port": 443, "uuid": "383e7ee6-2089-4dba-b9d3-f8e1d10feafc", "udp": true, "tls": true, "skip-cert-verify": false, "client-fingerprint": "ios", "network": "ws", "ws-opts": {"path": "/pq/jp5", "headers": {"Host": "ujp5.xn--ghqu5fm27b67w.com"}}, "servername": "ujp5.xn--ghqu5fm27b67w.com"}
-  - {"name": "🇯🇵日本东京06-0.1倍 | 高速专线推荐", "type": "vless", "server": "unamecf2.xn--ghqu5fm27b67w.com", "port": 443, "uuid": "383e7ee6-2089-4dba-b9d3-f8e1d10feafc", "udp": true, "tls": true, "skip-cert-verify": false, "client-fingerprint": "safari", "network": "ws", "ws-opts": {"path": "/pq/jp2", "headers": {"Host": "ujp2.xn--ghqu5fm27b67w.com"}}, "servername": "ujp2.xn--ghqu5fm27b67w.com"}
-  - {"name": "🇯🇵日本东京07-0.1倍 | 高速专线推荐", "type": "vless", "server": "unamecf2.xn--ghqu5fm27b67w.com", "port": 443, "uuid": "383e7ee6-2089-4dba-b9d3-f8e1d10feafc", "udp": true, "tls": true, "skip-cert-verify": false, "client-fingerprint": "ios", "network": "ws", "ws-opts": {"path": "/pq/jp3", "headers": {"Host": "ujp3.xn--ghqu5fm27b67w.com"}}, "servername": "ujp3.xn--ghqu5fm27b67w.com"}
-  - {"name": "🇯🇵日本东京08-0.1倍 | 高速专线推荐", "type": "vless", "server": "unamecf2.xn--ghqu5fm27b67w.com", "port": 443, "uuid": "383e7ee6-2089-4dba-b9d3-f8e1d10feafc", "udp": true, "tls": true, "skip-cert-verify": false, "client-fingerprint": "ios", "network": "ws", "ws-opts": {"path": "/pq/jp4", "headers": {"Host": "ujp4.xn--ghqu5fm27b67w.com"}}, "servername": "ujp4.xn--ghqu5fm27b67w.com"}
-  - {"name": "🇯🇵日本东京09-0.1倍 | 高速专线推荐", "type": "vless", "server": "unamecf2.xn--ghqu5fm27b67w.com", "port": 443, "uuid": "383e7ee6-2089-4dba-b9d3-f8e1d10feafc", "udp": true, "tls": true, "skip-cert-verify": false, "client-fingerprint": "ios", "network": "ws", "ws-opts": {"path": "/pq/jp5", "headers": {"Host": "ujp5.xn--ghqu5fm27b67w.com"}}, "servername": "ujp5.xn--ghqu5fm27b67w.com"}
-  - {"name": "🇸🇬新加坡01 | 电信联通推荐", "type": "vless", "server": "downloadcfpro.xn--ghq880n3na965a.com", "port": 443, "uuid": "383e7ee6-2089-4dba-b9d3-f8e1d10feafc", "udp": true, "tls": true, "skip-cert-verify": false, "client-fingerprint": "ios", "network": "ws", "ws-opts": {"path": "/pq/sg1", "headers": {"Host": "sgp1.xn--ghq880n3na965a.com"}}, "servername": "sgp1.xn--ghq880n3na965a.com"}
-  - {"name": "🇸🇬新加坡02 | 电信联通推荐", "type": "vless", "server": "downloadcfpro.xn--ghq880n3na965a.com", "port": 443, "uuid": "383e7ee6-2089-4dba-b9d3-f8e1d10feafc", "udp": true, "tls": true, "skip-cert-verify": false, "client-fingerprint": "chrome", "network": "ws", "ws-opts": {"path": "/pq/sg1", "headers": {"Host": "sgp1.xn--ghq880n3na965a.com"}}, "servername": "sgp1.xn--ghq880n3na965a.com"}
-  - {"name": "🇯🇵日本东京01 | 移动联通推荐", "type": "vless", "server": "pq.aws48.yydjc.top", "port": 443, "uuid": "383e7ee6-2089-4dba-b9d3-f8e1d10feafc", "udp": true, "flow": "xtls-rprx-vision", "tls": true, "skip-cert-verify": false, "client-fingerprint": "ios", "reality-opts": {"public-key": "ybBxu1pW3O9Me954LCDfXgHW6lIYepAbnla82yaZ5HE", "short-id": "6a1faecb"}, "network": "tcp", "servername": "iosapps.itunes.apple.com"}
-  - {"name": "🇯🇵日本东京02 | 移动联通推荐", "type": "vless", "server": "pq.aws49.yydjc.top", "port": 443, "uuid": "383e7ee6-2089-4dba-b9d3-f8e1d10feafc", "udp": true, "flow": "xtls-rprx-vision", "tls": true, "skip-cert-verify": false, "client-fingerprint": "ios", "reality-opts": {"public-key": "f1131S_7UjEFSAbjkkPrSp4wdjZwG5otAmHd9Naxcj4", "short-id": "701fcb1f"}, "network": "tcp", "servername": "support.apple.com"}
-  - {"name": "🇯🇵日本东京03 | 移动联通推荐", "type": "vless", "server": "pq.aws50.yydjc.top", "port": 443, "uuid": "383e7ee6-2089-4dba-b9d3-f8e1d10feafc", "udp": true, "flow": "xtls-rprx-vision", "tls": true, "skip-cert-verify": false, "client-fingerprint": "ios", "reality-opts": {"public-key": "pR8CV43xvSgvzSXPVLCVomjw-yZvNyqU32kietO2pEc", "short-id": "a6115a2c"}, "network": "tcp", "servername": "iosapps.itunes.apple.com"}
-  - {"name": "🇯🇵日本东京04 | 移动联通推荐", "type": "vless", "server": "pq.aws51.yydjc.top", "port": 443, "uuid": "383e7ee6-2089-4dba-b9d3-f8e1d10feafc", "udp": true, "flow": "xtls-rprx-vision", "tls": true, "skip-cert-verify": false, "client-fingerprint": "ios", "reality-opts": {"public-key": "FrLhPuCVfzdM5rppzxHXQ5BZSGf1YHrXgo-cCtecGSo", "short-id": "f3b38af2"}, "network": "tcp", "servername": "cdn-dynmedia-1.microsoft.com"}
-  - {"name": "🇯🇵日本东京05 | 移动联通推荐", "type": "vless", "server": "pq.aws52.yydjc.top", "port": 443, "uuid": "383e7ee6-2089-4dba-b9d3-f8e1d10feafc", "udp": true, "flow": "xtls-rprx-vision", "tls": true, "skip-cert-verify": false, "client-fingerprint": "safari", "reality-opts": {"public-key": "FrLhPuCVfzdM5rppzxHXQ5BZSGf1YHrXgo-cCtecGSo", "short-id": "f3b38af2"}, "network": "tcp", "servername": "cdn-dynmedia-1.microsoft.com"}
-  - {"name": "🇭🇰香港04-0.1倍", "type": "vless", "server": "downloadcfpro.xn--ghq880n3na965a.com", "port": 443, "uuid": "383e7ee6-2089-4dba-b9d3-f8e1d10feafc", "udp": true, "tls": true, "skip-cert-verify": false, "client-fingerprint": "ios", "network": "ws", "ws-opts": {"path": "/pq/hk4", "headers": {"Host": "hk4p1.xn--ghq880n3na965a.com"}}, "servername": "hk4p1.xn--ghq880n3na965a.com"}
-  - {"name": "🇸🇬AWS新加坡02 | 移动联通推荐", "type": "vless", "server": "pq.aws64.yydjc.top", "port": 443, "uuid": "383e7ee6-2089-4dba-b9d3-f8e1d10feafc", "udp": true, "flow": "xtls-rprx-vision", "tls": true, "skip-cert-verify": false, "client-fingerprint": "safari", "reality-opts": {"public-key": "xjWkdgeetCnB1-kHqwVnAaSUqg4qK9TFWQlamW8FSRI", "short-id": "e2e15173"}, "network": "tcp", "servername": "iosapps.itunes.apple.com"}
-  - {"name": "🇸🇬AWS新加坡03 | 移动联通推荐", "type": "vless", "server": "pq.aws65.yydjc.top", "port": 443, "uuid": "383e7ee6-2089-4dba-b9d3-f8e1d10feafc", "udp": true, "flow": "xtls-rprx-vision", "tls": true, "skip-cert-verify": false, "client-fingerprint": "safari", "reality-opts": {"public-key": "9076EbD5vM8kATc_08QvDiqZF5KHTM_LaSrMOvcwfHw", "short-id": "57b7989c"}, "network": "tcp", "servername": "iosapps.itunes.apple.com"}
-  - {"name": "🇺🇸美国01-0.1倍 | 电信联通移动推荐", "server": "pq.us1.globals-download.com", "port": 35000, "ports": "35000-39000", "mport": "35000-39000", "udp": true, "skip-cert-verify": true, "sni": "www.apple.com", "type": "hysteria2", "auth": "383e7ee6-2089-4dba-b9d3-f8e1d10feafc"}
-  - {"name": "🇺🇸美国02-0.1倍 | 电信联通移动推荐", "server": "pq.us2.globals-download.com", "port": 35000, "ports": "35000-39000", "mport": "35000-39000", "udp": true, "skip-cert-verify": true, "sni": "www.apple.com", "type": "hysteria2", "auth": "383e7ee6-2089-4dba-b9d3-f8e1d10feafc"}
-  - {"name": "🇺🇸美国03-0.1倍 | 电信联通移动推荐", "server": "pq.us3.globals-download.com", "port": 35000, "ports": "35000-39000", "mport": "35000-39000", "udp": true, "skip-cert-verify": true, "sni": "tv.apple.com", "type": "hysteria2", "auth": "383e7ee6-2089-4dba-b9d3-f8e1d10feafc"}
-  - {"name": "🇺🇸美国04-0.1倍 | 电信联通移动推荐", "server": "pq.us4.globals-download.com", "port": 35000, "ports": "35000-39000", "mport": "35000-39000", "udp": true, "skip-cert-verify": true, "sni": "www.apple.com", "type": "hysteria2", "auth": "383e7ee6-2089-4dba-b9d3-f8e1d10feafc"}
-  - {"name": "🇺🇸美国05-0.1倍 | 电信联通移动推荐", "server": "pq.us5.globals-download.com", "port": 35000, "ports": "35000-39000", "mport": "35000-39000", "udp": true, "skip-cert-verify": true, "sni": "www.apple.com", "type": "hysteria2", "auth": "383e7ee6-2089-4dba-b9d3-f8e1d10feafc"}
-  - {"name": "🇺🇸美国06-0.1倍 | 电信联通移动推荐", "server": "pq.us6.globals-download.com", "port": 35000, "ports": "35000-39000", "mport": "35000-39000", "udp": true, "skip-cert-verify": true, "sni": "www.apple.com", "type": "hysteria2", "auth": "383e7ee6-2089-4dba-b9d3-f8e1d10feafc"}
-  - {"name": "🇺🇸美国07-0.1倍 | 电信联通移动推荐", "server": "pq.us7.globals-download.com", "port": 35000, "ports": "35000-39000", "mport": "35000-39000", "udp": true, "skip-cert-verify": true, "sni": "www.apple.com", "type": "hysteria2", "auth": "383e7ee6-2089-4dba-b9d3-f8e1d10feafc"}
-  - {"name": "🇺🇸美国08-0.1倍 | 电信联通移动推荐", "server": "pq.us8.globals-download.com", "port": 35000, "ports": "35000-39000", "mport": "35000-39000", "udp": true, "skip-cert-verify": true, "sni": "www.apple.com", "type": "hysteria2", "auth": "383e7ee6-2089-4dba-b9d3-f8e1d10feafc"}
   - {"name": "🇰🇷韩国 | 高速专线-hy2", "server": "146.56.164.36", "port": 35000, "ports": "35000-39000", "mport": "35000-39000", "udp": true, "skip-cert-verify": true, "sni": "api.push.apple.com", "type": "hysteria2", "auth": "383e7ee6-2089-4dba-b9d3-f8e1d10feafc"}
   - {"name": "🇦🇪迪拜 | 高速专线-hy2", "server": "139.185.46.236", "port": 35000, "ports": "35000-39000", "mport": "35000-39000", "udp": true, "skip-cert-verify": true, "sni": "www.apple.com", "type": "hysteria2", "auth": "383e7ee6-2089-4dba-b9d3-f8e1d10feafc"}
   - {"name": "🇨🇭瑞士苏黎世 | 高速专线-hy2", "server": "152.67.95.183", "port": 35000, "ports": "35000-39000", "mport": "35000-39000", "udp": true, "skip-cert-verify": true, "sni": "www.apple.com", "type": "hysteria2", "auth": "383e7ee6-2089-4dba-b9d3-f8e1d10feafc"}
@@ -797,27 +707,6 @@ proxies:
   - {"name": "🇨🇳 台湾 家宽 | 01 0.5倍率-15", "type": "tuic", "server": "hinet-ddns.baipiao0721-dns78655.eu", "port": 2096, "uuid": "1136cf06-9d94-4916-bfa8-1fbc35f7e632", "password": "1136cf06-9d94-4916-bfa8-1fbc35f7e632", "alpn": ["h3"], "disable-sni": true, "reduce-rtt": false, "udp-relay-mode": "native", "congestion-controller": "cubic", "skip-cert-verify": true, "sni": "", "version": 5}
   - {"name": "🇨🇳 台湾 家宽 | 02 0.5倍率-16", "type": "tuic", "server": "hinet-ddns.baipiao0721-dns78655.eu", "port": 2096, "uuid": "1136cf06-9d94-4916-bfa8-1fbc35f7e632", "password": "1136cf06-9d94-4916-bfa8-1fbc35f7e632", "alpn": ["h3"], "disable-sni": true, "reduce-rtt": false, "udp-relay-mode": "native", "congestion-controller": "cubic", "skip-cert-verify": true, "sni": "", "version": 5}
   - {"name": "[Hy2]马来西亚 12-v6-三网优化", "server": "gho102.icuvdproduction.org", "port": 18441, "sni": "d1--ov-gotcha07.bilivideo.com", "skip-cert-verify": true, "type": "hysteria2", "auth": "609aa734-24e9-4d3c-b534-d57e77994c14", "down-speed": "200", "up-speed": "50"}
-  - {"name": "[Hy2]台湾11", "server": "gho101.icuvdproduction.org", "port": 18441, "sni": "d1--ov-gotcha07.bilivideo.com", "skip-cert-verify": true, "type": "hysteria2", "auth": "609aa734-24e9-4d3c-b534-d57e77994c14", "down-speed": "200", "up-speed": "50"}
-  - {"name": "[Hy2]美国三网优化13", "server": "gho103.icuvdproduction.org", "port": 18441, "sni": "d1--ov-gotcha07.bilivideo.com", "skip-cert-verify": true, "type": "hysteria2", "auth": "609aa734-24e9-4d3c-b534-d57e77994c14", "down-speed": "200", "up-speed": "50"}
-  - {"name": "[Hy2]日本14-V6-移动联通优化", "server": "gho104.icuvdproduction.org", "port": 18441, "sni": "d1--ov-gotcha07.bilivideo.com", "skip-cert-verify": true, "type": "hysteria2", "auth": "609aa734-24e9-4d3c-b534-d57e77994c14", "down-speed": "200", "up-speed": "50"}
-  - {"name": "[Hy2]台湾16", "server": "gho106.icuvdproduction.org", "port": 18441, "sni": "d1--ov-gotcha07.bilivideo.com", "skip-cert-verify": true, "type": "hysteria2", "auth": "609aa734-24e9-4d3c-b534-d57e77994c14", "down-speed": "200", "up-speed": "50"}
-  - {"name": "[Hy2]香港18-移动联通优化", "server": "gho108.icuvdproduction.org", "port": 18441, "sni": "d1--ov-gotcha07.bilivideo.com", "skip-cert-verify": true, "type": "hysteria2", "auth": "609aa734-24e9-4d3c-b534-d57e77994c14", "down-speed": "200", "up-speed": "50"}
-  - {"name": "[Hy2]香港19-移动联通优化", "server": "gho109.icuvdproduction.org", "port": 18441, "sni": "d1--ov-gotcha07.bilivideo.com", "skip-cert-verify": true, "type": "hysteria2", "auth": "609aa734-24e9-4d3c-b534-d57e77994c14", "down-speed": "200", "up-speed": "50"}
-  - {"name": "🇺🇸美国圣何塞01-0.1倍", "type": "vless", "server": "unamecf2.xn--ghqu5fm27b67w.com", "port": 443, "uuid": "537aaf7d-7120-492e-89f9-cc828b1f4e0a", "udp": true, "tls": true, "skip-cert-verify": false, "client-fingerprint": "chrome", "network": "ws", "ws-opts": {"path": "/pq/us1", "headers": {"Host": "usa1s.xn--ghqu5fm27b67w.com"}}, "servername": "usa1s.xn--ghqu5fm27b67w.com"}
-  - {"name": "🇺🇸美国圣何塞02-0.1倍", "type": "vless", "server": "unamecf2.xn--ghqu5fm27b67w.com", "port": 443, "uuid": "537aaf7d-7120-492e-89f9-cc828b1f4e0a", "udp": true, "tls": true, "skip-cert-verify": false, "client-fingerprint": "chrome", "network": "ws", "ws-opts": {"path": "/pq/us2", "headers": {"Host": "usa2.xn--ghqu5fm27b67w.com"}}, "servername": "usa2.xn--ghqu5fm27b67w.com"}
-  - {"name": "🇺🇸美国圣何塞03-0.1倍", "type": "vless", "server": "unamecf2.xn--ghqu5fm27b67w.com", "port": 443, "uuid": "537aaf7d-7120-492e-89f9-cc828b1f4e0a", "udp": true, "tls": true, "skip-cert-verify": false, "client-fingerprint": "chrome", "network": "ws", "ws-opts": {"path": "/pq/us3", "headers": {"Host": "usa3.xn--ghqu5fm27b67w.com"}}, "servername": "usa3.xn--ghqu5fm27b67w.com"}
-  - {"name": "🇺🇸美国圣何塞04-0.1倍", "type": "vless", "server": "unamecf2.xn--ghqu5fm27b67w.com", "port": 443, "uuid": "537aaf7d-7120-492e-89f9-cc828b1f4e0a", "udp": true, "tls": true, "skip-cert-verify": false, "client-fingerprint": "chrome", "network": "ws", "ws-opts": {"path": "/pq/us4", "headers": {"Host": "usa4.xn--ghqu5fm27b67w.com"}}, "servername": "usa4.xn--ghqu5fm27b67w.com"}
-  - {"name": "🇺🇸美国圣何塞05-0.1倍", "type": "vless", "server": "unamecf2.xn--ghqu5fm27b67w.com", "port": 443, "uuid": "537aaf7d-7120-492e-89f9-cc828b1f4e0a", "udp": true, "tls": true, "skip-cert-verify": false, "client-fingerprint": "chrome", "network": "ws", "ws-opts": {"path": "/pq/us5", "headers": {"Host": "usa5.xn--ghqu5fm27b67w.com"}}, "servername": "usa5.xn--ghqu5fm27b67w.com"}
-  - {"name": "🇺🇸美国圣何塞06-0.1倍", "type": "vless", "server": "unamecf2.xn--ghqu5fm27b67w.com", "port": 443, "uuid": "537aaf7d-7120-492e-89f9-cc828b1f4e0a", "udp": true, "tls": true, "skip-cert-verify": false, "client-fingerprint": "chrome", "network": "ws", "ws-opts": {"path": "/pq/us6", "headers": {"Host": "usa6.xn--ghqu5fm27b67w.com"}}, "servername": "usa6.xn--ghqu5fm27b67w.com"}
-  - {"name": "🇺🇸美国圣何塞07-0.1倍", "type": "vless", "server": "unamecf2.xn--ghqu5fm27b67w.com", "port": 443, "uuid": "537aaf7d-7120-492e-89f9-cc828b1f4e0a", "udp": true, "tls": true, "skip-cert-verify": false, "client-fingerprint": "chrome", "network": "ws", "ws-opts": {"path": "/pq/us7", "headers": {"Host": "usa7.xn--ghqu5fm27b67w.com"}}, "servername": "usa7.xn--ghqu5fm27b67w.com"}
-  - {"name": "🇺🇸美国洛杉矶08-0.1倍", "type": "vless", "server": "unamecf2.xn--ghqu5fm27b67w.com", "port": 443, "uuid": "537aaf7d-7120-492e-89f9-cc828b1f4e0a", "udp": true, "tls": true, "skip-cert-verify": false, "client-fingerprint": "chrome", "network": "ws", "ws-opts": {"path": "/pq/us8", "headers": {"Host": "usa8.xn--ghqu5fm27b67w.com"}}, "servername": "usa8.xn--ghqu5fm27b67w.com"}
-  - {"name": "🇺🇸美国阿什本01-0.1倍", "type": "vless", "server": "69.84.182.109", "port": 443, "uuid": "537aaf7d-7120-492e-89f9-cc828b1f4e0a", "udp": true, "tls": true, "skip-cert-verify": false, "client-fingerprint": "chrome", "network": "ws", "ws-opts": {"path": "/pq/us4", "headers": {"Host": "pq-us4.globals-download.com"}}, "servername": "pq-us4.globals-download.com"}
-  - {"name": "🇺🇸美国阿什本02-0.1倍", "type": "vless", "server": "69.84.182.109", "port": 443, "uuid": "537aaf7d-7120-492e-89f9-cc828b1f4e0a", "udp": true, "tls": true, "skip-cert-verify": false, "client-fingerprint": "chrome", "network": "ws", "ws-opts": {"path": "/pq/us5", "headers": {"Host": "pq-us5.globals-download.com"}}, "servername": "pq-us5.globals-download.com"}
-  - {"name": "🇺🇸美国阿什本03-0.1倍", "type": "vless", "server": "69.84.182.109", "port": 443, "uuid": "537aaf7d-7120-492e-89f9-cc828b1f4e0a", "udp": true, "tls": true, "skip-cert-verify": false, "client-fingerprint": "chrome", "network": "ws", "ws-opts": {"path": "/pq/us6", "headers": {"Host": "pq-us6.globals-download.com"}}, "servername": "pq-us6.globals-download.com"}
-  - {"name": "🇰🇷韩国首尔01", "type": "vless", "server": "193.123.227.125", "port": 443, "uuid": "537aaf7d-7120-492e-89f9-cc828b1f4e0a", "udp": true, "flow": "xtls-rprx-vision", "tls": true, "skip-cert-verify": false, "client-fingerprint": "chrome", "reality-opts": {"public-key": "P--AseuV7sGvgy7YJ8iX58GxeP5-M2oq0Mq2YxPAXRs", "short-id": "f00d40f38482"}, "network": "tcp", "servername": "buylite.music.apple.com"}
-  - {"name": "🇹🇼台湾 | 避免晚高峰使用", "type": "vless", "server": "pq-hinet.tw1.yydjc.top", "port": 443, "uuid": "537aaf7d-7120-492e-89f9-cc828b1f4e0a", "udp": true, "flow": "xtls-rprx-vision", "tls": true, "skip-cert-verify": false, "client-fingerprint": "chrome", "reality-opts": {"public-key": "kp6ml6xwSt4hTDEKj6U0FR0l-kDy2iUiILiT0XfFwjA", "short-id": "3662ca42"}, "network": "tcp", "servername": "static-snowbreak.amazingseasun.com"}
-  - {"name": "🇹🇼台湾2 | 避免晚高峰使用", "type": "vless", "server": "pq-hinet.tw2.yydjc.top", "port": 443, "uuid": "537aaf7d-7120-492e-89f9-cc828b1f4e0a", "udp": true, "flow": "xtls-rprx-vision", "tls": true, "skip-cert-verify": false, "client-fingerprint": "chrome", "reality-opts": {"public-key": "Z-S-J9zDn7pXU7haa9_BeIny-Yp5qtS0R_MnHSgsoGA", "short-id": "0c9347ba"}, "network": "tcp", "servername": "static-snowbreak.amazingseasun.com"}
-  - {"name": "🇹🇼台湾3 | 避免晚高峰使用", "type": "vless", "server": "pq-hinet.tw3.yydjc.top", "port": 443, "uuid": "537aaf7d-7120-492e-89f9-cc828b1f4e0a", "udp": true, "flow": "xtls-rprx-vision", "tls": true, "skip-cert-verify": false, "client-fingerprint": "chrome", "reality-opts": {"public-key": "eECwNaUgTEzRbyaeSaYpZGNTuuf5xZL2UVeGhDNWxTE", "short-id": "c85e4b9b"}, "network": "tcp", "servername": "static-snowbreak.amazingseasun.com"}
   - {"name": "[IPLC]墨西哥 01 克雷塔罗", "type": "vmess", "server": "board-01.ddnskunlun.com", "port": 11939, "cipher": "auto", "uuid": "c814cdaa-3fd1-32a3-b1af-852a4fb5c634", "alterId": 0, "tls": false, "client-fingerprint": "", "network": "tcp"}
   - {"name": "[IPLC]墨西哥 02 克雷塔罗", "type": "vmess", "server": "board-01.ddnskunlun.com", "port": 11886, "cipher": "auto", "uuid": "c814cdaa-3fd1-32a3-b1af-852a4fb5c634", "alterId": 0, "tls": false, "client-fingerprint": "", "network": "tcp"}
   - {"name": "[IPLC]奥地利 01 维也纳", "type": "vmess", "server": "board-01.ddnskunlun.com", "port": 11927, "cipher": "auto", "uuid": "c814cdaa-3fd1-32a3-b1af-852a4fb5c634", "alterId": 0, "tls": false, "client-fingerprint": "", "network": "tcp"}
@@ -854,6 +743,3 @@ proxies:
   - {"name": "[IPLC]马来西亚 04 吉隆坡", "type": "vmess", "server": "board-04.ddnskunlun.com", "port": 11874, "cipher": "auto", "uuid": "c814cdaa-3fd1-32a3-b1af-852a4fb5c634", "alterId": 0, "tls": false, "client-fingerprint": "", "network": "tcp"}
   - {"name": "[IPLC]斯洛文尼亚 01 克拉尼", "type": "vmess", "server": "board-01.ddnskunlun.com", "port": 11947, "cipher": "auto", "uuid": "c814cdaa-3fd1-32a3-b1af-852a4fb5c634", "alterId": 0, "tls": false, "client-fingerprint": "", "network": "tcp"}
   - {"name": "[IPLC]沙特阿拉伯 01 利雅得", "type": "vmess", "server": "board-01.ddnskunlun.com", "port": 11910, "cipher": "auto", "uuid": "c814cdaa-3fd1-32a3-b1af-852a4fb5c634", "alterId": 0, "tls": false, "client-fingerprint": "", "network": "tcp"}
-http:
-  url-rewrite:
-    - ^http://r\.d www.reddit.com/r/china_irl 302
