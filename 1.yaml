@@ -301,8 +301,6 @@ rules:
   - RULE-SET,EmbyDirect,DIRECT
   - RULE-SET,abema_domain,JP-Media
   - RULE-SET,google_ip,线路
-  - RULE-SET,adrules_domain,REJECT
-  - RULE-SET,adrules_ip,REJECT
   - RULE-SET,hbo_domain,Media
   - RULE-SET,httpdns_domain,REJECT
   - RULE-SET,hulu_domain,Media
@@ -320,8 +318,9 @@ rules:
   - RULE-SET,twitch_ip,Media
   - RULE-SET,spotify_ip,Media
   - RULE-SET,talkatone_ip,US-Auto
+  - RULE-SET,adrules_domain,REJECT
+  - RULE-SET,adrules_ip,REJECT
   - GEOIP,CN,DIRECT
-  - RULE-SET,VPS,低延迟
   - MATCH,线路
 rule-providers:
   abema_domain:
